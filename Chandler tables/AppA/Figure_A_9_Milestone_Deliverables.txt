@@ -1,0 +1,42 @@
+JUSTICE UNIT
+Alpha Deliverable for Sept 28, 2008
+Last Updated Aug 29, 2008
+
+Levels 
+-The following levels are asset complete, with game play scripting:
+	*Justice Hall
+	*Villain’s Lair
+-The following levels are have basic geometry and are viewable in game, but have no game play scripted:
+	*City Hall
+	*Office Complex
+
+Characters
+-The following characters are asset complete:
+	*Bulletpoint
+	*Montezuma 
+-The following characters are viewable in game, but don’t have final textures
+	*Caribou
+
+UI
+-UI color scheme and font are final and approved
+-UI flow is prototyped in Macromedia Flash
+-Basic UI screens are implemented and functioning:
+	*Start screen
+	*Profile screen
+	*Options screen
+-In-game UI has placeholder art with basic functionality for:
+	*Health bar
+	*Inventory
+
+Sound
+-Placeholder VO cues and sound designs are implemented for the following levels:
+	*Justice Hall
+	*Villain’s Lair
+-Sound designs completed for remaining levels in the game
+
+Engineering
+-Scripting tools completed and functioning
+-Art tools completed and functioning
+-Networking APIs are implemented
+-Build process finalized and in place 
+

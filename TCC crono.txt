@@ -1,0 +1,71 @@
+Capítulos do TCC
+	Introdução
+	
+	Visão geral da proposta
+		Objetivo
+		Mercado
+		Justificativa e motivação
+	
+	Engine architecture
+		GameLoop and real-time simulation
+			Renderinhg loop
+			logic loop
+			Styles of gameloops
+		Gráficos
+			Z-Ordering
+			GLSL Shaders
+			Color theory 
+		Collision system
+			Box2D
+		Aúdio
+			OpenAL
+		Coordinate System
+			Box2D > world space
+			etc
+		Input System
+		Game Objects
+			Component Based
+			Object oriented
+			Entity system
+		Resource Management
+			Chunk system
+			File system
+	
+	Math for games (?)
+		GA
+	
+	Metodologias ágeis e gerencimanto de projetos
+		Scrum
+		Pré-Produção
+		Produção
+		GDD
+	
+	AI
+		Utility AI
+		Finite State machine
+		Decision tree
+		Pathfinding
+	
+	Scripting Engine
+		
+	PCG
+		Random noise (Perlin)
+		Geração de ambientes
+	
+	Estruturas de dados e design patterns para jogos
+		Quad Tree
+		R Tree
+		I/O em tempo real
+	
+	Testes
+		Debug
+		Demonstrar o "por trás" de cada processo
+	Resultados
+		Protótipo
+	Conclusão
+	
+	
+DÚVIDAS PARA TIRAR AMANHA	
+	Mesmo devendo as duas matérias (SD e C3) posso fazer o estágio obg?
+	Só posso iniciar ele durante o período de matrícula em matéria?
+	Os professores da banca devo convidar antes?

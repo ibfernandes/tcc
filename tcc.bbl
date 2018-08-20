@@ -1,0 +1,48 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Chandler 2012]{Manualdejogosdigitais}
+\abntrefinfo{Chandler}{CHANDLER}{2012}
+{CHANDLER, H.~M. \emph{Manual de Produ{\c{c}}{\~a}o de Jogos Digitais}. 9. ed.
+  Bookman, 2012.
+ISBN 9788540701847. Dispon{\'\i}vel em:
+  \url{http://books.google.com.br/books?id=Ifdu3B9C7jEC}.}
+
+\bibitem[Gregory 2009]{GameEngineArchitecture}
+\abntrefinfo{Gregory}{GREGORY}{2009}
+{GREGORY, J. \emph{Game Engine Architecture}. [S.l.]: Taylor and Francis Group,
+  2009.
+ISBN 9781439865262.}
+
+\bibitem[Khronos 2017]{KhronosOpenGLSpecification}
+\abntrefinfo{Khronos}{KHRONOS}{2017}
+{KHRONOS. \emph{OpenGL Specifications}. 2017.
+Dispon{\'\i}vel em: \url{https://www.khronos.org/registry/OpenGL/specs/gl/}.}
+
+\bibitem[McDonald 2017]{GameMarketArticle}
+\abntrefinfo{McDonald}{MCDONALD}{2017}
+{MCDONALD, E. \emph{The Global Games Market Will Reach \$108{.}9 Billion in
+  2017 With Mobile Taking 42\%}. 2017.
+Dispon{\'\i}vel em:
+  \url{https://newzoo.com/insights/articles/the-global-games-market-will-reach-108-9-billion-in-2017-with-mobile-taking-42/}.}
+
+\bibitem[OpenGL 2017]{OpenGLAbout}
+\abntrefinfo{OpenGL}{OPENGL}{2017}
+{OPENGL. \emph{About OpenGL}. 2017.
+Dispon{\'\i}vel em: \url{https://www.opengl.org/about/}.}
+
+\bibitem[Rogers 2016]{LevelUp}
+\abntrefinfo{Rogers}{ROGERS}{2016}
+{ROGERS, S. \emph{Level Up}. [S.l.]: Edgard Blucher, 2016.
+ISBN 9788521207009.}
+
+\bibitem[Vries 2015]{LearnOpenGL}
+\abntrefinfo{Vries}{VRIES}{2015}
+{VRIES, J. de. \emph{Learn OpenGL}. 2. ed. [s.n.], 2015. Dispon{\'\i}vel em:
+  \url{https://learnopengl.com/book/offline\%20learnopengl.pdf}.}
+
+\end{thebibliography}
