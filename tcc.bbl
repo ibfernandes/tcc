@@ -30,6 +30,11 @@ Dispon{\'\i}vel em: \url{https://www.khronos.org/registry/OpenGL/specs/gl/}.}
 Dispon{\'\i}vel em:
   \url{https://newzoo.com/insights/articles/the-global-games-market-will-reach-108-9-billion-in-2017-with-mobile-taking-42/}.}
 
+\bibitem[Nystrom 2014]{GameProgrammingPatterns}
+\abntrefinfo{Nystrom}{NYSTROM}{2014}
+{NYSTROM, R. \emph{Game Programming Patterns}. [S.l.]: Genever Benning, 2014.
+ISBN 0990582906.}
+
 \bibitem[OpenGL 2017]{OpenGLAbout}
 \abntrefinfo{OpenGL}{OPENGL}{2017}
 {OPENGL. \emph{About OpenGL}. 2017.

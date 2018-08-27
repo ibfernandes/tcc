@@ -1,38 +1,61 @@
 Capítulos do TCC
-	Introdução
+
+	Introdução ✔
 	
-	Visão geral da proposta
-		Objetivo
-		Mercado
-		Justificativa e motivação
+	Visão geral da proposta ✔
+		Objetivo ✔
+		Justificativa e motivação ✔
+		Mercado ✔
 	
-	Engine architecture
-		GameLoop and real-time simulation
-			Renderinhg loop
-			logic loop
-			Styles of gameloops
+	Revisão bibliográfica ✔
+	
+	Arquitetura de uma Engine
+		Estrutura do Game Loop✔
+		Estrutura do atualizador ✔
+			Timestep fixo ✔
+			Timestep variável ✔
+			Timestep semi-fixo ✔
+		Estrutura do renderizador ✔
+			Interpolação linear ✔
+		OpenGL
+			GLSL
+			Shaders
+				Fragment Shader
+				Vertex Shader
+			VBO
+			VAO
+			Framebuffers
 		Gráficos
 			Z-Ordering
-			GLSL Shaders
-			Color theory 
-		Collision system
-			Box2D
-		Aúdio
-			OpenAL
-		Coordinate System
-			Box2D > world space
-			etc
-		Input System
+			Color theory
+			Lighting
+				Ambient, Diffuse e normals
+			Renderização de textos
 		Game Objects
 			Component Based
 			Object oriented
 			Entity system
+		Collision system
+			AABB
+			Box2D
+		Coordinate System
+			Local Space
+			World Space
+			View Space
+			Box2D para World Space
+		Camera
+		Input System
+			GLFW Keyboard
+			GLFW Mouse
 		Resource Management
 			Chunk system
 			File system
-	
-	Math for games (?)
-		GA
+		Aúdio
+			OpenAL
+			
+	*Matemática para jogos
+		Transformações
+		Álgebra Linear
 	
 	Metodologias ágeis e gerencimanto de projetos
 		Scrum
@@ -46,26 +69,29 @@ Capítulos do TCC
 		Decision tree
 		Pathfinding
 	
-	Scripting Engine
+	*Scripting Engine
 		
 	PCG
 		Random noise (Perlin)
 		Geração de ambientes
+			Continentes
+			Cidades
 	
 	Estruturas de dados e design patterns para jogos
 		Quad Tree
 		R Tree
 		I/O em tempo real
 	
+	Desenvolvimento do trabalho
+		Estrutura final do projeto e diagramas
+		
 	Testes
 		Debug
 		Demonstrar o "por trás" de cada processo
-	Resultados
-		Protótipo
+		
+	Experimentos e Resultados
+		Otimizações (FrameRate, timestep size)
+		Protótipo final
+		
 	Conclusão
 	
-	
-DÚVIDAS PARA TIRAR AMANHA	
-	Mesmo devendo as duas matérias (SD e C3) posso fazer o estágio obg?
-	Só posso iniciar ele durante o período de matrícula em matéria?
-	Os professores da banca devo convidar antes?
