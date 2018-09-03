@@ -110,11 +110,14 @@ This work proposes to develop a multiplataform game for desktop entitled Travell
   \item[OpenGL] Open Graphics Library
   \item[GPU] Graphics Processing Unit
   \item[GLFW] Graphics Library Framework
+  \item[GLSL] OpenGL Shading Language
   \item[NPC] Non Playable Character
   \item[HUD] Heads-Up Display
   \item[ASD] A Ser Definido
   \item[FPS] Frames per second
   \item[px] Pixel (Unidade de medida)
+  \item[VBO] Vertex Buffer Object
+  \item[VAO] Vertex Array Object
 \end{siglas}
 
 
@@ -307,17 +310,21 @@ Children of morta: Action RPG em pixel art. \\
 % ------------------------------------------
 % DESENVOLVIMENTO DO TRABALHO
 
-\chapter{Arquitetura de uma Game Engine}
-Game Engine é o termo designado para o motor que está por trás de todo jogo. É neste sistema de simulação gráfica em tempo real que todo o ambiente do jogo é construído. As principais funcionalidades providas em uma Engine incluem um sistema de renderização 2D e/ou 3D, detecção e resolução de colisões, áudio e inteligência artificial. A partir desses elementos há várias ramificações em sub sistemas com funcionalidades específicas para satisfazer as necessidades individuais de cada projeto. Em muitas características a Engine se assemelha a um sistema operacional. Ela lida com aspectos de baixo nível da máquina como a GPU e geralmente é construída utilizando-se o padrão de projeto em camadas. A figura a seguir ilustra um típico diagrama da arquitetura desse sistema:
+\chapter{Arquitetura de uma game engine}
+Game engine (em português literal, motor de jogo) é o termo designado ao motor que está por trás de todo jogo. É neste conjunto de sistemas de simulação em tempo real que todo o ambiente do jogo é construído. As principais funcionalidades providas em uma engine são um sistema de renderização 2D e/ou 3D, detecção e resolução de colisões, áudio e inteligência artificial. A partir desses elementos há várias ramificações em subsistemas com funcionalidades específicas para satisfazer as necessidades individuais de cada projeto. Uma engine se assemelha em muitas características a um sistema operacional. Ela lida com aspectos de baixo nível da máquina como a \textit{Graphic Processing Unit} (GPU) e é comummente construída utilizando-se o padrão de projeto em camadas. A Figura ~\ref{fig:arquitetura}  ilustra um típico diagrama da arquitetura desse sistema e seus componentes.
+
+Alguns exemplos muito populares de engines disponíveis no mercado são a Unity, Unreal Engine, Godot, Construct 2 entre muitas outras. Cada uma apresenta sua própria estrutura e especificidade. Algumas são voltadas para projetos 3D e 2D, outras são otimizadas especificamente para um ambiente 2D e outras 3D. Cabe ao projetista decidir qual desses produtos irá melhor atende-lo conforme suas necessidades. Para este projeto, a engine utilizada será de desenvolvimento próprio.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{imagens/engine_layers.png}
-	\caption{Componentes de uma Game Engine //TODO: Como referenciar imagens externas}
+	\caption{Componentes de uma Game Engine. Fonte:~\cite{GameEngineArchitecture}
+    \label{fig:arquitetura}}
 \end{figure}
 
-\section{Game Loop}
-Game Loop é o núcleo da arquitetura de uma Engine. É neste loop que todos os sub sistemas da Engine são chamados e  executados, como a renderização, detecção e resolução de colisões, áudio e muitos outros \cite{GameEngineArchitecture}. Por se tratar de uma simulação em tempo real, onde a tela inteira deve ser atualizada em uma quantidade muito alta de vezes é fundamental que tudo seja executado o mais rápido possível e em tempo constante para que o usuário tenha uma experiência fluída e dinâmica.\\
-Portanto, o tempo demanda um papel chave neste sistema e deve ser cuidadosamente levado em consideração para que não haja quaisquer gargalos que deturpem a fluidez e experiência final do usuário. A estrutura mais simples de um Game Loop é composta como se segue:\\
+\section{Game loop}
+Game loop é o núcleo da arquitetura de uma engine. É neste loop que todos os subsistemas da engine são chamados e  executados, como a renderização, detecção e resolução de colisões, áudio e muitos outros \cite{GameEngineArchitecture}. Por se tratar de uma simulação em tempo real, onde a tela inteira deve ser atualizada em uma quantidade muito alta de vezes, é fundamental que tudo seja executado o mais rápido possível e em tempo constante para que o usuário tenha uma experiência fluída e dinâmica.\\
+Portanto, o tempo demanda um papel chave neste sistema e deve ser cuidadosamente levado em consideração para que não haja quaisquer gargalos que deturpem a fluidez e experiência final do usuário. A estrutura mais simples de um game loop é composta como se segue:\\
 
 \begin{lstlisting}[caption=Estrutura básica do Game Loop]
 while(true) {
@@ -326,20 +333,26 @@ while(true) {
 }
 \end{lstlisting}
 Esse código sendo executado ao longo do tempo é representado pela figura:
-\\//TODO: Insert Ilu. 1
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/ilu1.png}
+	\caption{Execução do game loop básico ao longo do tempo}
+\end{figure}
 
-Cada execução do método \texttt{render} significa o desenho de uma imagem na tela e a quantidade total de imagens desenhadas ao longo de um segundo é representado pela sigla FPS (\textit{Frames per second}). Cada execução do método \texttt{update} significa um passo no tempo do jogo (\textit{timestep}). Da mesma forma que nosso relógio move em tiques de um segundo em um segundo, o tempo do jogo move em tiques de \texttt{update} em \texttt{update}.
+Cada execução do método \texttt{render} significa o desenho de uma imagem na tela e a quantidade total de imagens desenhadas ao longo de um segundo é representado pela sigla FPS (\textit{Frames per second}). Cada execução do método \texttt{update} significa um passo no tempo do jogo (\textit{timestep}). Da mesma forma que o relógio move em tiques de um segundo em um segundo, o tempo do jogo move em tiques de \texttt{update} em \texttt{update}.
 
 
 \section{Sistema de atualização}
-O sistema de atualização é responsável por controlar o aspecto lógico da Engine. Nele ocorre todos os cálculos relativos a movimentação dos objetos, colisões, inteligência artificial e outros. Sendo assim, é um sistema composto de outros sistemas, cada um rodando com uma taxa de atualização específica e não obrigatoriamente atrelados ao FPS.
+O sistema de atualização é responsável por controlar o aspecto lógico da engine. Nele ocorre todos os cálculos relativos a movimentação dos objetos, colisões, inteligência artificial e outros. Sendo assim, é um sistema composto de outros sistemas, cada um rodando com uma taxa de atualização específica e não obrigatoriamente atrelados ao FPS.
 
 \subsection{Timestep fixo}
-Sistemas de atualização com timestep fixo são aqueles que estavam diretamente atrelados ao FPS e eram utilizados em jogos antigos \cite{GameEngineArchitecture}. As unidades de medida de tempo eram diretamente atrelados ao FPS de forma que se uma máquina é capaz de rodar o jogo a 30 FPS e outra a 60 FPS, na segunda máquina o jogo daria impressão de estar duas vezes mais rápido ou lento dependendo do valor escolhido para o timestep. Isso acontecia por que os jogos eram desenvolvidos para plataformas específicas e, sabendo a qual FPS o jogo iria rodar, era fácil delimitar um timestep fixo com o qual o jogo iria trabalhar.\\ Entretanto, conforme as máquinas se tornaram mais potentes e o mercado passou a oferecer mais opções de hardware, logo a indústria estava produzindo jogos para um SO com múltiplas possibilidades de hardware por detrás. Isso gerou o problema descrito acima que, dado uma máquina capaz de rodar a 30 FPS e outra a 60 FPS, sendo a máquina alvo do projeto de 30 FPS onde o personagem deveria mover-se 300 pixels por segundo (ou 300/30 = 10 pixels por frame), na segunda ele estaria se movendo a 600 pixels por segundo pois 
-60 FPS*10px = 600 px/s. Ou seja, na segunda máquina ele estaria movendo-se com o dobro da velocidade desejada. Isso acontece por que antigamente o jogo era projetado para rodar em uma máquina cujo a capacidade de FPS seria x e a variável delta t, que representa o tempo transcorrido entre um frame e outro, seria o inverso de x, ou simplesmente o inverso da frequência, o período 1/x. A partir disso a velocidade do objeto era calculada efetuando v(i) = v(i-1)*dt e como dt é um valor fixo dado por 1/x (baseado num FPS de x) ao termos um computador mais potente nós temos que o tempo transcorrido entre um frame e outro é menor e portanto o período aumenta, mas como ele foi pré calculado para uma máquina alvo esse valor não diminui na máquina mais potente e acaba sendo somado mais vezes, resultando em uma velocidade maior que a originalmente desejada. Esse problema pode ser facilmente representado por uma série.\\
- 	Em um PC capaz de rodar a 30FPS: $$\sum_{n=1}^{30} 10px = 300 px/s$$
- 	Em um PC capaz de rodar a 60FPS:$$\sum_{n=1}^{60} 10px = 600 px/s$$
-Sendo assim, a estrutura do Game Loop com timestep fixo seria:
+Sistemas de atualização com timestep fixo são aqueles que estavam diretamente atrelados ao FPS e eram utilizados em jogos antigos \cite{GameEngineArchitecture}. As unidades de medida de tempo eram diretamente atreladas ao FPS tal que se uma máquina é capaz de rodar o jogo a 30 FPS e outra a 60 FPS, na segunda máquina o jogo daria impressão de estar duas vezes mais rápido ou duas vezes mais lento dependendo do valor fixado para o timestep. Isso acontecia por que os jogos eram desenvolvidos para plataformas específicas e, sabendo em qual taxa de FPS o jogo iria rodar, era fácil delimitar um timestep fixo para o jogo.
+
+Entretanto, conforme as máquinas se tornaram mais potentes e o mercado passou a oferecer mais opções de hardware, logo a indústria estava produzindo jogos para um SO com múltiplas possibilidades de hardware. Essa gama de computadores com poderes de processamento distintos gerou o problema descrito acima. Por exemplo, defina-se uma máquina \texttt{MA} capaz de rodar o jogo a 30 FPS e uma máquina \texttt{MB} capaz de rodar a 60 FPS, sendo a máquina \texttt{MA} o alvo do projeto. Se um personagem deveria mover-se 300 pixels por segundo, logo 10 pixels por frame ($300 px/ 30 FPS$), na máquina \texttt{MB} ele estaria se movendo a 600 pixels por segundo pois ao dobrar o \textit{FPS} dobra-se a quantidade de vezes que chamamos o método \texttt{update} e portanto o personagem passa a mover-se 600 pixels por segundo ($60 FPS * 10 px$). Isso acontece por que antigamente o jogo era projetado para rodar numa máquina cuja capacidade de FPS seria $x$ e a variável $\Delta t$, que representa o tempo transcorrido entre um frame e outro, seria o inverso de $x$, ou simplesmente o inverso da frequência, o período $1/x$. A partir disso a posição do objeto era calculada efetuando-se $pos(i) = pos(i-1) + velPerFrame$ e como $\Delta t$ é um valor fixo dado por $1/x$ (baseado num FPS de $x$), tem-se que em um computador mais potente, o tempo transcorrido entre um frame e outro é menor e portanto o período aumenta. Como o valor foi pré calculado para uma máquina alvo ele não diminui na máquina mais potente e acaba sendo somado mais vezes, resultando em uma velocidade maior que a originalmente desejada. Esse problema pode ser facilmente representado por uma série.
+
+Em um PC capaz de rodar a 30FPS: $$\sum_{n=1}^{30} 10px = 300 px/s$$
+Em um PC capaz de rodar a 60FPS: $$\sum_{n=1}^{60} 10px = 600 px/s$$
+Sendo assim, a estrutura do game loop com timestep fixo seria:
 \begin{lstlisting}[caption=Game Loop com timestep fixo]
 public static final float dt = 1f/30f;
 
@@ -348,13 +361,17 @@ while(true) {
 	render();
 }
 \end{lstlisting}
-E pode ser representado pela figura:\\
-//TODO: Insert Ilu 2
+E pode ser representado pela figura:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/ilu2.png}
+	\caption{Execução do game loop com timestep fixo ao longo do tempo}
+\end{figure}
 \subsection{Timestep variável}
-Ao tornar a taxa de atualização dt dinâmica invés de fixa ela passa a ser independente do FPS. Isso é possível medindo quanto tempo se passou entre um frame e outro invés de usar um valor pré-fixado. Dessa forma o Game Loop fica:\\
-\begin{lstlisting}[caption=Game Loop com timestep variável]
-long lastFrame;
-long dt;
+Tornando a taxa de atualização $\Delta t$ dinâmica ao invés de fixa ela passa a ser independente do FPS. Isso é possível medindo quanto tempo se passou entre um frame e outro. Dessa forma o game loop fica:\\
+\begin{lstlisting}[caption=Game loop com timestep variável]
+private long lastFrame;
+private long dt;
 		
 while(true) {
 	long currentFrame = System.nanoTime(); 
@@ -366,23 +383,27 @@ while(true) {
 }
 \end{lstlisting}
 Esse código é representado pela figura:
-\\//TODO: Insert Ilu. 2\\
-Embora tenha-se resolvido o problema anterior de dois computadores com poder de processamento diferente, o sistema ainda não é ideal. A falha está no fato de utilizar-se o delta t anterior ao frame atual. Se o tempo passado entre um frame e outro for muito grande, ou seja, se tivermos um pico de performance, será avançado um tempo muito grande e um passo do personagem que era para ser 10 pixels, passa a ser 10px mais o atraso e este efeito chamado de \textit{stuttering} é percetível ao jogador, pois atrapalha a fluidez da movimentação. Isso também traz consequências na lógica do programa. Um objeto que deveria percorrer 10 pixels por timestep, ao percorrer mais num único timestep poderia, por exemplo, estar ignorando uma colisão que deveria ocorrer entre o ponto atual e o próximo. Isso é melhor demonstrado na figura a seguir:
-\\//TODO: Insert Ilu 4
-\\ Não só isso, mas um timestep variável traz toda uma complicação com a depuração. Ao introduzirmos um fator não determinístico no processo, pode ser que seja impossível reproduzir um cenário de bug para efetuar seu diagnóstico e correção. 
+\\//TODO: Insert Ilu. 3\\
+
+Embora tenha-se resolvido o problema anterior de dois computadores com poder de processamento diferente, o sistema ainda não é ideal. A falha está no fato de utilizar o $\Delta t$ anterior ao frame atual. Se o tempo passado entre um frame e outro for muito grande, ou seja, se tivermos um pico de performance, será avançado um tempo muito grande e um passo do personagem que era para ser $10 pixels$, passa a ser $10px + atraso$ e este efeito chamado de \textit{stuttering} é percetível ao jogador, pois atrapalha a fluidez da movimentação. Isso também traz consequências na lógica do programa. Um objeto que deveria percorrer 10 pixels por timestep, ao percorrer mais em um único timestep poderia, por exemplo, estar ignorando uma colisão que deveria ocorrer entre o ponto atual e o próximo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/ilu4.png}
+	\caption{Objeto ignorando colisão devido um timestep muito grande}
+\end{figure}
+ Não só isso, mas um timestep variável traz toda uma complicação com a depuração. Ao introduzir um fator não determinístico no processo, pode ser que seja impossível reproduzir um cenário de bug para efetuar seu diagnóstico e correção. 
 
 \subsection{Timestep semi-fixo}
-Um Game Loop com timestep semi-fixo tenta trazer o melhor dos dois mundos. Isso é possível usando um dt fixo para cada chamada do método update e, quando o sistema demorar mais que o dt fixado, fazê-lo recuperar-se  chamando o método \texttt{update} quantas vezes necessário.
+Um game loop com timestep semi-fixo tenta trazer o melhor dos dois mundos. Isso é possível usando um $\Delta t$ fixo para cada chamada do método update e, quando o sistema demorar mais que o $\Delta t$ fixado, faz-se a recuperação do mesmo chamando o método \texttt{update} quantas vezes necessário.
 Isso é fácil visualizar quando demonstrado em código:
 \begin{lstlisting}[caption=Game Loop com timestep semi-fixo]
-long lastFrame;
-long accumulator = 0;
-long dt;
+private long lastFrame;
+private long accumulator = 0;
+private long dt;
 public static final long ONE_SECOND_IN_NANOSECONDS = 10^9;
 public static final long STEPS_PER_SECOND = 30;
 public static final long FIXED_DT = ONE_SECOND_IN_NANO/STEPS_PER_SECOND;
-		
-		
+			
 while(true) {
 	long currentFrame = System.nanoTime(); 
 	dt = currentFrame - lastFrame;
@@ -397,19 +418,19 @@ while(true) {
 	render();
 }
 \end{lstlisting}
-É importante ter cuidado com o valor escolhido para o \texttt{FIXED_DT}(timestep). Se ele for muito pequeno pode ser que tome muito tempo de processamento e nunca recupere o atraso. Se for muito maior que a frame rate pode gerar o efeito de sttutering \cite{GameProgrammingPatterns}.
+É importante ter cuidado com o valor escolhido para o \texttt{FIXED_DT}(timestep). Se o timestep for menor que o tempo que se leva para processar o método \texttt{update} o sistema nunca irá recuperar seu atraso, tendo um acumulador que sempre cresce e nunca fica próximo de zerar \cite{GameProgrammingPatterns}.
 O sistema de timestep semi-fixo é demonstrado pela ilustração:
-\\//TODO: Insert Ilu.4
+\\//TODO: Insert Ilu. 6
  
 \section{Sistema de renderização}
-É neste sistema que todos os objetos visíveis na tela são desenhados. O sistema responsável é executado diversas vezes e em rápida sucessão durante um segundo, criando uma ilusão de movimento. Esse processo se inicia no processador e termina na placa gráfica acontecendo quantas vezes a máquina conseguir ou quantas vezes o usuário desejar configurar. Os valores mais comuns são atrelados à frequência do monitor que, atualmente, variam de 30 Hz até 144 Hz e para todos os efeitos são o equivalente ao FPS \cite{GameEngineArchitecture}.
+É neste sistema que todos os objetos visíveis na tela são desenhados. Esse sistema é executado diversas vezes e em rápida sucessão durante um segundo, criando uma ilusão de movimento. Esse processo se inicia no processador e termina na placa gráfica acontecendo quantas vezes a máquina conseguir ou quantas vezes o usuário desejar configurar. Os valores mais comuns são atrelados à frequência do monitor que, atualmente, variam de 30 Hz até 144 Hz e para todos os efeitos são o equivalente ao FPS \cite{GameEngineArchitecture}.
 
 \subsection{Interpolação Linear} 
-Com o timestep definido ainda é necessário mais um procedimento para que o sistema renderize objetos em movimento de forma suave. O efeito de \textit{stuttering} pode ser causado tanto pelo aspecto lógico, através dos picos de performance quanto pelo simples fato de que não se possui total controle sobre o SO. Não é possível garantir uma taxa de atualização e renderização intercalada e perfeita. Haverá momentos que depois de um \texttt{update} o método \texttt{render} será chamado várias vezes e sem nenhum tratamento este efeito também causa \textit{stuttering}. Ao chamarmos o método \texttt{render} consecutivamente e não atualizarmos a posição do objeto em cada chamada para o usuário a impressão é de um sistema engasgado e um movimento não fluído.
-Para resolver este último problema é necessário realizar uma interpolação linear entre a posição anterior e a atual do objeto, tornando o movimento de objetos suave. Esse problema pode ser visualizado nas figuras a seguir:
-//TODO: Insert Ilu 5
-//TODO: Insert Ilu 6
-E o código final do Game Loop com a interpolação linear fica como se segue:
+Com o timestep definido ainda é necessário mais um procedimento para que o sistema renderize objetos em movimento de forma suave. O efeito de \textit{stuttering} pode ser causado tanto pelo aspecto lógico, através dos picos de performance, quanto pelo simples fato de que não se possui controle total sobre o SO. Não é possível garantir uma taxa de atualização e renderização intercalada e perfeita. Haverá momentos que depois de um único \texttt{update} o método \texttt{render} será chamado várias vezes e, sem nenhum tratamento, este efeito também causa \textit{stuttering}. Ao chamarmos o método \texttt{render} consecutivamente e não atualizarmos a posição do objeto em cada chamada, para o usuário a impressão é de um sistema engasgado com um movimento não fluído.
+Para resolver este último problema é necessário realizar uma interpolação linear entre a posição anterior e atual do objeto, tornando seu movimento suave. Esse efeito pode ser visualizado nas figuras a seguir onde um objeto move-se 10 pixels por segundo. Na primeira figura a função \texttt{render} é chamada sem nenhum tratamento e portanto renderiza o objeto no mesmo lugar até que sua posição seja atualizada no próximo \texttt{update}. Já na segunda figura, é renderizado a interpolação da posição desse objeto, tornando seu movimento muito mais suave para o usuário.
+\\//TODO: Insert Ilu 7
+\\//TODO: Insert Ilu 5\\
+E o código final do game loop com interpolação linear fica como se segue:
 \begin{lstlisting}[caption=Game Loop com timestep semi-fixo e interpolação linear]
 		long lastFrame;
 		long accumulator = 0;
@@ -435,10 +456,123 @@ E o código final do Game Loop com a interpolação linear fica como se segue:
 			render(interpolationFactor);
 		}
 \end{lstlisting}
-Dentro da função \texttt{render} o fator de interpolação é utilizado na seguinte fórmula para obter a posição aonde o objeto deve ser renderizado:\\
-renderPosition = currentPosition * interpolationFactor + previousPosition * (1 - interpolationFactor)
-\section{OpenGL}
-OpenGL é a API responsável pela comunicação com a GPU e portanto a renderização dos objetos. Cada Engine deve utilizar uma API diferente dependendo da plataforma na qual o produto final será disponibilizado. Por exemplo, para um sistema mobile existe a API OpenGL ES, para windows temos a OpenGL e DirectX entre outras.
+Dentro da função \texttt{render} o fator de interpolação é utilizado na seguinte fórmula para obter a posição onde o objeto deve ser renderizado:
+
+\begin{quote}
+$renderPosition$ = $currentPosition * interpolationFactor$ + $previousPosition * (1 - interpolationFactor)$
+\end{quote}
+
+\section{API gráfica OpenGL}
+OpenGL é a API encarregada pela comunicação com a GPU. Através dela são realizadas todas as chamadas de função responsáveis por desenhar objetos na tela. Cada Engine deve utilizar uma API dependendo da plataforma na qual o produto final será disponibilizado. Por exemplo, para um sistema mobile existe a API OpenGL ES, para windows tem-se a OpenGL, DirectX etc. De certa forma, as APIs gráficas por si só são aquilo que na essência compõem o sistema de renderização.  
+\subsection{Core-profile e Immediate mode}
+Immediate mode (legacy) é o modo antigo de se operar com OpenGL. Hoje ele é depreciado e substituído pelo modo Core-profile. No modo antigo as funções eram mais fáceis de usar, com muitas da funcionalidades já abstraídas pela API. Entretanto, por serem abstraídas elas forneciam uma menor flexibilidade de controle sobre como o OpenGL  operava e eram também ineficientes\cite{LearnOpenGL}. Com o passar do tempo e uma demanda dos desenvolvedores por maior flexibilidade a API foi depreciada e substituída pelo modo Core-profile, nele tem-se muito mais controle sobre como o OpenGL opera. Entretanto, isso vem ao custo de uma maior curva de aprendizagem e complexidade de implementação.
+\subsection{State Machine}
+O OpenGL funciona como uma enorme máquina de estados, possuindo uma enorme coleção de variáveis que definem como  operar no estado vigente. Chama-se as funções para configurar o estado atual, passando buffers e outras informações para então renderizar o estado atual.
+
+\subsection{Hello window}
+A primeira peça necessária para usar o OpenGL é criar um contexto e uma janela onde renderizar. O processo de criação da janela é especifico de cada SO e faz-se necessário uso de outra API para abstrair esse passo. Neste documento será utilizado a biblioteca \texttt{GLFW}. O código a seguir demonstra esse processo e é explicado a seguir:
+\begin{lstlisting}[caption=Inicialização da janela e contexto OpenGL]
+public void init() {
+	if (!glfwInit()) 
+		System.err.println("Could not initialize GLFW.");
+
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+
+	id = glfwCreateWindow(width, height, name,  NULL,  NULL);
+	glfwMakeContextCurrent(id);
+
+	glfwSetWindowPos(id, 2000, 60);
+	glfwShowWindow(id);
+	GL.createCapabilities();
+	glfwSwapInterval(1); //VSYNC
+
+	glViewport(0,0, width, height);
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+\end{lstlisting}
+Primeiramente inicializa-se o GLFW chamando \texttt{glfwInit}. Em seguida usa-se a função \texttt{glfwWindowHint} para adicionar atributos a janela, sendo o primeiro argumento o nome do atributo e o segundo argumento o valor que se deseja atribuir. Aqui foram inseridos os atributos \texttt{GLFW_CONTEXT_VERSION_MAJOR} e \texttt{GLFW_CONTEXT_VERSION_MINOR} para indicar qual a versão ideal e mínima para rodar a aplicação. No caso essa versão é a 3.3. O atributo \texttt{GLFW_OPENGL_PROFILE} altera entre o modo core profile e immediate mode (Legacy). Cria-se então a janela com o método \texttt{glfwCreateWindow} e usa-se o id retornado para torná-lo o contexto vigente com \texttt{glfwMakeContextCurrent}. A função \texttt{glfwShowWindow} é chamada para tornar essa janela visível ao usuário. Para utilizar o OpenGL e criar seu contexto é necessário chamar \texttt{GL.createCapabilities}. A partir deste ponto o OpenGL pode ser utilizado normalmente.
+
+\subsection{OpenGL pipeline}
+A fim de poder desenhar objetos na janela é necessário abordar os \textit{buffer objects} e \textit{pipeline} presentes no OpenGL. Os \textit{buffer objects} são estruturas responsáveis por transmitir e receber dados da GPU. Existem 9 tipos de objetos e estes são divididos em duas categorias:
+\\ \textbf{Regular objects}
+\\ Objetos dessa categoria contem dados.
+\begin{itemize}
+\item Buffer object
+\item RenderBuffer object
+\item Texture object
+\item Query object
+\item Sampler object
+\end{itemize}
+\textbf{Container objects}
+\\ Objetos dessa categoria servem apenas de containers para transportar os elementos da lista anterior. (\textit{regular objects}). 
+\begin{itemize}
+\item Framebuffer object
+\item Vertex Array object
+\item Transform Feedback object
+\item Program pipeline object
+\end{itemize}
+
+Neste primeiro momento será abordado o \textit{Vertex Buffer Object} (VBO) e \textit{Vertex Array Object} (VAO). A fim de desenhar um objeto na tela faz-se necessário enviar a GPU os vértices que o compõem. O \textit{pipeline} recebe como entrada uma série de vértices 3D, os processa e transforma em pixels 2D na tela \cite{LearnOpenGL}. Cada etapa do \textit{pipeline} recebe como entrada a saída da etapa anterior.
+
+As etapas customizáveis do \textit{pipeline} são processadas por pequenos programas chamados \textit{shaders}. Esses programas são escritos em GLSL pelo desenvolvedor da aplicação e ficam alojados na GPU, sendo altamente paralelizáveis e especializados. A seguir tem-se uma representação simplificada do processo que ocorre no pipeline.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/openglpipeline.png}
+	\caption{Etapas do pipeline  \label{fig:pipeline}}
+\end{figure}
+
+Na etapa I o \textit{vertex shader} é responsável, principalmente, por receber um único vértice e processar sua coordenada cartesiana de um sistema para outro. Por exemplo, as coordenadas finais desse objeto vão mudar conforme a câmera se movimento no espaço. É também necessário converter a posição local do objeto para a sua posição global no ambiente. Esses e outros processos serão melhor abordados no capítulo sobre Sistemas de Coordenadas.
+
+Na etapa do \textit{shape assembly} o OpenGL monta todos os vértices recebidos como entrada na primitiva selecionada para renderização. São algumas delas: \textit{GL_POINTS}, \textit{GL_LINES} e \textit{GL_TRIANGLES}.
+
+A etapa do \textit{geometry shader} recebe como entrada a primitiva de saída do \textit{shape assembly}. A partir desses vértices o \textit{geometry shader} é capaz de gerar novos vértices e formar novas primitivas. No exemplo da figura \ref{fig:pipeline} ele recebe um triângulo e cria um novo vértice no centro, resultando em 3 sub triângulos.
+
+O \textit{tesselation shader} é altamente especializado em subdividir uma primitiva em outras muito menores. Essa função é útil para, por exemplo, detalhar objetos mais próximos da tela e generalizar objetos mais distantes reduzindo sua quantidade de vértices.
+
+A etapa de \textit{rasterization} processa a saída do \textit{tesselation shader} e converte todas essas informações em coordenadas 2D na tela ou, simplesmente, em pixels na tela. Esses pixels são então repassados como fragmentos para o \textit{fragment shader}.
+
+Na penúltima etapa do pipeline, o \textit{fragment shader} processa todos os fragmentos para dar aos pixels sua cor final. É neste estágio que todos os efeitos visuais são aplicados como por exemplo a iluminação.
+
+Por fim, no último estágio é aplicado o \textit{blending} e  outros testes. \textit{Blending} nada mais é do que calcular o quanto a transparência de um objeto afeta outro. No exemplo da figura \ref{fig:pipeline} isso é representado pelos dois triângulos menores que afetam a cor final do triângulo maior aonde estes se sobrepõem. Neste estágio também são realizados os testes de \textit{depth} e \textit{stencil}.
+
+\subsection{Vertex Array Object e Vertex Buffer Object}
+Todo objeto no OpenGL é manipulado através de seu ID. Portanto, faz-se necessário gerar o ID do VAO e VBO chamando as funções \texttt{glGenVertexArrays()} e \texttt{glGenBuffers()}. Após gerados os IDs vincula-se esse \textit{data object} como o vigente através da função \texttt{glBindBuffer(type , id)} e insere-se os dados nele através da função \texttt{glBufferData(type, data, draw_type)}. Para o \textit{object container} o processo é similar. Vincula-se o VAO com \textit{glBindVertexArray()} e habilita-se a localização do atributo do vértice no \textit{vertex shader} através da função \textit{glEnableVertexAttribArray()}. Por fim, configura-se como cada vértice deve ser interpretado, nesta situação como um bloco de 4 floats, sendo 2 deles as posições x e y do objeto e os dois últimos a posição x e y da textura que compõem esse objeto. Essa configuração é feita pela função \texttt{glVertexAttribPointer()}.
+
+\begin{lstlisting}[caption=Inicialização do VBO e VAO]
+private void init() {
+	float vertices [] = {
+			//Pos	//Texture
+			0,	1,	0,	1f,
+			1,	0,	1f,	0,
+			0,	0,	0,	0,
+			
+			0,	1,	0,	1f,
+			1,	1,	1f,	1f,
+			1,	0,	1f,	0
+	};
+	
+	int quadVAO = glGenVertexArrays();
+	int VBO = glGenBuffers();
+	
+	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBufferData(GL_ARRAY_BUFFER, BufferUtilities.createFloatBuffer(getVertices(3)), GL_STATIC_DRAW); 
+	
+	glBindVertexArray(quadVAO);
+	glEnableVertexAttribArray(0);
+	glVertexAttribPointer(0 , 4, GL_FLOAT, false, Float.BYTES * 4, 0);
+	
+	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindVertexArray(0);
+}
+\end{lstlisting}
+
+\subsection{OpenGL Shading Language (GLSL)}
 
 \chapter{Desenvolvimento do trabalho}
 \label{sec:desenv}

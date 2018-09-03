@@ -1,8 +1,12 @@
 \select@language {brazil}
 \contentsline {figure}{\numberline {1}{\ignorespaces Tabela com uma estimativa de tempo para cada passo do desenvolvimento}}{12}{figure.1.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Componentes de uma Game Engine //TODO: Como referenciar imagens externas}}{19}{figure.4.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Jogador ca\IeC {\c c}ando um coelho com arco e flecha}}{26}{figure.5.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Jogador pronto para atacar alvo que ficou preso na armadilha de ch\IeC {\~a}o}}{27}{figure.5.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Jogador cantando em um vilarejo}}{28}{figure.5.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Jogador sendo prestigiado ap\IeC {\'o}s t\IeC {\'e}rmino da m\IeC {\'u}sica}}{28}{figure.5.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Esbo\IeC {\c c}o do menu para compor m\IeC {\'u}sicas}}{29}{figure.5.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Componentes de uma Game Engine. Fonte:~\cite {GameEngineArchitecture} }}{19}{figure.4.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop b\IeC {\'a}sico ao longo do tempo}}{20}{figure.4.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep fixo ao longo do tempo}}{22}{figure.4.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Objeto ignorando colis\IeC {\~a}o devido um timestep muito grande}}{24}{figure.4.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Etapas do pipeline }}{29}{figure.4.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Jogador ca\IeC {\c c}ando um coelho com arco e flecha}}{32}{figure.5.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Jogador pronto para atacar alvo que ficou preso na armadilha de ch\IeC {\~a}o}}{33}{figure.5.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Jogador cantando em um vilarejo}}{34}{figure.5.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Jogador sendo prestigiado ap\IeC {\'o}s t\IeC {\'e}rmino da m\IeC {\'u}sica}}{34}{figure.5.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Esbo\IeC {\c c}o do menu para compor m\IeC {\'u}sicas}}{35}{figure.5.11}

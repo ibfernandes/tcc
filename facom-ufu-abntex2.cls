@@ -126,8 +126,7 @@
 \usepackage{xcolor}
 \definecolor{verde}{rgb}{0.25,0.5,0.35}
 \definecolor{jpurple}{rgb}{0.5,0,0.35}
-\definecolor{branco}{rgb}{1,1,1}
-
+\definecolor{white}{rgb}{1,1,1}
 
 \usepackage{lipsum}				% para geração de dummy text
 \usepackage{blindtext}
@@ -151,14 +150,14 @@
   numbers=left,
   numberstyle=\tiny,
   breaklines=true, 
-  backgroundcolor=\color{branco}, 
+  backgroundcolor=\color{white}, 
   breakautoindent=true, 
   captionpos=b,
   xleftmargin=0pt,
   tabsize=4
 }
-
-
+\renewcommand{\lstlistingname}{Algoritmo}
+\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % ---

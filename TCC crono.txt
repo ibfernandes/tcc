@@ -17,13 +17,14 @@ Capítulos do TCC
 			Timestep semi-fixo ✔
 		Estrutura do renderizador ✔
 			Interpolação linear ✔
-		OpenGL
+		OpenGL ✔
+			Core-profile e immediate mode ✔
+			State machine ✔
+			Hello window ✔
+			OpenGL pipeline ✔
+			Vertex buffer object e Vertex Array Object
 			GLSL
-			Shaders
-				Fragment Shader
-				Vertex Shader
-			VBO
-			VAO
+			Vertex e Fragment shaders
 			Framebuffers
 		Gráficos
 			Z-Ordering
@@ -87,6 +88,7 @@ Capítulos do TCC
 		
 	Testes
 		Debug
+		Rendering call per object vs. Batching
 		Demonstrar o "por trás" de cada processo
 		
 	Experimentos e Resultados
