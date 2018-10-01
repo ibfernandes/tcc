@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  3 SEP 2018 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  30 SEP 2018 20:19
 entering extended mode
 **./tcc.tex
 (tcc.tex
@@ -1293,18 +1293,26 @@ l.56 \end{folhadeaprovacao}
 
 ] [3
 
-] (tcc.lof) [4
+] (tcc.lof
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) [4
 
 ] (tcc.lot) [5
 
-] (tcc.lol)
-[6
+]
+(tcc.lol) [6
 
 
 ] [7
 
 
-] (tcc.toc [8
+] (tcc.toc
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 27.
+ [8
 
 ]) [9] [10
 
@@ -1318,7 +1326,7 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 181.
-<imagens/cronograma.png, id=208, 741.77126pt x 915.42pt>
+<imagens/cronograma.png, id=278, 741.77126pt x 915.42pt>
 File: imagens/cronograma.png Graphic file (type png)
 <use imagens/cronograma.png>
 Package pdftex.def Info: imagens/cronograma.png  used on input line 217. on inp
@@ -1362,7 +1370,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 [17
 
 ]
-<imagens/engine_layers.png, id=269, 1277.77374pt x 1710.39pt>
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.88> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 313.
+<imagens/engine_layers.png, id=339, 1277.77374pt x 1710.39pt>
 File: imagens/engine_layers.png Graphic file (type png)
 <use imagens/engine_layers.png>
 Package pdftex.def Info: imagens/engine_layers.png  used on input line 320. on 
@@ -1372,204 +1382,392 @@ Package pdftex.def Info: Requested size: 455.0pt x 609.05875pt on input line 32
  [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 326--328
-
- []
-
-[19pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
-}) has been already used, duplicate ignored
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 325.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.328 
+l.327 
        <./imagens/engine_layers.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 329.
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 329.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+nput line 330.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 330.
-<imagens/ilu1.png, id=285, 196.8153pt x 71.7882pt>
-File: imagens/ilu1.png Graphic file (type png)
-<use imagens/ilu1.png>
-Package pdftex.def Info: imagens/ilu1.png  used on input line 338. on input lin
-e 338.
-Package pdftex.def Info: Requested size: 455.0pt x 165.96263pt on input line 33
-8.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 331.
+<imagens/ilu1_small.png, id=358, 104.91196pt x 41.4348pt>
+File: imagens/ilu1_small.png Graphic file (type png)
+<use imagens/ilu1_small.png>
+Package pdftex.def Info: imagens/ilu1_small.png  used on input line 343. on inp
+ut line 343.
+Package pdftex.def Info: Requested size: 455.0pt x 179.71063pt on input line 34
+3.
  [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.347 
-       <./imagens/ilu1.png>] [21]
-<imagens/ilu2.png, id=306, 188.1429pt x 83.1105pt>
-File: imagens/ilu2.png Graphic file (type png)
-<use imagens/ilu2.png>
-Package pdftex.def Info: imagens/ilu2.png  used on input line 367. on input lin
-e 367.
-Package pdftex.def Info: Requested size: 455.0pt x 201.01004pt on input line 36
+l.352 
+       <./imagens/ilu1_small.png (PNG copy)>] [21]
+<imagens/ilu2_small.png, id=379, 94.31235pt x 46.0119pt>
+File: imagens/ilu2_small.png Graphic file (type png)
+<use imagens/ilu2_small.png>
+Package pdftex.def Info: imagens/ilu2_small.png  used on input line 377. on inp
+ut line 377.
+Package pdftex.def Info: Requested size: 455.0pt x 222.05162pt on input line 37
+7.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.391 	lastFrame 
+                 = currentFrame; <./imagens/ilu2_small.png (PNG copy)>]
+<imagens/ilu3_small.png, id=394, 96.72134pt x 44.8074pt>
+File: imagens/ilu3_small.png Graphic file (type png)
+<use imagens/ilu3_small.png>
+Package pdftex.def Info: imagens/ilu3_small.png  used on input line 400. on inp
+ut line 400.
+Package pdftex.def Info: Requested size: 455.0pt x 210.78961pt on input line 40
+0.
+<imagens/ilu4_small.png, id=395, 99.9735pt x 43.48245pt>
+File: imagens/ilu4_small.png Graphic file (type png)
+<use imagens/ilu4_small.png>
+Package pdftex.def Info: imagens/ilu4_small.png  used on input line 407. on inp
+ut line 407.
+Package pdftex.def Info: Requested size: 455.0pt x 197.90643pt on input line 40
 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
-
- []
-
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
+[23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.376 while(
-            true) { <./imagens/ilu2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
-
- []
-
-<imagens/ilu4.png, id=320, 206.2104pt x 98.0463pt>
-File: imagens/ilu4.png Graphic file (type png)
-<use imagens/ilu4.png>
-Package pdftex.def Info: imagens/ilu4.png  used on input line 391. on input lin
-e 391.
-Package pdftex.def Info: Requested size: 455.0pt x 216.36073pt on input line 39
-1.
-[23] [24pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.4.5}) has been already used, duplicate ignored
+l.410  N
+        √£o s√≥ isso, mas um timestep vari√°vel traz toda uma complica√ß√£o ...
+ <./imagens/ilu3_small.png (PNG copy)>] [24pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.4.6}) has been already used, duplicate ign
+ored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.415     	accumulator 
-                       -= FIXED_DT; <./imagens/ilu4.png>] [25]
-Overfull \hbox (5.0023pt too wide) in paragraph at lines 462--463
+l.433  	 }
+           <./imagens/ilu4_small.png (PNG copy)>]
+<imagens/ilu6_small.png, id=429, 97.0827pt x 44.68695pt>
+File: imagens/ilu6_small.png Graphic file (type png)
+<use imagens/ilu6_small.png>
+Package pdftex.def Info: imagens/ilu6_small.png  used on input line 443. on inp
+ut line 443.
+Package pdftex.def Info: Requested size: 455.0pt x 209.47836pt on input line 44
+3.
+<imagens/ilu8_small.png, id=430, 85.7604pt x 50.589pt>
+File: imagens/ilu8_small.png Graphic file (type png)
+<use imagens/ilu8_small.png>
+Package pdftex.def Info: imagens/ilu8_small.png  used on input line 449. on inp
+ut line 449.
+Package pdftex.def Info: Requested size: 455.0pt x 268.43068pt on input line 44
+9.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.452 
+       <./imagens/ilu6_small.png (PNG copy)>]
+<imagens/ilu7_small.png, id=445, 88.28986pt x 49.1436pt>
+File: imagens/ilu7_small.png Graphic file (type png)
+<use imagens/ilu7_small.png>
+Package pdftex.def Info: imagens/ilu7_small.png  used on input line 461. on inp
+ut line 461.
+Package pdftex.def Info: Requested size: 455.0pt x 253.28424pt on input line 46
+1.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.464 \end{figure}
+                   <./imagens/ilu8_small.png (PNG copy)>]
+<imagens/ilu5_small.png, id=450, 98.40765pt x 44.0847pt>
+File: imagens/ilu5_small.png Graphic file (type png)
+<use imagens/ilu5_small.png>
+Package pdftex.def Info: imagens/ilu5_small.png  used on input line 467. on inp
+ut line 467.
+Package pdftex.def Info: Requested size: 455.0pt x 203.83333pt on input line 46
+7.
+ [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.474 ...mestep semi-fixo e interpola√ß√£o linear]
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{figure.4.10}) has been already used, dupli
+cate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.474 ...mestep semi-fixo e interpola√ß√£o linear]
+                                                   <./imagens/ilu7_small.png (P
+NG copy)> <./imagens/ilu5_small.png (PNG copy)>]
+Overfull \hbox (5.0023pt too wide) in paragraph at lines 502--503
 []$\OML/lmm/m/it/12 renderPosition$ \T1/lmr/m/n/12 = $\OML/lmm/m/it/12 currentP
 osition \OMS/lmsy/m/n/12  \OML/lmm/m/it/12 interpolationFactor$ \T1/lmr/m/n/12
  + $\OML/lmm/m/it/12 previousPosition \OMS/lmsy/m/n/12 
  []
 
-[26]
-Overfull \hbox (0.53008pt too wide) in paragraph at lines 470--471
-[]\T1/lmr/m/n/12 O OpenGL fun-ci-ona como uma enorme m·-quina de es-ta-dos, pos
--suindo uma enorme
+[28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 555--557
+\T1/lmtt/m/n/12 share) \T1/lmr/m/n/12 e usa-se o id re-tor-nado para torn·-lo c
+on-texto vi-gente com
  []
 
-[27] [28]
-<imagens/openglpipeline.png, id=431, 1254.6875pt x 220.825pt>
+[30]
+<imagens/openglpipeline.png, id=537, 1254.6875pt x 220.825pt>
 File: imagens/openglpipeline.png Graphic file (type png)
 <use imagens/openglpipeline.png>
-Package pdftex.def Info: imagens/openglpipeline.png  used on input line 526. on
- input line 526.
-Package pdftex.def Info: Requested size: 455.0pt x 80.07985pt on input line 526
+Package pdftex.def Info: imagens/openglpipeline.png  used on input line 585. on
+ input line 585.
+Package pdftex.def Info: Requested size: 455.0pt x 80.07985pt on input line 585
 .
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.533 
-       <./imagens/openglpipeline.png>]
-Overfull \hbox (19.45633pt too wide) in paragraph at lines 545--546
+ [31]
+Underfull \hbox (badness 1442) in paragraph at lines 604--605
 \T1/lmr/m/n/12 rio ge-rar o ID do VAO e VBO cha-mando as fun-Áıes \T1/lmtt/m/n/
-12 glGenVertexArrays() \T1/lmr/m/n/12 e \T1/lmtt/m/n/12 glGenBuffers()\T1/lmr/m
-/n/12 .
+12 glGenVertexArrays() \T1/lmr/m/n/12 e
  []
 
-
-Overfull \hbox (53.72505pt too wide) in paragraph at lines 545--546
-\T1/lmr/m/n/12 ApÛs ge-ra-dos os IDs vincula-se esse \T1/lmr/m/it/12 data ob-je
-ct \T1/lmr/m/n/12 como o vi-gente atra-vÈs da fun-Á„o \T1/lmtt/m/n/12 glBindBuf
-fer(type
- []
-
-
-Overfull \hbox (9.70036pt too wide) in paragraph at lines 545--546
-\T1/lmtt/m/n/12 , id) \T1/lmr/m/n/12 e insere-se os da-dos nele atra-vÈs da fun
--Á„o \T1/lmtt/m/n/12 glBufferData(type, data, draw_type)\T1/lmr/m/n/12 .
- []
-
-[30] [31]
-<imagens/mecanica_caca.png, id=472, 602.25pt x 400.49625pt>
-File: imagens/mecanica_caca.png Graphic file (type png)
-<use imagens/mecanica_caca.png>
-Package pdftex.def Info: imagens/mecanica_caca.png  used on input line 583. on 
-input line 583.
-Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 583.
-<imagens/mecanica_armadilha.png, id=473, 602.25pt x 400.49625pt>
-File: imagens/mecanica_armadilha.png Graphic file (type png)
-<use imagens/mecanica_armadilha.png>
-Package pdftex.def Info: imagens/mecanica_armadilha.png  used on input line 598
-. on input line 598.
-Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 598.
- [32
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.7}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.601 O
-        sistema de armadilhas √© dado pelo seguinte fluxo de a√ß√µes: <./imagen
-s/mecanica_caca.png>]
-<imagens/mecanica_cantar.png, id=482, 602.25pt x 400.49625pt>
-File: imagens/mecanica_cantar.png Graphic file (type png)
-<use imagens/mecanica_cantar.png>
-Package pdftex.def Info: imagens/mecanica_cantar.png  used on input line 619. o
-n input line 619.
-Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 619.
-<imagens/mecanica_cantar2.png, id=483, 602.25pt x 400.49625pt>
-File: imagens/mecanica_cantar2.png Graphic file (type png)
-<use imagens/mecanica_cantar2.png>
-Package pdftex.def Info: imagens/mecanica_cantar2.png  used on input line 624. 
-on input line 624.
-Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 624.
- [33pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-8}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.626 \end{figure}
-                   <./imagens/mecanica_armadilha.png>]
-<imagens/mecanica_compormusica.png, id=490, 602.25pt x 400.49625pt>
-File: imagens/mecanica_compormusica.png Graphic file (type png)
-<use imagens/mecanica_compormusica.png>
-Package pdftex.def Info: imagens/mecanica_compormusica.png  used on input line 
-634. on input line 634.
-Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 634.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-9}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.637 A
-       SD.pdfTeX warning (ext4): destination with the same identifier (name{fig
-ure.5.10}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.637 A
-       SD. <./imagens/mecanica_cantar.png> <./imagens/mecanica_cantar2.png>]
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.659 \chapter
-              {Experimentos e resultados} <./imagens/mecanica_compormusica.png>
-] [36] [37
+l.605 
+       <./imagens/openglpipeline.png>]
+<imagens/tringulosCompondoQuad.png, id=551, 24.3309pt x 19.87425pt>
+File: imagens/tringulosCompondoQuad.png Graphic file (type png)
+<use imagens/tringulosCompondoQuad.png>
+Package pdftex.def Info: imagens/tringulosCompondoQuad.png  used on input line 
+637. on input line 637.
+Package pdftex.def Info: Requested size: 281.99597pt x 230.51677pt on input lin
+e 637.
+ [33] [34pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.654 
+       <./imagens/tringulosCompondoQuad.png>] [35]
+<imagens/helloShader.png, id=615, 1302.8675pt x 763.85374pt>
+File: imagens/helloShader.png Graphic file (type png)
+<use imagens/helloShader.png>
+Package pdftex.def Info: imagens/helloShader.png  used on input line 693. on in
+put line 693.
+Package pdftex.def Info: Requested size: 455.0pt x 266.75838pt on input line 69
+3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--699
+\T1/lmtt/m/n/12 GL_VERTEX_SHADER\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 GL_TESS_CONTRO
+L_SHADER\T1/lmr/m/n/12 ,
+ []
+
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.702 	glShaderSource(
+                      vertexShader, vertexSource); <./imagens/helloShader.png>]
+
+Overfull \hbox (37.88474pt too wide) in paragraph at lines 733--735
+\T1/lmtt/m/n/12 variableName), value)\T1/lmr/m/n/12 , para um ve-tor de 3 flo-a
+ts usa-se \T1/lmtt/m/n/12 glUniform3f(glGetUniformLocation
+ []
+
+
+Overfull \hbox (124.96037pt too wide) in paragraph at lines 733--735
+\T1/lmtt/m/n/12 (programID,variableName), x, y, z)\T1/lmr/m/n/12 , para uma ma-
+triz 4 por 4 \T1/lmtt/m/n/12 glUniformMatrix4fv(glGetUniformLocation
+ []
+
+
+Overfull \hbox (2.12067pt too wide) in paragraph at lines 733--735
+\T1/lmtt/m/n/12 (programID,variableName), false, BufferUtilities.createFloatBuf
+fer(m)) \T1/lmr/m/n/12 e as-
+ []
+
+[37] [38] [39] [40] [41] [42]
+<imagens/sistema_rgba_argb.png, id=844, 246.9225pt x 179.67125pt>
+File: imagens/sistema_rgba_argb.png Graphic file (type png)
+<use imagens/sistema_rgba_argb.png>
+Package pdftex.def Info: imagens/sistema_rgba_argb.png  used on input line 930.
+ on input line 930.
+Package pdftex.def Info: Requested size: 234.99664pt x 170.99101pt on input lin
+e 930.
+<imagens/extracting_rgb_channel.png, id=845, 348.30125pt x 135.50626pt>
+File: imagens/extracting_rgb_channel.png Graphic file (type png)
+<use imagens/extracting_rgb_channel.png>
+Package pdftex.def Info: imagens/extracting_rgb_channel.png  used on input line
+ 938. on input line 938.
+Package pdftex.def Info: Requested size: 258.4963pt x 100.57285pt on input line
+ 938.
+ [43pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.941 
+       <./imagens/sistema_rgba_argb.png>]
+<imagens/wrap_modes.png, id=858, 1405.25pt x 401.5pt>
+File: imagens/wrap_modes.png Graphic file (type png)
+<use imagens/wrap_modes.png>
+Package pdftex.def Info: imagens/wrap_modes.png  used on input line 945. on inp
+ut line 945.
+Package pdftex.def Info: Requested size: 455.0pt x 130.00195pt on input line 94
+5.
+
+Overfull \hbox (26.11693pt too wide) in paragraph at lines 942--947
+\T1/lmr/m/n/12 tes de qual-quer ope-ra-Á„o na tex-tura vincula-se ela como cor-
+rente usando \T1/lmtt/m/n/12 glBindTexture(type,
+ []
+
+
+Overfull \hbox (8.40543pt too wide) in paragraph at lines 948--949
+[]\T1/lmr/m/n/12 Esses mo-dos s„o con-fi-gu-ra-dos atra-vÈs da fun-Á„o \T1/lmtt
+/m/n/12 glTexParameteri(GL_TEXTURE_2D,
+ []
+
+<imagens/gl_filters.png, id=859, 206.7725pt x 48.18pt>
+File: imagens/gl_filters.png Graphic file (type png)
+<use imagens/gl_filters.png>
+Package pdftex.def Info: imagens/gl_filters.png  used on input line 956. on inp
+ut line 956.
+Package pdftex.def Info: Requested size: 422.99396pt x 98.57182pt on input line
+ 956.
+[44pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.959 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.959 
+       <./imagens/extracting_rgb_channel.png> <./imagens/wrap_modes.png>]
+Overfull \hbox (29.64638pt too wide) in paragraph at lines 962--963
+\T1/lmr/m/n/12 da-dos da ima-gem pro-pri-a-mente dita para o OpenGL. Isso È fei
+to na fun-Á„o \T1/lmtt/m/n/12 glTexImage2D(type,
+ []
+
+
+Overfull \hbox (69.87526pt too wide) in paragraph at lines 962--963
+\T1/lmtt/m/n/12 mipmap_level, internal_format, width, height, border, color_for
+mat, type, bytebuffer) 
+ []
+
+<imagens/spritesheet.png, id=864, 159.59625pt x 94.3525pt>
+File: imagens/spritesheet.png Graphic file (type png)
+<use imagens/spritesheet.png>
+Package pdftex.def Info: imagens/spritesheet.png  used on input line 968. on in
+put line 968.
+Package pdftex.def Info: Requested size: 187.99731pt x 111.14348pt on input lin
+e 968.
+[45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.974 layout 
+             (location = 0) in vec4 vertex; //xy positionpdfTeX warning (ext4):
+ destination with the same identifier (name{figure.4.18}) has been already used
+, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.974 layout 
+             (location = 0) in vec4 vertex; //xy position <./imagens/gl_filters
+.png> <./imagens/spritesheet.png>] [46]
+<imagens/mecanica_caca.png, id=898, 602.25pt x 400.49625pt>
+File: imagens/mecanica_caca.png Graphic file (type png)
+<use imagens/mecanica_caca.png>
+Package pdftex.def Info: imagens/mecanica_caca.png  used on input line 1011. on
+ input line 1011.
+Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
+e 1011.
+<imagens/mecanica_armadilha.png, id=899, 602.25pt x 400.49625pt>
+File: imagens/mecanica_armadilha.png Graphic file (type png)
+<use imagens/mecanica_armadilha.png>
+Package pdftex.def Info: imagens/mecanica_armadilha.png  used on input line 102
+6. on input line 1026.
+Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
+e 1026.
+ [47
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.19})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1029 O
+         sistema de armadilhas √© dado pelo seguinte fluxo de a√ß√µes: <./image
+ns/mecanica_caca.png>]
+<imagens/mecanica_cantar.png, id=908, 602.25pt x 400.49625pt>
+File: imagens/mecanica_cantar.png Graphic file (type png)
+<use imagens/mecanica_cantar.png>
+Package pdftex.def Info: imagens/mecanica_cantar.png  used on input line 1047. 
+on input line 1047.
+Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
+e 1047.
+<imagens/mecanica_cantar2.png, id=909, 602.25pt x 400.49625pt>
+File: imagens/mecanica_cantar2.png Graphic file (type png)
+<use imagens/mecanica_cantar2.png>
+Package pdftex.def Info: imagens/mecanica_cantar2.png  used on input line 1052.
+ on input line 1052.
+Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
+e 1052.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1054 \end{figure}
+                    <./imagens/mecanica_armadilha.png>]
+<imagens/mecanica_compormusica.png, id=917, 602.25pt x 400.49625pt>
+File: imagens/mecanica_compormusica.png Graphic file (type png)
+<use imagens/mecanica_compormusica.png>
+Package pdftex.def Info: imagens/mecanica_compormusica.png  used on input line 
+1062. on input line 1062.
+Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
+e 1062.
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1065 A
+        SD.pdfTeX warning (ext4): destination with the same identifier (name{fi
+gure.5.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1065 A
+        SD. <./imagens/mecanica_cantar.png> <./imagens/mecanica_cantar2.png>]
+[50pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1087 \chapter
+               {Experimentos e resultados} <./imagens/mecanica_compormusica.png
+>] [51] [52
 
 ] (tcc.bbl (tcc.brf)
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [38
+ [53
 
 ]
 
@@ -1581,7 +1779,7 @@ bibitemlist
 No file tcc.ind.
 
 AED: lastpage setting LastPage
-[39
+[54
 
 ]
 \tf@lof=\write6
@@ -1596,27 +1794,28 @@ AED: lastpage setting LastPage
 \tf@toc=\write9
 \openout9 = `tcc.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 761.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 761.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1189.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1189.
  (tcc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 761.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 761.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1189.
+
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: E33031F54B58FC292F7085CED8F4E663;969.
+(rerunfilecheck)             Checksum: 08A9490AFE1150B7377E324D20C22A9F;1143.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 761.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1189.
  ) 
 Here is how much of TeX's memory you used:
- 15758 strings out of 493312
- 222875 string characters out of 3138901
- 515294 words of memory out of 3000000
- 18732 multiletter control sequences out of 15000+200000
- 62670 words of font info for 51 fonts, out of 3000000 for 9000
+ 16328 strings out of 493312
+ 232527 string characters out of 3138901
+ 573294 words of memory out of 3000000
+ 18967 multiletter control sequences out of 15000+200000
+ 73872 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,42p,1716b,1877s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,42p,1734b,1877s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Fil
 es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fon
 ts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec
@@ -1627,15 +1826,17 @@ c/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri1
-2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc.pdf (40 pages, 1045031 bytes).
+2.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/lm/lmss17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/lm/lmssbo10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tcc.pdf (55 pages, 2123415 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
- 255 named destinations out of 1000 (max. 500000)
- 500 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1354 PDF objects out of 1440 (max. 8388607)
+ 571 named destinations out of 1000 (max. 500000)
+ 648 words of extra memory for PDF output out of 10000 (max. 10000000)
 

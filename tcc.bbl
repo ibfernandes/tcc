@@ -23,6 +23,23 @@ ISBN 9781439865262.}
 {KHRONOS. \emph{OpenGL Specifications}. 2017.
 Dispon{\'\i}vel em: \url{https://www.khronos.org/registry/OpenGL/specs/gl/}.}
 
+\bibitem[Khronos 2018]{OpenGLHistory}
+\abntrefinfo{Khronos}{KHRONOS}{2018a}
+{KHRONOS. \emph{History of OpenGL}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.khronos.org/opengl/wiki/History\_of\_OpenGL\#OpenGL\_3.0\_.282008.29}.}
+
+\bibitem[Khronos 2018]{OpenGLObject}
+\abntrefinfo{Khronos}{KHRONOS}{2018b}
+{KHRONOS. \emph{OpenGL Object}. 2018.
+Dispon{\'\i}vel em: \url{https://www.khronos.org/opengl/wiki/OpenGL\_Object}.}
+
+\bibitem[Khronos 2018]{openGLShaderCompilation}
+\abntrefinfo{Khronos}{KHRONOS}{2018c}
+{KHRONOS. \emph{OpenGL shader compilation}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.khronos.org/opengl/wiki/Shader\_Compilation}.}
+
 \bibitem[McDonald 2017]{GameMarketArticle}
 \abntrefinfo{McDonald}{MCDONALD}{2017}
 {MCDONALD, E. \emph{The Global Games Market Will Reach \$108{.}9 Billion in

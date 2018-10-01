@@ -11,6 +11,9 @@
 \backcite {GameEngineArchitecture}{{20}{4.1}{section.4.1}}
 \backcite {GameEngineArchitecture}{{21}{4.2.1}{subsection.4.2.1}}
 \backcite {GameProgrammingPatterns}{{25}{4.2.3}{lstnumber.4.4.20}}
-\backcite {GameEngineArchitecture}{{25}{4.3}{section.4.3}}
-\backcite {LearnOpenGL}{{27}{4.4.1}{subsection.4.4.1}}
-\backcite {LearnOpenGL}{{29}{4.4.4}{subsection.4.4.4}}
+\backcite {GameEngineArchitecture}{{26}{4.3}{section.4.3}}
+\backcite {OpenGLHistory}{{29}{4.4.1}{subsection.4.4.1}}
+\backcite {LearnOpenGL}{{29}{4.4.1}{subsection.4.4.1}}
+\backcite {OpenGLObject}{{31}{4.4.4}{subsection.4.4.4}}
+\backcite {LearnOpenGL}{{31}{4.4.4}{Item.14}}
+\backcite {openGLShaderCompilation}{{36}{4.4.8}{subsection.4.4.8}}

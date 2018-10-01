@@ -22,15 +22,20 @@ Capítulos do TCC
 			State machine ✔
 			Hello window ✔
 			OpenGL pipeline ✔
-			Vertex buffer object e Vertex Array Object
-			GLSL
-			Vertex e Fragment shaders
-			Framebuffers
-		Gráficos
+			Vertex buffer object e Vertex Array Object ✔
+			GLSL✔
+			Vertex e Fragment shaders ✔
+			Compilando um shader ✔
+			Uniforms ✔
+			*Framebuffers
+		Renderer
+			Texture ✔
+			Animation
 			Z-Ordering
 			Color theory
 			Lighting
 				Ambient, Diffuse e normals
+			Renderer class
 			Renderização de textos
 		Game Objects
 			Component Based
