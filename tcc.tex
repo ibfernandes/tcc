@@ -12,14 +12,19 @@ brazil]{facom-ufu-abntex2}
 \data{2018}
 \orientador{Profa. Maria Adriana Vidigal de Lima} 
 \titulo{Desenvolvimento de jogos 2D multiplataforma utilizando
-OpenGL e Java} 
+OpenGL e Java } 
 
 \begin{document}
 \pagenumbering{arabic}
+
+\pagestyle{plain}
+
+
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 
 \imprimircapa
+
 \begin{folhadeaprovacao}
 
   \begin{center}
@@ -603,7 +608,7 @@ Por fim, no último estágio é aplicado o \textit{blending} e  outros testes. \
 \subsection{Vertex Array Object e Vertex Buffer Object}
 Todo objeto no OpenGL é manipulado através de seu ID. Portanto, faz-se necessário gerar o ID do VAO e VBO chamando as funções \texttt{glGenVertexArrays()} e \linebreak \texttt{glGenBuffers()}. Após gerados os IDs vincula-se esse \textit{data object} como o vigente através da função \texttt{glBindBuffer}\texttt{(type, id)} e insere-se os dados nele através da função \texttt{glBufferData(type, data, draw_type)}. Para o \textit{object container} o processo é similar. Vincula-se o VAO com \texttt{glBindVertexArray(id)} e habilita-se a localização do atributo do vértice no \textit{vertex shader} através da função \texttt{glEnableVertexAttribArray(index)}. Por fim, configura-se como cada vértice deve ser interpretado, nesta situação como um bloco de 4 floats, sendo 2 deles as posições $x$ e $y$ do objeto e os dois últimos a posição $x$ e $y$ da textura que compõem esse objeto. Essa configuração é feita pela função \texttt{glVertexAttribPointer(index, size, type, normalized, stride, pointer)}.
 
-\begin{lstlisting}[caption=Inicialização do VBO e VAO]
+\begin{lstlisting}[caption=Inicialização do VBO e VAO, label={alg:initVBOVAO}]
 private void init() {
 	float vertices [] = {
 			//Pos	//Texture
@@ -695,7 +700,7 @@ void main(){
 \end{figure}
 
 \subsection{Compilando o shader em um programa}
-Com o código dos shaders salvos em arquivo é necessário compilá-los e envia-los a GPU antes de poderem ser efetivamente usados. Assim como qualquer objeto no OpenGL o primeiro passo é gerar um ID para referenciá-lo. Esse processo é feito chamando \texttt{glCreateShader(type)}. Os tipos possíveis de shader são aqueles demonstrados e numerados de I a IV na figura \ref{fig:pipeline}. Portanto, os valores possíveis são: \texttt{GL_COMPUTE_SHADER},  \texttt{GL_VERTEX_SHADER},  \texttt{GL_TESS_CONTROL_SHADER},\linebreak  \texttt{GL_TESS_EVALUATION_SHADER},  \texttt{GL_GEOMETRY_SHADER}, e  \texttt{GL_FRAGMENT_SHADER}~\cite{openGLShaderCompilation}. Com o objeto criado atribui-se o código ao objeto e o mesmo é compilado a partir das funções \texttt{glShaderSource(id, code)} e \texttt{glCompileShader(id)}. Para checar se a compilação foi realizada com sucesso chama-se a função \texttt{glGetShaderi(id, GL_COMPILE_STATUS)}, se o retorno for 0 (FALSE) não houve erros. Caso contrário, a função \texttt{glGetShaderInfoLog(id)} retorna a mensagem de erro, que pode ser posteriormente impressa na tela.
+Com o código dos shaders salvos em arquivo é necessário compilá-los e envia-los a GPU antes de poderem ser efetivamente usados. Assim como qualquer objeto no OpenGL o primeiro passo é gerar um ID para referenciá-lo. Esse processo é feito chamando \texttt{glCreateShader(type)}. Os tipos possíveis de shader são aqueles demonstrados e numerados de I a IV na figura \ref{fig:pipeline}. Portanto, os valores possíveis são: \texttt{GL_COMPUTE_SHADER},  \texttt{GL_VERTEX_SHADER},  \texttt{GL_TESS_CONTROL_SHADER},\linebreak  \texttt{GL_TESS_EVALUATION_SHADER},  \texttt{GL_GEOMETRY_SHADER}, e  \texttt{GL_FRAGMENT_SHADER}~\cite{openGLShaderCompilation}. Com o objeto criado atribui-se o código ao objeto e o mesmo é compilado a partir das funções \texttt{glShaderSource(id, code)} e \texttt{glCompileShader(id)}. Para checar se a compilação foi realizada com sucesso chama-se a função \texttt{glGetShaderi(id, GL_COMPILE_STATUS)}. Se o retorno for 0 (FALSE) não houve erros. Caso contrário, a função \texttt{glGetShaderInfoLog(id)} retorna a mensagem de erro, que pode ser posteriormente impressa na tela.
 
  \begin{lstlisting}[caption=Processo de compilação do shader]
 	int vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -705,12 +710,12 @@ Com o código dos shaders salvos em arquivo é necessário compilá-los e envia-
 	int success = glGetShaderi(vertexShader, GL_COMPILE_STATUS);
 			
 	if(success==0) {
-		String log = glGetShaderInfoLog(object);
+		String log = glGetShaderInfoLog(vertexShader);
 		System.err.println(log);
 	}
 \end{lstlisting}
 
-Tendo os shaders compilados agora é necessário criar um programa. Essa etapa segue um padrão baseado no processo de dois estágios para compile/link usada nos programas escritos em C e C++. O código fonte é primeiro servido ao compilador, produzindo um object file. Para obter o executável final é necessário encadear um ou mais object files juntos. Com o programa criado e os shaders encadeados a ele é possível utilizar todos esses shaders com apenas uma chamada do programa.
+Tendo os shaders necessários compilados agora é necessário criar um programa. Essa etapa segue um padrão baseado no processo de dois estágios para compile/link usada nos programas escritos em C e C++. O código fonte é primeiro servido ao compilador, produzindo um object file. Para obter o executável final é necessário encadear um ou mais object files juntos. Com o programa criado e os shaders encadeados a ele é possível utilizar todos esses shaders com apenas uma chamada do programa.
 
  \begin{lstlisting}[caption=Processo de criação e link de um programa]
 	int id = glCreateProgram();
@@ -718,15 +723,15 @@ Tendo os shaders compilados agora é necessário criar um programa. Essa etapa s
 	glAttachShader(id, fragmentShader);
 	glLinkProgram(id);
 	
-	int success = glGetProgrami(object, GL_LINK_STATUS);
+	int success = glGetProgrami(id, GL_LINK_STATUS);
 			
 	if(success==0) {
-		String log = glGetProgramInfoLog(object);
+		String log = glGetProgramInfoLog(id);
 		System.err.println(log);
 	}
 \end{lstlisting}
 
-Os shaders uma vez encadeados podem ser deletados para liberar espaço usado a função \texttt{glDeleteShader(id)}.
+Os shaders uma vez encadeados podem ser removidos para liberar espaço usado a função \texttt{glDeleteShader(id)}.
 
 \subsection{Uniforms}
 
@@ -931,7 +936,7 @@ Com o byte buffer alocado a próxima etapa é preenchê-lo com os dados contidos
 	\caption{Sistema ARGB e RGBA, ambos com canais de 8 bits (1 byte)}
 \end{figure}
 
-Para realizar essa conversão basta aplicar um shift de 24, 16 ou 8 bits conforme o canal e depois aplicar uma máscara de $0x0000FF_{16}$ bits (e.g $11111111_2$) para preservar somente o byte menos significativo. O tamanho do shift depende da posição em que o canal se encontra. A extração do canal verde é exemplificado na figura a seguir.
+Para realizar essa conversão basta aplicar um deslocamento de 24, 16 ou 8 bits conforme o canal e depois aplicar uma máscara de $0x0000FF_{16}$ bits (e.g $11111111_2$) para preservar somente o byte menos significativo. O tamanho do deslocamento depende da posição em que o canal se encontra. A extração do canal verde é exemplificada na figura a seguir.
 
 \begin{figure}[H]
 	\centering
@@ -939,36 +944,39 @@ Para realizar essa conversão basta aplicar um shift de 24, 16 ou 8 bits conform
 	\caption{Extração do canal verde em um inteiro de 3 bytes}
 \end{figure}
 
-Uma vez que todos os dados foram inseridos no buffer, usa-se \texttt{buffer.flip()}. Antes de qualquer operação na textura vincula-se ela como corrente usando \texttt{glBindTexture(type, id)}. Para este exemplo será utilizado GL_TEXTURE_2D, indicando uma imagem normal em 2D. Em seguida configura-se o modo de \textit{wrapping}. Por padrão, quando as coordenadas de uma textura excedem seu tamanho o openGL as repete com o modo \texttt{GL_REPEAT}. Entretanto, existem 4 modos possíveis: \texttt{GL_REPEAT}, \texttt{GL_MIRRORED_REPEAT}, \texttt{GL_CLAMP_TO_EDGE} e \texttt{GL_CLAMP_TO_BORDER}.
+Uma vez que todos os dados foram inseridos no buffer, usa-se \texttt{buffer.flip()}. Antes de qualquer operação na textura vincula-se ela como atual usando \texttt{glBindTexture(type, id)}. Para este exemplo será utilizado o tipo \texttt{GL_TEXTURE_2D}, indicando uma imagem normal em 2D. Em seguida configura-se o modo de \textit{wrapping}. Por padrão, quando as coordenadas de uma textura excedem seu tamanho o openGL as repete com o modo \texttt{GL_REPEAT}. Entretanto, existem 4 modos possíveis: \texttt{GL_REPEAT}, \texttt{GL_MIRRORED_REPEAT}, \texttt{GL_CLAMP_TO_EDGE} e \texttt{GL_CLAMP_TO_BORDER}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{imagens/wrap_modes.png}
 	\caption{Wrap modes}
 \end{figure}
-Esses modos são configurados através da função \texttt{glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL12.GL_CLAMP_TO_EDGE}. O segundo argumento indica o eixo para o qual se deseja aplicar a configuração, sendo eles S e T, equivalentes a x e y. Em seguida é escolhido qual a fórmula utilizada para escalonar a imagem. São dois modos possíveis, \texttt{GL_NEAREST} e \texttt{GL_LINEAR}.
+Esses modos são configurados através da função \texttt{glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE)}. O segundo argumento indica o eixo para o qual se deseja aplicar a configuração, sendo eles S e T, equivalentes a x e y. Em seguida é escolhida a fórmula utilizada para escalonar a imagem. São dois modos possívei: \texttt{GL_NEAREST} e \texttt{GL_LINEAR}.
 
-O modo GL_NEAREST é o modo default do openGL e opera escolhendo o pixel cujo centro é o mais próximo da coordenada da textura. De uma maneira simples é o modo que ao ampliar a imagem não é aplicado nenhuma suavização, passando uma impressão de imagem serrilhada/pixelada. O exemplo abaixo demonstra esse processo:
+O modo \texttt{GL_NEAREST} é o modo \textit{default} do openGL e opera escolhendo o pixel cujo centro é o mais próximo da coordenada da textura. De uma maneira simples é o modo que ao ampliar a imagem não é aplicada nenhuma suavização, passando uma impressão de imagem serrilhada/pixelizada. A Figura~\ref{fig:ampli} demonstra esse processo.
 
-O modo GL_LINEAR interpola um valor entre os pixels vizinhos. É o modo que ao ampliar ou diminuir a imagem causa uma impressão de bordas mais suaves.
+O modo \texttt{GL_LINEAR} interpola um valor entre os pixels vizinhos. É o modo que ao ampliar ou diminuir a imagem causa uma impressão de bordas mais suaves.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=36em]{imagens/gl_filters.png}
-	\caption{Amplicação de 32x usando cada tipo de filtro}
+	\caption{Ampliação de 32x usando cada tipo de filtro. \label{fig:ampli}}
 \end{figure}
 
 Esses modos podem ser aplicados distintamente para operações de aumentar ou diminuir a imagem. O atributo responsável por dizer em qual das duas situações o filtro deve ser aplicado é: \texttt{GL_TEXTURE_MAG_FILTER} e \texttt{GL_TEXTURE_MIN_FILTER}. Sendo o primeiro para operações de magnifying (aumento) e o segundo para operações de minifying (diminuir).
 
-Por fim, com todos esses parâmetros configurados envia-se o bytebuffer contendo os dados da imagem propriamente dita para o OpenGL. Isso é feito na função \texttt{glTexImage2D(type, mipmap_level, internal_format, width, height, border, color_format, type, bytebuffer)}
+Por fim, com todos esses parâmetros configurados envia-se o bytebuffer contendo os dados da imagem propriamente dita para o OpenGL. Isso é feito na função \texttt{glTexImage2D(type, mipmap_level, internal_format, width, height, border, color_format, type, bytebuffer)}.
 
 \subsection{Animações}
-Uma vez que todo o sistema de shader program e texturas estão montados é possível usá-los para construir componentes mais avançados, como o de animação. Um objeto em animação não é nada mais que uma sequência de frames desenhados em um intervalo de milissegundos, criando ilusão de movimento. É comum a utilização de spritesheets para armazenar todas as imagens em um único arquivo e então recortá-las em pedaços (frames) em tempo de execução.
+Uma vez que todo o sistema de shader program e texturas estão montados é possível usá-los para construir componentes mais avançados, como o de animação. Um objeto em animação não é nada mais que uma sequência de frames desenhados em um intervalo de milissegundos, criando ilusão de movimento. É comum a utilização de \textit{spritesheets} para armazenar todas as imagens em um único arquivo e então recortá-las em pedaços (frames) em tempo de execução.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=16em]{imagens/spritesheet.png}
-	\caption{Spritesheet com frames de 32x32}
+	\caption{Spritesheet com frames de 32x32 pixels}
 \end{figure}
-Para que esse recorte seja possível é necessário acrescentar alguns parâmetros ao shader para que este saiba qual pedaço deve ser recortado. Essa tarefa pode ser facilmente realizada alterando as coordenadas locais da textura enviadas através do glAttrib 0 definido anteriormente.
+Para que esse recorte seja possível é necessário acrescentar alguns parâmetros ao shader para que este saiba qual pedaço deve ser recortado. Essa tarefa pode ser facilmente realizada alterando as coordenadas locais da textura enviadas através do atributo \texttt{glAttribXXXX} 0 definido anteriormente.
+
+
 \begin{lstlisting}[caption=Vertex shader com animações]
 #version 330 core
 layout (location = 0) in vec4 vertex; //xy position
@@ -996,16 +1004,160 @@ void main(){
 
 \end{lstlisting}
 
-Na variável \texttt{spriteFrame}
+Na variável \texttt{spriteFrame}  //TODO (finish)
 
 \subsection{Z-Ordering}
+A técnica de z-ordering consiste na ordenação de objetos em sobreposição. É utilizada para organizar a ordem na qual os elementos devem ser renderizados tal que não haja elementos distantes sendo desenhados em cima de objetos mais próximos da câmera.
+Para ambientes 2D basta simplesmente ordenar os elementos pela posição y do menor para o maior. 
+//TODO: imagem ordenacao
 
-\subsection{Light}
-\subsubsection{Ambient}
-\subsubsection{Diffuse}
-\subsubsection{Normals}
+Um ponto a se tomar cuidado na implementação desta técnica é ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação.
 
-\chapter{Desenvolvimento do trabalho}
+
+\subsection{Iluminação}
+Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não servem para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
+O modelo de iluminação adotado e adaptado nesta engine foi o de Phong que usa três componentes de luz em sua construção: ambient, diffuse e specular.
+\\TODO: demonstração de cada componente
+\\TODO: colocar referencia (bibliográfica) do modelo de Phong
+
+\subsubsection{Ambiente}
+De uma maneira simples a luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
+
+Vale ressaltar duas propriedades importantes da luz: reflexão e refração. A iluminação que advém de qualquer fonte luminosa pode impactar objetos mesmo que estes não estejam sobre alcance direto da mesma através da reflexão da luz. Algoritmos que levam esses fatores em consideração são chamados de \textit{global illumination}, mas são geralmente caros em performance ou muito complexos.
+Para esta engine será adotado um modelo simplificado que consiste em multiplicar a cor do objeto por uma variável \texttt{lightAmbientColor}, que define a cor e intensidade da luz que ilumina todo o mundo.
+
+\begin{lstlisting}[caption=Fragment Shader com luz ambiente]
+#version 330 core
+in vec2 TexCoords;
+out vec4 color;
+
+uniform sampler2D image;
+
+void main(){
+	vec4 lightAmbientColor = vec4(0.1,0,0,1);
+	
+	vec4 imgTex =  texture(image, TexCoords).xyzw;
+	
+	color = imgTex*lightAmbientColor;
+}
+\end{lstlisting}
+
+Dessa forma o resultado que se obtêm com a cor acima é um ambiente com uma tonalidade um pouco avermelhada:
+
+//TODO: add sunset image
+
+
+\subsubsection{Luz Difusa}
+A luz difusa simula o impacto direcional que uma fonte de luz tem sobre um objeto qualquer. Quanto mais perto o objeto está dessa fonte, mais brilhante ele será.
+
+Para calcular a luz difusa é necessário antes ter em mãos o vetor normal do objeto que será atingido pelos raios de luz. Dessa forma, quando o raio de luz atinge o objeto calcula-se o ângulo entre os dois vetores usando o produto escalar.
+//TODO: inserir imagem do produto escalar 
+
+O resultado desse produto escalar indica o impacto que a luz terá sobre a cor do fragmento sendo processado pelo shader, tendo em conta sua orientação relativa à luz. Para realizar o cálculo será necessário  então um vetor com a posição da fonte luminosa e o vetor normal e do fragmento sendo afetado por essa fonte.
+O vetor normal será obtido através de uma normal texture e o vetor da fonte luminosa através de uma variável \texttt{global uniform}.  
+
+//TODO: referência vetor normal ou footnote (whatever)
+//TODO: adicionar o código do shader com luz difusa
+
+\subsubsection{Vetor Normal}
+
+Um vetor normal unitário é aquele perpendicular à superfície do vértice. A técnica comumente utilizada para trabalhar com os vetores normais de um objeto consiste em mapeá-los em uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente convertido para as coordenadas de cores RGB e, por fim, são armazenadas em uma imagem/textura.
+
+//TODO: demonstrar uma normal texture
+
+//TODO: demonstrar um vetor normal
+
+
+\subsubsection{Luz Especular}
+A luz especular é o ponto brilhante que aparece em objetos reluzentes e ajuda a dar uma melhor percepção do espaço 3D.
+
+//TODO: imagem do olho e o reflexo especular em uma superfície
+
+
+\subsection{Classe Renderer}
+
+A classe renderer é responsável por conter e controlar todos métodos de desenho do sistema. Nela define-se uma função única tal que não seja necessário, a todo momento, configurar o shader e atualizar diretamente as variáveis uniform, VBO e VAO. Ela abstrai todos esses processos em uma simples chamada que recebe como argumento as coordenadas, texture e afins do objeto. Dessa forma, o código \ref{alg:initVBOVAO} será incorporado em uma classe renderer juntamente com o método render descrito a seguir:
+
+\begin{lstlisting}[caption=Classe renderer simples]
+public class TextureRenderer(){
+
+	public TextureRenderer(){
+		init();
+	}
+
+	private void init(){
+		//code from algorithm 4.7
+	}
+
+	public void render(Texture texture, Vec2 position, Vec2 size, float rotate, Vec4 color, Vec4 spriteFrame) {
+		this.shader.use();
+		Mat4 model = new Mat4();
+		
+		model = model.translate(position.x, position.y, 0);
+		model = model.translate(0.5f * size.x, 0.5f *size.y, 0); //Move the origin of rotation to object's center
+		model = model.rotate(rotate, 0, 0, 1); // Must be in radians
+		model = model.translate(-0.5f * size.x, -0.5f *size.y, 0); //Move the origin of rotation back to it's top left
+		model = model.scale(size.x, size.y, 1);
+		
+		shader.setMat4("model", model);
+		shader.setVec4("spriteColor", color);
+		shader.setVec2("flip", orientation);
+		shader.setVec4("spriteFrame", spriteFrame);
+		
+		shader.setInteger("image", 0);
+		
+		glActiveTexture(GL_TEXTURE0);
+		texture.bind();
+
+		glBindVertexArray(quadVAO);
+		glDrawArrays(GL_TRIANGLES, 0, 6*3);
+		glBindVertexArray(0);
+	}
+}
+\end{lstlisting}
+
+Dessa forma, para renderizar os objetos itera-se numa lista e para cada objeto chama-se TextureRenderer.render().
+
+\begin{lstlisting}[caption=Demonstração do render]
+	for(GameObject obj: listOfObjects){
+		textureRenderer.render(obj.getTexture(), obj.getPosition(), obj.getSize(), obj.size(), ...);
+	}
+\end{lstlisting}
+
+Entretanto, esta implementação é ingênua pois é necessário realizar n chamadas à função render, sendo n a quantidade de objetos na lista. Ou seja, se há um milhão de objetos na tela serão realizadas um milhão de chamadas ao método render e consequentemente um milhão de trocas de contexto de shader em this.shader.user() mais 4 transferências de informação para as variáveis uniform por chamada do método. Toda essa troca de contexto e transferência de dados entre CPU e GPU possuem um impacto enorme no desempenho e quanto maior a lista de objetos a serem desenhados pior será a performance.
+
+Para fins de introdução ao conceito e abstração do processo de renderização  abordou-se o modelo acima. Entretanto, o problema será tratado em uma sessão mais adiante que implementará o método de batch rendering, que resolve esta situação realizando apenas uma única chamada do método render por tipo de shader e realizando a transferência desses dados em um único e enorme pacote de dados, evitando gargalo no BUS da placa mãe.
+
+\subsection{Arquitetura do Game Object}
+
+Os game objects, também conhecidos como entities, estão no centro de tudo aquilo que da vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: Component Based, Object Oriented e Entity System \cite{GameObjectArchitecture}. 
+
+\subsubsection{Object Based}
+Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe GameObject que é então especializada para cada tipo de objeto. Por exemplo: uma classe minotauro estende uma classe monstro que por fim estende a classe game object. Da mesma forma uma classe besouro estende 
+a classe monstro que estende a classe game object.
+
+O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe game object extensa e com recursos muitas das vezes usados apenas por uma certa especialização.
+
+Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe Monstro só para ser capaz de usar o sistema de dano.
+
+//TODO: colocar uma imagem UML demonstrando essa especialização. 
+
+\subsubsection{Component Based}
+A arquitetura baseada em componentes, também conhecido pelo nome de behaviors, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então "especializar" um game object atribuindo a ele os componentes que se deseja. Dessa forma, para que um game object seja um monstro basta adicionar um componente de dano, vida e IA.
+
+Existem várias maneiras de se implementar essa arquitetura. Através do uso de switches para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes usando passagem de mensagem. A maior desvantagem dessa arquitetura está na relação estrita entre os dados e o sistema que os manipula, tornando o processamento de um sistema que requer múltiplos dados não diretamente relacionados complicado.
+
+//TODO: falar da leitura simplifcada de arquivo tanto no CB quanto EB
+//TODO: diagrama uml e cód. exemplo dos switches
+
+\subsubsection{Entity Based}
+Um game object baseado em entidades trabalha de maneira similar a como um banco de dados trata suas informações. O sistema que manipula as informações é desacoplado dos dados em si. Dessa maneira, uma entidade é composta apenas de dados e um sistema à parte é responsável por processar essas informações e realizar suas tarefas.
+Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável obtém esses dados e realiza seus cálculos, caso qualquer desses dados não estejam presentes o sistema ignora essa entidade e avança para a próxima.
+
+//TODO: img e cód.
+
+
+\chapter{Criação de Jogo usando a Arquitetura ArchGame}
 \label{sec:desenv}
 \section{Mecânicas}
 \subsection{Sistema de caça ativa}

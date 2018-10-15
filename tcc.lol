@@ -14,3 +14,6 @@
 \contentsline {lstlisting}{\numberline {4.14}Inicializando uma textura no OpenGL a partir de um BufferedImage}{41}{lstlisting.4.14}
 \contentsline {lstlisting}{\numberline {4.15}Fun\IeC {\c c}\IeC {\~a}o auxiliar createByteBuffer}{43}{lstlisting.4.15}
 \contentsline {lstlisting}{\numberline {4.16}Vertex shader com anima\IeC {\c c}\IeC {\~o}es}{46}{lstlisting.4.16}
+\contentsline {lstlisting}{\numberline {4.17}Fragment Shader com luz ambiente}{47}{lstlisting.4.17}
+\contentsline {lstlisting}{\numberline {4.18}Classe renderer simples}{49}{lstlisting.4.18}
+\contentsline {lstlisting}{\numberline {4.19}Demonstra\IeC {\c c}\IeC {\~a}o do render}{50}{lstlisting.4.19}

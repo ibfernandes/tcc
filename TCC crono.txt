@@ -30,13 +30,13 @@ Capítulos do TCC
 			*Framebuffers
 		Renderer
 			Texture ✔
-			Animation
-			Z-Ordering
-			Color theory
+			Animation ✔
+			Z-Ordering ✔
+			*Color theory
 			Lighting
-				Ambient, Diffuse e normals
-			Renderer class
-			Renderização de textos
+				Ambient, Diffuse, Specular e normals 
+			Renderer class ✔
+			*Renderização de textos
 		Game Objects
 			Component Based
 			Object oriented

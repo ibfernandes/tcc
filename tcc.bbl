@@ -67,4 +67,11 @@ ISBN 9788521207009.}
 {VRIES, J. de. \emph{Learn OpenGL}. 2. ed. [s.n.], 2015. Dispon{\'\i}vel em:
   \url{https://learnopengl.com/book/offline\%20learnopengl.pdf}.}
 
+\bibitem[Wenderlich 2018]{GameObjectArchitecture}
+\abntrefinfo{Wenderlich}{WENDERLICH}{2018}
+{WENDERLICH, R. \emph{Introduction to Component Based Architecture in Games}.
+  2018.
+Dispon{\'\i}vel em:
+  \url{https://www.raywenderlich.com/2806-introduction-to-component-based-architecture-in-games}.}
+
 \end{thebibliography}

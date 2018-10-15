@@ -18,7 +18,8 @@
 %%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{facom-ufu-abntex2}[2015/11/30 v1.0 Modelo da Faculdade de Computação da Universidade Federal de Uberlândia baseado em abnTeX2]
+%%\ProvidesClass{facom-ufu-abntex2}[2015/11/30 v1.0 Modelo da Faculdade de Computação da Universidade Federal de Uberlândia baseado em abnTeX2]
+\ProvidesClass{facom-ufu-abntex2}[]
 
 %
 % Repassa todos os parametros a classe abntex2, 
@@ -121,7 +122,9 @@
 \usepackage{mathtools}
 \usepackage{array}
 \usepackage{mathstyle}
+\usepackage{fancyhdr}
 \usepackage{float}
+
 % ---
 \usepackage{xcolor}
 \definecolor{verde}{rgb}{0.25,0.5,0.35}

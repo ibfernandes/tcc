@@ -46,28 +46,34 @@
 \contentsline {subsection}{\numberline {4.5.1}Textura}{41}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Anima\IeC {\c c}\IeC {\~o}es}{45}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Z-Ordering}{46}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Light}{46}{subsection.4.5.4}
-\contentsline {subsubsection}{\numberline {4.5.4.1}Ambient}{46}{subsubsection.4.5.4.1}
-\contentsline {subsubsection}{\numberline {4.5.4.2}Diffuse}{46}{subsubsection.4.5.4.2}
-\contentsline {subsubsection}{\numberline {4.5.4.3}Normals}{46}{subsubsection.4.5.4.3}
+\contentsline {subsection}{\numberline {4.5.4}Ilumina\IeC {\c c}\IeC {\~a}o}{47}{subsection.4.5.4}
+\contentsline {subsubsection}{\numberline {4.5.4.1}Ambiente}{47}{subsubsection.4.5.4.1}
+\contentsline {subsubsection}{\numberline {4.5.4.2}Luz Difusa}{48}{subsubsection.4.5.4.2}
+\contentsline {subsubsection}{\numberline {4.5.4.3}Vetor Normal}{48}{subsubsection.4.5.4.3}
+\contentsline {subsubsection}{\numberline {4.5.4.4}Luz Especular}{48}{subsubsection.4.5.4.4}
+\contentsline {subsection}{\numberline {4.5.5}Classe Renderer}{48}{subsection.4.5.5}
+\contentsline {subsection}{\numberline {4.5.6}Arquitetura do Game Object}{50}{subsection.4.5.6}
+\contentsline {subsubsection}{\numberline {4.5.6.1}Object Based}{50}{subsubsection.4.5.6.1}
+\contentsline {subsubsection}{\numberline {4.5.6.2}Component Based}{51}{subsubsection.4.5.6.2}
+\contentsline {subsubsection}{\numberline {4.5.6.3}Entity Based}{51}{subsubsection.4.5.6.3}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Desenvolvimento do trabalho}}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}Mec\IeC {\^a}nicas}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Sistema de ca\IeC {\c c}a ativa}{47}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Sistema de armadilhas}{48}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Sistema de Combate}{48}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Sistema de apadrinhamento}{48}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Cantar m\IeC {\'u}sicas}{49}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Compor m\IeC {\'u}sicas}{50}{subsection.5.1.6}
-\contentsline {subsection}{\numberline {5.1.7}Contar hist\IeC {\'o}rias}{50}{subsection.5.1.7}
-\contentsline {subsection}{\numberline {5.1.8}Compor hist\IeC {\'o}rias}{50}{subsection.5.1.8}
-\contentsline {subsection}{\numberline {5.1.9}Atributos dos vilarejos e cidades}{50}{subsection.5.1.9}
-\contentsline {subsection}{\numberline {5.1.10}Atributos do jogador}{50}{subsection.5.1.10}
-\contentsline {subsection}{\numberline {5.1.11}Domar animais}{51}{subsection.5.1.11}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Cria\IeC {\c c}\IeC {\~a}o de Jogo usando a Arquitetura ArchGame}}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Mec\IeC {\^a}nicas}{53}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Sistema de ca\IeC {\c c}a ativa}{53}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Sistema de armadilhas}{54}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Sistema de Combate}{54}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Sistema de apadrinhamento}{54}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Cantar m\IeC {\'u}sicas}{55}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Compor m\IeC {\'u}sicas}{56}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Contar hist\IeC {\'o}rias}{56}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Compor hist\IeC {\'o}rias}{56}{subsection.5.1.8}
+\contentsline {subsection}{\numberline {5.1.9}Atributos dos vilarejos e cidades}{56}{subsection.5.1.9}
+\contentsline {subsection}{\numberline {5.1.10}Atributos do jogador}{56}{subsection.5.1.10}
+\contentsline {subsection}{\numberline {5.1.11}Domar animais}{57}{subsection.5.1.11}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Experimentos e resultados}}{52}{chapter.6}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Experimentos e resultados}}{58}{chapter.6}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Conclus\IeC {\~a}o}}{53}{chapter.7}
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Conclus\IeC {\~a}o}}{59}{chapter.7}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{54}{section*.8}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{60}{section*.8}
