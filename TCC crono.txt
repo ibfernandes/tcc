@@ -33,22 +33,22 @@ Capítulos do TCC
 			Animation ✔
 			Z-Ordering ✔
 			*Color theory
-			Lighting
-				Ambient, Diffuse, Specular e normals 
+			Lighting ✔
+				Ambient, Diffuse, Specular e normals ✔-
 			Renderer class ✔
 			*Renderização de textos
-		Game Objects
-			Component Based
-			Object oriented
-			Entity system
-		Collision system
-			AABB
-			Box2D
-		Coordinate System
-			Local Space
-			World Space
-			View Space
-			Box2D para World Space
+		Game Objects ✔
+			Component Based ✔
+			Object oriented ✔
+			Entity system ✔-
+		Collision system ✔
+			AABB ✔
+			Box2D ✔
+		Coordinate System ✔
+			Local Space ✔
+			World Space ✔
+			View Space ✔
+			Box2D para World Space ✔
 		Camera
 		Input System
 			GLFW Keyboard
@@ -102,3 +102,5 @@ Capítulos do TCC
 		
 	Conclusão
 	
+	
+	fazer um diagrama de modulos

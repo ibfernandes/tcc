@@ -123,6 +123,8 @@ This work proposes to develop a multiplataform game for desktop entitled Travell
   \item[px] Pixel (Unidade de medida)
   \item[VBO] Vertex Buffer Object
   \item[VAO] Vertex Array Object
+  \item[AABB] Axis Aligned Bouding Box
+  \item[NDC] Normalized Device Coordinates
 \end{siglas}
 
 
@@ -1005,6 +1007,7 @@ void main(){
 \end{lstlisting}
 
 Na variável \texttt{spriteFrame}  //TODO (finish)
+//TODO: insert animation class code
 
 \subsection{Z-Ordering}
 A técnica de z-ordering consiste na ordenação de objetos em sobreposição. É utilizada para organizar a ordem na qual os elementos devem ser renderizados tal que não haja elementos distantes sendo desenhados em cima de objetos mais próximos da câmera.
@@ -1078,6 +1081,7 @@ A luz especular é o ponto brilhante que aparece em objetos reluzentes e ajuda a
 
 A classe renderer é responsável por conter e controlar todos métodos de desenho do sistema. Nela define-se uma função única tal que não seja necessário, a todo momento, configurar o shader e atualizar diretamente as variáveis uniform, VBO e VAO. Ela abstrai todos esses processos em uma simples chamada que recebe como argumento as coordenadas, texture e afins do objeto. Dessa forma, o código \ref{alg:initVBOVAO} será incorporado em uma classe renderer juntamente com o método render descrito a seguir:
 
+
 \begin{lstlisting}[caption=Classe renderer simples]
 public class TextureRenderer(){
 
@@ -1116,6 +1120,7 @@ public class TextureRenderer(){
 }
 \end{lstlisting}
 
+
 Dessa forma, para renderizar os objetos itera-se numa lista e para cada objeto chama-se TextureRenderer.render().
 
 \begin{lstlisting}[caption=Demonstração do render]
@@ -1128,36 +1133,128 @@ Entretanto, esta implementação é ingênua pois é necessário realizar n cham
 
 Para fins de introdução ao conceito e abstração do processo de renderização  abordou-se o modelo acima. Entretanto, o problema será tratado em uma sessão mais adiante que implementará o método de batch rendering, que resolve esta situação realizando apenas uma única chamada do método render por tipo de shader e realizando a transferência desses dados em um único e enorme pacote de dados, evitando gargalo no BUS da placa mãe.
 
+
+//TODO: atualizar seção e subseção para Arquitetura do GO
 \subsection{Arquitetura do Game Object}
 
-Os game objects, também conhecidos como entities, estão no centro de tudo aquilo que da vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: Component Based, Object Oriented e Entity System \cite{GameObjectArchitecture}. 
+Os game objects, também conhecidos como entidades, estão no centro de tudo aquilo que dá vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: Component Based, Object Oriented e Entity System \cite{GameObjectArchitecture}. 
 
 \subsubsection{Object Based}
-Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe GameObject que é então especializada para cada tipo de objeto. Por exemplo: uma classe minotauro estende uma classe monstro que por fim estende a classe game object. Da mesma forma uma classe besouro estende 
-a classe monstro que estende a classe game object.
+Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe GameObject que é então especializada para cada tipo de objeto. Por exemplo, uma classe \texttt{minotauro} estende uma classe \texttt{monstro} que, por sua vez, estende a classe GameObject. Da mesma forma uma classe \texttt{besouro} estende a classe \texttt{monstro} que estende a classe GameObject.
 
-O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe game object extensa e com recursos muitas das vezes usados apenas por uma certa especialização.
+O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe GameObject extensa e com recursos muitas das vezes usados apenas por uma certa especialização.
 
-Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe Monstro só para ser capaz de usar o sistema de dano.
+Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe \texttt{monstro} só para ser capaz de usar o sistema de dano.
 
 //TODO: colocar uma imagem UML demonstrando essa especialização. 
 
 \subsubsection{Component Based}
-A arquitetura baseada em componentes, também conhecido pelo nome de behaviors, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então "especializar" um game object atribuindo a ele os componentes que se deseja. Dessa forma, para que um game object seja um monstro basta adicionar um componente de dano, vida e IA.
+A arquitetura baseada em componentes, também conhecida pelo nome de behavior, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então "especializar" um GameObject atribuindo a ele os componentes que se deseja. Dessa forma, para que um GameObject seja um \texttt{monstro} basta adicionar um componente de dano, vida e IA.
 
 Existem várias maneiras de se implementar essa arquitetura. Através do uso de switches para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes usando passagem de mensagem. A maior desvantagem dessa arquitetura está na relação estrita entre os dados e o sistema que os manipula, tornando o processamento de um sistema que requer múltiplos dados não diretamente relacionados complicado.
 
-//TODO: falar da leitura simplifcada de arquivo tanto no CB quanto EB
+//TODO: falar da leitura simplificada de arquivo tanto no CB quanto EB
 //TODO: diagrama uml e cód. exemplo dos switches
 
-\subsubsection{Entity Based}
-Um game object baseado em entidades trabalha de maneira similar a como um banco de dados trata suas informações. O sistema que manipula as informações é desacoplado dos dados em si. Dessa maneira, uma entidade é composta apenas de dados e um sistema à parte é responsável por processar essas informações e realizar suas tarefas.
-Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável obtém esses dados e realiza seus cálculos, caso qualquer desses dados não estejam presentes o sistema ignora essa entidade e avança para a próxima.
+
+\subsection{Entity Based}
+Um game object baseado em entidades trabalha de maneira similar à forma como um banco de dados trata suas informações. O sistema que manipula as informações é desacoplado dos dados em si. Dessa maneira, uma entidade é composta apenas de dados e um sistema à parte é responsável por processar essas informações e realizar suas tarefas.
+Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável verifica se a entidade possui esses atributos e, caso tenha, realiza seus cálculos senão, o sistema ignora essa entidade e avança para a próxima da lista.
 
 //TODO: img e cód.
 
+\section{Sistema de colisões}
 
-\chapter{Criação de Jogo usando a Arquitetura ArchGame}
+O sistema de colisões é responsável por delimitar o espaço físico que cada objeto deve ocupar no ambiente. Para formas geométricas mais básicas como retângulos, círculos e triângulos existem fórmulas simples e otimizadas para detectar essas colisões. Para polígonos mais complexos existem diversos algoritmos que usufruem de métodos avançados para detectar e resolver essas colisões.
+
+Um problema de colisão é dividido em duas etapas principais: detecção e resolução. A etapa de detecção consiste em detectar quais objetos colidiram com quais outros objetos em um tempo $t$. Esse processo pode ocorrer de duas formas, por antecipação ou no tempo de colisão. A segunda etapa consiste em resolver essas colisões usando uma série de critérios como, por exemplo, gravidade, massa, velocidade etc.
+
+\subsection{Colisões do tipo AABB vs AABB}
+
+Colisões do tipo Axis Aligned Bounding Box (AABB) são as mais simples de resolver. Para detectar se dois retângulos de eixo alinhado colidiram basta checar se houve sobreposição em qualquer um dos eixos x e y.
+
+\begin{lstlisting}[caption=Colisão AABB vs AABB]
+	public boolean intersects(Rectangle r) {
+    	float tw = this.width;
+        float th = this.height;
+        float rw = r.width;
+        float rh = r.height;
+        
+        if (rw <= 0 || rh <= 0 || tw <= 0 || th <= 0) 
+            return false;
+        
+        float tx = this.x;
+        float ty = this.y;
+        float rx = r.x;
+        float ry = r.y;
+        rw += rx;
+        rh += ry;
+        tw += tx;
+        th += ty;
+      
+        return ((rw < rx || rw > tx) && 
+                (rh < ry || rh > ty) &&
+                (tw < tx || tw > rx) && 
+                (th < ty || th > ry)); 
+    }
+\end{lstlisting}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16em]{imagens/aabbaabb.png}
+	\caption{Colisão AABB vs AABB}
+\end{figure}
+
+Para o exemplo da figura acima a intersecção ocorreu onde $rw > tx$, $rh > ty$, $tw > rx$ e $th > ry$. Ou seja, o retângulo r está abaixo e a direita do retângulo t.
+
+\subsection{jBox2D}
+
+A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro. Esse tópico será discutido adiante no capítulo Sistemas de coordenadas.
+
+Para o sistema de colisões funcionar ele precisa, assim como a própria engine, de um mundo e um timestep, neste caso, fixo. Define-se abaixo o exemplo:
+//TODO: código exemplo
+
+\section{Sistema de coordenadas}
+
+\subsection{Local Space}
+As coordenadas de espaço local referem-se ao próprio espaço do objeto. Geralmente são normalizadas entre $[-1, 1]$ com origem no ponto $(0,0)$.
+//TODO: imagem
+\subsection{World Space}
+As coordenadas de espaço de mundo são obtidas através da multiplicação do local space pela matriz model e representam a posição do objeto no mundo. O processo de multiplicação do local space pela matriz model  escala, rotaciona e translada o objeto para o world space.
+
+Se todos os objetos fossem inseridos no mundo somente usando as coordenadas locais muito provavelmente estariam todos sobrepostos na origem. O processo de conversão para o world space pode ser exemplificado por uma pilha de caixas onde se deseja inserir outra. Para empilhá-la em cima de outra é necessário escalá-la para o mesmo tamanho das outras, rotacioná-la para alinhar as outras e caber no espaço vazio e por fim translada-la-a para a posição em que ela ficará na pilha.
+
+\subsection{View Space}
+O view space é geralmente referenciado como a câmera, ou também camera space. O view space é obtido a partir da multiplicação do world space pelo ponto de vista da câmera. Esse processo é realizado multiplicando a matriz do world space pela matriz view.
+
+\subsection{Clip space}
+Clip space é o espaço visível pela câmera de forma que todos os pontos fora desse espaço são descartados. Seu nome é derivado justamente desse fato: clip space (espaço de recorte). Para que o usuário não tenha de especificar todas coordenadas em um intervalo NDC (Normalized Devide Coordinates), que varia entre $[-1,1]$, trabalha-se com dois sistemas de projeção responsáveis por converter do view space de volta para um intervalo NDC. São os dois sistemas: projeção ortográfica e projeção de perspectiva.
+Note que, se um triângulo possui apenas um parte visível e portanto terá uma parte recortada o OpenGL divide esse triângulo em primitivas menores e então descarta aquelas que estão fora do intervalo NDC.
+
+\subsection{Projeção}
+
+\subsubsection{Projeção ortográfica}
+Para especificar uma matriz de projeção ortográfica é necessário fornecer a largura, altura e comprimento do frustum. Dessa forma, todas as coordenadas que estiverem entre o plano mais próximo e o plano mais distante serão apresentadas ao usuário. Todo o resto será recortado fora.
+//TODO: imagem do far e near plane
+
+A projeção ortográfica mapeia coordenadas 3D diretamente para o plano 2D da tela, sem levar em consideração a perspectiva. Isso produz um efeito não realístico para cenário 3D pois da a impressão de objetos prensados na tela.
+
+//TODO: imagem do resultado de uma matriz orto
+
+Para especificar a matriz ortográfica será utilizado uma função do GLM definida a seguir. Os dois primeiros parâmetros são a 
+\begin{lstlisting}[caption=Função Ortho do GLM]
+Mat4 projection = new Mat4();
+projection = projection.ortho(float left, float right, float bottom, float top, float zNear, float zFar);
+\end{lstlisting}
+
+\subsubsection{Projeção de perspectiva}
+
+\subsection{jBox2D para world space}
+
+\section{Camera}
+
+\chapter{Criação de um protótipo}
 \label{sec:desenv}
 \section{Mecânicas}
 \subsection{Sistema de caça ativa}
