@@ -130,6 +130,7 @@
 \definecolor{verde}{rgb}{0.25,0.5,0.35}
 \definecolor{jpurple}{rgb}{0.5,0,0.35}
 \definecolor{white}{rgb}{1,1,1}
+\definecolor{almostBlack}{rgb}{0.05,0.05,0.05}
 
 \usepackage{lipsum}				% para geração de dummy text
 \usepackage{blindtext}
@@ -142,9 +143,9 @@
 \usepackage{listings}
 \lstset{
   language=Java,
-  basicstyle=\ttfamily\small, 
+  basicstyle=\ttfamily\scriptsize, 
   keywordstyle=\color{jpurple}\bfseries,
-  stringstyle=\color{red},
+  stringstyle=\color{blue},
   commentstyle=\color{verde},
   morecomment=[s][\color{blue}]{/**}{*/},
   extendedchars=true, 
@@ -157,10 +158,13 @@
   breakautoindent=true, 
   captionpos=b,
   xleftmargin=0pt,
-  tabsize=4
+  identifierstyle=\color{almostBlack},
+  tabsize=2
 }
 \renewcommand{\lstlistingname}{Algoritmo}
 \renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
+
+
 % --- 
 % CONFIGURAÇÕES DE PACOTES
 % ---

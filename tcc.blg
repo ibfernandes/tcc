@@ -16,9 +16,11 @@ Warning--entry type for "openGLShaderCompilation" isn't style-file defined
 --line 95 of file referencias.bib
 Warning--entry type for "GameObjectArchitecture" isn't style-file defined
 --line 103 of file referencias.bib
+Warning--entry type for "PhongShading" isn't style-file defined
+--line 111 of file referencias.bib
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 7 warnings)
+(There were 8 warnings)

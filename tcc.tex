@@ -64,24 +64,27 @@ OpenGL e Java }
 
 \begin{resumo} 
 
-Este trabalho propõe a criação de um jogo multiplataforma  para desktop intitulado Traveller.
-A elicitação dos requisitos para a elaboração do jogo será documentada em um artefato denominado \textit{Game Design Document} que permite estruturar, sistematizar e organizar 
-o processo de construção do jogo.
+Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Caravela e a subsequente elaboração de um jogo.
 A implementação de código será realizada na linguagem Java e através da API gráfica OpenGL usando GLFW (OpenGL Frame Work). 
-O jogo será elaborado utilizando-se algoritmos procedurais para geração de algumas artes e ambientes, algoritmos genéticos para o comportamento de Non Playable Characters (NPC) e padrões de projeto como o MVC.
+A elicitação dos requisitos do jogo será documentada em um artefato denominado \textit{Game Design Document} que permite estruturar, sistematizar e organizar 
+o processo de construção.
+O jogo será elaborado utilizando técnicas de algoritmos procedurais para geração de artes e ambientes, inteligência artificial para o comportamento de Non Playable Characters (NPC) e padrões de projeto aplicados em jogos.
  
  \vspace{\onelineskip}
  \noindent
- \textbf{Palavras-chave}: Indie Game, Game Design Document, Jogos, Java, OpenGL
+ \textbf{Palavras-chave}: Indie Game, Game Design Document, Jogos, Java, OpenGL, Game Engine, Artificial Intelligence
 \end{resumo}
 
 \begin{abstract} 
-This work proposes to develop a multiplataform game for desktop entitled Traveller. The elicitation of requisites for the game will be documented in an artifact called Game Design Document which allows to structure, systematize and organize the process of building a game. The code implementation will be done in Java through the API OpenGL and GLFW.  The game will be elaboreted using procedural algorithms to generate some art and environment, genetic algorithms for NPC behaviours and design patterns such as MVC.
+This work proposes to develop a multiplataform game engine for desktop entitled Caravela and a subsequent game elaboration. 
+The code implementation will be done in Java through the API OpenGL using GLFW (OpenGL Frame Work).
+The elicitation of requisites for the game will be documented in an artifact called Game Design Document which allows to structure, systematize and organize the process of building a game.
+The game will be elaboreted using techniques of procedural algorithms to generate art and environment, artificial intelligence for Non Playable Characters (NPC) behaviours and design patterns applied to games.
 
  \vspace{\onelineskip}
     
  \noindent
- \textbf{Keywords}: Indie Game, Game Design Document, Games, Java, OpenGL %TCC:
+ \textbf{Keywords}: Indie Game, Game Design Document, Jogos, Java, OpenGL, Game Engine, Artificial Intelligence %TCC:
 \end{abstract}
 \cleardoublepage
 
@@ -118,13 +121,14 @@ This work proposes to develop a multiplataform game for desktop entitled Travell
   \item[GLSL] OpenGL Shading Language
   \item[NPC] Non Playable Character
   \item[HUD] Heads-Up Display
-  \item[ASD] A Ser Definido
   \item[FPS] Frames per second
   \item[px] Pixel (Unidade de medida)
   \item[VBO] Vertex Buffer Object
   \item[VAO] Vertex Array Object
   \item[AABB] Axis Aligned Bouding Box
   \item[NDC] Normalized Device Coordinates
+  \item[GLM] OpenGL Mathematics Library
+  \item[IA] Inteligência Artificial
 \end{siglas}
 
 
@@ -150,31 +154,25 @@ This work proposes to develop a multiplataform game for desktop entitled Travell
 
 \section{Visão Geral da Proposta}
 O mercado internacional de jogos movimentará aproximadamente 108.9
-bilhões de dólares distribuídos entre 2.2 bilhões de jogadores. Destes, 58\%
+bilhões de dólares distribuídos entre 2.2 bilhões de jogadores em 2017. Destes, 58\%
 representam os segmentos de PC e consoles \cite{GameMarketArticle}. Além de ser uma área
-comercial extremamente lucrativa é também interdisciplinar e aproxima
+comercial lucrativa é também interdisciplinar e aproxima
 conceitos de Computação, Design gráfico, Música, Artes e outras esferas do
 conhecimento.
 Para a elaboração de um projeto bem construído e com alto potencial de
 sucesso é necessário respeitar as etapas de pré-produção, produção, testes
 e pós-produção. Ao longo de todas as etapas serão definidas estratégias de
-implementação em linguagens orientadas a objetos, Engenharia de software
-voltada par jogos e metodologias ágeis.
-Desenvolvida pela Khronos Group a API OpenGL fornece tudo que há de mais
-avançado em aplicações gráficas, sendo acelerada diretamente em
-hardware, multiplataforma, robusta e totalmente escalável.
-
+implementação em linguagens orientadas a objetos, engenharia de software
+voltada para jogos e metodologias ágeis.
+Desenvolvida pela Khronos Group a API OpenGL fornece uma ampla gama de soluções para aplicações gráficas, sendo acelerada diretamente em
+hardware, multiplataforma e robusta.
 
 %Objetivo
 \section{Objetivo}
-O objetivo é desenvolver um jogo seguindo a construção de um Game Design
-Document (GDD) e ter o produto final publicado e distribuído
-comercialmente de maneira digital. Ao final deste documento será
-apresentada a primeira fase do capítulo introdutório, jogável e com
-qualidade profissional.
+Este projeto propõe portanto a construção de uma game engine, também traduzida como motor de jogo. Para isso será utilizado a linguagem Java e a biblioteca LWJGL, que incorpora a biblioteca OpenGL, GLFW e outras necessárias ao projeto. Ao fim de seu desenvolvimento será ainda construído um protótipo de jogo para demonstrar as funcionalidades da mesma. Esse protótipo será construído utilizando o Game Design Document (GDD), definido em seu próprio capítulo.
 
 \section{Justificativa e Motivação}
-O consumo cada vez maior deste tipo de produto pela população de todas as idades traz cada vez mais oportunidades de trabalho e aprendizagem.
+O consumo cada vez maior deste tipo de produto pelo público de todas as idades traz cada vez mais oportunidades de trabalho e aprendizagem.
 A insuficiência de materiais em língua portuguesa sobre os processos de desenvolvimento e planejamento de jogos é um grande instigador desse trabalho. Neste contexto, esse trabalho aborda todas as etapas pelas quais um jogo passa para torna-se um software que será distribuído e jogado por pessoas do mundo todo.
 
 
@@ -217,13 +215,6 @@ Etapa 4 – Testes e avaliação do jogo.
 \item Lançamento.
 \end{enumerate}
 
-\section{Cronograma}
-O cronograma é apresentado segundo formatos e exemplos do livro Manual de produções de jogos digitais \cite{Manualdejogosdigitais}:
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=4in]{imagens/cronograma.png}
-	\caption{Tabela com uma estimativa de tempo para cada passo do desenvolvimento}
-\end{figure}
 
 % ------------------------------------------
 % REFERENCIAL TEÓRICO
@@ -347,7 +338,7 @@ Cada execução do método \texttt{render} significa o desenho de uma imagem na 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu1_small.png}
+	\includegraphics[width=28em]{imagens/ilu1_small.png}
 	\caption{Execução do game loop básico ao longo do tempo\label{fig:gameloopbasico}}
 \end{figure}
 
@@ -381,7 +372,7 @@ while(true) {
 E pode ser representado pela figura:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu2_small.png}
+	\includegraphics[width=28em]{imagens/ilu2_small.png}
 	\caption{Execução do game loop com timestep fixo ao longo do tempo}
 \end{figure}
 
@@ -404,14 +395,14 @@ while(true) {
 Esse código é representado pela figura:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu3_small.png}
+	\includegraphics[width=28em]{imagens/ilu3_small.png}
 	\caption{Execução do game loop com timestep variável ao longo do tempo}
 \end{figure}
 
 Embora tenha-se resolvido o problema anterior de dois computadores com capacidades diferentes de processamento, o sistema ainda não é ideal. A falha está no fato de utilizar o $\Delta t$ anterior ao frame atual. Se o tempo passado entre um frame e outro for muito grande, ou seja, se houver um pico de performance, será avançado um tempo muito grande e um passo do personagem que era para ser $10 pixels$, passa a ser $10px + atraso$. Isso gera um efeito chamado de \textit{stuttering} e é percetível ao jogador, pois atrapalha a fluidez da movimentação. Isso também traz consequências na lógica do programa. Um objeto que deveria percorrer 10 pixels por timestep, ao percorrer mais em um único timestep poderia, por exemplo, estar ignorando uma colisão que iria ocorrer entre o ponto atual e o próximo.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu4_small.png}
+	\includegraphics[width=28em]{imagens/ilu4_small.png}
 	\caption{Objeto ignorando colisão devido um timestep muito grande}
 \end{figure}
  Não só isso, mas um timestep variável traz toda uma complicação com a depuração. Ao introduzir um fator não determinístico no processo, pode ser que seja impossível reproduzir um cenário de bug para efetuar seu diagnóstico e correção. 
@@ -447,13 +438,13 @@ while(true) {
 O sistema de timestep semi-fixo é demonstrado pela ilustração:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu6_small.png}
+	\includegraphics[width=28em]{imagens/ilu6_small.png}
 	\caption{Execução do game loop com timestep semi-fixo ao longo do tempo}
 \end{figure}
 O problema em que o processamento do método update é maior que o $\Delta t$ é mostrado na figura seguinte. Note que o valor de $dt_0$ é maior que o $\Delta t$ fixado e o sistema só tende a piorar ao longo do tempo, acumulando cada vez mais atraso nos valores de $dt$ e nunca se recuperando.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu8_small.png}
+	\includegraphics[width=28em]{imagens/ilu8_small.png}
 	\caption{Método \texttt{update} com tempo de processamento maior que o $\Delta t$}
 \end{figure}
  
@@ -465,13 +456,13 @@ Com o timestep definido ainda é necessário mais um procedimento para que o sis
 Para resolver este último problema é necessário realizar uma interpolação linear entre a posição anterior e atual do objeto, tornando seu movimento suave. Esse efeito pode ser visualizado nas figuras \ref{fig:renderSemInterpolacao} e \ref{fig:renderComInterpolacao} onde um objeto move-se 10 pixels por segundo. Na primeira figura a função \texttt{render} é chamada sem nenhum tratamento e portanto renderiza o objeto no mesmo lugar até que sua posição seja atualizada no próximo \texttt{update}. Já na segunda figura, é renderizada a interpolação da posição desse objeto, tornando seu movimento muito mais suave para o usuário.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu7_small.png}
+	\includegraphics[width=28em]{imagens/ilu7_small.png}
 	\caption{Renderização sem interpolação
 	\label{fig:renderSemInterpolacao}}
 \end{figure}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/ilu5_small.png}
+	\includegraphics[width=28em]{imagens/ilu5_small.png}
 	\caption{Renderização sem interpolação
 	\label{fig:renderComInterpolacao}}
 \end{figure}
@@ -981,17 +972,17 @@ Para que esse recorte seja possível é necessário acrescentar alguns parâmetr
 
 \begin{lstlisting}[caption=Vertex shader com animações]
 #version 330 core
-layout (location = 0) in vec4 vertex; //xy position
-									 //zw Tex coord
-
+layout (location = 0) in vec4 vertex;
+//Onde: xy coord. vertex e zw coord. textura
+ 
 out vec2 TexCoords;
 out vec3 FragPos;
 
 uniform mat4 model;
 uniform mat4 projection;
 uniform mat4 camera;
-uniform vec4 spriteFrame; 	//xy 	top left point of the spriteFrame
-							//zw	width and height
+uniform vec4 spriteFrame;
+//Onde: xy coord. do frame na textura e zw largura e altura
 
 void main(){
 	vec2 tCoords = vertex.zw;
@@ -1006,27 +997,89 @@ void main(){
 
 \end{lstlisting}
 
-Na variável \texttt{spriteFrame}  //TODO (finish)
-//TODO: insert animation class code
+Na variável \texttt{spriteFrame}  tem-se as coordenadas de qual pedaço da textura deverá ser extraído. Essa informação é então repassada  para o fragment shader onde por fim a função \texttt{texture()} irá colher esses pixels para manipulação.
 
+Dessa forma o código da classe responsável pela manipulação lógica da animação fica como se segue. A classe pode ser ainda estendida para comportar frames com tempo de duração específico. Para isso basta substituir o parâmetro \texttt{long frameDuration} por um vetor com o tempo de duração correspondete a cada frame e alterar a lógica do método \texttt{update}.
+
+\begin{lstlisting}[caption=Classe Animation]
+public class Animation implements Serializable{
+	private Vec4 frames[];
+	private int currentFrame = 0;
+	private String texture;
+	private long frameDuration = -1;
+	private long startTime = System.nanoTime();
+	private boolean playedOnce = false;
+	
+	public Animation(String texture, long frameDuration) {
+		this.texture = texture;
+		this.frameDuration = frameDuration;
+	}
+
+	public void setFrames(int quantity, Vec2 offset, Vec2 size) {
+	
+		frames = new Vec4[quantity];
+		float width = ResourceManager.getSelf().getTexture(texture).getWidth();
+		float height = ResourceManager.getSelf().getTexture(texture).getHeight();
+		
+		for(int i= 0; i< quantity; i++){
+			frames[i] = new Vec4(
+						((float)i*size.x + offset.x)/width,
+						(offset.y)/height,
+						(size.x)/width,
+						(size.y)/height
+					);
+		}
+		
+	}
+	
+	public Vec4 getCurrentFrame() {
+		return frames[currentFrame];
+	}
+	
+	public void update() {
+		if(frameDuration>0) {
+			long elapsed = (System.nanoTime() - startTime) / Engine.MILISECOND;
+			
+			if(elapsed > frameDuration) {
+				currentFrame++;
+				startTime = System.nanoTime();
+			}
+			if(currentFrame == frames.length) {
+				currentFrame = 0;
+				playedOnce = true;
+			}
+		}
+	}
+}
+\end{lstlisting}
 \subsection{Z-Ordering}
 A técnica de z-ordering consiste na ordenação de objetos em sobreposição. É utilizada para organizar a ordem na qual os elementos devem ser renderizados tal que não haja elementos distantes sendo desenhados em cima de objetos mais próximos da câmera.
 Para ambientes 2D basta simplesmente ordenar os elementos pela posição y do menor para o maior. 
-//TODO: imagem ordenacao
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=28em]{imagens/z-order.png}
+	\caption{Ordem correta de renderização: do menor y para o maior}
+\end{figure}
 
 Um ponto a se tomar cuidado na implementação desta técnica é ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação.
 
 
 \subsection{Iluminação}
-Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não servem para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
-O modelo de iluminação adotado e adaptado nesta engine foi o de Phong que usa três componentes de luz em sua construção: ambient, diffuse e specular.
-\\TODO: demonstração de cada componente
-\\TODO: colocar referencia (bibliográfica) do modelo de Phong
+Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não costumam servir para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
+O modelo de iluminação adotado e adaptado nesta engine foi o de Phong \cite{PhongShading} que usa três componentes de luz em sua construção: ambient, diffuse e specular.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=28em]{imagens/lightning.png}
+	\caption{Componentes do modelo de Phong}
+\end{figure}
+
 
 \subsubsection{Ambiente}
-De uma maneira simples a luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
+A luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
 
-Vale ressaltar duas propriedades importantes da luz: reflexão e refração. A iluminação que advém de qualquer fonte luminosa pode impactar objetos mesmo que estes não estejam sobre alcance direto da mesma através da reflexão da luz. Algoritmos que levam esses fatores em consideração são chamados de \textit{global illumination}, mas são geralmente caros em performance ou muito complexos.
+Vale ressaltar duas propriedades importantes da luz: reflexão e refração. A iluminação que advém de qualquer fonte luminosa pode impactar objetos mesmo que estes não estejam sobre alcance direto. Esse efeito advém da propriedade da reflexão e é chamado de luz indireta. Algoritmos que levam esse fator em consideração são chamados de \textit{global illumination}, mas geralmente custam caro em performance ou são muito complexos.
 Para esta engine será adotado um modelo simplificado que consiste em multiplicar a cor do objeto por uma variável \texttt{lightAmbientColor}, que define a cor e intensidade da luz que ilumina todo o mundo.
 
 \begin{lstlisting}[caption=Fragment Shader com luz ambiente]
@@ -1167,11 +1220,13 @@ Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atribu
 
 O sistema de colisões é responsável por delimitar o espaço físico que cada objeto deve ocupar no ambiente. Para formas geométricas mais básicas como retângulos, círculos e triângulos existem fórmulas simples e otimizadas para detectar essas colisões. Para polígonos mais complexos existem diversos algoritmos que usufruem de métodos avançados para detectar e resolver essas colisões.
 
-Um problema de colisão é dividido em duas etapas principais: detecção e resolução. A etapa de detecção consiste em detectar quais objetos colidiram com quais outros objetos em um tempo $t$. Esse processo pode ocorrer de duas formas, por antecipação ou no tempo de colisão. A segunda etapa consiste em resolver essas colisões usando uma série de critérios como, por exemplo, gravidade, massa, velocidade etc.
+Um problema de colisão é dividido em duas etapas principais: detecção e resolução. A etapa de detecção consiste em detectar quais objetos colidiram com quais outros objetos em um tempo $t$. Esse processo pode ocorrer de duas formas, por antecipação ou no tempo de colisão. A segunda etapa consiste em resolver essas colisões usando uma série de critérios como, por exemplo: gravidade, massa, velocidade, impulso, torque etc.
 
 \subsection{Colisões do tipo AABB vs AABB}
 
 Colisões do tipo Axis Aligned Bounding Box (AABB) são as mais simples de resolver. Para detectar se dois retângulos de eixo alinhado colidiram basta checar se houve sobreposição em qualquer um dos eixos x e y.
+//TODO: explicar melhor eixo alinhado 
+//TODO: explicar melhor vs
 
 \begin{lstlisting}[caption=Colisão AABB vs AABB]
 	public boolean intersects(Rectangle r) {
@@ -1210,49 +1265,171 @@ Para o exemplo da figura acima a intersecção ocorreu onde $rw > tx$, $rh > ty$
 
 \subsection{jBox2D}
 
-A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro. Esse tópico será discutido adiante no capítulo Sistemas de coordenadas.
+A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o torna inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro. Esse tópico será discutido adiante no capítulo Sistemas de Coordenadas.
 
 Para o sistema de colisões funcionar ele precisa, assim como a própria engine, de um mundo e um timestep, neste caso, fixo. Define-se abaixo o exemplo:
 //TODO: código exemplo
 
 \section{Sistema de coordenadas}
 
-\subsection{Local Space}
-As coordenadas de espaço local referem-se ao próprio espaço do objeto. Geralmente são normalizadas entre $[-1, 1]$ com origem no ponto $(0,0)$.
-//TODO: imagem
-\subsection{World Space}
-As coordenadas de espaço de mundo são obtidas através da multiplicação do local space pela matriz model e representam a posição do objeto no mundo. O processo de multiplicação do local space pela matriz model  escala, rotaciona e translada o objeto para o world space.
+O sistema de coordenadas abrange todo o processo de manipulação das coordenadas dos game objects até a sua conversão NDC e por fim rasterização para a tela. Note que o OpenGL espera todas as coordenadas finais no formato NDC (Normalized Devide Coordinates), que varia entre $[-1,1]$. Cada etapa manipula e converte de um sistema para o outro. São cinco sistemas de coordenadas no total:
 
-Se todos os objetos fossem inseridos no mundo somente usando as coordenadas locais muito provavelmente estariam todos sobrepostos na origem. O processo de conversão para o world space pode ser exemplificado por uma pilha de caixas onde se deseja inserir outra. Para empilhá-la em cima de outra é necessário escalá-la para o mesmo tamanho das outras, rotacioná-la para alinhar as outras e caber no espaço vazio e por fim translada-la-a para a posição em que ela ficará na pilha.
+\begin{enumerate}
+    \item Espaço local
+    \item Espaço de mundo
+    \item Espaço de visão (ou espaço de câmera)
+    \item Espaço de recorte
+    \item Espaço da tela (projeção)
+\end{enumerate}
 
-\subsection{View Space}
-O view space é geralmente referenciado como a câmera, ou também camera space. O view space é obtido a partir da multiplicação do world space pelo ponto de vista da câmera. Esse processo é realizado multiplicando a matriz do world space pela matriz view.
+Uma vez processadas elas são passadas para o \textit{shader rasterization} e enfim convertidas para pixels em 2D na tela.
 
-\subsection{Clip space}
-Clip space é o espaço visível pela câmera de forma que todos os pontos fora desse espaço são descartados. Seu nome é derivado justamente desse fato: clip space (espaço de recorte). Para que o usuário não tenha de especificar todas coordenadas em um intervalo NDC (Normalized Devide Coordinates), que varia entre $[-1,1]$, trabalha-se com dois sistemas de projeção responsáveis por converter do view space de volta para um intervalo NDC. São os dois sistemas: projeção ortográfica e projeção de perspectiva.
-Note que, se um triângulo possui apenas um parte visível e portanto terá uma parte recortada o OpenGL divide esse triângulo em primitivas menores e então descarta aquelas que estão fora do intervalo NDC.
+//TODO: imagem de todo processo de transformação de um sistema para outro
+
+\subsection{Espaço local}
+As coordenadas em espaço local referem-se ao próprio espaço do objeto. Representam as coordenadas do objeto relativo à sua própria origem. Geralmente são normalizadas no formato NDC com origem no ponto $(0,0)$.
+
+//TODO: imagem de um objeto no local space.
+
+\subsection{Espaço de mundo}
+As coordenadas em espaço de mundo são obtidas através da multiplicação do espaço local pela matriz \textit{model}. O resultado representa a posição do objeto no mundo relativo à origem do mundo. O processo de multiplicação do espaço local pela \textit{model} escala, rotaciona e translada o objeto para o espaço de mundo através do processo chamado transformação afim.
+
+Se todos os objetos fossem inseridos no mundo somente usando as coordenadas locais provavelmente todos estariam sobrepostos na origem. O processo de conversão para o espaço de mundo pode ser exemplificado por uma pilha de caixas onde se deseja inserir outra. Para empilhá-la é necessário escalá-la para o mesmo tamanho das outras, rotacioná-la para alinhar com as outras e caber no espaço vazio e, por fim, transladá-la para a posição na pilha.
+
+//TODO: imagem exemplo ilustrando o processo de inserir a caixa.
+
+\subsection{Espaço de visão}
+O espaço de visão, também referenciado como espaço da câmera, é obtido a partir da multiplicação do espaço de mundo pela \textit{view matrix} e representa o ponto de vista da câmera sobre o mundo.
+
+//TODO: imagem exemplo
+
+\subsection{Espaço de recorte}
+Espaço de recorte é a zona visível na tela de forma que todos os pontos fora desse espaço são descartados. Para que o usuário não tenha de especificar todas coordenadas em um intervalo NDC desde o início do processo trabalha-se com dois sistemas de projeção responsáveis por converter do espaço de visão de volta para um intervalo NDC. São os dois sistemas: projeção ortográfica e projeção de perspectiva.
+Note que, se um triângulo possui apenas um parte visível e terá uma parte recortada o OpenGL divide esse triângulo em primitivas menores e então descarta aquelas que estão fora da tela, ou simplesmente, fora do intervalo NDC.
 
 \subsection{Projeção}
 
+Existem duas formas de aplicar a projeção. São elas projeção ortográfica e projeção de perspectiva.
+
 \subsubsection{Projeção ortográfica}
-Para especificar uma matriz de projeção ortográfica é necessário fornecer a largura, altura e comprimento do frustum. Dessa forma, todas as coordenadas que estiverem entre o plano mais próximo e o plano mais distante serão apresentadas ao usuário. Todo o resto será recortado fora.
+//TODO: frustum - tronco de base paralela
+
+Para especificar uma matriz de projeção ortográfica é necessário fornecer a largura, altura e comprimento do frustum. Dessa forma, todas as coordenadas que estiverem entre o retângulo formado pelo plano mais próximo e pelo plano mais distante serão apresentadas ao usuário. Todo o resto será recortado fora.
 //TODO: imagem do far e near plane
 
-A projeção ortográfica mapeia coordenadas 3D diretamente para o plano 2D da tela, sem levar em consideração a perspectiva. Isso produz um efeito não realístico para cenário 3D pois da a impressão de objetos prensados na tela.
+A projeção ortográfica mapeia linearmente coordenadas 3D diretamente para o plano 2D da tela, sem levar em consideração a perspectiva. Isso produz um efeito não realístico para ambientes 3D pois passa a impressão de objetos prensados na tela, sem profundidade.
 
 //TODO: imagem do resultado de uma matriz orto
 
-Para especificar a matriz ortográfica será utilizado uma função do GLM definida a seguir. Os dois primeiros parâmetros são a 
+Para especificar a matriz ortográfica será utilizada a função do GLM definida a seguir. Os dois primeiros parâmetros são as coordenadas esquerda e direita do frustum, o terceiro e quarto parâmetro a parte de baixo e topo do frustum. Com esses quatro parâmetros definiu-se o tamanho do plano mais próximo e do plano mais distante. O quinto e sexto parâmetro indicam a distância entre os dois planos.
+
 \begin{lstlisting}[caption=Função Ortho do GLM]
 Mat4 projection = new Mat4();
 projection = projection.ortho(float left, float right, float bottom, float top, float zNear, float zFar);
 \end{lstlisting}
+//TODO: inserir imagem indicando parâmetros. Mais fácil visualizar
 
 \subsubsection{Projeção de perspectiva}
+A projeção de perspectiva simula a percepção humana de profundidade. Objetos mais distantes se tornam menores e a esse efeito é dado o nome de perspectiva.
+A matriz de projeção pode ser criada utilizando a seguitne função do GLM.
+\begin{lstlisting}[caption=Função Perspective do GLM]
+Mat4 perspective = new Mat4();
+perspective = perspective.perspective(toRadians(45), width/height, near, far);
+\end{lstlisting}
 
-\subsection{jBox2D para world space}
+\subsection{jBox2D para espaço de mundo}
+
+Para trabalhar com os dois sistemas de medida (pixels e metros) basta selecionar um fator de escalonamento. Supondo um fator de 100, basta multiplicar por 100 para converter de metros para pixels e dividir por 100 para converter de pixels para metros.
 
 \section{Camera}
+\section{Sistema de input}
+O sistema de input é responsável por mapear botões de uma interface física como teclado, mouse e gamepad em ações dentro do jogo. Para não lidar com a interface de hardware diretamente a biblioteca GLFW apresenta uma abstração que realiza essa comunicação.
+
+\subsection{GLFW Keyboard}
+\subsection{GLFW Mouse}
+\subsection{GLFW Game Control}
+
+\section{Gerência de recursos}
+O sistema de gerência de recursos é responsável por ler e salvar todos os arquivos da Engine. Em suma, esse sistema é responsável por centralizar todas as operações de I/O e gerenciá-las num único lugar de forma que seja evitado a ocorrência de dois arquivos idênticos em memória.
+
+\subsection{Chunk system}
+O sistema de chunks reparte toda a extensão do mapa em pequenos pedaços para uma maior facilidade de manuseio na hora de ler e salvar no disco. Outro fator determinante para a escolha deste formato é a necessidade de poder gerar um mapa infinito e com carregamento dinâmico, ou seja, sem telas de loading. Isso é possível repartindo o mapa em pequenos pedaços que serão gerados, lidos e escritos sobre demanda.
+
+É importante notar que este é um sistema crítico e deve ser meticulosamente ajustado para as necessidades de cada projeto. Um arquivo muito grande pode gerar um atraso de leitura e escrita muito grande, enquanto um arquivo muito pequeno pode sobrecarregar o sistema com o overhead de muitas chamadas de função I/O num período curto de tempo. É necessário implementar este sistema utilizando técnicas de leitura e escrita assíncronas de forma que a Engine não congele enquanto aguarda cada operação de I/O.
+
+Com estes detalhes abordados a implementação se faz com duas classes principais: Chunk e ChunkManager. //TODO: check class names
+
+\subsection{A classe Resource Manager}
+
+\section{Aúdio}
+A implementação de aúdio foi feita utilizando a mesma família de bibliotecas da Khronos, o OpenAL, voltada especificamente para áudio.
+
+\subsection{Integrando o OpenAL}
+
+\chapter{Inteligência artifical}
+O sistema responsável pela IA da Engine é parte fundamental do sistema. Sem ela o jogo iria ser um conjunto de imagens estáticas distribuídas à esmo na tela.
+Em essência IA é o que da vida a todos os inimigos e personagens do jogo, tornando-o dinâmico e interativo para o usuário.
+//TODO: https://www.gamedev.net/articles/programming/artificial-intelligence/the-total-beginners-guide-to-game-ai-r4942/ 
+
+\section{Utility AI}
+
+Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dado essa medida, alguém poderá expressar o acréscimo ou queda desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
+
+Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto de onde será extraído os valores que quantificam o ambiente e por fim calculado o seu retorno indicando o utility daquela ação.
+
+//TODO: ref to http://www.intrinsicalgorithm.com/media/2010GDC-DaveMark-KevinDill-UtilityTheory.pdf
+
+\subsection{Processo de funcionamento}
+Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuido a cada dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação que será executada.
+
+//TODO: imagem com o gráfico mostrando a interpolação das funções
+
+Para a função de pontuação que calcula o score da ação atirar tem-se como parâmetros a distância do inimigo. Para a função de abrigar-se tem-se a distância do inimigo e a vida do agente como parâmetros. Supondo que cada ação seja calculada pelas funções:
+
+\begin{itemize}
+    \item Atirar: $return 0.5$
+    \item Abrigar-se: $return (vida - 1)^2$
+    \item Perseguir: $return distancia^3$
+\end{itemize}
+
+ A partir dessas funções é possível calcular qual utility será o maior para cada conjunto de parâmetros. Note ainda que todos os parâmetros estão normalizados no intervalo $[0,1]$. Para normalizar a distância é necessário escolher um valor máximo e assim todo valor que excedê-lo será fixado em 1. O gráfico para cada função é dado a seguir.
+ 
+ //TODO: gráfico das funções
+ 
+ Sobrepondo as três funções pode-se ter uma melhor noção de qual comportamento irá se sobressair em cada situação para cada valor do parâmetro. Entretanto, vale lembrar que os valores de vida e distância são independentes e portanto as funções não necessariamente estarão no mesmo ponto do eixo X ao mesmo tempo.
+ A tabela abaixo demonstra três situações em que, para cada conjunto de parâmetros tem-se uma ação que é decidida usando a maior utility.
+ 
+ Vida do agente				:
+ Distância até o inimigo	:
+ 
+ Atirar		Abrigar-se		Perserguir
+ 00			00
+
+
+//TODO: good example https://alastaira.wordpress.com/2013/01/25/at-a-glance-functions-for-modelling-utility-based-game-ai/
+//https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_Thing_of_the_Past.php
+
+\section{Finite State Machine}
+\section{Árvore de decisões}
+\section{Pathfinding}
+Existem muitas maneiras de se implementar o algoritmo de pathfindind. Alguns funcionam muito bem para sistemas estáticos onde tem-se conhecimento do mundo e outros nem tanto. Para ambientes dinâmicos não pode-se, por exemplo, assumir way-points estáticas com caminhos pré-calculados pois o ambiente muda a todo momento.
+
+O processo de pathfinding no ambiente 2D consiste em primeiro mapear uma seção do mapa para uma matriz. Cada 
+
+\chapter{Procedural Content Generation}
+Procedural Content Generation (PCG) é o termo cunhado para descrever processos de geração de dados aleatórios ou pseudo-aleatórios em jogos. Esses dados são utilizados para gerar desde terrenos até modelos 3D de maneira algorítmica invés de manual.
+
+\section{Random noise}
+O conceito mais básico na construção de elementos baseados em PCG envolve a utilização de ruídos como fonte de dados pseudo-aleatória. Existem diversos algoritmos para obtenção de ruído pseudo-aleatório como, por exemplo, perlin noise, simplex noise e gradient noise. Há ainda técnicas que se utilizam de maneiras não determinísticas e implementam outras fontes de dado.
+//TODO: good source: https://thebookofshaders.com/12/ http://pcgbook.com/
+
+\subsection{Perlin noise}
+Perlin noise é um tipo de ruído gradiente concebido por Ken Perlin em 1983 //TODO: cite. O algoritmo tem inicio definindo um grid de dimensão n. O processo mais básico consiste em definir o grid com uma série de vetores gradiente, computar o produto escalar entre vetores gradiente de distância e então realizar uma interpolação entre esses valores.
+
+\section{Geração de terrenos}
+A geração de terreno utilizada nessa engine consiste em um ...
+\subsection{Florestas}
+
 
 \chapter{Criação de um protótipo}
 \label{sec:desenv}
@@ -1334,12 +1511,15 @@ apresentado ao jogador em forma de uma animação de andar diferente. Quanto mai
 \subsection{Domar animais}
 Alguns animais podem ser domados através dos instrumentos. Basta cantar próximo a eles então eles serão domados.
 
+
 % ------------------------------------------
 % EXPERIMENTOS E RESULTADOS
 \chapter{Experimentos e resultados}
 \label{sec:experim}
 
+\section{Protótipo}
 
+\section{Otimizações e testes de desempenho}
 
 
 

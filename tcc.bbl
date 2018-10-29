@@ -62,6 +62,13 @@ Dispon{\'\i}vel em: \url{https://www.opengl.org/about/}.}
 {ROGERS, S. \emph{Level Up}. [S.l.]: Edgard Blucher, 2016.
 ISBN 9788521207009.}
 
+\bibitem[ScratchAPixel 2018]{PhongShading}
+\abntrefinfo{ScratchAPixel}{SCRATCHAPIXEL}{2018}
+{SCRATCHAPIXEL. \emph{The Phong Model, Introduction to the Concepts of Shader,
+  Reflection Models and BRDF}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.scratchapixel.com/lessons/3d-basic-rendering/phong-shader-BRDF}.}
+
 \bibitem[Vries 2015]{LearnOpenGL}
 \abntrefinfo{Vries}{VRIES}{2015}
 {VRIES, J. de. \emph{Learn OpenGL}. 2. ed. [s.n.], 2015. Dispon{\'\i}vel em:
