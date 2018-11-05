@@ -64,7 +64,7 @@ OpenGL e Java }
 
 \begin{resumo} 
 
-Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Caravela e a subsequente elaboração de um jogo.
+Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Narval e a subsequente elaboração de um jogo.
 A implementação de código será realizada na linguagem Java e através da API gráfica OpenGL usando GLFW (OpenGL Frame Work). 
 A elicitação dos requisitos do jogo será documentada em um artefato denominado \textit{Game Design Document} que permite estruturar, sistematizar e organizar 
 o processo de construção.
@@ -76,7 +76,7 @@ O jogo será elaborado utilizando técnicas de algoritmos procedurais para gera�
 \end{resumo}
 
 \begin{abstract} 
-This work proposes to develop a multiplataform game engine for desktop entitled Caravela and a subsequent game elaboration. 
+This work proposes to develop a multiplataform game engine for desktop entitled Narval and a subsequent game elaboration. 
 The code implementation will be done in Java through the API OpenGL using GLFW (OpenGL Frame Work).
 The elicitation of requisites for the game will be documented in an artifact called Game Design Document which allows to structure, systematize and organize the process of building a game.
 The game will be elaboreted using techniques of procedural algorithms to generate art and environment, artificial intelligence for Non Playable Characters (NPC) behaviours and design patterns applied to games.
@@ -87,6 +87,13 @@ The game will be elaboreted using techniques of procedural algorithms to generat
  \textbf{Keywords}: Indie Game, Game Design Document, Jogos, Java, OpenGL, Game Engine, Artificial Intelligence %TCC:
 \end{abstract}
 \cleardoublepage
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{imagens/logo.png}
+\end{figure}
+\clearpage
+
 
 % ------------------------------------------
 % LISTA DE FIGURAS
@@ -129,6 +136,7 @@ The game will be elaboreted using techniques of procedural algorithms to generat
   \item[NDC] Normalized Device Coordinates
   \item[GLM] OpenGL Mathematics Library
   \item[IA] Inteligência Artificial
+  \item[PCM] Pulse-code modulation 
 \end{siglas}
 
 
@@ -153,27 +161,29 @@ The game will be elaboreted using techniques of procedural algorithms to generat
 \chapter{Introdução}
 
 \section{Visão Geral da Proposta}
-O mercado internacional de jogos movimentará aproximadamente 108.9
+Estima-se que o mercado internacional de jogos movimentará aproximadamente 108.9
 bilhões de dólares distribuídos entre 2.2 bilhões de jogadores em 2017. Destes, 58\%
 representam os segmentos de PC e consoles \cite{GameMarketArticle}. Além de ser uma área
 comercial lucrativa é também interdisciplinar e aproxima
-conceitos de Computação, Design gráfico, Música, Artes e outras esferas do
+diversos conceitos de Computação, Design gráfico, Música, Artes e outras esferas do
 conhecimento.
 Para a elaboração de um projeto bem construído e com alto potencial de
 sucesso é necessário respeitar as etapas de pré-produção, produção, testes
 e pós-produção. Ao longo de todas as etapas serão definidas estratégias de
-implementação em linguagens orientadas a objetos, engenharia de software
-voltada para jogos e metodologias ágeis.
-Desenvolvida pela Khronos Group a API OpenGL fornece uma ampla gama de soluções para aplicações gráficas, sendo acelerada diretamente em
-hardware, multiplataforma e robusta.
+implementação em linguagens orientadas a objetos, engenharia de software, padrões de projeto
+voltados para jogos e metodologias ágeis.
 
 %Objetivo
 \section{Objetivo}
-Este projeto propõe portanto a construção de uma game engine, também traduzida como motor de jogo. Para isso será utilizado a linguagem Java e a biblioteca LWJGL, que incorpora a biblioteca OpenGL, GLFW e outras necessárias ao projeto. Ao fim de seu desenvolvimento será ainda construído um protótipo de jogo para demonstrar as funcionalidades da mesma. Esse protótipo será construído utilizando o Game Design Document (GDD), definido em seu próprio capítulo.
+Este projeto propõe portanto a construção de uma game engine, também traduzida como motor de jogo. Para isso será utilizado a linguagem Java e a biblioteca LWJGL, que incorpora a biblioteca OpenGL, GLFW e outras necessárias ao projeto.
+Desenvolvida pela Khronos Group a API OpenGL fornece uma ampla gama de soluções para aplicações gráficas, sendo acelerada diretamente em
+hardware, multiplataforma e robusta. Esses fatores culminaram na sua escolha como o componente responsável pela renderização da engine. Para a parte de áudio será utilizada a biblioteca OpenAL e para o modulo de física a biblioteca jBox2D. 
+Ao fim de seu desenvolvimento será ainda construído um protótipo de jogo para demonstrar as funcionalidades da mesma. %Esse protótipo será construído utilizando o Game Design Document (GDD), definido em seu próprio capítulo.
 
 \section{Justificativa e Motivação}
 O consumo cada vez maior deste tipo de produto pelo público de todas as idades traz cada vez mais oportunidades de trabalho e aprendizagem.
 A insuficiência de materiais em língua portuguesa sobre os processos de desenvolvimento e planejamento de jogos é um grande instigador desse trabalho. Neste contexto, esse trabalho aborda todas as etapas pelas quais um jogo passa para torna-se um software que será distribuído e jogado por pessoas do mundo todo.
+Embora haja diversas opções de Engines no mercado como Unity, Unreal, CryEngine e afins, a grande maioria é de código fechado, o que torna extremamente dificil senão impossível de modificá-la para as necessidades especias de um projeto. Além deste fato, para comercializar os produtos produzidos nelas é necessário pagar uma porcentagem da revenda obtida com o produto lançado. Portanto, para este projeto será desenvolvida uma Engine própria, para ter-se uma maior flexibilidade de implementação e para ter uma licença de software próprio.
 
 
 \section{Metodologia}
@@ -240,7 +250,8 @@ Durante a produção será elaborado os assets e código do jogo. É nela que oc
 Em jogos há duas grandes fases para verificar se tudo está funcionando como o esperado: Alfa e Beta. Durante todo o processo é necessário uma equipe do Departamento de Qualidade verificando bugs e reportando-os. Entretanto, as fases Alfa e Beta são as mais importantes. A fase alfa é quando uma seleta quantidade de usuários é escolhida para testar o jogo e dar feedback à desenvolvedora. Ela é fundamental para garantir que o jogo funciona como esperado e quais aspectos precisam ser melhorados antes de ser distribuída para o público geral. A etapa seguinte, Beta, é geralmente aberta ao público e já possui boa parte dos bugs corrigidos. Ela é essencial para testar a recepção do público e fazer as correções finais antes do lançamento oficial.
 
 \subsection{Game Design Document}
-Como em todo software o jogo também possui um documento de requisitos. Entretanto, um documento de requisitos não é suficiente para detalhar todos os elementos que compõe um jogo.  Essa carência de especificações como história, personagens, roteiro, câmera entre outras coisas são supridas pelo GDD.  Portanto, no caso especial de um jogo é necessário ambos documentos para detalhar e especificar adequadamente o projeto. Entretanto, não há regra universal ou normas que ditem como exatamente um GDD deve ser construído ou quais conteúdos deve abranger. A estrutura de um GDD é, possivelmente, composta dos seguintes itens \cite{LevelUp}:\\ %TODO: Citei apenas os mais relevates, isso altera a maneira de citar uma vez que não está idêntico ao do livro?
+Como em todo software o jogo também possui um documento de requisitos. Entretanto, um documento de requisitos não é suficiente para detalhar todos os elementos que compõe um jogo.  Essa carência de especificações como história, personagens, roteiro, câmera entre outras coisas são supridas pelo GDD.  Portanto, no caso especial de um jogo é necessário ambos documentos para detalhar e especificar adequadamente o projeto. Entretanto, não há regra universal ou normas que ditem como exatamente um GDD deve ser construído ou quais conteúdos deve abranger. A estrutura de um GDD é, possivelmente, composta dos seguintes itens \cite{LevelUp}:
+
 \textbf{Objetivos de jogo} – Detalha o conceito geral do jogo.\\
 \textbf{Visão geral da história} – Constitui um breve resumo da história. Deve entrelaçar os diversos elementos narrativos como ambientes e personagens e conter o início, meio e fim da narrativa. \\
 \textbf{Controles do jogo} – Lista de movimentos que o jogador poderá realizar como ataques, rolamento e corrida. Deve mapear cada botão do controle com a ação a ser realizada. \\
@@ -292,18 +303,17 @@ Como em todo software o jogo também possui um documento de requisitos. Entretan
 \chapter{Trabalhos Correlatos}
 \label{sec:trabcorr}
 
-%TODO: Inserir imagem
+//TODO: Inserir imagens
 No Place for bravery: Jogo estilo Roguelike em pixel art. Atualmente em desenvolvimento pelo estúdio Glitch Factory situado no Distrito Federal.\\
 
-%TODO: Inserir imagem
 Eitr: Jogo estilo Action RPG inspirado em Dark souls com uma temática sombria e em pixel art. Atualmente em desenvolvimento pelo estúdio Devolver Digital.\\
 
-%TODO: Inserir imagem
 Kingdom: Jogo de plataforma feito em pixel art. \\
 
 Moon Hunters: Action RPG em pixel art com mundo extenso e procedural, muito similar à proposta deste trabalho em alguns aspectos centrais. \\
 
 Children of morta: Action RPG em pixel art. \\
+
 
 % ------------------------------------------
 % DESENVOLVIMENTO DO TRABALHO
@@ -319,6 +329,8 @@ Alguns exemplos muito populares de engines disponíveis no mercado são a Unity,
 	\caption{Componentes de uma Game Engine. Fonte:~\cite{GameEngineArchitecture}
     \label{fig:arquitetura}}
 \end{figure}
+
+//TODO: Substituir essa imagem pelo diagrama de modulos da engine 
 
 \section{\textit{Game Loop}}
 Game loop é o núcleo da arquitetura de uma engine. É neste loop que todos os subsistemas da engine são chamados e  executados, como a renderização, detecção e resolução de colisões, áudio e muitos outros \cite{GameEngineArchitecture}. Por se tratar de uma simulação em tempo real, onde a tela inteira deve ser atualizada em uma quantidade muito alta de vezes, é fundamental que tudo seja executado o mais rápido possível e em tempo constante para que o usuário tenha uma experiência fluída e dinâmica.
@@ -452,6 +464,7 @@ O problema em que o processamento do método update é maior que o $\Delta t$ é
 É neste sistema que todos os objetos visíveis na tela são desenhados. Esse sistema é executado diversas vezes e em rápida sucessão durante um segundo através do método \texttt{render}, criando uma ilusão de movimento. Esse processo se inicia no processador e termina na placa gráfica acontecendo quantas vezes a máquina conseguir ou quantas vezes o usuário desejar configurar. Os valores mais comuns para fixar o FPS são atrelados à frequência do monitor que, atualmente, variam de 30 Hz até 144 Hz e para todos os efeitos Hertz é uma medida equivalente ao FPS \cite{GameEngineArchitecture}.
 
 \subsection{Interpolação Linear} 
+\label{subsec:interpoLinear}
 Com o timestep definido ainda é necessário mais um procedimento para que o sistema renderize objetos em movimento de forma suave. O efeito de \textit{stuttering} pode ser causado tanto pelo aspecto lógico, através dos picos de performance, quanto pelo simples fato de que não se possui total controle sobre como o SO gerencia a aplicação. Não é possível garantir uma taxa de atualização e renderização intercalada e perfeita. Haverá momentos que depois de um único \texttt{update} o método \texttt{render} será chamado várias vezes se processado em um tempo menor que o $\Delta t$ e, sem nenhum tratamento, este efeito também causa \textit{stuttering}. Ao chamar o método \texttt{render} consecutivamente e não atualizar a posição do objeto em cada chamada, o usuário tem a impressão de um sistema engasgado com movimento não fluído.
 Para resolver este último problema é necessário realizar uma interpolação linear entre a posição anterior e atual do objeto, tornando seu movimento suave. Esse efeito pode ser visualizado nas figuras \ref{fig:renderSemInterpolacao} e \ref{fig:renderComInterpolacao} onde um objeto move-se 10 pixels por segundo. Na primeira figura a função \texttt{render} é chamada sem nenhum tratamento e portanto renderiza o objeto no mesmo lugar até que sua posição seja atualizada no próximo \texttt{update}. Já na segunda figura, é renderizada a interpolação da posição desse objeto, tornando seu movimento muito mais suave para o usuário.
 \begin{figure}[H]
@@ -1065,7 +1078,7 @@ Para ambientes 2D basta simplesmente ordenar os elementos pela posição y do me
 Um ponto a se tomar cuidado na implementação desta técnica é ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação.
 
 
-\subsection{Iluminação}
+\section{Iluminação}
 Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não costumam servir para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
 O modelo de iluminação adotado e adaptado nesta engine foi o de Phong \cite{PhongShading} que usa três componentes de luz em sua construção: ambient, diffuse e specular.
 
@@ -1076,7 +1089,7 @@ O modelo de iluminação adotado e adaptado nesta engine foi o de Phong \cite{Ph
 \end{figure}
 
 
-\subsubsection{Ambiente}
+\subsection{Ambiente}
 A luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
 
 Vale ressaltar duas propriedades importantes da luz: reflexão e refração. A iluminação que advém de qualquer fonte luminosa pode impactar objetos mesmo que estes não estejam sobre alcance direto. Esse efeito advém da propriedade da reflexão e é chamado de luz indireta. Algoritmos que levam esse fator em consideração são chamados de \textit{global illumination}, mas geralmente custam caro em performance ou são muito complexos.
@@ -1090,7 +1103,7 @@ out vec4 color;
 uniform sampler2D image;
 
 void main(){
-	vec4 lightAmbientColor = vec4(0.1,0,0,1);
+	vec4 lightAmbientColor = vec4(1.1,0.7,0.25,1);
 	
 	vec4 imgTex =  texture(image, TexCoords).xyzw;
 	
@@ -1098,40 +1111,160 @@ void main(){
 }
 \end{lstlisting}
 
-Dessa forma o resultado que se obtêm com a cor acima é um ambiente com uma tonalidade um pouco avermelhada:
+Dessa forma o resultado que se obtêm com a cor acima é um ambiente com uma tonalidade um pouco alaranjada:
 
-//TODO: add sunset image
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=28em]{imagens/sunset.png}
+	\caption{Demonstração da luz ambiente com tonalidade alaranjada}
+\end{figure}
 
 
-\subsubsection{Luz Difusa}
+\subsection{Luz Difusa}
 A luz difusa simula o impacto direcional que uma fonte de luz tem sobre um objeto qualquer. Quanto mais perto o objeto está dessa fonte, mais brilhante ele será.
 
-Para calcular a luz difusa é necessário antes ter em mãos o vetor normal do objeto que será atingido pelos raios de luz. Dessa forma, quando o raio de luz atinge o objeto calcula-se o ângulo entre os dois vetores usando o produto escalar.
-//TODO: inserir imagem do produto escalar 
+Para calcular a luz difusa é necessário antes ter em mãos o vetor normal do objeto que será atingido pelos raios de luz. Dessa forma, quando o raio de luz atinge o objeto calcula-se o ângulo $\theta$ entre os dois vetores usando o produto escalar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/normal_reflection.png}
+	\caption{Angulo $\theta$ entre raio luminoso e vetor normal da superfície iluminada}
+\end{figure}
 
 O resultado desse produto escalar indica o impacto que a luz terá sobre a cor do fragmento sendo processado pelo shader, tendo em conta sua orientação relativa à luz. Para realizar o cálculo será necessário  então um vetor com a posição da fonte luminosa e o vetor normal e do fragmento sendo afetado por essa fonte.
-O vetor normal será obtido através de uma normal texture e o vetor da fonte luminosa através de uma variável \texttt{global uniform}.  
+O vetor normal será obtido através de uma normal texture e o vetor da fonte luminosa através de uma variável \texttt{global uniform}. O vetor normal é pré-calculado e armazenado em uma imagem enviada ao shader juntamente com a posição e cor da fonte luminosa. O cálculo é então feito normalizando a subtração do \texttt{lightPos} pela posição do fragmento, obtendo assim a direção da luz. Com o valor normalizado realiza-se o produto escalar da direção da luz pela textura normal. Multiplica-se então o resultado pela cor da luz e ao final somada-se a luz difusa a luz ambiente. Esse resultado é multiplicado pela textura para obter o resultado final. O resultado obtido com o shader é ilustrado na figura abaixo.
+//TODO: falta explicar melhor o lightDir
 
-//TODO: referência vetor normal ou footnote (whatever)
-//TODO: adicionar o código do shader com luz difusa
+\begin{lstlisting}[caption=Fragment Shader com luz ambiente e difusa]
+#version 330 core
 
-\subsubsection{Vetor Normal}
+in vec2 TexCoords;
+in vec3 FragPos;  
 
-Um vetor normal unitário é aquele perpendicular à superfície do vértice. A técnica comumente utilizada para trabalhar com os vetores normais de um objeto consiste em mapeá-los em uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente convertido para as coordenadas de cores RGB e, por fim, são armazenadas em uma imagem/textura.
+out vec4 color;
 
-//TODO: demonstrar uma normal texture
+uniform sampler2D image;
+uniform sampler2D normalTex;
 
-//TODO: demonstrar um vetor normal
+uniform vec3 lightPos; 
+uniform vec3 lightColor;
+
+void main(){
+
+	vec3 normal = normalize(texture(normalTex, TexCoords).xyz);
+
+	vec3 lightDir = normalize(lightPos - FragPos);
+	float diff = max(dot(normal, lightDir), 0.0);
+	vec3 diffuse = diff * lightColor;
+	
+	vec4 lightAmbientColor = vec4(1.1,0.7,0.25,1);
+	vec4 imgTex =  texture(image, TexCoords).xyzw;
+	
+	color = imgTex * (lightAmbientColor + vec4(diffuse.xyz,1));
+}
+\end{lstlisting}
 
 
-\subsubsection{Luz Especular}
-A luz especular é o ponto brilhante que aparece em objetos reluzentes e ajuda a dar uma melhor percepção do espaço 3D.
 
-//TODO: imagem do olho e o reflexo especular em uma superfície
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/normalTextureExample.png}
+	\caption{Resultado da luz difusa usando a textura normal do objeto}
+\end{figure}
 
+\subsection{Vetor Normal}
 
-\subsection{Classe Renderer}
+Um vetor normal unitário é aquele perpendicular à superfície do vértice. A técnica comumente utilizada para trabalhar com os vetores normais de um objeto consiste em mapeá-los em uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente convertido para as coordenadas de cores RGB e, por fim, são armazenadas em uma imagem (textura).
 
+\subsection{Luz Especular}
+A luz especular é o ponto brilhante que aparece em objetos reluzentes, ajudando numa melhor percepção do espaço 3D. %O termo especular significa que a luz é perfeitamente refletida, como se fosse refletida de um espelho da fonte luminosa para o observador. 
+
+//TODO: falta complementar essa seção
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/specular.png}
+	\caption{Luz especular do ponto de vista do observador}
+\end{figure}
+
+\subsection{Atenuação}
+A intensidade da luz diminui quanto maior a distância de um objeto, começando intensa e rapidamente desvanecendo. Aplicar uma fórmula linear para calcular esse efeito daria uma impressão errônea do comportamento da luz, tratando-a como se fosse uniforme. Portanto, faz-se necessário utilizar uma fórmula que melhor simule este comportamento. Sendo ela:
+
+\begin{center}
+$F = \frac{1} {(K_c + K_l*d + K_q*d^2)}$
+\end{center}
+
+Aonde:
+\begin{itemize}
+    \item $K_c$ é uma constante arbitrária para garantir que o denominador nunca seja 0
+     \item $K_l$ é uma constante linear
+     \item $K_q$ é uma constante quadrática
+     \item $d$ é a distância do fragmento até a fonte luminosa
+\end{itemize}
+
+Existe uma tabela para auxiliar na escolha do valor das constantes para distâncias entre 0 e 3200. A tabela pode ser facilmente estendida para distâncias maiores.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c c c}
+Range & Constant & Linear & Quadratic \\
+\hline		
+3250 & 1.0 & 0.0014 & 0.000007 \\
+600 & 1.0 & 0.007 & 0.0002 \\
+325 & 1.0 & 0.014 & 0.0007 \\
+200 & 1.0 & 0.022 & 0.0019 \\
+160 & 1.0 & 0.027 & 0.0028 \\
+100 & 1.0 & 0.045 & 0.0075 \\
+65 & 1.0 & 0.07 & 0.017 \\
+50 & 1.0 & 0.09 & 0.032 \\
+32 & 1.0 & 0.14 & 0.07 \\
+20 & 1.0 & 0.22 & 0.20 \\
+13 & 1.0 & 0.35 & 0.44 \\
+7 & 1.0 & 0.7 & 1.8  \\
+
+\end{tabular}
+\caption{Tabela de valores exemplo para a função de atenuação}
+\end{table}
+
+A implementação do fator de atenuação é feita diretamente no shader multiplicando os valores da luz ambiente, difusa e especular.
+
+\begin{lstlisting}[caption={Fragment Shader com luz ambiente, difusa e atenuação}]
+#version 330 core
+
+in vec2 TexCoords;
+in vec3 FragPos;  
+
+out vec4 color;
+
+uniform sampler2D image;
+uniform sampler2D normalTex;
+
+uniform vec3 lightPos; 
+uniform vec3 lightColor;
+
+void main(){
+
+	vec3 normal = normalize(texture(normalTex, TexCoords).xyz);
+
+	vec3 lightDir = normalize(lightPos - FragPos);
+	float diff = max(dot(normal, lightDir), 0.0);
+	vec3 diffuse = diff * lightColor;
+	
+	float distance = length(lightPos - vec3(FragPos.xyz));
+	float constant = 1;
+	float linear = 0.007;
+	float quadratic = 0.0002;
+	
+	float attenuation = 1 / (constant + linear * distance + quadratic * (distance* distance));
+	
+	vec4 lightAmbientColor = vec4(1.1,0.7,0.25,1);
+	vec4 imgTex =  texture(image, TexCoords).xyzw;
+	
+	color = vec4((imgTex.xyz + lightAmbientColor + (lightColor * attenuation*0.8) ) * attenuation, imgTex.w);
+}
+\end{lstlisting}
+
+\section{Classe Renderer}
 A classe renderer é responsável por conter e controlar todos métodos de desenho do sistema. Nela define-se uma função única tal que não seja necessário, a todo momento, configurar o shader e atualizar diretamente as variáveis uniform, VBO e VAO. Ela abstrai todos esses processos em uma simples chamada que recebe como argumento as coordenadas, texture e afins do objeto. Dessa forma, o código \ref{alg:initVBOVAO} será incorporado em uma classe renderer juntamente com o método render descrito a seguir:
 
 
@@ -1186,27 +1319,31 @@ Entretanto, esta implementação é ingênua pois é necessário realizar n cham
 
 Para fins de introdução ao conceito e abstração do processo de renderização  abordou-se o modelo acima. Entretanto, o problema será tratado em uma sessão mais adiante que implementará o método de batch rendering, que resolve esta situação realizando apenas uma única chamada do método render por tipo de shader e realizando a transferência desses dados em um único e enorme pacote de dados, evitando gargalo no BUS da placa mãe.
 
-
-//TODO: atualizar seção e subseção para Arquitetura do GO
-\subsection{Arquitetura do Game Object}
+\section{Arquitetura do Game Object}
 
 Os game objects, também conhecidos como entidades, estão no centro de tudo aquilo que dá vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: Component Based, Object Oriented e Entity System \cite{GameObjectArchitecture}. 
 
-\subsubsection{Object Based}
+\subsection{Object Based}
 Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe GameObject que é então especializada para cada tipo de objeto. Por exemplo, uma classe \texttt{minotauro} estende uma classe \texttt{monstro} que, por sua vez, estende a classe GameObject. Da mesma forma uma classe \texttt{besouro} estende a classe \texttt{monstro} que estende a classe GameObject.
 
 O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe GameObject extensa e com recursos muitas das vezes usados apenas por uma certa especialização.
 
 Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe \texttt{monstro} só para ser capaz de usar o sistema de dano.
 
-//TODO: colocar uma imagem UML demonstrando essa especialização. 
 
-\subsubsection{Component Based}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/gameobject_specialization.png}
+	\caption{Especialização das classes numa arquitetura baseada em objetos}
+\end{figure}
+
+\subsection{Component Based}
 A arquitetura baseada em componentes, também conhecida pelo nome de behavior, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então "especializar" um GameObject atribuindo a ele os componentes que se deseja. Dessa forma, para que um GameObject seja um \texttt{monstro} basta adicionar um componente de dano, vida e IA.
 
 Existem várias maneiras de se implementar essa arquitetura. Através do uso de switches para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes usando passagem de mensagem. A maior desvantagem dessa arquitetura está na relação estrita entre os dados e o sistema que os manipula, tornando o processamento de um sistema que requer múltiplos dados não diretamente relacionados complicado.
 
 //TODO: falar da leitura simplificada de arquivo tanto no CB quanto EB
+
 //TODO: diagrama uml e cód. exemplo dos switches
 
 
@@ -1224,9 +1361,7 @@ Um problema de colisão é dividido em duas etapas principais: detecção e reso
 
 \subsection{Colisões do tipo AABB vs AABB}
 
-Colisões do tipo Axis Aligned Bounding Box (AABB) são as mais simples de resolver. Para detectar se dois retângulos de eixo alinhado colidiram basta checar se houve sobreposição em qualquer um dos eixos x e y.
-//TODO: explicar melhor eixo alinhado 
-//TODO: explicar melhor vs
+Colisões do tipo Axis Aligned Bounding Box (AABB) são as mais simples de resolver. Um retângulo do tipo AABB possui o seu eixo $x$ paralelo ao eixo x do plano cartesiano, e o seu eixo y paralelo ao eixo y do plano cartesiano, ou seja, sem qualquer rotação. Para detectar se dois retângulos de eixo alinhado colidiram basta checar se houve sobreposição em qualquer um dos eixos x e y.
 
 \begin{lstlisting}[caption=Colisão AABB vs AABB]
 	public boolean intersects(Rectangle r) {
@@ -1265,9 +1400,10 @@ Para o exemplo da figura acima a intersecção ocorreu onde $rw > tx$, $rh > ty$
 
 \subsection{jBox2D}
 
-A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o torna inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro. Esse tópico será discutido adiante no capítulo Sistemas de Coordenadas.
+A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o torna inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro.
 
 Para o sistema de colisões funcionar ele precisa, assim como a própria engine, de um mundo e um timestep, neste caso, fixo. Define-se abaixo o exemplo:
+
 //TODO: código exemplo
 
 \section{Sistema de coordenadas}
@@ -1279,12 +1415,16 @@ O sistema de coordenadas abrange todo o processo de manipulação das coordenada
     \item Espaço de mundo
     \item Espaço de visão (ou espaço de câmera)
     \item Espaço de recorte
-    \item Espaço da tela (projeção)
+    \item Espaço da tela
 \end{enumerate}
 
 Uma vez processadas elas são passadas para o \textit{shader rasterization} e enfim convertidas para pixels em 2D na tela.
 
-//TODO: imagem de todo processo de transformação de um sistema para outro
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/coordSpace.png}
+	\caption{Processo de transformações de coordenadas até o espaço final da tela. Fonte:~\cite{LearnOpenGL}}
+\end{figure}
 
 \subsection{Espaço local}
 As coordenadas em espaço local referem-se ao próprio espaço do objeto. Representam as coordenadas do objeto relativo à sua própria origem. Geralmente são normalizadas no formato NDC com origem no ponto $(0,0)$.
@@ -1341,12 +1481,153 @@ perspective = perspective.perspective(toRadians(45), width/height, near, far);
 
 Para trabalhar com os dois sistemas de medida (pixels e metros) basta selecionar um fator de escalonamento. Supondo um fator de 100, basta multiplicar por 100 para converter de metros para pixels e dividir por 100 para converter de pixels para metros.
 
-\section{Camera}
+\section{Câmera}
+A classe câmera é responsável por manter, calcular e enviar o valor da matriz de visão para o uniform no shader. Ela é necessária pois, a partir de uma única classe fica fácil manipular em quem está o foco da câmera, aplicar efeitos como tremulação entre outras funções. É importante frisar que ela deve atualizar a variável uniform dentro do método \texttt{variableUpdate} para que seja utilizado o valor baseado na interpolação, caso contrário ela dará impressão de objetos travando como discutido na subseção de interpolação linear \ref{subsec:interpoLinear}.
+
+\begin{lstlisting}[caption=Mouse input]
+public class Camera {
+    private float x=0,y=0,z=0;
+    private Entity focus;
+    private Mat4 camera;
+    private Mat4 transform;
+    private EntityManager em;
+     
+    public Camera(EntityManager em) {
+        this.em = em;
+        camera = new Mat4();
+        transform  = new Mat4();
+        camera = camera.identity();
+    }
+     
+    public void setFocusOn(Entity entity) {
+        focus = entity;
+    }
+     
+    public void moveDirectTo(float x, float y) {
+        this.x = x;
+        this.y = y;
+        camera = camera.identity();
+        camera.translate(x, y,0);
+    }
+     
+    public void move(float x, float y) {
+        this.x += x;
+        this.y += y;
+        camera = camera.identity();
+        camera.translate(this.x, this.y,0);
+    }
+     
+    public void update(float deltaTime) {}
+     
+    public void variableUpdate(float alpha) {
+        RenderComponent rc = ((RenderComponent)(em.getFirstComponent(focus, RenderComponent.class)));
+        Vec2 position = rc.getRenderPosition();
+        Vec2 size = rc.getSize();
+         
+        if(focus != null)
+            moveDirectTo(-position.x + 1280/2 - size.x/2, -position.y +720/2 - size.y/2);
+ 
+        transform = transform.identity();
+        transform.translate(this.x,this.y,0);
+         
+        ResourceManager.getSelf().getShader("texture").use();
+        ResourceManager.getSelf().getShader("texture").setMat4("camera", transform);
+         
+        ResourceManager.getSelf().getShader("batchRenderer").use();
+        ResourceManager.getSelf().getShader("batchRenderer").setMat4("camera", transform);
+    }
+ 
+    public float getX() {
+        return x*-1;
+    }
+ 
+    public float getY() {
+        return y*-1;
+    }
+     
+    public Vec2 getPos() {
+        return new Vec2(x*-1,y*-1);
+    }
+}
+\end{lstlisting}
+
 \section{Sistema de input}
-O sistema de input é responsável por mapear botões de uma interface física como teclado, mouse e gamepad em ações dentro do jogo. Para não lidar com a interface de hardware diretamente a biblioteca GLFW apresenta uma abstração que realiza essa comunicação.
+O sistema de input é responsável por mapear botões de uma interface física como teclado, mouse e controle de videogame em ações dentro do jogo. Para não lidar diretamente com a interface de hardware a biblioteca GLFW apresenta uma abstração que realiza essa comunicação.
+
+O conceito para implementar o mapeamento de input consiste em definir um mapa de ações que podem então ser associadas ao input do usuário. Dessa forma, se o usuário trocar o equipamento, suponha-se, de um teclado para um controle de videogame tudo que o sistema precisa fazer é associar os novos botões às ações. Por exemplo, a ação de pular no teclado é mapeada para a tecla espaço. Quando o usuário trocar para o controle de videogame o sistema mapeia a ação pular para o botão "X" do controle, por exemplo. Dessa forma abstrai-se a ação que o game object vai realizar do hardware que está sendo utilizado.
+
+Entretanto, haverá casos que essa abstração não será suficiente e as ações serão mapeadas diretamente ao hardware em uso. Essa situação irá ocorrer, por exemplo, na interação com a interface onde o cursor do mouse não é diretamente mapeável para o joystick. Seria necessário implementar um pseudo cursor usando os botões analógicos do controle ou mapear o movimento de tecla em tecla ao invés de usar o conceito de ponteiro.
 
 \subsection{GLFW Keyboard}
+Para o controle do teclado é necessário primeiro definir uma classe que irá implementar o callback do GLFW. Nela será criado um vetor de booleanos que indica quais teclas estão pressionadas em determinado momento.
+
+\begin{lstlisting}[caption=Keyboard input]
+public class KeyboardControl extends GLFWKeyCallback implements  Control {
+    private boolean keys[] = new boolean[512];
+ 
+    @Override
+    public void invoke(long window, int key, int scancode, int action, int mods) {
+        keys[key] = action != GLFW.GLFW_RELEASE;
+    }
+ 
+    @Override
+    public boolean isKeyPressed(int key) {
+        return keys[key];
+    }
+ 
+    @Override
+    public boolean isKeyReleased(int key) {
+        return keys[key];
+    }
+}
+\end{lstlisting}
+
+A partir da classe KeyBoardControl é possível implementar então um HashMap que mapeia as teclas para ações que serão então utilizadas pelos game objects.
+
+
 \subsection{GLFW Mouse}
+De maneira similar o controle do mouse contém um vetor de booleanos indicando quais teclas estão sendo pressionadas e também um Vetor de duas coordenadas indicando sua posição na janela. Note-se que as coordenadas são calculadas considerando o canto superior esquerdo da janela como origem.
+
+\begin{lstlisting}[caption=Mouse input]
+public class MouseControl extends GLFWCursorPosCallback implements Control{
+    private int previousState = -1;
+    private Vec2 cursorPos = new Vec2(0,0);
+     
+    @Override
+    public boolean isKeyReleased(int key) {
+        int state = glfwGetMouseButton(Engine.getSelf().getWindow().getId(), key);
+         
+        if (state == GLFW_RELEASE) 
+            return true;
+        else
+            return false;
+    }
+ 
+    @Override
+    public boolean isKeyPressed(int key) {
+        int state = glfwGetMouseButton(Engine.getSelf().getWindow().getId(), key);
+         
+        if (state == GLFW_RELEASE &&  previousState== GLFW_PRESS) {
+            previousState=state;
+            return true;
+        }else {
+            previousState=state;
+            return false;
+        }
+    }
+ 
+    @Override
+    public void invoke(long window, double xpos, double ypos) {
+        cursorPos.x = (float) xpos;
+        cursorPos.y = (float) ypos;
+    }
+ 
+    public Vec2 getCursorPos() {
+        return cursorPos;
+    }
+}
+\end{lstlisting}
+
 \subsection{GLFW Game Control}
 
 \section{Gerência de recursos}
@@ -1357,27 +1638,232 @@ O sistema de chunks reparte toda a extensão do mapa em pequenos pedaços para u
 
 É importante notar que este é um sistema crítico e deve ser meticulosamente ajustado para as necessidades de cada projeto. Um arquivo muito grande pode gerar um atraso de leitura e escrita muito grande, enquanto um arquivo muito pequeno pode sobrecarregar o sistema com o overhead de muitas chamadas de função I/O num período curto de tempo. É necessário implementar este sistema utilizando técnicas de leitura e escrita assíncronas de forma que a Engine não congele enquanto aguarda cada operação de I/O.
 
-Com estes detalhes abordados a implementação se faz com duas classes principais: Chunk e ChunkManager. //TODO: check class names
+Com estes detalhes abordados a implementação se faz com duas classes principais: Chunk e ChunkManager. 
+
+//TODO: check class names
+
+\subsection{Chunk}
+O chunk contem todas as entidades que intersectam sua \textit{bounding box} e as informações pertinentes do terreno como: textura, regiões etc. Ele é serializado para leitura e escrita em disco. Sendo assim, um conjunto n de chunks sendo carregados ao iniciar o jogo representam o último estado do jogo.
+
+A geração da textura do mapa pode ser dinâmica, isto é, ser gerada a cada frame, ou estática, gerando-se uma única vez.
+
+\subsection{Chunk Manager}
+O Chunk manager fica responsável por gerenciar quais chunks devem ser lidos ou salvos. De maneira similiar ao clipping do OpenGL o chunk manager verifica quais chunks estão visiveis na tela e partir disso, estando visível ele é lido e estando fora de visão ele é salvo e liberado da memória.
 
 \subsection{A classe Resource Manager}
+A classe responsável pela leitura e escrita desses arquivos segue o padrão de projeto Singleton, sendo assim facilmente invocada de qualquer lugar do código.
+
+\begin{lstlisting}[caption=Classe Resource Manager]
+ 
+public final class ResourceManager {
+    private static ResourceManager self;
+    private static HashMap<String,  Shader> shaders = new HashMap<String, Shader>();
+    private static HashMap<String,  Texture> textures = new HashMap<String, Texture>();
+    private static HashMap<String,  Audio> audio = new HashMap<String, Audio>();
+    private static HashMap<String,  Font> fonts = new HashMap<String, Font>();
+    private static HashMap<String,  Renderer> renderers = new HashMap<String, Renderer>();
+
+    private ResourceManager() {}
+     
+    public static ResourceManager getSelf() {
+        if(self == null) 
+            self = new ResourceManager();
+        return self;
+    }
+     
+    public Audio loadAudio(String name, String audioPath) {
+        if(audio.containsKey(name))
+            return audio.get(name);
+        return audio.put(name, new Audio(audioPath));
+    }
+     
+    public Audio getAudio(String name) {
+        return audio.get(name);
+    }
+     
+    public Font loadFont(String name, String fontPath) {
+        if(fonts.containsKey(name))
+            return fonts.get(name);
+        return fonts.put(name, new Font());
+    }
+     
+    public Font getFont(String name) {
+        return fonts.get(name);
+    }
+     
+    public int playAudio(String name, Vec2 pos, float maxDistance) {
+        AudioSource a = new AudioSource(audio.get(name).getBufferPointer(), pos, maxDistance);
+        a.play();
+         
+        return a.getSourcePointer();
+    }
+
+    public Shader loadShader(String name, String vertexShaderPath, String fragmentShaderFilPath, String geometryShaderPath) {
+        if(shaders.containsKey(name))
+            return shaders.get(name);
+        return shaders.put(name, loadShaderFromFile(vertexShaderPath, fragmentShaderFilPath, geometryShaderPath));
+    }
+
+    public Texture loadTexture(String name, String imgPath) {
+        if(textures.containsKey(name))
+            return textures.get(name);
+        return textures.put(name, loadTextureFromFile(imgPath));
+    }
+     
+    public Shader getShader(String name) {
+        return shaders.get(name);
+    }
+     
+    public Texture getTexture(String name) {
+        return textures.get(name);
+    }
+
+    private Shader loadShaderFromFile(String vertexShaderPath, String fragmentShaderPath, String geometryShaderPath) {
+        String vertexCode = null, fragmentCode = null, geometryCode = null;
+         
+        try {
+            //Vertex Code
+            StringBuilder stringBuilder = new StringBuilder();
+            BufferedReader bufferedReader;
+             
+             
+             
+            bufferedReader = new BufferedReader(new InputStreamReader(
+                    this.getClass().getResourceAsStream("/" + vertexShaderPath)
+                    )); 
+            String line;
+             
+            while((line = bufferedReader.readLine())!=null)
+                stringBuilder.append(line).append("\n");
+             
+            bufferedReader.close();
+            vertexCode = stringBuilder.toString();
+             
+            //Fragment Code
+            stringBuilder = new StringBuilder();
+             
+            bufferedReader = new BufferedReader(new InputStreamReader(
+                    this.getClass().getResourceAsStream("/" + fragmentShaderPath)
+                    )); 
+             
+            while((line = bufferedReader.readLine())!=null)
+                stringBuilder.append(line).append("\n");
+             
+            bufferedReader.close();
+            fragmentCode = stringBuilder.toString();
+             
+            //Geometry Code
+            if(geometryShaderPath!=null){
+                stringBuilder = new StringBuilder();
+                bufferedReader = new BufferedReader(new InputStreamReader(
+                        this.getClass().getResourceAsStream("/" + geometryShaderPath)
+                        )); 
+                 
+                while((line = bufferedReader.readLine())!=null)
+                    stringBuilder.append(line).append("\n");
+                 
+                bufferedReader.close();
+                geometryCode = stringBuilder.toString();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+         
+        Shader shader = new Shader();
+        shader.compile(vertexCode, fragmentCode, (geometryCode==null)? null : geometryCode);
+        return shader;
+    }
+     
+    private Texture loadTextureFromFile(String imgPath) {
+        Texture t = new Texture("/"+imgPath); 
+        return t;
+    }
+     
+    public void setRenderer(String name, Renderer r) {
+        renderers.put(name, r);
+    }
+     
+    public <T extends Renderer> T getRenderer(String name) {
+        return (T) renderers.get(name);
+    }
+}
+\end{lstlisting}
 
 \section{Aúdio}
-A implementação de aúdio foi feita utilizando a mesma família de bibliotecas da Khronos, o OpenAL, voltada especificamente para áudio.
+A implementação de aúdio foi feita utilizando outra biblioteca multiplataforma da Khronos, o OpenAL, voltada especificamente para áudio. Através dela é possível utilizar diversas funções para manipulação de aúdio 3D numa maneira eficiente e ágil. 
 
 \subsection{Integrando o OpenAL}
+O openAL usa conceitos similares aos que são empregados no OpenGL. Cria-se e vincula-se buffers para transferir e receber dados através da API.
+Sempre existe um único ouvinte por \textit{audio context}, que representa a posição de onde todas as fontes serão escutadas. Para definir uma fonte de aúdio é necessário primeiro carregar o aúdio do arquivo. O OpenAL por padrão usa buffers com formato Modulação por Código de Pulso(PCM) em 8 ou 16 bits, mono ou stereo.
+
+Para ler o arquivo e prepará-lo para inserção no buffer é necessário carregá-lo usando a biblioteca auxiliar STBVorbis, que acompanha o LWJGL.
+Lê-se o arquivo usando \texttt{this.getClass().getResourceAsStream}, em sequência aloca-se dois buffers de inteiro numa pilha, aonde salva-se a quantidade de canais, no caso, se é mono ou stereo, e a taxa de amostragem.
+Por fim usando um shortBuffer usa-se a função \texttt{stb_vorbis_decode_memory} para decodificar o áudio do arquivo.
+
+\begin{lstlisting}[caption=Leitura do arquivo de aúdio]
+        String fileName = audioPath;
+        byte[] memory = null;
+         
+        try {
+            int numberOfBytes = this.getClass().getResourceAsStream("/" + audioPath).available();
+            memory = new byte[numberOfBytes];
+            this.getClass().getResourceAsStream("/" + audioPath).read(memory, 0, numberOfBytes);
+             
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+ 
+        stackPush();
+        IntBuffer channelsBuffer = stackMallocInt(1);
+        stackPush();
+        IntBuffer sampleRateBuffer = stackMallocInt(1);
+
+        ShortBuffer rawAudioBuffer = stb_vorbis_decode_memory(BufferUtilities.createByteBuffer(memory), channelsBuffer, sampleRateBuffer);
+ 
+        int channels = channelsBuffer.get();
+        int sampleRate = sampleRateBuffer.get();
+
+        stackPop();
+        stackPop();
+ 
+        int format = -1;
+        if(channels == 1) {
+            format = AL_FORMAT_MONO16;
+            System.out.println("mono");
+        } else if(channels == 2) {
+            format = AL_FORMAT_STEREO16;
+        }
+\end{lstlisting}
+
+A última etapa é gerar um openAL buffer e transferir os dados alocados em \texttt{rawAudioBuffer} no formato e taxa de amostragem escolhidos.
+\begin{lstlisting}[caption=OpenAL Buffers]
+    bufferPointer = alGenBuffers();
+    alBufferData(bufferPointer, AL_FORMAT_MONO16, rawAudioBuffer, sampleRate);
+\end{lstlisting}
+
+No gameloop ou na classe player define-se a posição do ouvinte com a função \texttt{alListener3f}.
+
+\begin{lstlisting}[caption=OpenAL Listener]
+PositionComponent playerPosComp = em.getFirstComponent(player, PositionComponent.class);
+alListener3f(AL_POSITION, playerPosComp.getPosition().x, playerPosComp.getPosition().y,0);
+\end{lstlisting}
 
 \chapter{Inteligência artifical}
 O sistema responsável pela IA da Engine é parte fundamental do sistema. Sem ela o jogo iria ser um conjunto de imagens estáticas distribuídas à esmo na tela.
-Em essência IA é o que da vida a todos os inimigos e personagens do jogo, tornando-o dinâmico e interativo para o usuário.
-//TODO: https://www.gamedev.net/articles/programming/artificial-intelligence/the-total-beginners-guide-to-game-ai-r4942/ 
+Em essência IA é aquilo que da vida a todos os inimigos e personagens do jogo, tornando-o dinâmico e interativo para o usuário.
+A IA é focada nas ações que um agente deve tomar, baseado nas condições atuais. A IA deve observar o ambiente, tomar decisões e então agir. Esse ciclo é descrito na literatura como Observar, Pensar e Agir \cite{GameDevAI}.
+
+A implementação da IA de um game object pode ser feita usando diversas técnicas, desde clausulas if/else até redes neurais. Entretanto, as mais comuns na indústria de jogos não envolvem técnicas com uso de treinamento pois o objetivo aqui não é uma IA ótima, mas sim uma capaz de desafiar e entreter o jogador. Outra restrição é que, para treinar a rede neural seria necessário alimentá-la com dados de muitos jogadores, algo que em produção é impraticável pois se quer o jogo está em uma etapa jogável.
+
+Assim como a etapa de renderização não pode demorar mais do que alguns milisegundos, o mesmo se aplica para a tomada de decisões da IA. Portanto, é fundamental que esta seja a mais rápida possível para que o jogador não experiencie travamentos na jogabilidade.
 
 \section{Utility AI}
 
 Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dado essa medida, alguém poderá expressar o acréscimo ou queda desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
 
-Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto de onde será extraído os valores que quantificam o ambiente e por fim calculado o seu retorno indicando o utility daquela ação.
+Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto de onde será extraído os valores que quantificam o ambiente e por fim calculado o seu retorno indicando o utility daquela ação \cite{UtilityAI}.
 
-//TODO: ref to http://www.intrinsicalgorithm.com/media/2010GDC-DaveMark-KevinDill-UtilityTheory.pdf
+
 
 \subsection{Processo de funcionamento}
 Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuido a cada dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação que será executada.
@@ -1405,30 +1891,109 @@ Para a função de pontuação que calcula o score da ação atirar tem-se como 
  Atirar		Abrigar-se		Perserguir
  00			00
 
-
+Por fim, o código de implementação é composto de três classes: Action, Consideration e ConsiderationTree.
 //TODO: good example https://alastaira.wordpress.com/2013/01/25/at-a-glance-functions-for-modelling-utility-based-game-ai/
 //https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_Thing_of_the_Past.php
 
-\section{Finite State Machine}
-\section{Árvore de decisões}
-\section{Pathfinding}
-Existem muitas maneiras de se implementar o algoritmo de pathfindind. Alguns funcionam muito bem para sistemas estáticos onde tem-se conhecimento do mundo e outros nem tanto. Para ambientes dinâmicos não pode-se, por exemplo, assumir way-points estáticas com caminhos pré-calculados pois o ambiente muda a todo momento.
+%\section{Finite State Machine}
+%\section{Árvore de decisões}
 
-O processo de pathfinding no ambiente 2D consiste em primeiro mapear uma seção do mapa para uma matriz. Cada 
+\section{Pathfinding}
+Existem muitas maneiras de se implementar o algoritmo de pathfinding. Alguns funcionam muito bem para sistemas estáticos onde tem-se conhecimento do mundo enquanto outros nem tanto. Para ambientes dinâmicos não pode-se, por exemplo, assumir way-points estáticas com caminhos pré-calculados pois o ambiente muda a todo momento.
+
+O processo de pathfinding no ambiente 2D consiste em primeiro mapear uma seção do mapa para uma matriz. Essa seção é geralmente a parte visível pela câmera mais um offset arbitrário. Para cada entidade que intersecta essa seção será feito um mapeamento da sua caixa de colisão para a matriz. Cada posição da matriz representa um retângulo de um tamanho arbitrário fixo. Note-se que, a não ser que todas as entidades do jogo possuam a mesma base comum com o tamanho do retângulo da matriz haverá um erro a se considerar. Por exemplo, se uma entidade com retângulo de 32x32 vai ser inserido em uma matriz cujo cada posição representa um retângulo de 10x10, na hora do mapeamento essa entidade vai ocupar 4x4 na matriz, tendo assim, para o algoritmo de pathfinding, um tamanho de 40x40. Esse exemplo pode ser melhor visualizado na figura a seguir.
+
+//TODO: Imagem do desperdício gerado ao mapear entity para matriz de pathfinding.
+
+Uma vez realizado o mapeamento tem-se uma matriz boolena representando quais pontos são transponíveis. A partir desse ponto basta implementar um algoritmo de busca como, por exemplo, o A estrela para percorrer a matriz e encontrar um caminho do ponto A para um ponto B. É importante levar em consideração que os objetos podem ocupar mais um nodo ao mesmo tempo devido ao seu tamanho variável e isso possui implicação direta na implementação do algoritmo de busca.
+
+//TODO: img demonstrando a busca com mais de um nodo de tamanho
 
 \chapter{Procedural Content Generation}
 Procedural Content Generation (PCG) é o termo cunhado para descrever processos de geração de dados aleatórios ou pseudo-aleatórios em jogos. Esses dados são utilizados para gerar desde terrenos até modelos 3D de maneira algorítmica invés de manual.
 
 \section{Random noise}
-O conceito mais básico na construção de elementos baseados em PCG envolve a utilização de ruídos como fonte de dados pseudo-aleatória. Existem diversos algoritmos para obtenção de ruído pseudo-aleatório como, por exemplo, perlin noise, simplex noise e gradient noise. Há ainda técnicas que se utilizam de maneiras não determinísticas e implementam outras fontes de dado.
+O conceito mais básico na construção de elementos baseados em PCG envolve a utilização de ruídos como fonte de dados pseudo-aleatória. Existem diversos algoritmos para obtenção de ruído pseudo-aleatório como, por exemplo, perlin noise, simplex noise e gradient noise. Há ainda técnicas que se utilizam de maneiras não determinísticas e implementam outras fontes de dados.
+
 //TODO: good source: https://thebookofshaders.com/12/ http://pcgbook.com/
 
 \subsection{Perlin noise}
 Perlin noise é um tipo de ruído gradiente concebido por Ken Perlin em 1983 //TODO: cite. O algoritmo tem inicio definindo um grid de dimensão n. O processo mais básico consiste em definir o grid com uma série de vetores gradiente, computar o produto escalar entre vetores gradiente de distância e então realizar uma interpolação entre esses valores.
 
 \section{Geração de terrenos}
-A geração de terreno utilizada nessa engine consiste em um ...
+A geração de terreno utilizada na engine consiste em preencher um conjunto de matrizes com valores gerados por um tipo de ruído diferente. Cada um desses valores é então extraído da matriz e atribuído um significado baseado numa regra determinada pelo usuário. Por exemplo, para a geração de ruídos utilizando perlin noise o valor retornado geralmente está no intervalo [-1,1]. A partir disso pode-se atribuir um significado onde para todo valor gerado inferior a 0 representa água e todo valor acimar de 0 representa terra. A partir disso a textura pode ser gerada ..
+
 \subsection{Florestas}
+
+\chapter{Diagramas e panorama geral}
+\section{Estrutura dos arquivos e pacotes}
+A estrutura geral de arquivos e pacotes do projeto da Engine Narval é dada a seguir. Cada arquivo representa uma classe Java.
+
+\begin{lstlisting}[caption=Árvore de arquivos do projeto]
+Engine
+    /ai
+        Action
+        AStar
+        Anode
+        Consideration
+    /audio
+        Audio
+        AudioSource
+    /controllers
+        Controller
+        PlayerController
+    /engine
+        Engine
+        GameState
+        PhysicsEngine
+        Settings
+        Window
+    /entity
+        /component
+            Component
+            PositionComponent
+            RenderCOmponent
+        SystemManager
+        PositionSystem
+        RenderSystem
+    /geometry
+        Rectangle
+        Segment
+    /graphic
+        Shader
+        Animation
+        Texture
+    /input
+        Control
+        JoystickControl
+        KeyboardControl
+        MouseControl
+    /logic
+        Camera
+        Chunk
+        ChunkMap
+        ReadingChunk
+        SavingChunk
+        Timer
+    /noise
+        FastNoise
+    /renderer
+        AnimationsManager
+        Renderer
+        TextureRenderer
+        BatchTextureRenderer
+    /ui
+        Font
+        Glyph
+    /utilities
+        ResourceManager
+        ArraysExt
+        BufferUtilities
+        Color
+        GLFWUtil
+        MathExt
+        QuadTree
+\end{lstlisting}        
 
 
 \chapter{Criação de um protótipo}
@@ -1521,8 +2086,13 @@ Alguns animais podem ser domados através dos instrumentos. Basta cantar próxim
 
 \section{Otimizações e testes de desempenho}
 
+Perlin noise  vs GPU? ou noiseSize text mult
 
+Batch Rendering vs One draw call per object
 
+Real time PCG x Loading chunk
+
+Leitura assincrona vs sincroca
 
 
 
