@@ -11,7 +11,7 @@ brazil]{facom-ufu-abntex2}
 \autor{Igor Batista Fernandes} 
 \data{2018}
 \orientador{Profa. Maria Adriana Vidigal de Lima} 
-\titulo{Desenvolvimento de jogos 2D multiplataforma utilizando
+\titulo{Desenvolvimento de uma game engine 2D multiplataforma utilizando
 OpenGL e Java } 
 
 \begin{document}
@@ -64,7 +64,7 @@ OpenGL e Java }
 
 \begin{resumo} 
 
-Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Narval e a subsequente elaboração de um jogo.
+Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Narval e a subsequente elaboração de um protótipo de jogo.
 A implementação de código será realizada na linguagem Java e através da API gráfica OpenGL usando GLFW (OpenGL Frame Work). 
 A elicitação dos requisitos do jogo será documentada em um artefato denominado \textit{Game Design Document} que permite estruturar, sistematizar e organizar 
 o processo de construção.
@@ -76,7 +76,7 @@ O jogo será elaborado utilizando técnicas de algoritmos procedurais para gera�
 \end{resumo}
 
 \begin{abstract} 
-This work proposes to develop a multiplataform game engine for desktop entitled Narval and a subsequent game elaboration. 
+This work proposes to develop a multiplataform game engine for desktop entitled Narval and a subsequent game prototype elaboration. 
 The code implementation will be done in Java through the API OpenGL using GLFW (OpenGL Frame Work).
 The elicitation of requisites for the game will be documented in an artifact called Game Design Document which allows to structure, systematize and organize the process of building a game.
 The game will be elaboreted using techniques of procedural algorithms to generate art and environment, artificial intelligence for Non Playable Characters (NPC) behaviours and design patterns applied to games.
@@ -185,7 +185,7 @@ O consumo cada vez maior deste tipo de produto pelo público de todas as idades 
 A insuficiência de materiais em língua portuguesa sobre os processos de desenvolvimento e planejamento de jogos é um grande instigador desse trabalho. Neste contexto, esse trabalho aborda todas as etapas pelas quais um jogo passa para torna-se um software que será distribuído e jogado por pessoas do mundo todo.
 Embora haja diversas opções de Engines no mercado como Unity, Unreal, CryEngine e afins, a grande maioria é de código fechado, o que torna extremamente dificil senão impossível de modificá-la para as necessidades especias de um projeto. Além deste fato, para comercializar os produtos produzidos nelas é necessário pagar uma porcentagem da revenda obtida com o produto lançado. Portanto, para este projeto será desenvolvida uma Engine própria, para ter-se uma maior flexibilidade de implementação e para ter uma licença de software próprio.
 
-
+\iffalse
 \section{Metodologia}
 
 
@@ -224,6 +224,7 @@ Etapa 4 – Testes e avaliação do jogo.
 \item Etapa Beta. Etapa de testes aberta e já próxima do lançamento final.
 \item Lançamento.
 \end{enumerate}
+\fi
 
 
 % ------------------------------------------
@@ -231,12 +232,33 @@ Etapa 4 – Testes e avaliação do jogo.
 
 \chapter{Revisão Bibliográfica}
 
-\section{Referencial Teórico}
+//TODO: Removi a seção Referencial Teórico e transformei as subseções em seções?
+
+
 \label{sec:refteo}
-\subsection{OpenGL}
-A API (Application Programming Interface) OpenGL fornece um conjunto de funções para manipulações gráficas \cite{LearnOpenGL}, sendo acelerada diretamente em hardware, multiplataforma, robusta e totalmente escalável. Embora comumente referida como uma API, o OpenGL é, por si só, um conjunto de especificações que determinam o resultado/saída de cada função e como devem ser executadas. Fica a cargo dos manufaturadores de placas gráficas implementarem a operação da função, respeitando as especificações do documento desenvolvido e mantido pela Khronos Group \cite{KhronosOpenGLSpecification}.
+\section{Computação gráfica}
+Computação gráfica refere-se a tudo que envolve criação ou manipulação de imagens no computador, incluindo animações \cite{ComputerGraphicsIntro}. Este ramo abrange diversas áreas, tais como: Jogos, Arquitetura, Cinema, Medicina, Artes e várias outras. Toda a computação gráfica atual é baseada em cálculos matemáticos para sintetizar pixels em uma tela 2D. Esse processo se dá através de um pipeline por onde primitivas gráficas são manipuladas para obter o resultado final mostrado na tela do usuário.
+\section{OpenGL}
+A API (Application Programming Interface) OpenGL fornece um conjunto de funções para manipulações gráficas \cite{LearnOpenGL}, sendo acelerada diretamente em hardware, multiplataforma e robusta. Embora comumente referida como uma API, o OpenGL é, por si só, um conjunto de especificações que determinam o resultado/saída de cada função e como devem ser executadas. Fica a cargo dos manufaturadores de placas gráficas implementarem a operação da função, respeitando as especificações do documento desenvolvido e mantido pela Khronos Group \cite{KhronosOpenGLSpecification}.
+
  O OpenGL foi lançado em 1992 como uma resposta direta a necessidade de se padronizar o conjunto de instruções usado em hardwares com interface gráfica. Até setembro de 2006 o padrão foi mantido pela ARB (Architecture Review Board), um conselho formado por empresas de grande renome no ramo como HP, IBM, Intel, NVIDIA, Dell e a própria fundadora, a Silicon Graphics. Em setembro de 2006 o conselho ARB tornou-se o OpenGL Working Group gerido e mantido pelo consórcio Khronos Group para Open Standard APIs\cite{OpenGLAbout}.
- 
+\section{Inteligência artificial}
+Inteligência Artificial (IA) é um ramo da Ciência da Computação que teoriza e desenvolve sistemas capazes de realizar tarefas onde normalmente requeriam inteligência humana, como processamento de imagens, recognição de fala, tomada de decisões e traduções linguísticas \cite{AIDefinition}.
+
+ Existe uma distinção importante na IA estudada academicamente e na utilizada em jogos. A pesquisa acadêmica em IA é dividida em dois campos: \textit{strong AI} e \textit{weak AI}. O campo de \textit{strong AI} preocupa-se em tentar criar sistemas que imitam o processo de pensamento humando enquanto o campo de \textit{weak AI} se preocupa em aplicar tecnologias baseadas em IA para solucionar problemas do mundo real. Entretanto, ambos os campos procuram resolver os problemas de maneira ótima, sem preocupar-se com limitações de tempo e hardware \cite{ProgrammingGameAIByExample}.
+
+Em contrapartida, a IA aplicada em jogos preocupa-se não com a solução ótima de um problema, mas com uma solução que seja capaz de dar ao usuário uma experiência agradável respeitando as capacidades do hardware para execução em tempo real.
+\section{Procedural Content Generation}
+\textit{Procedural Content Generation} (PCG) é a criação algorítmica de conteúdo para jogos com pouca ou nenhuma interferência do usuário \cite{ProceduralContentGenerationInGames}. Por conteúdo define-se cenários, mapas, regras de jogo, texturas, itens, música, personagens e qualquer outro elemento que componha o jogo.
+
+Esse processo comumente se da pela utilização de métodos aleatórios ou pseudo-aleatórios para gerar dados que serão manipulados através de regras e transformados em uma infinidade de elementos do jogo \cite{PCGWiki}.
+\section{Game Engine}
+Define-se como game engine um sistema composto de outros sub sistemas cujo trabalho em coesão provêm todas as funcionalidades necessárias para o desenvolvimento de um jogo. Uma arquitetura direcionada a dados é o que diferencia uma game engine de um pedaço de software que é o jogo, mas não uma engine \cite{GameEngineArchitecture}. 
+
+Portanto, game engine é um software extensível e pode ser usado como fundação para diferentes tipos e gêneros de jogos sem mudanças maiores. Embora uma game engine ideal deva ser capaz de servir como base para qualquer jogo imaginável, é fato que quanto mais de propósito geral ela se torna, menos ótima ela é para rodar um jogo em determinada plataforma.
+
+
+\iffalse
 \subsection{Engenharia de software}
 A engenharia de software em um jogo, para ser bem sucedida, precisa respeitar as etapas de pré-produção, produção, testes (ou Quality Assurance) e pós-produção [Manual de produção de jogos digitais – Pg. 3]. A metodologia de desenvolvimento a ser utilizada neste trabalho será o SCRUM.
 
@@ -297,13 +319,16 @@ Como em todo software o jogo também possui um documento de requisitos. Entretan
 \textbf{Cenas de corte} - Listar as cenas de corte.\\
 \textbf{Músicas e efeitos especiais} - Listar as músicas e efeitos juntamente com seu tom/clima e onde aparecem.\\
 \textbf{Apêndices} - Lista de animações do jogador, Lista de animações dos NPCs e inimigos, Lista dos efeitos sonoros, Lista de músicas, Roteiros etc.
+
+\fi
 % ------------------------------------------
 % Trabalhos Correlatos
 
 \chapter{Trabalhos Correlatos}
 \label{sec:trabcorr}
 
-//TODO: Inserir imagens
+//TODO: Inserir imagens, citar livros correlatos?
+
 No Place for bravery: Jogo estilo Roguelike em pixel art. Atualmente em desenvolvimento pelo estúdio Glitch Factory situado no Distrito Federal.\\
 
 Eitr: Jogo estilo Action RPG inspirado em Dark souls com uma temática sombria e em pixel art. Atualmente em desenvolvimento pelo estúdio Devolver Digital.\\
@@ -755,15 +780,7 @@ public class Shader {
 	public int getId() {
 		return id;
 	}
-	
-	/**
-	 * Compile all vertex, fragment and geometry source code into a linked program.
-	 * Geometry is optional.
-	 * 
-	 * @param vertexSource
-	 * @param fragmentSource
-	 * @param geometrySource
-	 */
+
 	public void compile(String vertexSource, String fragmentSource, String geometrySource) {
 		int vertexShader, geometryShader = 0, fragmentShader;
 		
@@ -1067,20 +1084,28 @@ public class Animation implements Serializable{
 \end{lstlisting}
 \subsection{Z-Ordering}
 A técnica de z-ordering consiste na ordenação de objetos em sobreposição. É utilizada para organizar a ordem na qual os elementos devem ser renderizados tal que não haja elementos distantes sendo desenhados em cima de objetos mais próximos da câmera.
-Para ambientes 2D basta simplesmente ordenar os elementos pela posição y do menor para o maior. 
+Para ambientes 2D, basta ordenar os elementos pela posição y do menor para o maior. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=28em]{imagens/z-order.png}
-	\caption{Ordem correta de renderização: do menor y para o maior}
+	\caption{Ordem correta de renderização: do menor y para o maior y}
 \end{figure}
 
-Um ponto a se tomar cuidado na implementação desta técnica é ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação.
+Deve-se atentar na implementação desta técnica para ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação. É ainda necessário, para dar um melhor senso de profundidade, considerar a posição dos objetos a partir da sua base que toca o solo. Isto é, considerar que sua posição y no espaço seja relativa ao ponto no qual o objeto toca o chão invés de ser simplesmente o canto superior esquerdo da imagem. Esse mesmo principio de caixa base é utilizada para calcular a colisão dos objetos que caminham pelo ambiente.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=28em]{imagens/zOrderWithBaseBox.png}
+	\caption{Ordem correta de renderização: do menor y para o maior y considerando a caixa base}
+\end{figure}
+
 
 
 \section{Iluminação}
 Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não costumam servir para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
-O modelo de iluminação adotado e adaptado nesta engine foi o de Phong \cite{PhongShading} que usa três componentes de luz em sua construção: ambient, diffuse e specular.
+O modelo de iluminação adotado e adaptado nesta engine foi o de Phong que usa três componentes de luz em sua construção: ambient, diffuse e specular \cite{PhongShading}.
 
 \begin{figure}[H]
 	\centering
@@ -1177,15 +1202,18 @@ void main(){
 Um vetor normal unitário é aquele perpendicular à superfície do vértice. A técnica comumente utilizada para trabalhar com os vetores normais de um objeto consiste em mapeá-los em uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente convertido para as coordenadas de cores RGB e, por fim, são armazenadas em uma imagem (textura).
 
 \subsection{Luz Especular}
-A luz especular é o ponto brilhante que aparece em objetos reluzentes, ajudando numa melhor percepção do espaço 3D. %O termo especular significa que a luz é perfeitamente refletida, como se fosse refletida de um espelho da fonte luminosa para o observador. 
+A luz especular é o ponto brilhante que aparece em objetos lisos e reluzentes, ajudando numa melhor percepção do espaço 3D e da textura do objeto que a reflete. O termo especular significa que a luz é perfeitamente refletida, assim como acontece em uma superfície perfeitamente lisa de, por exemplo, um espelho.
 
-//TODO: falta complementar essa seção
+Assim como a luz difusa, a luz especular possui o vetor de direção da luz e o vetor normal do objeto. Entretanto, ela também é calculada baseando-se na direção em que a câmera está olhando.
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=20em]{imagens/specular.png}
 	\caption{Luz especular do ponto de vista do observador}
 \end{figure}
+
+//TODO: include incidence and reflect angles to better explain.
 
 \subsection{Atenuação}
 A intensidade da luz diminui quanto maior a distância de um objeto, começando intensa e rapidamente desvanecendo. Aplicar uma fórmula linear para calcular esse efeito daria uma impressão errônea do comportamento da luz, tratando-a como se fosse uniforme. Portanto, faz-se necessário utilizar uma fórmula que melhor simule este comportamento. Sendo ela:
@@ -1342,16 +1370,30 @@ A arquitetura baseada em componentes, também conhecida pelo nome de behavior, c
 
 Existem várias maneiras de se implementar essa arquitetura. Através do uso de switches para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes usando passagem de mensagem. A maior desvantagem dessa arquitetura está na relação estrita entre os dados e o sistema que os manipula, tornando o processamento de um sistema que requer múltiplos dados não diretamente relacionados complicado.
 
-//TODO: falar da leitura simplificada de arquivo tanto no CB quanto EB
 
-//TODO: diagrama uml e cód. exemplo dos switches
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/componentBased.png}
+	\caption{GameObject composto de vários componentes}
+\end{figure}
+
+
+//TODO: falar da leitura simplificada de arquivo tanto no Component Based quanto Eentity Based
+
+//TODO:cód. exemplo dos switches
 
 
 \subsection{Entity Based}
 Um game object baseado em entidades trabalha de maneira similar à forma como um banco de dados trata suas informações. O sistema que manipula as informações é desacoplado dos dados em si. Dessa maneira, uma entidade é composta apenas de dados e um sistema à parte é responsável por processar essas informações e realizar suas tarefas.
 Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável verifica se a entidade possui esses atributos e, caso tenha, realiza seus cálculos senão, o sistema ignora essa entidade e avança para a próxima da lista.
 
-//TODO: img e cód.
+//TODO: cód.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/entityDiagram.png}
+	\caption{Diagrama de classes do sistema entity based}
+\end{figure}
 
 \section{Sistema de colisões}
 
@@ -1422,7 +1464,7 @@ Uma vez processadas elas são passadas para o \textit{shader rasterization} e en
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=30em]{imagens/coordSpace.png}
+	\includegraphics[width=30em]{imagens/coordSpace.PNG}
 	\caption{Processo de transformações de coordenadas até o espaço final da tela. Fonte:~\cite{LearnOpenGL}}
 \end{figure}
 
@@ -1849,24 +1891,24 @@ alListener3f(AL_POSITION, playerPosComp.getPosition().x, playerPosComp.getPositi
 \end{lstlisting}
 
 \chapter{Inteligência artifical}
-O sistema responsável pela IA da Engine é parte fundamental do sistema. Sem ela o jogo iria ser um conjunto de imagens estáticas distribuídas à esmo na tela.
-Em essência IA é aquilo que da vida a todos os inimigos e personagens do jogo, tornando-o dinâmico e interativo para o usuário.
+O sistema responsável pela IA da Engine é parte fundamental do sistema. Sem ela o jogo seria um conjunto de imagens estáticas distribuídas à esmo na tela.
+Em essência IA é aquilo que da vida a todos os personagens do jogo, tornando-o dinâmico e interativo para o usuário.
 A IA é focada nas ações que um agente deve tomar, baseado nas condições atuais. A IA deve observar o ambiente, tomar decisões e então agir. Esse ciclo é descrito na literatura como Observar, Pensar e Agir \cite{GameDevAI}.
 
-A implementação da IA de um game object pode ser feita usando diversas técnicas, desde clausulas if/else até redes neurais. Entretanto, as mais comuns na indústria de jogos não envolvem técnicas com uso de treinamento pois o objetivo aqui não é uma IA ótima, mas sim uma capaz de desafiar e entreter o jogador. Outra restrição é que, para treinar a rede neural seria necessário alimentá-la com dados de muitos jogadores, algo que em produção é impraticável pois se quer o jogo está em uma etapa jogável.
+A implementação da IA de um game object pode ser feita usando diversas técnicas, desde clausulas if ou else até redes neurais. Entretanto, as mais comuns na indústria de jogos não envolvem técnicas com uso de treinamento pois o objetivo aqui não é uma IA ótima, mas sim uma capaz de desafiar e entreter o jogador. Outra restrição é que, para treinar a rede neural seria necessário alimentá-la com dados de muitos jogadores, algo impraticável no estágio de produção pois se quer o jogo está em numa etapa jogável.
 
-Assim como a etapa de renderização não pode demorar mais do que alguns milisegundos, o mesmo se aplica para a tomada de decisões da IA. Portanto, é fundamental que esta seja a mais rápida possível para que o jogador não experiencie travamentos na jogabilidade.
+Assim como o processo de renderização não pode demorar mais do que alguns milisegundos, o mesmo se aplica para a tomada de decisões da IA. Portanto, é fundamental que esta seja a mais rápida possível para que o jogador não experiencie travamentos na jogabilidade.
 
 \section{Utility AI}
 
-Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dado essa medida, alguém poderá expressar o acréscimo ou queda desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
+Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dado essa medida, alguém poderá expressar o acréscimo ou decréscimo desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
 
-Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto de onde será extraído os valores que quantificam o ambiente e por fim calculado o seu retorno indicando o utility daquela ação \cite{UtilityAI}.
+Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto e dele extraem os valores que quantificam o ambiente. Por fim, o cálculo é realizado e indica o utility, ou o quão desejável,  aquela ação é \cite{UtilityAI}.
 
 
 
 \subsection{Processo de funcionamento}
-Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuido a cada dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação que será executada.
+Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuído a cada uma dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação dentre as três que será executada.
 
 //TODO: imagem com o gráfico mostrando a interpolação das funções
 
@@ -1910,7 +1952,7 @@ Uma vez realizado o mapeamento tem-se uma matriz boolena representando quais pon
 //TODO: img demonstrando a busca com mais de um nodo de tamanho
 
 \chapter{Procedural Content Generation}
-Procedural Content Generation (PCG) é o termo cunhado para descrever processos de geração de dados aleatórios ou pseudo-aleatórios em jogos. Esses dados são utilizados para gerar desde terrenos até modelos 3D de maneira algorítmica invés de manual.
+Procedural Content Generation (PCG) é o termo cunhado para descrever processos de geração de dados aleatórios ou pseudo-aleatórios em jogos. Esses dados são utilizados para criar regras que definem desde terrenos até modelos 3D de maneira algorítmica ao invés de manual.
 
 \section{Random noise}
 O conceito mais básico na construção de elementos baseados em PCG envolve a utilização de ruídos como fonte de dados pseudo-aleatória. Existem diversos algoritmos para obtenção de ruído pseudo-aleatório como, por exemplo, perlin noise, simplex noise e gradient noise. Há ainda técnicas que se utilizam de maneiras não determinísticas e implementam outras fontes de dados.
@@ -1926,6 +1968,11 @@ A geração de terreno utilizada na engine consiste em preencher um conjunto de 
 \subsection{Florestas}
 
 \chapter{Diagramas e panorama geral}
+\section{Estrutura hierárquicca das classes}
+Todas as classes até então desenvolvidas e abordadas se organizam da seguinte maneira no escopo global do projeto:
+
+
+
 \section{Estrutura dos arquivos e pacotes}
 A estrutura geral de arquivos e pacotes do projeto da Engine Narval é dada a seguir. Cada arquivo representa uma classe Java.
 
@@ -2084,6 +2131,10 @@ Alguns animais podem ser domados através dos instrumentos. Basta cantar próxim
 
 \section{Protótipo}
 
+O protótipo final construído utilizando a game engine demonstra suas principais funcionalidades em um pequeno jogo de exploração em um ambiente procedural 2D ambientado num mundo fantástico.
+
+Nele pode-se caminhar através do cenário explorando novos 
+
 \section{Otimizações e testes de desempenho}
 
 Perlin noise  vs GPU? ou noiseSize text mult
@@ -2101,9 +2152,9 @@ Leitura assincrona vs sincroca
 
 \chapter{Conclusão}
 \label{sec:conclus}
+Com a primeira versão da game engine finalizada é necessário agora realizar considerações finais. Um sistema dessa magnitude deve ser constantemente atualizado com novas tecnologias para manter-se relevante em um cenário competitivo como a indústria de jogos. A pesquisa permitiu produzir um extenso material em língua portuguesa acerca do tema, documentando e exemplificando cada etapa, desde a demonstração de possibilidades até a implementação de uma delas.
 
-
-
+...
 
 
 

@@ -18,13 +18,23 @@ Warning--entry type for "GameObjectArchitecture" isn't style-file defined
 --line 103 of file referencias.bib
 Warning--entry type for "PhongShading" isn't style-file defined
 --line 111 of file referencias.bib
-Warning--entry type for "GameDevAI" isn't style-file defined
+Warning--entry type for "ProgrammingGameAIByExample" isn't style-file defined
 --line 119 of file referencias.bib
-Warning--entry type for "UtilityAI" isn't style-file defined
+Warning--entry type for "ProceduralContentGenerationInGames" isn't style-file defined
 --line 126 of file referencias.bib
+Warning--entry type for "GameDevAI" isn't style-file defined
+--line 134 of file referencias.bib
+Warning--entry type for "UtilityAI" isn't style-file defined
+--line 141 of file referencias.bib
+Warning--entry type for "ComputerGraphicsIntro" isn't style-file defined
+--line 148 of file referencias.bib
+Warning--entry type for "AIDefinition" isn't style-file defined
+--line 156 of file referencias.bib
+Warning--entry type for "PCGWiki" isn't style-file defined
+--line 164 of file referencias.bib
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 10 warnings)
+(There were 15 warnings)

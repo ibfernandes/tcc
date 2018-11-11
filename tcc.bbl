@@ -5,12 +5,22 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
-\bibitem[Chandler 2012]{Manualdejogosdigitais}
-\abntrefinfo{Chandler}{CHANDLER}{2012}
-{CHANDLER, H.~M. \emph{Manual de Produ{\c{c}}{\~a}o de Jogos Digitais}. 9. ed.
-  Bookman, 2012.
-ISBN 9788540701847. Dispon{\'\i}vel em:
-  \url{http://books.google.com.br/books?id=Ifdu3B9C7jEC}.}
+\bibitem[Buckland 2005]{ProgrammingGameAIByExample}
+\abntrefinfo{Buckland}{BUCKLAND}{2005}
+{BUCKLAND, M. \emph{Programming Game AI by Example}. [S.l.]: Wordware
+  Publishin, 2005.}
+
+\bibitem[Dictionary 2018]{AIDefinition}
+\abntrefinfo{Dictionary}{DICTIONARY}{2018}
+{DICTIONARY, O. 2018.
+Dispon{\'\i}vel em:
+  \url{https://en.oxforddictionaries.com/definition/artificial\_intelligence}.}
+
+\bibitem[Eck 2018]{ComputerGraphicsIntro}
+\abntrefinfo{Eck}{ECK}{2018}
+{ECK, D.~J. \emph{Introduction to Computer Graphics}. 2018.
+Dispon{\'\i}vel em:
+  \url{http://math.hws.edu/eck/cs424/downloads/graphicsbook-linked.pdf}.}
 
 \bibitem[Gregory 2009]{GameEngineArchitecture}
 \abntrefinfo{Gregory}{GREGORY}{2009}
@@ -64,17 +74,17 @@ ISBN 0990582906.}
 {OPENGL. \emph{About OpenGL}. 2017.
 Dispon{\'\i}vel em: \url{https://www.opengl.org/about/}.}
 
-\bibitem[Rogers 2016]{LevelUp}
-\abntrefinfo{Rogers}{ROGERS}{2016}
-{ROGERS, S. \emph{Level Up}. [S.l.]: Edgard Blucher, 2016.
-ISBN 9788521207009.}
-
 \bibitem[ScratchAPixel 2018]{PhongShading}
 \abntrefinfo{ScratchAPixel}{SCRATCHAPIXEL}{2018}
 {SCRATCHAPIXEL. \emph{The Phong Model, Introduction to the Concepts of Shader,
   Reflection Models and BRDF}. 2018.
 Dispon{\'\i}vel em:
   \url{https://www.scratchapixel.com/lessons/3d-basic-rendering/phong-shader-BRDF}.}
+
+\bibitem[Shaker, Togelius e Nelson 2016]{ProceduralContentGenerationInGames}
+\abntrefinfo{Shaker, Togelius e Nelson}{SHAKER; TOGELIUS; NELSON}{2016}
+{SHAKER, N.; TOGELIUS, J.; NELSON, M.~J. \emph{Procedural Content Generation in
+  Games}. [S.l.]: Springer, 2016.}
 
 \bibitem[Sizer 2018]{GameDevAI}
 \abntrefinfo{Sizer}{SIZER}{2018}
@@ -93,5 +103,10 @@ Dispon{\'\i}vel em:
   2018.
 Dispon{\'\i}vel em:
   \url{https://www.raywenderlich.com/2806-introduction-to-component-based-architecture-in-games}.}
+
+\bibitem[Wiki 2018]{PCGWiki}
+\abntrefinfo{Wiki}{WIKI}{2018}
+{WIKI, P. 2018.
+Dispon{\'\i}vel em: \url{http://pcg.wikidot.com/}.}
 
 \end{thebibliography}

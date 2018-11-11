@@ -1,32 +1,35 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Componentes de uma Game Engine. Fonte:~\cite {GameEngineArchitecture} }}{21}{figure.4.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop b\IeC {\'a}sico ao longo do tempo}}{22}{figure.4.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep fixo ao longo do tempo}}{24}{figure.4.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep vari\IeC {\'a}vel ao longo do tempo}}{25}{figure.4.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Objeto ignorando colis\IeC {\~a}o devido um timestep muito grande}}{25}{figure.4.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep semi-fixo ao longo do tempo}}{26}{figure.4.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces M\IeC {\'e}todo \texttt {update} com tempo de processamento maior que o $\Delta t$}}{27}{figure.4.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{28}{figure.4.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{28}{figure.4.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Etapas do pipeline }}{32}{figure.4.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Dois tri\IeC {\^a}ngulos em coordenadas locais normalizadas que juntos formam um quadrado}}{34}{figure.4.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Resultado obtido com dois shaders simples}}{36}{figure.4.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Sistema ARGB e RGBA, ambos com canais de 8 bits (1 byte)}}{42}{figure.4.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Extra\IeC {\c c}\IeC {\~a}o do canal verde em um inteiro de 3 bytes}}{42}{figure.4.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Wrap modes}}{43}{figure.4.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Amplia\IeC {\c c}\IeC {\~a}o de 32x usando cada tipo de filtro. }}{43}{figure.4.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Spritesheet com frames de 32x32 pixels}}{44}{figure.4.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior}}{46}{figure.4.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Componentes do modelo de Phong}}{47}{figure.4.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o da luz ambiente com tonalidade alaranjada}}{48}{figure.4.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Angulo $\theta $ entre raio luminoso e vetor normal da superf\IeC {\'\i }cie iluminada}}{48}{figure.4.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Resultado da luz difusa usando a textura normal do objeto}}{49}{figure.4.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Luz especular do ponto de vista do observador}}{50}{figure.4.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Especializa\IeC {\c c}\IeC {\~a}o das classes numa arquitetura baseada em objetos}}{54}{figure.4.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Colis\IeC {\~a}o AABB vs AABB}}{56}{figure.4.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Processo de transforma\IeC {\c c}\IeC {\~o}es de coordenadas at\IeC {\'e} o espa\IeC {\c c}o final da tela. Fonte:~\cite {LearnOpenGL}}}{57}{figure.4.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Jogador ca\IeC {\c c}ando um coelho com arco e flecha}}{75}{figure.8.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Jogador pronto para atacar alvo que ficou preso na armadilha de ch\IeC {\~a}o}}{76}{figure.8.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Jogador cantando em um vilarejo}}{77}{figure.8.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Jogador sendo prestigiado ap\IeC {\'o}s t\IeC {\'e}rmino da m\IeC {\'u}sica}}{77}{figure.8.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Esbo\IeC {\c c}o do menu para compor m\IeC {\'u}sicas}}{78}{figure.8.31}
+\contentsline {figure}{\numberline {1}{\ignorespaces Componentes de uma Game Engine. Fonte:~\cite {GameEngineArchitecture} }}{19}{figure.4.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop b\IeC {\'a}sico ao longo do tempo}}{20}{figure.4.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep fixo ao longo do tempo}}{22}{figure.4.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep vari\IeC {\'a}vel ao longo do tempo}}{23}{figure.4.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Objeto ignorando colis\IeC {\~a}o devido um timestep muito grande}}{23}{figure.4.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep semi-fixo ao longo do tempo}}{24}{figure.4.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces M\IeC {\'e}todo \texttt {update} com tempo de processamento maior que o $\Delta t$}}{25}{figure.4.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{26}{figure.4.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{26}{figure.4.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Etapas do pipeline }}{30}{figure.4.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Dois tri\IeC {\^a}ngulos em coordenadas locais normalizadas que juntos formam um quadrado}}{32}{figure.4.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Resultado obtido com dois shaders simples}}{34}{figure.4.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Sistema ARGB e RGBA, ambos com canais de 8 bits (1 byte)}}{40}{figure.4.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Extra\IeC {\c c}\IeC {\~a}o do canal verde em um inteiro de 3 bytes}}{40}{figure.4.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Wrap modes}}{41}{figure.4.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Amplia\IeC {\c c}\IeC {\~a}o de 32x usando cada tipo de filtro. }}{41}{figure.4.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Spritesheet com frames de 32x32 pixels}}{42}{figure.4.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y}}{44}{figure.4.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y considerando a caixa base}}{45}{figure.4.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Componentes do modelo de Phong}}{45}{figure.4.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o da luz ambiente com tonalidade alaranjada}}{46}{figure.4.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces Angulo $\theta $ entre raio luminoso e vetor normal da superf\IeC {\'\i }cie iluminada}}{47}{figure.4.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Resultado da luz difusa usando a textura normal do objeto}}{48}{figure.4.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Luz especular do ponto de vista do observador}}{49}{figure.4.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Especializa\IeC {\c c}\IeC {\~a}o das classes numa arquitetura baseada em objetos}}{53}{figure.4.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces GameObject composto de v\IeC {\'a}rios componentes}}{54}{figure.4.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de classes do sistema entity based}}{55}{figure.4.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Colis\IeC {\~a}o AABB vs AABB}}{56}{figure.4.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Processo de transforma\IeC {\c c}\IeC {\~o}es de coordenadas at\IeC {\'e} o espa\IeC {\c c}o final da tela. Fonte:~\cite {LearnOpenGL}}}{57}{figure.4.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Jogador ca\IeC {\c c}ando um coelho com arco e flecha}}{75}{figure.8.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Jogador pronto para atacar alvo que ficou preso na armadilha de ch\IeC {\~a}o}}{76}{figure.8.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Jogador cantando em um vilarejo}}{77}{figure.8.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Jogador sendo prestigiado ap\IeC {\'o}s t\IeC {\'e}rmino da m\IeC {\'u}sica}}{77}{figure.8.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Esbo\IeC {\c c}o do menu para compor m\IeC {\'u}sicas}}{78}{figure.8.34}

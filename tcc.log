@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  4 NOV 2018 22:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  11 NOV 2018 20:56
 entering extended mode
 **./tcc.tex
 (tcc.tex
@@ -1322,532 +1322,570 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 8.
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )) [5
 
-] (tcc.lot) [6
+] [6] (tcc.lot)
+[7
 
-]
-(tcc.lol) [7
+] (tcc.lol) [8
 
 
-] [8
+] [9
 
 
 ] (tcc.toc
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 26.
- [9
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 23.
+ [10
 
-] [10]) [11] [12
-
-
-]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 196.
+] [11]) [12] [13
 
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 196.
- [13] [14] [15
+] [14] [15
 
 ] [16]
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--316
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
-[19
+[17
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <24.88> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 321.
-<imagens/engine_layers.png, id=489, 1277.77374pt x 1710.39pt>
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 346.
+<imagens/engine_layers.png, id=479, 1277.77374pt x 1710.39pt>
 File: imagens/engine_layers.png Graphic file (type png)
 <use imagens/engine_layers.png>
-Package pdftex.def Info: imagens/engine_layers.png  used on input line 328. on 
-input line 328.
-Package pdftex.def Info: Requested size: 455.0pt x 609.05875pt on input line 32
-8.
- [20
+Package pdftex.def Info: imagens/engine_layers.png  used on input line 353. on 
+input line 353.
+Package pdftex.def Info: Requested size: 455.0pt x 609.05875pt on input line 35
+3.
+ [18
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 335.
- [21pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 360.
+ [19pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.337 
+l.362 
        <./imagens/engine_layers.png>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 340.
+nput line 365.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 341.
-<imagens/ilu1_small.png, id=507, 104.91196pt x 41.4348pt>
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 366.
+<imagens/ilu1_small.png, id=498, 104.91196pt x 41.4348pt>
 File: imagens/ilu1_small.png Graphic file (type png)
 <use imagens/ilu1_small.png>
-Package pdftex.def Info: imagens/ilu1_small.png  used on input line 353. on inp
-ut line 353.
+Package pdftex.def Info: imagens/ilu1_small.png  used on input line 378. on inp
+ut line 378.
 Package pdftex.def Info: Requested size: 328.9953pt x 129.94237pt on input line
- 353.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 378.
+ [20pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.363 \subsection
+l.388 \subsection
                  {Timestep fixo} <./imagens/ilu1_small.png (PNG copy)>]
-[23]
-<imagens/ilu2_small.png, id=528, 94.31235pt x 46.0119pt>
+[21]
+<imagens/ilu2_small.png, id=520, 94.31235pt x 46.0119pt>
 File: imagens/ilu2_small.png Graphic file (type png)
 <use imagens/ilu2_small.png>
-Package pdftex.def Info: imagens/ilu2_small.png  used on input line 387. on inp
-ut line 387.
+Package pdftex.def Info: imagens/ilu2_small.png  used on input line 412. on inp
+ut line 412.
 Package pdftex.def Info: Requested size: 328.9953pt x 160.55818pt on input line
- 387.
-<imagens/ilu3_small.png, id=529, 96.72134pt x 44.8074pt>
+ 412.
+<imagens/ilu3_small.png, id=521, 96.72134pt x 44.8074pt>
 File: imagens/ilu3_small.png Graphic file (type png)
 <use imagens/ilu3_small.png>
-Package pdftex.def Info: imagens/ilu3_small.png  used on input line 410. on inp
-ut line 410.
+Package pdftex.def Info: imagens/ilu3_small.png  used on input line 435. on inp
+ut line 435.
 Package pdftex.def Info: Requested size: 328.9953pt x 152.4149pt on input line 
-410.
- [24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+435.
+ [22pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.413 
+l.438 
        <./imagens/ilu2_small.png (PNG copy)>]
-<imagens/ilu4_small.png, id=552, 99.9735pt x 43.48245pt>
+<imagens/ilu4_small.png, id=543, 99.9735pt x 43.48245pt>
 File: imagens/ilu4_small.png Graphic file (type png)
 <use imagens/ilu4_small.png>
-Package pdftex.def Info: imagens/ilu4_small.png  used on input line 417. on inp
-ut line 417.
+Package pdftex.def Info: imagens/ilu4_small.png  used on input line 442. on inp
+ut line 442.
 Package pdftex.def Info: Requested size: 328.9953pt x 143.09903pt on input line
- 417.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 442.
+ [23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.425 
+l.450 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.425 
+l.450 
        <./imagens/ilu3_small.png (PNG copy)> <./imagens/ilu4_small.png (PNG cop
 y)>]
-<imagens/ilu6_small.png, id=559, 97.0827pt x 44.68695pt>
+<imagens/ilu6_small.png, id=550, 97.0827pt x 44.68695pt>
 File: imagens/ilu6_small.png Graphic file (type png)
 <use imagens/ilu6_small.png>
-Package pdftex.def Info: imagens/ilu6_small.png  used on input line 453. on inp
-ut line 453.
+Package pdftex.def Info: imagens/ilu6_small.png  used on input line 478. on inp
+ut line 478.
 Package pdftex.def Info: Requested size: 328.9953pt x 151.46649pt on input line
- 453.
-<imagens/ilu8_small.png, id=560, 85.7604pt x 50.589pt>
+ 478.
+<imagens/ilu8_small.png, id=551, 85.7604pt x 50.589pt>
 File: imagens/ilu8_small.png Graphic file (type png)
 <use imagens/ilu8_small.png>
-Package pdftex.def Info: imagens/ilu8_small.png  used on input line 459. on inp
-ut line 459.
+Package pdftex.def Info: imagens/ilu8_small.png  used on input line 484. on inp
+ut line 484.
 Package pdftex.def Info: Requested size: 328.9953pt x 194.09277pt on input line
- 459.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 484.
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.461 \end{figure}
+l.486 \end{figure}
                    <./imagens/ilu6_small.png (PNG copy)>]
-<imagens/ilu7_small.png, id=590, 88.28986pt x 49.1436pt>
+<imagens/ilu7_small.png, id=582, 88.28986pt x 49.1436pt>
 File: imagens/ilu7_small.png Graphic file (type png)
 <use imagens/ilu7_small.png>
-Package pdftex.def Info: imagens/ilu7_small.png  used on input line 472. on inp
-ut line 472.
+Package pdftex.def Info: imagens/ilu7_small.png  used on input line 497. on inp
+ut line 497.
 Package pdftex.def Info: Requested size: 328.9953pt x 183.14143pt on input line
- 472.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 497.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.475 \end{figure}
+l.500 \end{figure}
                    <./imagens/ilu8_small.png (PNG copy)>]
-<imagens/ilu5_small.png, id=595, 98.40765pt x 44.0847pt>
+<imagens/ilu5_small.png, id=587, 98.40765pt x 44.0847pt>
 File: imagens/ilu5_small.png Graphic file (type png)
 <use imagens/ilu5_small.png>
-Package pdftex.def Info: imagens/ilu5_small.png  used on input line 478. on inp
-ut line 478.
+Package pdftex.def Info: imagens/ilu5_small.png  used on input line 503. on inp
+ut line 503.
 Package pdftex.def Info: Requested size: 328.9953pt x 147.38493pt on input line
- 478.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 503.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.496 			dt 
+l.521 			dt 
             = currentFrame - lastFrame;pdfTeX warning (ext4): destination with 
 the same identifier (name{figure.4.9}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.496 			dt 
+l.521 			dt 
             = currentFrame - lastFrame; <./imagens/ilu7_small.png (PNG copy)> <
 ./imagens/ilu5_small.png (PNG copy)>]
-Overfull \hbox (5.0023pt too wide) in paragraph at lines 513--514
+Overfull \hbox (5.0023pt too wide) in paragraph at lines 538--539
 []$\OML/lmm/m/it/12 renderPosition$ \T1/lmr/m/n/12 = $\OML/lmm/m/it/12 currentP
 osition \OMS/lmsy/m/n/12  \OML/lmm/m/it/12 interpolationFactor$ \T1/lmr/m/n/12
  + $\OML/lmm/m/it/12 previousPosition \OMS/lmsy/m/n/12 
  []
 
-[29] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 566--568
+[27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
 \T1/lmtt/m/n/12 share) \T1/lmr/m/n/12 e usa-se o id re-tor-nado para torn·-lo c
 on-texto vi-gente com
  []
 
-[31]
-<imagens/openglpipeline.png, id=685, 1254.6875pt x 220.825pt>
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 600.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 600.
+ [29]
+<imagens/openglpipeline.png, id=676, 1254.6875pt x 220.825pt>
 File: imagens/openglpipeline.png Graphic file (type png)
 <use imagens/openglpipeline.png>
-Package pdftex.def Info: imagens/openglpipeline.png  used on input line 596. on
- input line 596.
-Package pdftex.def Info: Requested size: 455.0pt x 80.07985pt on input line 596
+Package pdftex.def Info: imagens/openglpipeline.png  used on input line 621. on
+ input line 621.
+Package pdftex.def Info: Requested size: 455.0pt x 80.07985pt on input line 621
 .
- [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.608 A
+l.633 A
         etapa de \textit{rasterization} processa a sa√≠da do \textit{tessela...
  <./imagens/openglpipeline.png>]
-Underfull \hbox (badness 1442) in paragraph at lines 615--616
+Underfull \hbox (badness 1442) in paragraph at lines 640--641
 \T1/lmr/m/n/12 rio ge-rar o ID do VAO e VBO cha-mando as fun-Áıes \T1/lmtt/m/n/
 12 glGenVertexArrays() \T1/lmr/m/n/12 e
  []
 
-[33]
-<imagens/tringulosCompondoQuad.png, id=711, 24.3309pt x 19.87425pt>
+[31]
+<imagens/tringulosCompondoQuad.png, id=703, 24.3309pt x 19.87425pt>
 File: imagens/tringulosCompondoQuad.png Graphic file (type png)
 <use imagens/tringulosCompondoQuad.png>
 Package pdftex.def Info: imagens/tringulosCompondoQuad.png  used on input line 
-648. on input line 648.
+673. on input line 673.
 Package pdftex.def Info: Requested size: 281.99597pt x 230.51677pt on input lin
-e 648.
- [34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+e 673.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.658 ...lstlisting}[caption=Vertex shader header]
+l.683 ...lstlisting}[caption=Vertex shader header]
                                                    <./imagens/tringulosCompondo
-Quad.png>] [35]
-<imagens/helloShader.png, id=752, 1302.8675pt x 763.85374pt>
+Quad.png>] [33]
+<imagens/helloShader.png, id=744, 1302.8675pt x 763.85374pt>
 File: imagens/helloShader.png Graphic file (type png)
 <use imagens/helloShader.png>
-Package pdftex.def Info: imagens/helloShader.png  used on input line 704. on in
-put line 704.
-Package pdftex.def Info: Requested size: 455.0pt x 266.75838pt on input line 70
-4.
+Package pdftex.def Info: imagens/helloShader.png  used on input line 729. on in
+put line 729.
+Package pdftex.def Info: Requested size: 455.0pt x 266.75838pt on input line 72
+9.
 
-Underfull \hbox (badness 10000) in paragraph at lines 709--710
+Underfull \hbox (badness 10000) in paragraph at lines 734--735
 \T1/lmtt/m/n/12 GL_VERTEX_SHADER\T1/lmr/m/n/12 , \T1/lmtt/m/n/12 GL_TESS_CONTRO
 L_SHADER\T1/lmr/m/n/12 ,
  []
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.710 
+l.735 
        <./imagens/helloShader.png>]
-Overfull \hbox (37.88474pt too wide) in paragraph at lines 744--746
+Overfull \hbox (37.88474pt too wide) in paragraph at lines 769--771
 \T1/lmtt/m/n/12 variableName), value)\T1/lmr/m/n/12 , para um ve-tor de 3 flo-a
 ts usa-se \T1/lmtt/m/n/12 glUniform3f(glGetUniformLocation
  []
 
 
-Overfull \hbox (124.96037pt too wide) in paragraph at lines 744--746
+Overfull \hbox (124.96037pt too wide) in paragraph at lines 769--771
 \T1/lmtt/m/n/12 (programID,variableName), x, y, z)\T1/lmr/m/n/12 , para uma ma-
 triz 4 por 4 \T1/lmtt/m/n/12 glUniformMatrix4fv(glGetUniformLocation
  []
 
 
-Overfull \hbox (2.12067pt too wide) in paragraph at lines 744--746
+Overfull \hbox (2.12067pt too wide) in paragraph at lines 769--771
 \T1/lmtt/m/n/12 (programID,variableName), false, BufferUtilities.createFloatBuf
 fer(m)) \T1/lmr/m/n/12 e as-
  []
 
-[37] [38] [39] [40] [41]
-<imagens/sistema_rgba_argb.png, id=988, 246.9225pt x 179.67125pt>
+[35] [36] [37] [38]
+<imagens/sistema_rgba_argb.png, id=941, 246.9225pt x 179.67125pt>
 File: imagens/sistema_rgba_argb.png Graphic file (type png)
 <use imagens/sistema_rgba_argb.png>
-Package pdftex.def Info: imagens/sistema_rgba_argb.png  used on input line 941.
- on input line 941.
+Package pdftex.def Info: imagens/sistema_rgba_argb.png  used on input line 958.
+ on input line 958.
 Package pdftex.def Info: Requested size: 234.99664pt x 170.99101pt on input lin
-e 941.
-<imagens/extracting_rgb_channel.png, id=989, 348.30125pt x 135.50626pt>
+e 958.
+ [39]
+<imagens/extracting_rgb_channel.png, id=973, 348.30125pt x 135.50626pt>
 File: imagens/extracting_rgb_channel.png Graphic file (type png)
 <use imagens/extracting_rgb_channel.png>
 Package pdftex.def Info: imagens/extracting_rgb_channel.png  used on input line
- 949. on input line 949.
+ 966. on input line 966.
 Package pdftex.def Info: Requested size: 258.4963pt x 100.57285pt on input line
- 949.
-<imagens/wrap_modes.png, id=990, 1405.25pt x 401.5pt>
+ 966.
+<imagens/wrap_modes.png, id=974, 1405.25pt x 401.5pt>
 File: imagens/wrap_modes.png Graphic file (type png)
 <use imagens/wrap_modes.png>
-Package pdftex.def Info: imagens/wrap_modes.png  used on input line 956. on inp
-ut line 956.
-Package pdftex.def Info: Requested size: 455.0pt x 130.00195pt on input line 95
-6.
+Package pdftex.def Info: imagens/wrap_modes.png  used on input line 973. on inp
+ut line 973.
+Package pdftex.def Info: Requested size: 455.0pt x 130.00195pt on input line 97
+3.
 
-Overfull \hbox (10.77768pt too wide) in paragraph at lines 953--958
+Overfull \hbox (10.77768pt too wide) in paragraph at lines 970--975
 \T1/lmr/m/n/12 tes de qual-quer ope-ra-Á„o na tex-tura vincula-se ela como atua
 l usando \T1/lmtt/m/n/12 glBindTexture(type,
  []
 
-[42pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.959 E
+l.976 E
        sses modos s√£o configurados atrav√©s da fun√ß√£o \texttt{glTexParame...
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.14})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.959 E
+l.976 E
        sses modos s√£o configurados atrav√©s da fun√ß√£o \texttt{glTexParame...
  <./imagens/sistema_rgba_argb.png> <./imagens/extracting_rgb_channel.png>]
-Overfull \hbox (8.40543pt too wide) in paragraph at lines 959--960
+Overfull \hbox (8.40543pt too wide) in paragraph at lines 976--977
 []\T1/lmr/m/n/12 Esses mo-dos s„o con-fi-gu-ra-dos atra-vÈs da fun-Á„o \T1/lmtt
 /m/n/12 glTexParameteri(GL_TEXTURE_2D,
  []
 
-<imagens/gl_filters.png, id=997, 206.7725pt x 48.18pt>
+<imagens/gl_filters.png, id=980, 206.7725pt x 48.18pt>
 File: imagens/gl_filters.png Graphic file (type png)
 <use imagens/gl_filters.png>
-Package pdftex.def Info: imagens/gl_filters.png  used on input line 967. on inp
-ut line 967.
+Package pdftex.def Info: imagens/gl_filters.png  used on input line 984. on inp
+ut line 984.
 Package pdftex.def Info: Requested size: 422.99396pt x 98.57182pt on input line
- 967.
+ 984.
 
-Overfull \hbox (29.64638pt too wide) in paragraph at lines 973--974
+Overfull \hbox (29.64638pt too wide) in paragraph at lines 990--991
 \T1/lmr/m/n/12 da-dos da ima-gem pro-pri-a-mente dita para o OpenGL. Isso È fei
 to na fun-Á„o \T1/lmtt/m/n/12 glTexImage2D(type,
  []
 
 
-Overfull \hbox (73.13925pt too wide) in paragraph at lines 973--974
+Overfull \hbox (73.13925pt too wide) in paragraph at lines 990--991
 \T1/lmtt/m/n/12 mipmap_level, internal_format, width, height, border, color_for
 mat, type, bytebuffer)\T1/lmr/m/n/12 . 
  []
 
-[43pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.975 \subsection
+l.992 \subsection
                  {Anima√ß√µes}pdfTeX warning (ext4): destination with the same 
 identifier (name{figure.4.16}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.975 \subsection
+l.992 \subsection
                  {Anima√ß√µes} <./imagens/wrap_modes.png> <./imagens/gl_filters
 .png>]
-<imagens/spritesheet.png, id=1002, 159.59625pt x 94.3525pt>
+<imagens/spritesheet.png, id=985, 159.59625pt x 94.3525pt>
 File: imagens/spritesheet.png Graphic file (type png)
 <use imagens/spritesheet.png>
-Package pdftex.def Info: imagens/spritesheet.png  used on input line 980. on in
-put line 980.
+Package pdftex.def Info: imagens/spritesheet.png  used on input line 997. on in
+put line 997.
 Package pdftex.def Info: Requested size: 187.99731pt x 111.14348pt on input lin
-e 980.
- [44pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+e 997.
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 17}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1011 \end{lstlisting}
-                        <./imagens/spritesheet.png>] [45]
-<imagens/z-order.png, id=1076, 355.3275pt x 184.69pt>
+l.1028 \end{lstlisting}
+                        <./imagens/spritesheet.png>] [43]
+<imagens/z-order.png, id=1060, 355.3275pt x 184.69pt>
 File: imagens/z-order.png Graphic file (type png)
 <use imagens/z-order.png>
-Package pdftex.def Info: imagens/z-order.png  used on input line 1074. on input
- line 1074.
+Package pdftex.def Info: imagens/z-order.png  used on input line 1091. on input
+ line 1091.
 Package pdftex.def Info: Requested size: 328.9953pt x 171.00746pt on input line
- 1074.
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ 1091.
+<imagens/zOrderWithBaseBox.png, id=1061, 355.3275pt x 184.69pt>
+File: imagens/zOrderWithBaseBox.png Graphic file (type png)
+<use imagens/zOrderWithBaseBox.png>
+Package pdftex.def Info: imagens/zOrderWithBaseBox.png  used on input line 1100
+. on input line 1100.
+Package pdftex.def Info: Requested size: 328.9953pt x 171.00746pt on input line
+ 1100.
+ [44pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 18}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1084 
+l.1103 
         <./imagens/z-order.png>]
-<imagens/lightning.png, id=1092, 216.81pt x 58.2175pt>
+<imagens/lightning.png, id=1077, 216.81pt x 58.2175pt>
 File: imagens/lightning.png Graphic file (type png)
 <use imagens/lightning.png>
-Package pdftex.def Info: imagens/lightning.png  used on input line 1087. on inp
-ut line 1087.
+Package pdftex.def Info: imagens/lightning.png  used on input line 1112. on inp
+ut line 1112.
 Package pdftex.def Info: Requested size: 328.9953pt x 88.35204pt on input line 
-1087.
-<imagens/sunset.png, id=1093, 1279.78125pt x 716.6775pt>
-File: imagens/sunset.png Graphic file (type png)
-<use imagens/sunset.png>
-Package pdftex.def Info: imagens/sunset.png  used on input line 1118. on input 
-line 1118.
-Package pdftex.def Info: Requested size: 328.9953pt x 184.23212pt on input line
- 1118.
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+1112.
+ [45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1121 
-        <./imagens/lightning.png>]
-<imagens/normal_reflection.png, id=1112, 146.5475pt x 81.30376pt>
+l.1122 
+       pdfTeX warning (ext4): destination with the same identifier (name{figure
+.4.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1122 
+        <./imagens/zOrderWithBaseBox.png> <./imagens/lightning.png>]
+<imagens/sunset.png, id=1085, 1279.78125pt x 716.6775pt>
+File: imagens/sunset.png Graphic file (type png)
+<use imagens/sunset.png>
+Package pdftex.def Info: imagens/sunset.png  used on input line 1143. on input 
+line 1143.
+Package pdftex.def Info: Requested size: 328.9953pt x 184.23212pt on input line
+ 1143.
+<imagens/normal_reflection.png, id=1086, 146.5475pt x 81.30376pt>
 File: imagens/normal_reflection.png Graphic file (type png)
 <use imagens/normal_reflection.png>
-Package pdftex.def Info: imagens/normal_reflection.png  used on input line 1130
-. on input line 1130.
+Package pdftex.def Info: imagens/normal_reflection.png  used on input line 1155
+. on input line 1155.
 Package pdftex.def Info: Requested size: 234.99664pt x 130.37398pt on input lin
-e 1130.
- [48pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-20}) has been already used, duplicate ignored
+e 1155.
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+21}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1137 
-       pdfTeX warning (ext4): destination with the same identifier (name{figure
-.4.21}) has been already used, duplicate ignored
+l.1158 
+        <./imagens/sunset.png>] [47pdfTeX warning (ext4): destination with the 
+same identifier (name{figure.4.22}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1137 
-        <./imagens/sunset.png> <./imagens/normal_reflection.png>]
-<imagens/normalTextureExample.png, id=1119, 971.63pt x 682.55pt>
+l.1188 	color 
+              = imgTex * (lightAmbientColor + vec4(diffuse.xyz,1)); <./imagens/
+normal_reflection.png>]
+<imagens/normalTextureExample.png, id=1132, 971.63pt x 682.55pt>
 File: imagens/normalTextureExample.png Graphic file (type png)
 <use imagens/normalTextureExample.png>
 Package pdftex.def Info: imagens/normalTextureExample.png  used on input line 1
-171. on input line 1171.
+196. on input line 1196.
 Package pdftex.def Info: Requested size: 234.99664pt x 165.07555pt on input lin
-e 1171.
- [49pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-22}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1178 
-        <./imagens/normalTextureExample.png>]
-<imagens/specular.png, id=1151, 146.5475pt x 81.30376pt>
+e 1196.
+<imagens/specular.png, id=1133, 146.5475pt x 81.30376pt>
 File: imagens/specular.png Graphic file (type png)
 <use imagens/specular.png>
-Package pdftex.def Info: imagens/specular.png  used on input line 1186. on inpu
-t line 1186.
+Package pdftex.def Info: imagens/specular.png  used on input line 1212. on inpu
+t line 1212.
 Package pdftex.def Info: Requested size: 234.99664pt x 130.37398pt on input lin
-e 1186.
- [50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+e 1212.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 23}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1203 \end{itemize}
-                     <./imagens/specular.png>] [51pdfTeX warning (ext4): destin
-ation with the same identifier (name{table.4.1}) has been already used, duplica
-te ignored
+l.1215 
+        <./imagens/normalTextureExample.png>] [49pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.4.24}) has been already used, duplic
+ate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1261 	vec4 
-             imgTex =  texture(image, TexCoords).xyzw;] [52]
-Overfull \hbox (6.38826pt too wide) in paragraph at lines 1320--1321
+l.1256 
+        <./imagens/specular.png>] [50pdfTeX warning (ext4): destination with th
+e same identifier (name{table.4.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1293 \end{lstlisting}
+                       ] [51]
+Overfull \hbox (6.38826pt too wide) in paragraph at lines 1348--1349
 []\T1/lmr/m/n/12 Para fins de in-tro-du-Á„o ao con-ceito e abs-tra-Á„o do pro-c
 esso de ren-de-ri-za-Á„o abordou-
  []
 
-[53]
-<imagens/gameobject_specialization.png, id=1247, 598.235pt x 362.35374pt>
+[52]
+<imagens/gameobject_specialization.png, id=1238, 598.235pt x 362.35374pt>
 File: imagens/gameobject_specialization.png Graphic file (type png)
 <use imagens/gameobject_specialization.png>
 Package pdftex.def Info: imagens/gameobject_specialization.png  used on input l
-ine 1336. on input line 1336.
+ine 1364. on input line 1364.
 Package pdftex.def Info: Requested size: 234.99664pt x 142.34027pt on input lin
-e 1336.
- [54pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-24}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1353 
-        <./imagens/gameobject_specialization.png>] [55]
-<imagens/aabbaabb.png, id=1269, 202.7575pt x 117.43875pt>
-File: imagens/aabbaabb.png Graphic file (type png)
-<use imagens/aabbaabb.png>
-Package pdftex.def Info: imagens/aabbaabb.png  used on input line 1395. on inpu
-t line 1395.
-Package pdftex.def Info: Requested size: 187.99731pt x 108.89255pt on input lin
-e 1395.
- [56pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+e 1364.
+<imagens/componentBased.png, id=1239, 352.31625pt x 160.6pt>
+File: imagens/componentBased.png Graphic file (type png)
+<use imagens/componentBased.png>
+Package pdftex.def Info: imagens/componentBased.png  used on input line 1376. o
+n input line 1376.
+Package pdftex.def Info: Requested size: 234.99664pt x 107.12112pt on input lin
+e 1376.
+ [53pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 25}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1412 
-        <./imagens/aabbaabb.png>]
-<imagens/coordSpace.png, id=1287, 858.20625pt x 423.08063pt>
-File: imagens/coordSpace.png Graphic file (type png)
-<use imagens/coordSpace.png>
-Package pdftex.def Info: imagens/coordSpace.png  used on input line 1425. on in
-put line 1425.
-Package pdftex.def Info: Requested size: 352.49496pt x 173.77405pt on input lin
-e 1425.
- [57pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+l.1379 
+        <./imagens/gameobject_specialization.png>]
+<imagens/entityDiagram.png, id=1245, 715.67375pt x 542.025pt>
+File: imagens/entityDiagram.png Graphic file (type png)
+<use imagens/entityDiagram.png>
+Package pdftex.def Info: imagens/entityDiagram.png  used on input line 1394. on
+ input line 1394.
+Package pdftex.def Info: Requested size: 352.49496pt x 266.96748pt on input lin
+e 1394.
+ [54pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 26}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1437 S
-        e todos os objetos fossem inseridos no mundo somente usando as coord...
- <./imagens/coordSpace.png>] [58] [59] [60] [61] [62] [63] [64] [65] [66]
-[67] [68] [69
+l.1397 
+        <./imagens/componentBased.png>] [55pdfTeX warning (ext4): destination w
+ith the same identifier (name{figure.4.27}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1412         float 
+                     rw = r.width; <./imagens/entityDiagram.png>]
+<imagens/aabbaabb.png, id=1259, 202.7575pt x 117.43875pt>
+File: imagens/aabbaabb.png Graphic file (type png)
+<use imagens/aabbaabb.png>
+Package pdftex.def Info: imagens/aabbaabb.png  used on input line 1437. on inpu
+t line 1437.
+Package pdftex.def Info: Requested size: 187.99731pt x 108.89255pt on input lin
+e 1437.
+ [56pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+28}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1451 \section
+               {Sistema de coordenadas} <./imagens/aabbaabb.png>]
+<imagens/coordSpace.PNG, id=1286, 858.20625pt x 423.08063pt>
+File: imagens/coordSpace.PNG Graphic file (type png)
+<use imagens/coordSpace.PNG>
+Package pdftex.def Info: imagens/coordSpace.PNG  used on input line 1467. on in
+put line 1467.
+Package pdftex.def Info: Requested size: 352.49496pt x 173.77405pt on input lin
+e 1467.
+ [57pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+29}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1478 
+        <./imagens/coordSpace.PNG>] [58] [59] [60] [61] [62] [63] [64] [65]
+[66] [67] [68] [69
 
 ]
-Overfull \hbox (51.28148pt too wide) in paragraph at lines 1894--1897
+Overfull \hbox (51.28148pt too wide) in paragraph at lines 1936--1939
 \T1/lmr/m/n/12 tion e Con-si-de-ra-ti-on-Tree. //-TODO: good exam-ple https://a
 lastaira.wordpress.com/2013/01/25/at-
  []
 
 
-Overfull \hbox (474.18657pt too wide) in paragraph at lines 1894--1897
+Overfull \hbox (474.18657pt too wide) in paragraph at lines 1936--1939
 \T1/lmr/m/n/12 a-glance-functions-for-modelling-utility-based-game-ai/ //https:
 //www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_T
 hing_of_the_Past.php 
@@ -1858,77 +1896,77 @@ hing_of_the_Past.php
 ] [73
 
 ] [74]
-<imagens/mecanica_caca.png, id=1735, 602.25pt x 400.49625pt>
+<imagens/mecanica_caca.png, id=1734, 602.25pt x 400.49625pt>
 File: imagens/mecanica_caca.png Graphic file (type png)
 <use imagens/mecanica_caca.png>
-Package pdftex.def Info: imagens/mecanica_caca.png  used on input line 2005. on
- input line 2005.
+Package pdftex.def Info: imagens/mecanica_caca.png  used on input line 2052. on
+ input line 2052.
 Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 2005.
-<imagens/mecanica_armadilha.png, id=1736, 602.25pt x 400.49625pt>
+e 2052.
+<imagens/mecanica_armadilha.png, id=1735, 602.25pt x 400.49625pt>
 File: imagens/mecanica_armadilha.png Graphic file (type png)
 <use imagens/mecanica_armadilha.png>
-Package pdftex.def Info: imagens/mecanica_armadilha.png  used on input line 202
-0. on input line 2020.
+Package pdftex.def Info: imagens/mecanica_armadilha.png  used on input line 206
+7. on input line 2067.
 Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 2020.
+e 2067.
  [75
 
-pdfTeX warning (ext4): destination with the same identifier (name{figure.8.27})
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8.30})
  has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2023 O
+l.2070 O
          sistema de armadilhas √© dado pelo seguinte fluxo de a√ß√µes: <./image
 ns/mecanica_caca.png>]
-<imagens/mecanica_cantar.png, id=1745, 602.25pt x 400.49625pt>
+<imagens/mecanica_cantar.png, id=1744, 602.25pt x 400.49625pt>
 File: imagens/mecanica_cantar.png Graphic file (type png)
 <use imagens/mecanica_cantar.png>
-Package pdftex.def Info: imagens/mecanica_cantar.png  used on input line 2041. 
-on input line 2041.
+Package pdftex.def Info: imagens/mecanica_cantar.png  used on input line 2088. 
+on input line 2088.
 Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 2041.
-<imagens/mecanica_cantar2.png, id=1746, 602.25pt x 400.49625pt>
+e 2088.
+<imagens/mecanica_cantar2.png, id=1745, 602.25pt x 400.49625pt>
 File: imagens/mecanica_cantar2.png Graphic file (type png)
 <use imagens/mecanica_cantar2.png>
-Package pdftex.def Info: imagens/mecanica_cantar2.png  used on input line 2046.
- on input line 2046.
+Package pdftex.def Info: imagens/mecanica_cantar2.png  used on input line 2093.
+ on input line 2093.
 Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 2046.
+e 2093.
  [76pdfTeX warning (ext4): destination with the same identifier (name{figure.8.
-28}) has been already used, duplicate ignored
+31}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2048 \end{figure}
+l.2095 \end{figure}
                     <./imagens/mecanica_armadilha.png>]
-<imagens/mecanica_compormusica.png, id=1753, 602.25pt x 400.49625pt>
+<imagens/mecanica_compormusica.png, id=1752, 602.25pt x 400.49625pt>
 File: imagens/mecanica_compormusica.png Graphic file (type png)
 <use imagens/mecanica_compormusica.png>
 Package pdftex.def Info: imagens/mecanica_compormusica.png  used on input line 
-2056. on input line 2056.
+2103. on input line 2103.
 Package pdftex.def Info: Requested size: 289.07999pt x 192.24213pt on input lin
-e 2056.
+e 2103.
  [77pdfTeX warning (ext4): destination with the same identifier (name{figure.8.
-29}) has been already used, duplicate ignored
+32}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2059 A
+l.2106 A
         SD.pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.8.30}) has been already used, duplicate ignored
+gure.8.33}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2059 A
+l.2106 A
         SD. <./imagens/mecanica_cantar.png> <./imagens/mecanica_cantar2.png>]
 [78pdfTeX warning (ext4): destination with the same identifier (name{figure.8.3
-1}) has been already used, duplicate ignored
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2082 \chapter
+l.2129 \chapter
                {Experimentos e resultados} <./imagens/mecanica_compormusica.png
 >] [79] [80
 
@@ -1963,25 +2001,25 @@ AED: lastpage setting LastPage
 \tf@toc=\write9
 \openout9 = `tcc.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2191.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2191.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2242.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2242.
  (tcc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2191.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2242.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2242.
 
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: CC123F8A1CF973E339E434ACDE395299;1385.
+(rerunfilecheck)             Checksum: B00A65DEAD3A8E51402B2806493373FD;1529.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2191.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2242.
  ) 
 Here is how much of TeX's memory you used:
- 17489 strings out of 493312
- 250080 string characters out of 3138901
- 608394 words of memory out of 3000000
- 19469 multiletter control sequences out of 15000+200000
+ 17517 strings out of 493312
+ 251237 string characters out of 3138901
+ 597394 words of memory out of 3000000
+ 19509 multiletter control sequences out of 15000+200000
  76869 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,12n,45p,1734b,1875s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2006,9 +2044,9 @@ m/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt9.pfb>
-Output written on tcc.pdf (84 pages, 2534116 bytes).
+Output written on tcc.pdf (84 pages, 2549268 bytes).
 PDF statistics:
- 2474 PDF objects out of 2487 (max. 8388607)
- 1215 named destinations out of 1440 (max. 500000)
- 1037 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2470 PDF objects out of 2487 (max. 8388607)
+ 1199 named destinations out of 1200 (max. 500000)
+ 1036 words of extra memory for PDF output out of 10000 (max. 10000000)
 
