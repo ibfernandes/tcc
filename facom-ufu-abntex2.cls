@@ -114,6 +114,7 @@
 \usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{grffile}
 \usepackage{amsmath}			%inclusão da biblioteca de matemática
 \usepackage{commath}
 \usepackage{alltt}

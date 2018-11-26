@@ -62,6 +62,11 @@ OpenGL e Java }
 %-------------------------------------------
 % RESUMO
 
+//TODO : tirar game design document do resumo e do 
+abstract
+//TODO : capítulo de trabalhos correlatos pode ser colocado como seção no capítulo da arquitetura NARVAL ao final (como arquiteturas correlatas)
+
+
 \begin{resumo} 
 
 Este trabalho propõe a criação de uma Game Engine multiplataforma para desktop intitulada Narval e a subsequente elaboração de um protótipo de jogo.
@@ -118,6 +123,8 @@ The game will be elaboreted using techniques of procedural algorithms to generat
 % ------------------------------------------
 % LISTA DE ABREVIATURAS OU SIGLAS
 
+
+
 \begin{siglas} 
   \item[GDD] Game Design Document 
   \item[API] Application Programming Interface
@@ -137,6 +144,7 @@ The game will be elaboreted using techniques of procedural algorithms to generat
   \item[GLM] OpenGL Mathematics Library
   \item[IA] Inteligência Artificial
   \item[PCM] Pulse-code modulation 
+  \item[FOV] Field Of View
 \end{siglas}
 
 
@@ -182,8 +190,13 @@ Ao fim de seu desenvolvimento será ainda construído um protótipo de jogo para
 
 \section{Justificativa e Motivação}
 O consumo cada vez maior deste tipo de produto pelo público de todas as idades traz cada vez mais oportunidades de trabalho e aprendizagem.
-A insuficiência de materiais em língua portuguesa sobre os processos de desenvolvimento e planejamento de jogos é um grande instigador desse trabalho. Neste contexto, esse trabalho aborda todas as etapas pelas quais um jogo passa para torna-se um software que será distribuído e jogado por pessoas do mundo todo.
+A insuficiência de materiais em língua portuguesa sobre os processos de desenvolvimento e planejamento de jogos é um grande instigador desse trabalho. Neste contexto, esse trabalho aborda todas as etapas pelas quais uma engine passa para torna-se um software que será distribuído e utilizado por pessoas do mundo todo.
 Embora haja diversas opções de Engines no mercado como Unity, Unreal, CryEngine e afins, a grande maioria é de código fechado, o que torna extremamente dificil senão impossível de modificá-la para as necessidades especias de um projeto. Além deste fato, para comercializar os produtos produzidos nelas é necessário pagar uma porcentagem da revenda obtida com o produto lançado. Portanto, para este projeto será desenvolvida uma Engine própria, para ter-se uma maior flexibilidade de implementação e para ter uma licença de software próprio.
+
+\section{Organização do Trabalho}
+//TODO: editar seção
+No Capítulo \ref{cap:Metodologia} está descrita a Metodologia utilizada neste trabalho. As bases teóricas: Manutenção de Sistema, Banco de Dados, Falta de Informações, Projeto de Banco de Dados e Refatoração em Banco de Dados são encontradas no Capítulo \ref{cap:ReferencialTeorico}. No Capítulo \ref{cap:BancoSIAF} é apresentado o Banco de Dados do SIAF. O Desenvolvimento do trabalho de remodelagem de dados compõe o Capítulo \ref{cap:Desenvolvimento}. Finalmente, o Capítulo \ref{cap:Conclusao} expõe as Conclusões obtidas do trabalho desenvolvido e apresenta perspectivas para Trabalhos Futuros.
+
 
 \iffalse
 \section{Metodologia}
@@ -232,31 +245,31 @@ Etapa 4 – Testes e avaliação do jogo.
 
 \chapter{Revisão Bibliográfica}
 
-//TODO: Removi a seção Referencial Teórico e transformei as subseções em seções?
-
 
 \label{sec:refteo}
 \section{Computação gráfica}
-Computação gráfica refere-se a tudo que envolve criação ou manipulação de imagens no computador, incluindo animações \cite{ComputerGraphicsIntro}. Este ramo abrange diversas áreas, tais como: Jogos, Arquitetura, Cinema, Medicina, Artes e várias outras. Toda a computação gráfica atual é baseada em cálculos matemáticos para sintetizar pixels em uma tela 2D. Esse processo se dá através de um pipeline por onde primitivas gráficas são manipuladas para obter o resultado final mostrado na tela do usuário.
+Computação gráfica refere-se a tudo que envolve criação ou manipulação de imagens no computador, incluindo animações \cite{ComputerGraphicsIntro}. Este ramo possui aplicações em diversas áreas, tais como: Jogos, Arquitetura, Cinema, Medicina, Artes e várias outras. Toda a computação gráfica atual é baseada em cálculos matemáticos para sintetizar pixels em uma tela 2D. Esse processo se dá através de um pipeline por onde primitivas gráficas são manipuladas para obter o resultado final mostrado na tela do usuário.
 \section{OpenGL}
 A API (Application Programming Interface) OpenGL fornece um conjunto de funções para manipulações gráficas \cite{LearnOpenGL}, sendo acelerada diretamente em hardware, multiplataforma e robusta. Embora comumente referida como uma API, o OpenGL é, por si só, um conjunto de especificações que determinam o resultado/saída de cada função e como devem ser executadas. Fica a cargo dos manufaturadores de placas gráficas implementarem a operação da função, respeitando as especificações do documento desenvolvido e mantido pela Khronos Group \cite{KhronosOpenGLSpecification}.
 
  O OpenGL foi lançado em 1992 como uma resposta direta a necessidade de se padronizar o conjunto de instruções usado em hardwares com interface gráfica. Até setembro de 2006 o padrão foi mantido pela ARB (Architecture Review Board), um conselho formado por empresas de grande renome no ramo como HP, IBM, Intel, NVIDIA, Dell e a própria fundadora, a Silicon Graphics. Em setembro de 2006 o conselho ARB tornou-se o OpenGL Working Group gerido e mantido pelo consórcio Khronos Group para Open Standard APIs\cite{OpenGLAbout}.
+ 
+\section{Game Engine}
+Define-se como game engine um sistema composto de outros sub sistemas cujo trabalho em coesão provêm todas as funcionalidades necessárias para o desenvolvimento de um jogo. Uma arquitetura direcionada a dados é o que diferencia uma game engine de um pedaço de software que é o jogo, mas não uma engine \cite{GameEngineArchitecture}. 
+
+Portanto, game engine é um software extensível e pode ser usado como fundação para diferentes tipos e gêneros de jogos sem mudanças maiores no seu núcleo. Embora uma game engine ideal deva ser capaz de servir como base para qualquer jogo imaginável, é fato que quanto mais de propósito geral ela se torna, menos ótima ela é para rodar um jogo em determinada plataforma. 
+ 
+Um sistema dessa magnitude precisa de uma organização estrutural flexível e modular para trazer uma fundação sólida ao projeto que será desenvolvido. Os principais sub sistemas que a game engine são: renderização, colisão e física, inteligência artificial, áudio e gerência de recursos.
 \section{Inteligência artificial}
 Inteligência Artificial (IA) é um ramo da Ciência da Computação que teoriza e desenvolve sistemas capazes de realizar tarefas onde normalmente requeriam inteligência humana, como processamento de imagens, recognição de fala, tomada de decisões e traduções linguísticas \cite{AIDefinition}.
 
- Existe uma distinção importante na IA estudada academicamente e na utilizada em jogos. A pesquisa acadêmica em IA é dividida em dois campos: \textit{strong AI} e \textit{weak AI}. O campo de \textit{strong AI} preocupa-se em tentar criar sistemas que imitam o processo de pensamento humando enquanto o campo de \textit{weak AI} se preocupa em aplicar tecnologias baseadas em IA para solucionar problemas do mundo real. Entretanto, ambos os campos procuram resolver os problemas de maneira ótima, sem preocupar-se com limitações de tempo e hardware \cite{ProgrammingGameAIByExample}.
+ Existe uma distinção importante na IA estudada academicamente e na utilizada em jogos. A pesquisa acadêmica em IA é dividida em dois campos: \textit{strong AI} e \textit{weak AI}. O campo de \textit{strong AI} preocupa-se em tentar criar sistemas que imitam o processo de pensamento humano, enquanto o campo de \textit{weak AI} se preocupa em aplicar tecnologias baseadas em IA para solucionar problemas do mundo real. Entretanto, ambos os campos procuram resolver os problemas de maneira ótima, sem preocupar-se com limitações de tempo e hardware \cite{ProgrammingGameAIByExample}.
 
 Em contrapartida, a IA aplicada em jogos preocupa-se não com a solução ótima de um problema, mas com uma solução que seja capaz de dar ao usuário uma experiência agradável respeitando as capacidades do hardware para execução em tempo real.
 \section{Procedural Content Generation}
 \textit{Procedural Content Generation} (PCG) é a criação algorítmica de conteúdo para jogos com pouca ou nenhuma interferência do usuário \cite{ProceduralContentGenerationInGames}. Por conteúdo define-se cenários, mapas, regras de jogo, texturas, itens, música, personagens e qualquer outro elemento que componha o jogo.
 
-Esse processo comumente se da pela utilização de métodos aleatórios ou pseudo-aleatórios para gerar dados que serão manipulados através de regras e transformados em uma infinidade de elementos do jogo \cite{PCGWiki}.
-\section{Game Engine}
-Define-se como game engine um sistema composto de outros sub sistemas cujo trabalho em coesão provêm todas as funcionalidades necessárias para o desenvolvimento de um jogo. Uma arquitetura direcionada a dados é o que diferencia uma game engine de um pedaço de software que é o jogo, mas não uma engine \cite{GameEngineArchitecture}. 
-
-Portanto, game engine é um software extensível e pode ser usado como fundação para diferentes tipos e gêneros de jogos sem mudanças maiores. Embora uma game engine ideal deva ser capaz de servir como base para qualquer jogo imaginável, é fato que quanto mais de propósito geral ela se torna, menos ótima ela é para rodar um jogo em determinada plataforma.
-
+Esse processo frequentemente se da pela utilização de métodos aleatórios ou pseudo-aleatórios para gerar dados que serão manipulados através de regras e transformados em uma infinidade de elementos do jogo \cite{PCGWiki}.
 
 \iffalse
 \subsection{Engenharia de software}
@@ -327,8 +340,16 @@ Como em todo software o jogo também possui um documento de requisitos. Entretan
 \chapter{Trabalhos Correlatos}
 \label{sec:trabcorr}
 
-//TODO: Inserir imagens, citar livros correlatos?
+Unity: Lançada em 8 de junho de 2005 a Unity é desenvolvida e mantida pela Unity Technologies. Possui maior foco em jogos 3D com várias plataformas e código fonte fechado.\\
 
+Unreal: Lançada em maio de 1998 a Unreal é desenvolvida e mantida pela Epic Games. Possui maior foco em jogos 3D com várias plataformas e código fonte fechado.\\
+
+GoDot: Lançada em fevereiro de 2014 a GoDot é desenvolvida e mantida pela comunidade através do GitHub. Possui engines dedicadas tanto para 3D quanto 2D. Ganhou muito destaque ao longo dos anos pela sua robustez e licenciamento MIT.\\
+
+Cocos2D-x: Lançada em 29 de fevereiro de 2008 é desenvolvida e mantida pela comunidade através do GitHub. Possui foco exclusivo em renderização 2D.\\
+
+
+\iffalse
 No Place for bravery: Jogo estilo Roguelike em pixel art. Atualmente em desenvolvimento pelo estúdio Glitch Factory situado no Distrito Federal.\\
 
 Eitr: Jogo estilo Action RPG inspirado em Dark souls com uma temática sombria e em pixel art. Atualmente em desenvolvimento pelo estúdio Devolver Digital.\\
@@ -338,24 +359,26 @@ Kingdom: Jogo de plataforma feito em pixel art. \\
 Moon Hunters: Action RPG em pixel art com mundo extenso e procedural, muito similar à proposta deste trabalho em alguns aspectos centrais. \\
 
 Children of morta: Action RPG em pixel art. \\
-
+\fi
 
 % ------------------------------------------
 % DESENVOLVIMENTO DO TRABALHO
 
 \chapter{Arquitetura de uma \textit{Game Engine}}
+\label{cap:gameEngine}
 Game engine (em português literal, motor de jogo) é o termo designado ao motor que está por trás de todo jogo. É neste conjunto de sistemas de simulação em tempo real que todo o ambiente do jogo é construído. As principais funcionalidades providas em uma engine são: um sistema de renderização 2D e/ou 3D, detecção e resolução de colisões, áudio, inteligência artificial e muitos outros. A partir desses elementos há várias ramificações em subsistemas com funcionalidades específicas para satisfazer as necessidades individuais de cada projeto. Uma engine se assemelha em muitas características a um sistema operacional. Ela lida com aspectos de baixo nível da máquina como a \textit{Graphic Processing Unit} (GPU) e é comumente construída utilizando-se o padrão de projeto em camadas. A Figura~\ref{fig:arquitetura}  ilustra um típico diagrama da arquitetura deste sistema e seus componentes.
 
-Alguns exemplos muito populares de engines disponíveis no mercado são a Unity, Unreal Engine, Godot, Construct 2 entre muitas outras. Cada uma apresenta sua própria estrutura e especificidade. Algumas são voltadas para projetos 3D e 2D, outras são otimizadas especificamente para um ambiente 2D e outras 3D. Cabe ao projetista decidir qual desses produtos irá melhor atendê-lo conforme suas necessidades. Para este projeto, a engine utilizada será de desenvolvimento próprio.
+Alguns exemplos muito populares de engines disponíveis no mercado são a Unity, Unreal Engine, Godot, Construct 2 entre muitas outras. Cada uma apresenta sua própria estrutura e especificidade. Algumas são voltadas para projetos 3D e 2D, outras são otimizadas especificamente para um ambiente 2D e outras 3D. Cabe ao projetista decidir qual desses produtos irá melhor atendê-lo conforme suas necessidades. Para este projeto, a engine utilizada será de desenvolvimento próprio e seguirá o diagrama apresentado adiante. Cada pacote desse diagrama será melhor detalhado no capítulo \ref{cap:panoramaGeral}.
+
+
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{imagens/engine_layers.png}
-	\caption{Componentes de uma Game Engine. Fonte:~\cite{GameEngineArchitecture}
+	\includegraphics[width=\textwidth]{imagens/engineLayers.png}
+	\caption{Pacotes da engine Narval divididos em camadas
     \label{fig:arquitetura}}
 \end{figure}
-
-//TODO: Substituir essa imagem pelo diagrama de modulos da engine 
 
 \section{\textit{Game Loop}}
 Game loop é o núcleo da arquitetura de uma engine. É neste loop que todos os subsistemas da engine são chamados e  executados, como a renderização, detecção e resolução de colisões, áudio e muitos outros \cite{GameEngineArchitecture}. Por se tratar de uma simulação em tempo real, onde a tela inteira deve ser atualizada em uma quantidade muito alta de vezes, é fundamental que tudo seja executado o mais rápido possível e em tempo constante para que o usuário tenha uma experiência fluída e dinâmica.
@@ -1092,7 +1115,7 @@ Para ambientes 2D, basta ordenar os elementos pela posição y do menor para o m
 	\caption{Ordem correta de renderização: do menor y para o maior y}
 \end{figure}
 
-Deve-se atentar na implementação desta técnica para ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação. É ainda necessário, para dar um melhor senso de profundidade, considerar a posição dos objetos a partir da sua base que toca o solo. Isto é, considerar que sua posição y no espaço seja relativa ao ponto no qual o objeto toca o chão invés de ser simplesmente o canto superior esquerdo da imagem. Esse mesmo principio de caixa base é utilizada para calcular a colisão dos objetos que caminham pelo ambiente.
+Deve atentar-se na implementação desta técnica para ordenar apenas os objetos que estão no espaço de visão da câmera, otimizando assim a performance do algoritmo de ordenação. É ainda necessário, para dar um melhor senso de profundidade, considerar a posição dos objetos a partir da sua base que toca o solo. Isto é, considerar que sua posição y no espaço seja relativa ao ponto no qual o objeto toca o chão invés de ser simplesmente o canto superior esquerdo da imagem. Esse mesmo principio de caixa base é utilizada para calcular a colisão dos objetos que caminham pelo ambiente.
 
 
 \begin{figure}[H]
@@ -1105,7 +1128,7 @@ Deve-se atentar na implementação desta técnica para ordenar apenas os objetos
 
 \section{Iluminação}
 Existem muitos modelos de iluminação com equações sofisticadas que conseguem simular a luz de maneira muito próxima da realidade. Entretanto, estes modelos mais robustos não costumam servir para um sistema de tempo real pois são muito caros em perfomance, sendo geralmente utilizados em outras indústrias como, por exemplo, a cinematográfica.
-O modelo de iluminação adotado e adaptado nesta engine foi o de Phong que usa três componentes de luz em sua construção: ambient, diffuse e specular \cite{PhongShading}.
+O modelo de iluminação adotado e adaptado nesta engine foi o~\citeonline{phong1975} que usa três componentes de luz em sua construção: ambient, diffuse e specular~\cite{PhongShading}.
 
 \begin{figure}[H]
 	\centering
@@ -1114,8 +1137,10 @@ O modelo de iluminação adotado e adaptado nesta engine foi o de Phong que usa 
 \end{figure}
 
 
+
+
 \subsection{Ambiente}
-A luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
+A luz ambiente representa as fontes de luz mais distantes que estão quase sempre presentes no mundo real como, por exemplo, o sol. São essas fontes que garantem a visibilidade quase constante dos objetos pois, afinal, sem luz o ser humano não é capaz de perceber o mundo visível.
 
 Vale ressaltar duas propriedades importantes da luz: reflexão e refração. A iluminação que advém de qualquer fonte luminosa pode impactar objetos mesmo que estes não estejam sobre alcance direto. Esse efeito advém da propriedade da reflexão e é chamado de luz indireta. Algoritmos que levam esse fator em consideração são chamados de \textit{global illumination}, mas geralmente custam caro em performance ou são muito complexos.
 Para esta engine será adotado um modelo simplificado que consiste em multiplicar a cor do objeto por uma variável \texttt{lightAmbientColor}, que define a cor e intensidade da luz que ilumina todo o mundo.
@@ -1146,19 +1171,18 @@ Dessa forma o resultado que se obtêm com a cor acima é um ambiente com uma ton
 
 
 \subsection{Luz Difusa}
-A luz difusa simula o impacto direcional que uma fonte de luz tem sobre um objeto qualquer. Quanto mais perto o objeto está dessa fonte, mais brilhante ele será.
+A luz difusa simula o impacto direcional que uma fonte de luz tem sobre um objeto qualquer. Quanto mais perto o objeto está dessa fonte, mais iluminado ele será.
 
-Para calcular a luz difusa é necessário antes ter em mãos o vetor normal do objeto que será atingido pelos raios de luz. Dessa forma, quando o raio de luz atinge o objeto calcula-se o ângulo $\theta$ entre os dois vetores usando o produto escalar.
+Para calcular a luz difusa é necessário antes ter em mãos o vetor normal do objeto que será atingido pelos raios de luz. Dessa forma, quando o raio de luz atinge o objeto calcula-se o ângulo de incidência $\theta$ entre os dois vetores usando o produto escalar. Note-se que o ângulo de reflexão é sempre igual ao ângulo de incidência.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=20em]{imagens/normal_reflection.png}
-	\caption{Angulo $\theta$ entre raio luminoso e vetor normal da superfície iluminada}
+	\caption{Ângulo $\theta$ entre raio luminoso e vetor normal da superfície iluminada}
 \end{figure}
 
-O resultado desse produto escalar indica o impacto que a luz terá sobre a cor do fragmento sendo processado pelo shader, tendo em conta sua orientação relativa à luz. Para realizar o cálculo será necessário  então um vetor com a posição da fonte luminosa e o vetor normal e do fragmento sendo afetado por essa fonte.
-O vetor normal será obtido através de uma normal texture e o vetor da fonte luminosa através de uma variável \texttt{global uniform}. O vetor normal é pré-calculado e armazenado em uma imagem enviada ao shader juntamente com a posição e cor da fonte luminosa. O cálculo é então feito normalizando a subtração do \texttt{lightPos} pela posição do fragmento, obtendo assim a direção da luz. Com o valor normalizado realiza-se o produto escalar da direção da luz pela textura normal. Multiplica-se então o resultado pela cor da luz e ao final somada-se a luz difusa a luz ambiente. Esse resultado é multiplicado pela textura para obter o resultado final. O resultado obtido com o shader é ilustrado na figura abaixo.
-//TODO: falta explicar melhor o lightDir
+O resultado desse produto escalar indica o impacto que a luz terá sobre a cor do fragmento sendo processado pelo shader, tendo em conta sua orientação relativa à luz. Para realizar o cálculo será necessário  então um vetor com a posição da fonte luminosa e o vetor normal do fragmento sendo afetado por essa fonte.
+O vetor normal será obtido através de uma \textit{normal texture} e o vetor da fonte luminosa através de uma variável \texttt{global uniform}. O vetor normal é pré-calculado e armazenado em uma imagem enviada ao shader juntamente com as \textit{uniforms} posição e cor da fonte luminosa. O cálculo é então feito normalizando a subtração do \texttt{lightPos} pela posição do fragmento, obtendo assim o vetor direção da luz. Com o valor normalizado realiza-se o produto escalar da direção da luz pela normal contida na textura. Multiplica-se então o resultado pela cor da luz e ao final soma-se a luz difusa a luz ambiente. Esse resultado é multiplicado pela textura para obter o resultado final.
 
 \begin{lstlisting}[caption=Fragment Shader com luz ambiente e difusa]
 #version 330 core
@@ -1199,10 +1223,10 @@ void main(){
 
 \subsection{Vetor Normal}
 
-Um vetor normal unitário é aquele perpendicular à superfície do vértice. A técnica comumente utilizada para trabalhar com os vetores normais de um objeto consiste em mapeá-los em uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente convertido para as coordenadas de cores RGB e, por fim, são armazenadas em uma imagem (textura).
+Um vetor normal unitário é aquele perpendicular à superfície. A técnica habitualmente utilizada para trabalhar com vetores normais de um objeto consiste em mapeá-los para uma textura de forma que, para cada pixel da textura original, haja um vetor normal. Como o vetor normal precisa de apenas 3 coordenadas (x,y,z) isso é facilmente feito calculando-se a normal de cada pixel da textura e convertendo esse vetor para as coordenadas de cores RGB, que são por fim armazenadas em uma outra imagem chamada de textura normal.
 
 \subsection{Luz Especular}
-A luz especular é o ponto brilhante que aparece em objetos lisos e reluzentes, ajudando numa melhor percepção do espaço 3D e da textura do objeto que a reflete. O termo especular significa que a luz é perfeitamente refletida, assim como acontece em uma superfície perfeitamente lisa de, por exemplo, um espelho.
+A luz especular é o ponto brilhante que aparece em objetos lisos e reluzentes, ajudando numa melhor percepção do espaço 3D e da textura do objeto que a reflete. A luz especular é mais intensa e presente numa superfície perfeitamente lisa de, por exemplo, um espelho. O brilho gerado por essa fonte luminosa é da cor da luz e não da cor do objeto.
 
 Assim como a luz difusa, a luz especular possui o vetor de direção da luz e o vetor normal do objeto. Entretanto, ela também é calculada baseando-se na direção em que a câmera está olhando.
 
@@ -1212,8 +1236,6 @@ Assim como a luz difusa, a luz especular possui o vetor de direção da luz e o 
 	\includegraphics[width=20em]{imagens/specular.png}
 	\caption{Luz especular do ponto de vista do observador}
 \end{figure}
-
-//TODO: include incidence and reflect angles to better explain.
 
 \subsection{Atenuação}
 A intensidade da luz diminui quanto maior a distância de um objeto, começando intensa e rapidamente desvanecendo. Aplicar uma fórmula linear para calcular esse efeito daria uma impressão errônea do comportamento da luz, tratando-a como se fosse uniforme. Portanto, faz-se necessário utilizar uma fórmula que melhor simule este comportamento. Sendo ela:
@@ -1230,11 +1252,13 @@ Aonde:
      \item $d$ é a distância do fragmento até a fonte luminosa
 \end{itemize}
 
-Existe uma tabela para auxiliar na escolha do valor das constantes para distâncias entre 0 e 3200. A tabela pode ser facilmente estendida para distâncias maiores.
+Existe uma tabela para auxiliar na escolha do valor dessas constantes para distâncias entre 0 e 3200. A tabela \ref{tab:attenuationValues} pode ser facilmente estendida para distâncias maiores.
+
 
 \begin{table}[H]
 \centering
-\begin{tabular}{c c c c}
+
+\begin{tabular}{l l l l}
 Range & Constant & Linear & Quadratic \\
 \hline		
 3250 & 1.0 & 0.0014 & 0.000007 \\
@@ -1252,6 +1276,7 @@ Range & Constant & Linear & Quadratic \\
 
 \end{tabular}
 \caption{Tabela de valores exemplo para a função de atenuação}
+\label{tab:attenuationValues}
 \end{table}
 
 A implementação do fator de atenuação é feita diretamente no shader multiplicando os valores da luz ambiente, difusa e especular.
@@ -1293,7 +1318,7 @@ void main(){
 \end{lstlisting}
 
 \section{Classe Renderer}
-A classe renderer é responsável por conter e controlar todos métodos de desenho do sistema. Nela define-se uma função única tal que não seja necessário, a todo momento, configurar o shader e atualizar diretamente as variáveis uniform, VBO e VAO. Ela abstrai todos esses processos em uma simples chamada que recebe como argumento as coordenadas, texture e afins do objeto. Dessa forma, o código \ref{alg:initVBOVAO} será incorporado em uma classe renderer juntamente com o método render descrito a seguir:
+A classe renderer é responsável por conter e controlar todos métodos de desenho do sistema. Nela define-se uma função única tal que não seja necessário, a todo momento, configurar o shader e atualizar diretamente as variáveis uniform, VBO e VAO. Ela abstrai todos esses processos em uma simples chamada que recebe como argumento as coordenadas, textura e afins do objeto. Dessa forma, o código \ref{alg:initVBOVAO} será incorporado em uma classe renderer juntamente com o método render descrito a seguir. Note que é importante abstrair como parâmetros apenas aquilo necessário para a renderização, evitando passar objetos específicos do jogo em criação. Dessa maneira o sistema se mantém flexível o suficiente para desenvolvimento de jogos de qualquer tipo.
 
 
 \begin{lstlisting}[caption=Classe renderer simples]
@@ -1343,33 +1368,34 @@ Dessa forma, para renderizar os objetos itera-se numa lista e para cada objeto c
 	}
 \end{lstlisting}
 
-Entretanto, esta implementação é ingênua pois é necessário realizar n chamadas à função render, sendo n a quantidade de objetos na lista. Ou seja, se há um milhão de objetos na tela serão realizadas um milhão de chamadas ao método render e consequentemente um milhão de trocas de contexto de shader em this.shader.user() mais 4 transferências de informação para as variáveis uniform por chamada do método. Toda essa troca de contexto e transferência de dados entre CPU e GPU possuem um impacto enorme no desempenho e quanto maior a lista de objetos a serem desenhados pior será a performance.
+Entretanto, esta implementação não é ideal pois faz-se necessário realizar n chamadas à função render, sendo n a quantidade de objetos na lista. Ou seja, se há um milhão de objetos na tela serão realizadas um milhão de chamadas ao método render e consequentemente um milhão de trocas de contexto de shader em this.shader.user() mais 4 transferências de informação para as variáveis uniform por chamada do método. Toda essa troca de contexto e transferência de dados entre CPU e GPU possuem um impacto enorme no desempenho. E quanto maior a lista de objetos a serem desenhados pior será a performance.
 
-Para fins de introdução ao conceito e abstração do processo de renderização  abordou-se o modelo acima. Entretanto, o problema será tratado em uma sessão mais adiante que implementará o método de batch rendering, que resolve esta situação realizando apenas uma única chamada do método render por tipo de shader e realizando a transferência desses dados em um único e enorme pacote de dados, evitando gargalo no BUS da placa mãe.
+Para fins de introdução ao conceito e simplificação do processo de renderização abordou-se o modelo acima. Entretanto, o problema será tratado em uma sessão mais adiante que implementará o método de \textit{batch rendering}, resolvendo esta situação realizando uma única chamada do método render por tipo de shader e texture. Dessa forma, a transferência dos dados será feita em um único e enorme pacote, evitando gargalo no BUS da placa mãe e \textit{overhead} de funções.
 
 \section{Arquitetura do Game Object}
 
-Os game objects, também conhecidos como entidades, estão no centro de tudo aquilo que dá vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: Component Based, Object Oriented e Entity System \cite{GameObjectArchitecture}. 
+Os \textit{game objects}, também conhecidos como entidades, estão no centro de tudo aquilo que dá vida ao cenário do jogo. São esses arquétipos que definem NPC's, inimigos, vida selvagem e até mesmo o próprio jogador. Existem três arquiteturas muito presentes e comuns no desenvolvimento de games: \textit{Component Based}, \textit{Object Oriented} e \textit{Entity System} \cite{GameObjectArchitecture}. 
 
 \subsection{Object Based}
-Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe GameObject que é então especializada para cada tipo de objeto. Por exemplo, uma classe \texttt{minotauro} estende uma classe \texttt{monstro} que, por sua vez, estende a classe GameObject. Da mesma forma uma classe \texttt{besouro} estende a classe \texttt{monstro} que estende a classe GameObject.
+Uma arquitetura baseada em objetos trabalha sobre o conceito de hierarquia de classes. Haverá uma classe \texttt{GameObject} que é então especializada para cada tipo de objeto. Por exemplo, uma classe \texttt{Minotauro} estende uma classe \texttt{Monstro} que, por sua vez, estende a classe \texttt{GameObject}. Da mesma forma uma classe \texttt{Besouro} estende a classe \texttt{Monstro} que estende a classe \texttt{GameObject}.
 
-O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe GameObject extensa e com recursos muitas das vezes usados apenas por uma certa especialização.
+O problema dessa implementação é que quanto mais especializações são criadas mais difícil e complexo se torna a manutenção dessa estrutura. Para cada nova regra implementada em uma especialização surgem exceções que começam a tornar necessário uma generalização ainda maior, resultando em uma classe \texttt{GameObject} extensa e com recursos muitas vezes usados apenas por uma única especialização.
 
-Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe \texttt{monstro} só para ser capaz de usar o sistema de dano.
+Isso ainda pode causar relações de hierarquia que não fazem sentido lógico como, por exemplo, uma armadilha que estende a classe \texttt{Monstro} só para ser capaz de usar o sistema de dano.
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=20em]{imagens/gameobject_specialization.png}
+	\includegraphics[width=26em]{imagens/gameobject_specialization.png}
 	\caption{Especialização das classes numa arquitetura baseada em objetos}
 \end{figure}
 
 \subsection{Component Based}
-A arquitetura baseada em componentes, também conhecida pelo nome de behavior, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então "especializar" um GameObject atribuindo a ele os componentes que se deseja. Dessa forma, para que um GameObject seja um \texttt{monstro} basta adicionar um componente de dano, vida e IA.
+A arquitetura baseada em componentes, também conhecida pelo nome de \textit{behavior}, consiste no uso de composição invés de herança. Ao contrário da especialização e generalização utilizados na herança o sistema de composição consiste em criar vários pequenos componentes e então ``especializar'' um \texttt{GameObject} atribuindo a ele os componentes que se deseja. Dessa forma, para que um \texttt{GameObject} seja um \texttt{Monstro} basta adicionar um componente de dano, vida e IA, por exemplo.
 
-Existem várias maneiras de se implementar essa arquitetura. Através do uso de switches para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes usando passagem de mensagem. A maior desvantagem dessa arquitetura está na relação estrita entre os dados e o sistema que os manipula, tornando o processamento de um sistema que requer múltiplos dados não diretamente relacionados complicado.
+Dessa forma, quando o sistema for salvar o \textit{game object} não será desperdiçada memória salvando dados de outros sistemas que não estão sendo utilizados por esse objeto pois, da maneira agora proposta, cada \textit{game object} terá apenas os componentes de que necessita e fará uso.
 
+Existem várias maneiras de se implementar essa arquitetura. Através do uso de \textit{switches} para assinalar qual componente está ativo ou não, através do padrão de projeto com componentes passando mensagem entre outros. A maior desvantagem dessa arquitetura está na relação acoplada entre  dados e o sistema que os manipula.
 
 \begin{figure}[H]
 	\centering
@@ -1378,16 +1404,12 @@ Existem várias maneiras de se implementar essa arquitetura. Através do uso de 
 \end{figure}
 
 
-//TODO: falar da leitura simplificada de arquivo tanto no Component Based quanto Eentity Based
-
-//TODO:cód. exemplo dos switches
-
-
 \subsection{Entity Based}
 Um game object baseado em entidades trabalha de maneira similar à forma como um banco de dados trata suas informações. O sistema que manipula as informações é desacoplado dos dados em si. Dessa maneira, uma entidade é composta apenas de dados e um sistema à parte é responsável por processar essas informações e realizar suas tarefas.
-Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável verifica se a entidade possui esses atributos e, caso tenha, realiza seus cálculos senão, o sistema ignora essa entidade e avança para a próxima da lista.
+Assim, uma entidade do tipo \texttt{Monstro} precisa ter associado a ela apenas os atributos pertinentes como dano, vida e IA. O sistema então responsável verifica se a entidade possui esses atributos e, caso tenha, realiza seus cálculos senão, o sistema ignora essa entidade e avança para a próxima da lista.
 
-//TODO: cód.
+//TODO: citar a figura indicando que os componentes foram desenvolvidos.
+
 
 \begin{figure}[H]
 	\centering
@@ -1395,11 +1417,13 @@ Assim, uma entidade do tipo monstro precisa ter associado a ela apenas os atribu
 	\caption{Diagrama de classes do sistema entity based}
 \end{figure}
 
+//TODO: cód.
+
 \section{Sistema de colisões}
 
 O sistema de colisões é responsável por delimitar o espaço físico que cada objeto deve ocupar no ambiente. Para formas geométricas mais básicas como retângulos, círculos e triângulos existem fórmulas simples e otimizadas para detectar essas colisões. Para polígonos mais complexos existem diversos algoritmos que usufruem de métodos avançados para detectar e resolver essas colisões.
 
-Um problema de colisão é dividido em duas etapas principais: detecção e resolução. A etapa de detecção consiste em detectar quais objetos colidiram com quais outros objetos em um tempo $t$. Esse processo pode ocorrer de duas formas, por antecipação ou no tempo de colisão. A segunda etapa consiste em resolver essas colisões usando uma série de critérios como, por exemplo: gravidade, massa, velocidade, impulso, torque etc.
+Um problema de colisão é dividido em duas etapas: detecção e resolução. A etapa de detecção consiste em detectar quais objetos colidiram com quais outros objetos em um tempo $t$. Esse processo pode ocorrer de duas formas, por antecipação ou no tempo de colisão. A segunda etapa consiste em resolver essas colisões usando uma série de critérios como, por exemplo: gravidade, massa, velocidade, impulso, torque entre outros.
 
 \subsection{Colisões do tipo AABB vs AABB}
 
@@ -1442,15 +1466,13 @@ Para o exemplo da figura acima a intersecção ocorreu onde $rw > tx$, $rh > ty$
 
 \subsection{jBox2D}
 
-A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o torna inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro.
+A biblioteca jBox2D é um porte da biblioteca Box2D, originalmente implementada em C++. Trata-se de uma ferramente rica em recursos para manipulação de corpos rígidos 2D. Embora o sistema de medidas implementado pelo jBox2D esteja no padrão internacional (metros) isso não o torna inutilizável para um ambiente 2D com sistema de medida em pixels. Entretanto, faz-se necessário criar um fator de escala para converter entre um sistema e outro. Para o sistema de colisões funcionar ele precisa, assim como a própria engine, de um mundo e um timestep, neste caso, fixo. Esse sistema será então atualizado juntamente com o método \texttt{update()} da engine.
 
-Para o sistema de colisões funcionar ele precisa, assim como a própria engine, de um mundo e um timestep, neste caso, fixo. Define-se abaixo o exemplo:
-
-//TODO: código exemplo
+//TODO: cód.
 
 \section{Sistema de coordenadas}
 
-O sistema de coordenadas abrange todo o processo de manipulação das coordenadas dos game objects até a sua conversão NDC e por fim rasterização para a tela. Note que o OpenGL espera todas as coordenadas finais no formato NDC (Normalized Devide Coordinates), que varia entre $[-1,1]$. Cada etapa manipula e converte de um sistema para o outro. São cinco sistemas de coordenadas no total:
+O sistema de coordenadas compreende todo o processo de manipulação das coordenadas de um game object para a tela final do usuário. Esse processamento tem início em espaço local e termina na sua conversão final para \textit{Normalized Devide Coordinates} (NDC) que por fim é rasterizado pelo OpenGL na tela. Note que o OpenGL espera todas as coordenadas finais no formato NDC, que varia entre $[-1,1]$. São cinco sistemas de coordenadas:
 
 \begin{enumerate}
     \item Espaço local
@@ -1460,48 +1482,51 @@ O sistema de coordenadas abrange todo o processo de manipulação das coordenada
     \item Espaço da tela
 \end{enumerate}
 
-Uma vez processadas elas são passadas para o \textit{shader rasterization} e enfim convertidas para pixels em 2D na tela.
+Uma vez processadas elas são passadas para o \textit{shader rasterization} e enfim convertidas para pixels 2D na tela.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=30em]{imagens/coordSpace.PNG}
+	\includegraphics[width=30em]{imagens/coordSpace.png}
 	\caption{Processo de transformações de coordenadas até o espaço final da tela. Fonte:~\cite{LearnOpenGL}}
 \end{figure}
 
 \subsection{Espaço local}
 As coordenadas em espaço local referem-se ao próprio espaço do objeto. Representam as coordenadas do objeto relativo à sua própria origem. Geralmente são normalizadas no formato NDC com origem no ponto $(0,0)$.
 
-//TODO: imagem de um objeto no local space.
 
 \subsection{Espaço de mundo}
-As coordenadas em espaço de mundo são obtidas através da multiplicação do espaço local pela matriz \textit{model}. O resultado representa a posição do objeto no mundo relativo à origem do mundo. O processo de multiplicação do espaço local pela \textit{model} escala, rotaciona e translada o objeto para o espaço de mundo através do processo chamado transformação afim.
+As coordenadas em espaço de mundo são obtidas através da multiplicação do espaço local pela matriz \textit{model}. O resultado representa a posição do objeto no mundo relativo à origem do mundo. O processo de multiplicação do espaço local pela matriz \textit{model} escala, rotaciona e translada o objeto para o espaço de mundo através do processo chamado transformação afim \cite{AffineTransformation}.
 
-Se todos os objetos fossem inseridos no mundo somente usando as coordenadas locais provavelmente todos estariam sobrepostos na origem. O processo de conversão para o espaço de mundo pode ser exemplificado por uma pilha de caixas onde se deseja inserir outra. Para empilhá-la é necessário escalá-la para o mesmo tamanho das outras, rotacioná-la para alinhar com as outras e caber no espaço vazio e, por fim, transladá-la para a posição na pilha.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/affineTransformation.png}
+	\caption{Exemplos de transformação afim. Fonte:~\cite{AffineTransformationImg}}
+\end{figure}
 
-//TODO: imagem exemplo ilustrando o processo de inserir a caixa.
+Se todos os objetos fossem inseridos no mundo somente usando as coordenadas locais muito provavelmente estariam sobrepostos na origem. O processo de conversão para o espaço de mundo pode ser exemplificado por uma pilha de caixas onde se deseja inserir outra. Para empilhá-la é necessário escalá-la para o mesmo tamanho das outras, rotacioná-la para alinhar e, por fim, transladá-la para a posição na pilha.
 
 \subsection{Espaço de visão}
 O espaço de visão, também referenciado como espaço da câmera, é obtido a partir da multiplicação do espaço de mundo pela \textit{view matrix} e representa o ponto de vista da câmera sobre o mundo.
 
-//TODO: imagem exemplo
-
 \subsection{Espaço de recorte}
 Espaço de recorte é a zona visível na tela de forma que todos os pontos fora desse espaço são descartados. Para que o usuário não tenha de especificar todas coordenadas em um intervalo NDC desde o início do processo trabalha-se com dois sistemas de projeção responsáveis por converter do espaço de visão de volta para um intervalo NDC. São os dois sistemas: projeção ortográfica e projeção de perspectiva.
-Note que, se um triângulo possui apenas um parte visível e terá uma parte recortada o OpenGL divide esse triângulo em primitivas menores e então descarta aquelas que estão fora da tela, ou simplesmente, fora do intervalo NDC.
+Note que, se um triângulo possui apenas um parte visível e terá uma parte recortada o OpenGL divide esse triângulo em primitivas menores e então descarta aquelas que estão fora da tela.
 
 \subsection{Projeção}
 
-Existem duas formas de aplicar a projeção. São elas projeção ortográfica e projeção de perspectiva.
+Existem duas formas de projeção, ambas baseadas no conceito de frustum, porção de um sólido contido entre duas bases paralelas que o cortam \cite{Frustum}. Os dois tipos de projeção são: ortográfica e perspectiva. A primeira é composta de um frustum retangular e a segunda de um frustum com formato similar a uma pirâmide.
 
 \subsubsection{Projeção ortográfica}
-//TODO: frustum - tronco de base paralela
 
-Para especificar uma matriz de projeção ortográfica é necessário fornecer a largura, altura e comprimento do frustum. Dessa forma, todas as coordenadas que estiverem entre o retângulo formado pelo plano mais próximo e pelo plano mais distante serão apresentadas ao usuário. Todo o resto será recortado fora.
-//TODO: imagem do far e near plane
+Para especificar uma matriz de projeção ortográfica é necessário fornecer a largura, altura e comprimento do frustum. Dessa forma, todas as coordenadas que estiverem entre o plano mais próximo e o plano mais distante serão preservadas e desenhadas na tela. Todo o resto será recortado fora.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/orthographicProjection.png}
+	\caption{Frustum da projeção ortográfica. Fonte:~\cite{LearnOpenGL}}
+\end{figure}
 
 A projeção ortográfica mapeia linearmente coordenadas 3D diretamente para o plano 2D da tela, sem levar em consideração a perspectiva. Isso produz um efeito não realístico para ambientes 3D pois passa a impressão de objetos prensados na tela, sem profundidade.
-
-//TODO: imagem do resultado de uma matriz orto
 
 Para especificar a matriz ortográfica será utilizada a função do GLM definida a seguir. Os dois primeiros parâmetros são as coordenadas esquerda e direita do frustum, o terceiro e quarto parâmetro a parte de baixo e topo do frustum. Com esses quatro parâmetros definiu-se o tamanho do plano mais próximo e do plano mais distante. O quinto e sexto parâmetro indicam a distância entre os dois planos.
 
@@ -1509,11 +1534,20 @@ Para especificar a matriz ortográfica será utilizada a função do GLM definid
 Mat4 projection = new Mat4();
 projection = projection.ortho(float left, float right, float bottom, float top, float zNear, float zFar);
 \end{lstlisting}
-//TODO: inserir imagem indicando parâmetros. Mais fácil visualizar
 
 \subsubsection{Projeção de perspectiva}
-A projeção de perspectiva simula a percepção humana de profundidade. Objetos mais distantes se tornam menores e a esse efeito é dado o nome de perspectiva.
-A matriz de projeção pode ser criada utilizando a seguitne função do GLM.
+A projeção de perspectiva simula a percepção humana de profundidade. Objetos mais distantes se tornam menores e a esse efeito é dado o nome de perspectiva. Esse fenômeno acontece por que o ser humano enxerga o mundo a partir de dois olhos, com ângulos de visão distintos.
+
+O frustum utilizado na projeção de perspectiva possui um formato similar a de uma pirâmide justamente para auxiliar na reprodução esse fenômeno. Ao invés de realizar uma transformação linear das coordenadas 3D para a tela, é feito um mapeamento que leva em consideração a distância dos objetos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=20em]{imagens/perspectiveProjection.png}
+	\caption{Frustum da projeção de perspectiva. Fonte:~\cite{LearnOpenGL}}
+\end{figure}
+
+A matriz de projeção pode ser criada utilizando a seguinte função do GLM onde o primeiro parâmetro recebe o field of view (FOV) em radianos, o segundo recebe a proporção de tela e no terceiro e quarto parâmetro recebe o plano mais próximo e distante, respectivamente.
+
 \begin{lstlisting}[caption=Função Perspective do GLM]
 Mat4 perspective = new Mat4();
 perspective = perspective.perspective(toRadians(45), width/height, near, far);
@@ -1670,27 +1704,35 @@ public class MouseControl extends GLFWCursorPosCallback implements Control{
 }
 \end{lstlisting}
 
-\subsection{GLFW Game Control}
 
 \section{Gerência de recursos}
-O sistema de gerência de recursos é responsável por ler e salvar todos os arquivos da Engine. Em suma, esse sistema é responsável por centralizar todas as operações de I/O e gerenciá-las num único lugar de forma que seja evitado a ocorrência de dois arquivos idênticos em memória.
+O sistema de gerência de recursos é responsável por ler e salvar todos os arquivos da engine. Em suma, esse sistema centraliza todas as operações de I/O num único lugar de forma que seja evitado a ocorrência de dois arquivos idênticos em memória. Isso é possível através do mapeamento dos recursos em um único lugar.
 
-\subsection{Chunk system}
-O sistema de chunks reparte toda a extensão do mapa em pequenos pedaços para uma maior facilidade de manuseio na hora de ler e salvar no disco. Outro fator determinante para a escolha deste formato é a necessidade de poder gerar um mapa infinito e com carregamento dinâmico, ou seja, sem telas de loading. Isso é possível repartindo o mapa em pequenos pedaços que serão gerados, lidos e escritos sobre demanda.
-
-É importante notar que este é um sistema crítico e deve ser meticulosamente ajustado para as necessidades de cada projeto. Um arquivo muito grande pode gerar um atraso de leitura e escrita muito grande, enquanto um arquivo muito pequeno pode sobrecarregar o sistema com o overhead de muitas chamadas de função I/O num período curto de tempo. É necessário implementar este sistema utilizando técnicas de leitura e escrita assíncronas de forma que a Engine não congele enquanto aguarda cada operação de I/O.
-
-Com estes detalhes abordados a implementação se faz com duas classes principais: Chunk e ChunkManager. 
-
-//TODO: check class names
 
 \subsection{Chunk}
-O chunk contem todas as entidades que intersectam sua \textit{bounding box} e as informações pertinentes do terreno como: textura, regiões etc. Ele é serializado para leitura e escrita em disco. Sendo assim, um conjunto n de chunks sendo carregados ao iniciar o jogo representam o último estado do jogo.
+Um chunk (em português, pedaço) contem todas as entidades que intersectam sua \textit{bounding box} e informações pertinentes do terreno como: textura, regiões de interação entre outros. Ele é serializado para leitura e escrita em disco. Sendo assim, um conjunto de $n$ chunks sendo carregados no início do jogo representam o último estado do jogo. Esse estado contém todas as entidades, mapa e outros artefatos  .
 
-A geração da textura do mapa pode ser dinâmica, isto é, ser gerada a cada frame, ou estática, gerando-se uma única vez.
+A geração da textura do mapa pode ser dinâmica, isto é, ser gerada a cada frame, ou estática, gerando-se uma única vez. A estática é utilizada para terrenos sem animação, enquanto a dinâmica para terrenos que envolvem animação como, por exemplo, as ondas que atingem a praia.
+
+\subsection{Chunk system}
+O sistema de chunks reparte toda a extensão do mapa em pequenos pedaços para uma maior facilidade de manuseio na hora de ler e salvar no disco. Um fator determinante para a escolha deste formato é a necessidade de poder gerar um mapa procedural e com carregamento dinâmico, ou seja, sem telas de carregamento. Isso é possível repartindo o mapa em pequenos pedaços que serão gerados, lidos e escritos sobre demanda.
+
+É importante notar que este sistema é crítico e deve ser meticulosamente ajustado para as necessidades de cada projeto. Um arquivo muito grande pode gerar um atraso de leitura e escrita muito alto, enquanto um arquivo muito pequeno pode sobrecarregar o sistema com o \textit{overhead} de muitas chamadas de função I/O num período curto de tempo. É necessário implementar este sistema utilizando técnicas de leitura e escrita assíncronas de forma que a engine não congele enquanto aguarda operações de I/O.
+
+Para tanto, o gerenciador de chunks armazena uma matriz 3 por 3 de chunks. Sempre que a câmera intersectar um chunk da borda será carregado uma nova coluna ou linha dessa matriz contendo os novos chunks que, caso ausentes no disco são gerados e, caso presentes, lidos. Esse processo deve ocorrer de forma rápida tal que o usuário não note qualquer chunk sendo carregado. Se o usuário movimentar-se mais rápido do que o sistema é capaz de carregar os chunks ele irá perceber várias partes cinzas que subitamente serão preenchidas com textura quando sua leitura finalizar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=38em]{imagens/chunkSystem.png}
+	\caption{Demonstração do sistema de chunks carregando a última coluna da matriz}
+	\label{fig:chunkSystem}
+\end{figure}
+
+O retângulo vermelho da figura \ref{fig:chunkSystem} representa a câmera. No momento em que esse retângulo intersecta qualquer um dos chunks na borda é iniciado o carregamento da linha e/ou coluna adjacentes a esse chunk. No caso da figura exemplo, quando a câmera intersecta o chunk da borda direita a primeira coluna da matriz é removida e armazenada em uma tabela Hash, enquanto a nova coluna direita da matriz é carregada. Se a câmera mover-se mais rápido do que o sistema é capaz de carregar os chunks o usuário irá presenciar partes cinzas na tela, que são as texturas ainda em carregamento.
 
 \subsection{Chunk Manager}
-O Chunk manager fica responsável por gerenciar quais chunks devem ser lidos ou salvos. De maneira similiar ao clipping do OpenGL o chunk manager verifica quais chunks estão visiveis na tela e partir disso, estando visível ele é lido e estando fora de visão ele é salvo e liberado da memória.
+O Chunk manager fica responsável por gerenciar quais chunks devem ser gerados, lidos ou salvos. Ele contém uma tabela hash com todos os chunks lidos até o momento, para evitar que tenham de ser lidos do disco caso já tenham sido em algum momento anterior.
+Esse gerenciador também é responsável por controlar o processo de leitura assíncrona, retornando o elemento somente quando sua leitura ou escrita foi completada.
 
 \subsection{A classe Resource Manager}
 A classe responsável pela leitura e escrita desses arquivos segue o padrão de projeto Singleton, sendo assim facilmente invocada de qualquer lugar do código.
@@ -1891,65 +1933,135 @@ alListener3f(AL_POSITION, playerPosComp.getPosition().x, playerPosComp.getPositi
 \end{lstlisting}
 
 \chapter{Inteligência artifical}
-O sistema responsável pela IA da Engine é parte fundamental do sistema. Sem ela o jogo seria um conjunto de imagens estáticas distribuídas à esmo na tela.
-Em essência IA é aquilo que da vida a todos os personagens do jogo, tornando-o dinâmico e interativo para o usuário.
-A IA é focada nas ações que um agente deve tomar, baseado nas condições atuais. A IA deve observar o ambiente, tomar decisões e então agir. Esse ciclo é descrito na literatura como Observar, Pensar e Agir \cite{GameDevAI}.
+O sub sistema responsável pela IA da engine é uma das partes mais importantes, pois sem ela o jogo seria um conjunto de imagens estáticas distribuídas à esmo pela tela.
+Em essência, IA é aquilo que da vida a todos os personagens do jogo, tornando-o interativo e dinâmico.
+A IA foca nas ações que um agente deve tomar, baseado nas condições atuais. A IA deve observar o ambiente, tomar decisões e então agir. Esse ciclo é descrito na literatura como observar, pensar e agir \cite{GameDevAI}.
 
-A implementação da IA de um game object pode ser feita usando diversas técnicas, desde clausulas if ou else até redes neurais. Entretanto, as mais comuns na indústria de jogos não envolvem técnicas com uso de treinamento pois o objetivo aqui não é uma IA ótima, mas sim uma capaz de desafiar e entreter o jogador. Outra restrição é que, para treinar a rede neural seria necessário alimentá-la com dados de muitos jogadores, algo impraticável no estágio de produção pois se quer o jogo está em numa etapa jogável.
+A implementação da IA de um game object pode ser feita usando diversas técnicas, desde clausulas if ou else até redes neurais. Entretanto, as mais comuns na indústria de jogos não envolvem técnicas com uso de treinamento pois o objetivo aqui não é uma IA ótima, mas sim uma capaz de desafiar e entreter o jogador. Outra restrição é que, para treinar a rede neural seria necessário alimentá-la com dados de muitos jogadores, algo impraticável no estágio de produção pois o jogo nem sequer está em numa etapa jogável.
 
-Assim como o processo de renderização não pode demorar mais do que alguns milisegundos, o mesmo se aplica para a tomada de decisões da IA. Portanto, é fundamental que esta seja a mais rápida possível para que o jogador não experiencie travamentos na jogabilidade.
+Assim como o processo de renderização não pode demorar mais do que alguns milissegundos, o mesmo se aplica para a tomada de decisões da IA. Portanto, é fundamental que esta seja a mais rápida possível para que o jogador não experiencie travamentos na jogabilidade.
 
-\section{Utility AI}
+\section{Utility em IA}
 
-Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dado essa medida, alguém poderá expressar o acréscimo ou decréscimo desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
+Em economia, \textit{utility} é uma medida da satisfação relativa de, ou desejo de, consumo de vários bens e serviços. Dada essa medida, alguém poderá expressar o acréscimo ou decréscimo desta \textit{utility}, e assim explicar o comportamento econômico em termos de tentativas para incrementar tal \textit{utility}.
 
 Incorporando esse conceito em IA pode-se delimitá-lo como o desejo de uma entidade em realizar determinada ação dado certo valor do utility, calculado com base no contexto em questão. Esse cálculo é realizado através de funções que recebem como parâmetro o contexto e dele extraem os valores que quantificam o ambiente. Por fim, o cálculo é realizado e indica o utility, ou o quão desejável,  aquela ação é \cite{UtilityAI}.
 
 
 
 \subsection{Processo de funcionamento}
-Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuído a cada uma dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação dentre as três que será executada.
+Para cada ação que o agente pode realizar é atribuída uma curva de pontuação. A função que gera essa curva recebe como parâmetros variáveis do ambiente que afetam essa ação. Por exemplo, um agente capaz de realizar três ações, atirar, abrigar-se e perseguir terá atribuída a cada uma dessas ações uma função de pontuação. Ao final, compara-se o valor calculado (utility) das funções e o maior deles representa a ação dentre as três que será executada.
 
-//TODO: imagem com o gráfico mostrando a interpolação das funções
-
-Para a função de pontuação que calcula o score da ação atirar tem-se como parâmetros a distância do inimigo. Para a função de abrigar-se tem-se a distância do inimigo e a vida do agente como parâmetros. Supondo que cada ação seja calculada pelas funções:
+Para a função de pontuação que calcula o score da ação atirar tem-se como parâmetro a distância do inimigo. Para a função de abrigar-se tem-se a distância do inimigo e a vida do agente como parâmetros. Supondo-se que cada ação seja calculada pelas funções:
 
 \begin{itemize}
-    \item Atirar: $return 0.5$
-    \item Abrigar-se: $return (vida - 1)^2$
-    \item Perseguir: $return distancia^3$
+    \item Atirar: $return~0.5$
+    \item Abrigar-se: $return~(vida - 1)^2$
+    \item Perseguir: $return~distancia^3$
 \end{itemize}
 
  A partir dessas funções é possível calcular qual utility será o maior para cada conjunto de parâmetros. Note ainda que todos os parâmetros estão normalizados no intervalo $[0,1]$. Para normalizar a distância é necessário escolher um valor máximo e assim todo valor que excedê-lo será fixado em 1. O gráfico para cada função é dado a seguir.
  
- //TODO: gráfico das funções
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=34em]{imagens/utilityFunctions.png}
+	\caption{Gráfico das funções utility}
+\end{figure}
+
  
  Sobrepondo as três funções pode-se ter uma melhor noção de qual comportamento irá se sobressair em cada situação para cada valor do parâmetro. Entretanto, vale lembrar que os valores de vida e distância são independentes e portanto as funções não necessariamente estarão no mesmo ponto do eixo X ao mesmo tempo.
- A tabela abaixo demonstra três situações em que, para cada conjunto de parâmetros tem-se uma ação que é decidida usando a maior utility.
+ A tabela abaixo demonstra três situações em que, para cada conjunto de parâmetros tem-se uma ação que é decidida usando a maior utility. O asterisco indica a função cuja pontuação foi maior e será, portanto, a ação executada.
  
- Vida do agente				:
- Distância até o inimigo	:
  
- Atirar		Abrigar-se		Perserguir
- 00			00
+\begin{table}[H]
+\centering
+\begin{tabular}{l l l l l}
+vida & distância & Atirar & Abrigar-se & Perseguir \\
+\hline		
+0 & 0 & 0.5* & 0 & 0 \\
+0.2 & 0 & 0.5 & 0.64* & 0 \\
+0.2 & 0.5 & 0.5 & 0.64* & 0.125 \\
+0.2 & 0.9 & 0.5 & 0.64 & 0.729* \\
+0.3 & 0 & 0.5* & 0.49 & 0 \\
 
-Por fim, o código de implementação é composto de três classes: Action, Consideration e ConsiderationTree.
-//TODO: good example https://alastaira.wordpress.com/2013/01/25/at-a-glance-functions-for-modelling-utility-based-game-ai/
-//https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_Thing_of_the_Past.php
+\end{tabular}
+\caption{Tabela de valores exemplo para as funções de pontuação}
+\end{table}
+
+Por fim, o código de implementação é composto de três classes: Action, Consideration e ConsiderationTree. Um game object com IA recebe um componente com a árvore de considerações (\texttt{ComponentTree}). A árvore de considerações contem as possíveis ações que esse agente pode tomar. Cada consideração implementa um método \texttt{evaluate()} que recebe como parâmetro o contexto e dele extrai os valores de que precisa para realizar seus cálculos e retornar a \textit{utility}. A classe Action contém o nome daquela \textit{utility} para que o objeto possa se guiar e executar a ação associada. Ela contém também o alvo daquela ação, caso haja algum. Esse fluxo é demonstrado no diagrama de classes dado a seguir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13em]{imagens/considerationTree.png}
+	\caption{Diagrama da Árvore de considerações para as funções de pontuação}
+\end{figure}
+
+%//TODO: good example https://alastaira.wordpress.com/2013/01/25/at-a-glance-functions-for-modelling-utility-based-game-ai/
+%//https://www.gamasutra.com/blogs/JakobRasmussen/20160427/271188/Are_Behavior_Trees_a_Thing_of_the_Past.php
 
 %\section{Finite State Machine}
 %\section{Árvore de decisões}
 
 \section{Pathfinding}
-Existem muitas maneiras de se implementar o algoritmo de pathfinding. Alguns funcionam muito bem para sistemas estáticos onde tem-se conhecimento do mundo enquanto outros nem tanto. Para ambientes dinâmicos não pode-se, por exemplo, assumir way-points estáticas com caminhos pré-calculados pois o ambiente muda a todo momento.
+Existem muitos algoritmos de \textit{pathfinding} como, por exemplo, A*, Dijkstra's, LPA* entre outros . Alguns se adéquam muito bem para sistemas estáticos onde tem-se total conhecimento e controle do ambiente, enquanto outros são melhor adaptados para ambientes imprevisíveis e sob constante mudança.
 
-O processo de pathfinding no ambiente 2D consiste em primeiro mapear uma seção do mapa para uma matriz. Essa seção é geralmente a parte visível pela câmera mais um offset arbitrário. Para cada entidade que intersecta essa seção será feito um mapeamento da sua caixa de colisão para a matriz. Cada posição da matriz representa um retângulo de um tamanho arbitrário fixo. Note-se que, a não ser que todas as entidades do jogo possuam a mesma base comum com o tamanho do retângulo da matriz haverá um erro a se considerar. Por exemplo, se uma entidade com retângulo de 32x32 vai ser inserido em uma matriz cujo cada posição representa um retângulo de 10x10, na hora do mapeamento essa entidade vai ocupar 4x4 na matriz, tendo assim, para o algoritmo de pathfinding, um tamanho de 40x40. Esse exemplo pode ser melhor visualizado na figura a seguir.
+Além dos vários algoritmos disponíveis e suas respectivas variações existem também diversas formas de representar o espaço de busca. Os algoritmos de \textit{pathfinding} trabalham em cima do conceito de grafos. Portanto, independentemente do jogo ser em 3D ou 2D, no final deverá haver uma representação desse mundo na forma de um grafo. Para um jogo 2D baseado em grids isso é facilmente alcançável aproveitando cada célula desse grid e transformando-a em um nodo do grafo. Para cada dois nodos adjacentes onde ambos são transponíveis há uma aresta que os liga. Se o mundo é construído sem utilizar diretamente o conceito de grid ainda é possível representá-lo em um grid com células de tamanho x e, caso uma célula intersecte a \textit{bounding box} de um objeto
+ela torna-se intransponível.
 
-//TODO: Imagem do desperdício gerado ao mapear entity para matriz de pathfinding.
+Existe ainda a possibilidade de utilizar uma \textit{octree} onde cada célula desse grid possui tamanho potência de um valor estático, ao invés de um tamanho único e estático. Há ainda conceitos que usam polígonos convexos para gerar uma malha que particiona o mapa em pedaços transponíveis. De maneira geral, existem diversas técnicas e cada projeto deve optar por aquela que melhor lhe servir.
 
-Uma vez realizado o mapeamento tem-se uma matriz boolena representando quais pontos são transponíveis. A partir desse ponto basta implementar um algoritmo de busca como, por exemplo, o A estrela para percorrer a matriz e encontrar um caminho do ponto A para um ponto B. É importante levar em consideração que os objetos podem ocupar mais um nodo ao mesmo tempo devido ao seu tamanho variável e isso possui implicação direta na implementação do algoritmo de busca.
+No sistema implementado na engine narval o processo de \textit{pathfinding} em ambiente 2D consiste em primeiro mapear a seção visível do mapa e mais um offset para uma matriz. Essa seção é geralmente o retângulo que constitui a visão do personagem. Para cada entidade que intersecta essa seção será feito um mapeamento da sua caixa de colisão para a matriz. Cada posição da matriz representa um retângulo de tamanho arbitrário e fixo. Note que, a não ser que todas as entidades do jogo possuam módulo zero com o tamanho do retângulo da matriz haverá um erro a se considerar. Por exemplo, se uma entidade com retângulo de 32x32 vai ser inserida em uma matriz cuja célula é um retângulo de 10x10, na hora do mapeamento essa entidade vai ocupar 4x4 células na matriz, tendo assim, para o algoritmo de pathfinding, um tamanho de 40x40. Isso resulta em um erro de 8 pixels para o tamanho real da entidade. Esse exemplo é demonstrado na figura a seguir, onde a parte vermelha representa a base box e a parte azul o desperdício. Ambas as duas partes representam o retângulo de fato contido na matriz.
 
-//TODO: img demonstrando a busca com mais de um nodo de tamanho
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/pixelWaste.png}
+	\caption{Desperdício gerado ao mapear uma base box de 32x32 pixels numa matriz de retângulos 10x10 pixels.}
+\end{figure}
+
+
+Uma vez realizado o mapeamento tem-se uma matriz boolena representando quais pontos são transponíveis. A partir disto basta implementar um algoritmo de busca como, por exemplo, o A* para percorrer o grafo representado pela matriz e encontrar um caminho do ponto A para um ponto B. É importante levar em consideração que os objeto podem ocupar mais de um nodo devido ao seu tamanho e isso possui implicação direta na implementação do algoritmo de busca.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/pathPlanningWithGrid.png}
+	\caption{Matriz booleana representada visualmente com os retângulos verdes sendo os transponíveis e os rosas intransponíveis. }
+\end{figure}
+
+\subsection{A*}
+Para uma implementação utilizando A* é necessário considerar o ponto de início não como um único ponto, mas como um conjunto de pontos que representam a base box da entidade. Essa aproximação permite que uma entidade cuja base box ocupa mais de um nodo possa se locomover pelo grid.
+
+O algoritmo de busca A* funciona determinando, a cada iteração, qual caminho estender. Isso é feito através da equação $f(n) = g(n) + h(n)$, onde $n$ é o próximo nodo no caminho, $g(n)$ o custo do nodo inicial até $n$ e $h(s)$ uma função heurística que estima o custo mais baixo do caminho de $n$ até o nodo objetivo.
+
+A heurística utilizada considera a possibilidade de 8 direções no grid, atribuindo um maior custo para as diagonais. Como a heurística é apenas uma aproximação, define-se uma constante $\sqrt{2}$ para multiplicar a distância diagonal. Dessa forma, tem-se uma estimativa razoável sem o custo alto de realizar o cálculo completo da distância euclidiana $\sqrt{x^2 + y^2}$. Dessa forma, a função heurística $h(n)$ fica como se segue.
+
+\begin{lstlisting}[caption= Heurística utilizada no A*]
+    float a = Math.abs(start.pos.x - end.pos.x);
+    float b = Math.abs(start.pos.y - end.pos.y);
+    
+    float min = Math.min(a,b);
+    float max = Math.max(a,b);
+    
+    return ((M_SQRT2-1.0f)*min + max);
+\end{lstlisting}
+
+
+O código completo do algoritmo A* implementado pela engine é dado no apêndice~\ref{apend:alg:a*}. O resultado obtido é também demonstrado na imagem a seguir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/pathPlanning.png}
+	\caption{Resultado final obtido com o A* }
+\end{figure}
+
+\iffalse
+//TODO: https://gamedev.stackexchange.com/questions/28041/path-finding-algorithms
+
+//TODO: links dos comentarios são interessantes
+
+//TODO: http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html
+
+//TODO: https://www.growingwiththeweb.com/2012/06/a-pathfinding-algorithm.html
+\fi
 
 \chapter{Procedural Content Generation}
 Procedural Content Generation (PCG) é o termo cunhado para descrever processos de geração de dados aleatórios ou pseudo-aleatórios em jogos. Esses dados são utilizados para criar regras que definem desde terrenos até modelos 3D de maneira algorítmica ao invés de manual.
@@ -1957,24 +2069,297 @@ Procedural Content Generation (PCG) é o termo cunhado para descrever processos 
 \section{Random noise}
 O conceito mais básico na construção de elementos baseados em PCG envolve a utilização de ruídos como fonte de dados pseudo-aleatória. Existem diversos algoritmos para obtenção de ruído pseudo-aleatório como, por exemplo, perlin noise, simplex noise e gradient noise. Há ainda técnicas que se utilizam de maneiras não determinísticas e implementam outras fontes de dados.
 
-//TODO: good source: https://thebookofshaders.com/12/ http://pcgbook.com/
-
 \subsection{Perlin noise}
-Perlin noise é um tipo de ruído gradiente concebido por Ken Perlin em 1983 //TODO: cite. O algoritmo tem inicio definindo um grid de dimensão n. O processo mais básico consiste em definir o grid com uma série de vetores gradiente, computar o produto escalar entre vetores gradiente de distância e então realizar uma interpolação entre esses valores.
+Perlin noise é um tipo de ruído gradiente concebido por \citeonline{perlin1985image} e depois melhorado por ele mesmo em 2002 \cite{Perlin:2002:IN:566654.566636}. Esse algoritmo é comumente usado na indústria para geração de ruídos que são utilizados para criar texturas de água, fogo, terrenos, nuvens e muitos outros. O ruído pode ser representado em uma, duas, três ou até quatro dimensões.
+
+O algoritmo recebe como entrada um ponto de $n$ coordenadas. Esse ponto deve ser unitário, ou seja, para cada coordenada faz-se $ mod~1$. Uma vez com as coordenadas unitárias em mãos elas são representadas em uma linha, quadrado ou cubo dependendo das dimensões do vetor. Por exemplo, para um vetor de duas dimensões com os valores $(0.75, 0.25)$ tem-se o seguinte ponto no plano:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15em]{imagens/perlinPoint.png}
+	\caption{Ponto $(0.75, 0.25)$ no plano. Adaptado de: \cite{Fataho}}
+\end{figure}
+
+Para cada um dos 4 pontos unitários que definem a borda do plano (8 para o cubo em 3D), são gerados vetores gradiente de maneira pseudo aleatória. Com esse vetor gradiente definido ele é fixo para a função que se está trabalhando.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15em]{imagens/perlinGradients.png}
+	\caption{Vetores gradiente definidos em amarelo no plano. Adaptado de: \cite{Fataho}}
+\end{figure}
+
+Em posse do ponto e dos vetores gradientes é necessário agora calcular o vetor distância desse ponto até os quatro pontos na borda do plano.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15em]{imagens/perlinGradientsAndOneDistance.png}
+	\caption{Vetor distância do ponto $(0,0)$na borda até o ponto $(0.75,0.25)$ em vermelho. Adaptado de: \cite{Fataho}}
+\end{figure}
+
+Uma vez com o vetor distância, vetor gradiente e o ponto dado como parâmetro da função realiza-se o produto escalar entre ambos os vetores para obter o valor $influência$.
+
+$\vec{D} = \vec{G}(-1,1) ~\cdotp ~ \vec{D}(0.75, 0.25)$
+
+$~~~~ = -1 * 0.75 + 1 *0.25$
+
+$~~~~ = -0.75 + 0.25$
+
+$~~~~ = -0.5$
+
+Esse processo é realizado para os quatro pares de vetor gradiente e vetor distância. Em sentido anti-horário, começando do ponto inferior esquerdo, os valores $influência$ são $-0.5$, $-0.5$, $0.5$ e $0$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15em]{imagens/perlinGradientsAndDistances.png}
+	\caption{Vetores distância do ponto $(0,0)$ em verde e vetores gradiente em amarelo. Adaptado de: \cite{Fataho}}
+\end{figure}
+
+O último passo consiste em interpolar linearmente os 4 valores $influência$ \texttt{b1}, \texttt{b2}, \texttt{b3} e \texttt{b4} como demonstrado no algoritmo a seguir. O resultado final retornado pelo algoritmo do perlin noise será dado pela variável \texttt{result}.
+
+\begin{lstlisting}[caption=Interpolação dos valores $influência$]
+int b1, b2, b3, b4;
+int x, y; 
+
+int x1 = linearInterpolation(b1,b2,x);
+int x2 = linearInterpolation(b3,b4,y);
+
+int result = linearInterpolation(x1,x2,y);
+
+float linearInterpolation(float a, float b, float t){
+	return (1f - t) * a + t * b;
+}
+\end{lstlisting}
+ 
 
 \section{Geração de terrenos}
-A geração de terreno utilizada na engine consiste em preencher um conjunto de matrizes com valores gerados por um tipo de ruído diferente. Cada um desses valores é então extraído da matriz e atribuído um significado baseado numa regra determinada pelo usuário. Por exemplo, para a geração de ruídos utilizando perlin noise o valor retornado geralmente está no intervalo [-1,1]. A partir disso pode-se atribuir um significado onde para todo valor gerado inferior a 0 representa água e todo valor acimar de 0 representa terra. A partir disso a textura pode ser gerada ..
+A geração de terreno utilizada na engine consiste, num primeiro passo, em preencher um conjunto de matrizes com valores gerados por vários algoritmos de ruído na função \texttt{generateAndShapeNoise}, sendo o principal deles Perlin Noise. Cada um desses valores é então extraído da matriz e atribuído um significado baseado numa regra determinada pela função \texttt{generateTerrain}. Os ruídos são gerados utilizando a implementação \texttt{FastNoise} \cite{FastNoise} incorporado na engine, onde o valor retornado pelas funções de ruído geralmente está no intervalo [-1,1]. 
 
-\subsection{Florestas}
+A textura gerada para lapidar o terreno é chamada de \textit{height map} e serve para indicar alturas no mapa. Com essa textura em mãos cada valor recebe um significado em termos de altura do terreno.
+
+Ruídos podem ser gerados em qualquer frequência, que basicamente resultam no efeito de zoom da textura final. Esse efeito é consequência da fórmula do comprimento de onda $\lambda = \frac{velocidade}{frequência}$ onde, dobrando a frequência, implica em diminuir o comprimento de onda pela metade do seu tamanho.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=34em]{imagens/perlinFrequencies.png}
+	\caption{Resultado da alteração na frequência. Adaptado de: \cite{NoiseRedBlob}}
+\end{figure}
+
+
+Outro atributo importante no processo de modelagem do ruído são os \textit{octaves}. Eles servem para lapidar o ruído e adicionar mais detalhes na textura. Eles funcionam somando-se os ruídos gerados, mas cada um tendo uma frequência e peso diferente diferentes. Isso é demonstrado no código a seguir onde soma-se um perlin noise de frequência $0.0005$ com peso $1$ e outro de frequência $0.005$ com peso $0.1$, resultando em dois octaves.
+
+\begin{lstlisting}[caption=Implementação do ruído que usa o perlin noise com dois octaves]
+public float noise(FastNoise fastNoise, float x, float y) {
+		float noise = 0;
+		
+		fastNoise.SetFrequency(0.0005f);	
+		noise +=  fastNoise.GetPerlin(x, y);
+
+		fastNoise.SetFrequency(0.005f);
+		noise += .1 * fastNoise.GetPerlin(x, y);
+		
+		return noise;
+	}
+\end{lstlisting}   
+
+Até então o ruído possui um aspecto fractal, com várias colinas e montanhas, mas nenhuma área de terreno plano. Para isso é necessário aplicar uma exponenciação ao ruído, achatando-o através da redução de valor. Não só é necessário um fator de exponenciação, mas também uma fórmula para gerar ruídos no formato de continentes e ilhas, onde quanto mais próximo da borda maior a probabilidade desse valor ser formatado como água. Essa fórmula consiste em primeiro calcular a distância de Manhattan $d$ do valor (x,y) atual até o centro do mapa e multiplicar por 2.
+
+$d = 2*max(abs(x - center_x), abs(y - center_y))$
+
+A segunda etapa consiste em calcular a fórmula dada em seguida \cite{NoiseRedBlob} onde $a$ é uma constante que puxa os todos os valores para cima, $b$ puxa as bordas do mapa para baixo e $c$ controla o quão rápido essa queda é.
+
+$ noise = noise + a - b*d^c$
+
+Dessa forma, o código completo da implementação que calcula e modela o ruído para uso é dado a seguir.
+
+\begin{lstlisting}[caption=Implementação que gera e molda o ruído]
+public void generateAndShapeNoise() {
+		float d;
+		float a = 0.15f;
+		float b = 0.9f;
+		float c = 2f;
+		
+		int coordX = ((this.x*chunkWidth)/NOISE_DIVISOR)  ;
+		int coordY = ((this.y*chunkHeight)/NOISE_DIVISOR)  ;
+
+		int constX = coordX;
+		int constY = coordY;
+		
+		for(int y=0; y<textureHeight; y++) {
+			for(int x=0; x<textureWidth;x++) {
+				coordX = constX + x;
+				coordY = constY + y;
+				
+				d = 2*Math.max(Math.abs((float)coordX/mapWidth - (float)(mapWidth/2)/mapWidth), Math.abs((float)coordY/mapHeight - (float)(mapHeight/2)/mapHeight));
+				
+				perlinNoise[x][y] = noise(fastNoise,coordX/3f,coordY);
+				whiteNoise[x][y] = fastNoise.GetWhiteNoise(coordX, coordY); 
+				fractalNoise[x][y] = fastNoise.GetPerlinFractal(coordX/4, coordY); 
+				
+				perlinNoise[x][y] = perlinNoise[x][y] + a - b*(float)Math.pow(d, c);
+			}
+		}
+	}
+\end{lstlisting}  
+
+A última etapa é atribuir um significado para cada um desses valores gerados. O código completo da implementação que atribui um significado a esses valores é dada a seguir. Em suma, valores abaixo de $-0.255$  viram água, valores abaixo de $-0.1$ viram areia e valores acima disso viram terra.
+
+\begin{lstlisting}[caption=Implementação que gera a textura final do terreno]
+public void generateTerrain() {
+
+	for(int y=0; y<textureHeight; y++) {
+		for(int x=0; x<textureWidth;x++) {
+			
+			if(perlinNoise[x][y]>-.1 ) { 		//terra
+				mapRGB[x][y] = Color.GRASS_GROUND;
+				if(fractalNoise[x][y]>0.2)
+					mapRGB[x][y] = Color.GRASS_GROUND_LIGHTER;
+			}
+			
+			if(perlinNoise[x][y]<=-.1) {	//areia
+				mapRGB[x][y] =  (255<<24) | (244<<16) | (234<<8) | (187);
+				if(whiteNoise[x][y]>0)
+					mapRGB[x][y] =  (255<<24) | (234<<16) | (224<<8) | (167);
+			}
+			
+			if(perlinNoise[x][y]<=-.255)  //preenche tudo com agua
+				mapRGB[x][y] = 	Color.TURKISH; //turquesa
+		}
+	}
+}
+\end{lstlisting}    
+
+Os resultados obtidos possuem terrenos de formato de similar aos exemplificados na figura a seguir.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=34em]{imagens/generatedTerrains.png}
+	\caption{Resultado final dos terrenos após modelagem do ruído e atribuição de significado. Adaptado de: \cite{NoiseRedBlob}}
+\end{figure}
+
+%//TODO: good source: https://thebookofshaders.com/12/ http://pcgbook.com/
 
 \chapter{Diagramas e panorama geral}
-\section{Estrutura hierárquicca das classes}
-Todas as classes até então desenvolvidas e abordadas se organizam da seguinte maneira no escopo global do projeto:
+\label{cap:panoramaGeral}
+
+Os diagramas dados a seguir descrevem toda a estrutura que compõe a fundação da engine Narval. Juntamente com o código ao longo deste trabalho os diagramas são a realização dos módulos abordados e descritos na introdução do capítulo \ref{cap:gameEngine}.
+
+Todas as classes até então desenvolvidas e abordadas se organizam nos pacotes descritos pela figura \ref{fig:arquitetura} e são dadas formalmente a seguir. Cada pacote agrupa classes relacionadas à um tema, área ou módulo da engine.
+
+\section{Pacote de IA}
+
+O pacote \texttt{engine.ai} contém todas as classes relacionadas à implementação de inteligência artificial. Essas classes implementam o A* e o conceito de utility utilizado para tomada de decisões do agente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/engine.ai.png}
+	\caption{Classes do pacote engine.ai}
+\end{figure}
+
+\section{Pacote de Aúdio}
+
+O pacote \texttt{engine.audio} contém todas as classes relacionadas à implementação de áudio. Essas classes implementam a leitura e configuração do arquivo de áudio via OpenAL.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/engine.audio.png}
+	\caption{Classes do pacote engine.audio}
+\end{figure}
+
+\section{Pacote da Engine}
+
+O pacote \texttt{engine.engine} contém todas as classes relacionadas à implementação do núcleo da game engine. Essas classes implementam a thread onde será rodada a primeira chamada ao método update e render, bem como a engine de física e também a janela OpenGL onde deverá ser feita a renderização. É nesse pacote também que serão carregadas e definidas todas as configurações da engine.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=30em]{imagens/engine.engine.png}
+	\caption{Classes do pacote engine.engine}
+\end{figure}
+
+\section{Pacote de componentes de entidades}
+
+O pacote \texttt{engine.entity.component} contém todas as classes relacionadas à implementação dos componentes das entidades. Muito embora cada jogo deverá ter seus próprios componentes, esse pacote implementa os mais comuns que estarão presentes em, senão todos os jogos, a maioria significativa deles.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/engine.entity.component.png}
+	\caption{Classes do pacote engine.entity.component}
+\end{figure}
+
+\section{Pacote de entidades}
+
+O pacote \texttt{engine.entitiy} contém todas as classes relacionadas à implementação das entidades e os sistemas que as gerenciam. Também conta com a implementação de algumas especializações comuns em jogos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/engine.entity.png}
+	\caption{Classes do pacote engine.entity}
+\end{figure}
+
+\section{Pacote gráfico}
+
+O pacote \texttt{engine.graphic} contém todas as classes relacionadas à implementação dos componentes gráficos como animações, textura e os shaders utilizados pelo OpenGL.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/engine.graphic.png}
+	\caption{Classes do pacote engine.graphic}
+\end{figure}
 
 
+\section{Pacote de input}
 
-\section{Estrutura dos arquivos e pacotes}
-A estrutura geral de arquivos e pacotes do projeto da Engine Narval é dada a seguir. Cada arquivo representa uma classe Java.
+O pacote \texttt{engine.input} contém todas as classes relacionadas ao tratamento de input.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=22em]{imagens/engine.input.png}
+	\caption{Classes do pacote engine.input}
+\end{figure}
+
+
+\section{Pacote lógico}
+
+O pacote \texttt{engine.logic} contém classes relacionadas ao aspecto lógico geral do sistema. Ele contém o sistema de chunks, timer, camera e o sistema de gerenciamento de animações.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/engine.logic.png}
+	\caption{Classes do pacote engine.logic}
+\end{figure}
+
+\section{Pacote de ruído}
+
+O pacote \texttt{engine.noise} contém a classe responsável por gerar o ruído utilizado na construção dos mapas. Sendo ela uma implementação de licença MIT feita por Auburns.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/engine.noise.png}
+	\caption{Classes do pacote engine.noise}
+\end{figure}
+//TODO : referencias às figuras e recortar a imagem
+
+
+\section{Pacote de renderizadores}
+
+O pacote \texttt{engine.renderer} contém as classes responsáveis pelos tipos de renderização.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/engine.renderer.png}
+	\caption{Classes do pacote engine.renderer}
+\end{figure}
+
+\section{Pacote de utilidades}
+
+O pacote \texttt{engine.utilities} contém uma série de classes consideradas utilitárias como por exemplo, criação e conversão de buffers, leitura de arquivos, conversão de cores, funções matemáticas e muitas outras.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/engine.utilities.png}
+	\caption{Classes do pacote engine.utilities}
+\end{figure}
+
+\section{Estrutura dos arquivos}
+A estrutura geral de arquivos e pacotes do projeto da Engine Narval é dada a seguir. Cada arquivo representa uma classe Java e cada pasta é denotada por uma barra e considerada como um pacote do projeto.
 
 \begin{lstlisting}[caption=Árvore de arquivos do projeto]
 Engine
@@ -2043,7 +2428,10 @@ Engine
 \end{lstlisting}        
 
 
+
+\iffalse
 \chapter{Criação de um protótipo}
+
 \label{sec:desenv}
 \section{Mecânicas}
 \subsection{Sistema de caça ativa}
@@ -2122,6 +2510,7 @@ apresentado ao jogador em forma de uma animação de andar diferente. Quanto mai
 
 \subsection{Domar animais}
 Alguns animais podem ser domados através dos instrumentos. Basta cantar próximo a eles então eles serão domados.
+\fi
 
 
 % ------------------------------------------
@@ -2129,15 +2518,47 @@ Alguns animais podem ser domados através dos instrumentos. Basta cantar próxim
 \chapter{Experimentos e resultados}
 \label{sec:experim}
 
-\section{Protótipo}
+\section{Demonstração}
 
-O protótipo final construído utilizando a game engine demonstra suas principais funcionalidades em um pequeno jogo de exploração em um ambiente procedural 2D ambientado num mundo fantástico.
+A demonstração final construída utilizando a game engine evidência suas principais funcionalidades em um mini jogo de exploração com ambiente procedural 2D.
 
-Nele pode-se caminhar através do cenário explorando novos 
+Nele pode-se caminhar através do cenário explorando o território gerado em tempo real e vislumbrar praias e florestas. Durante essa jornada pode-se notar o efeito de iluminação local, global e sua atenuação juntamente com o passar do dia.  Nota-se ainda o efeito de vento aplicado aos objetos que compõem a vegetação e entidades de AI simples que vagam pelo ambiente. A seguir são dadas algumas capturas de tela da demonstração. Cada captura de tela exemplifica uma das funcionalidades da engine discutidas no capítulo \ref{cap:gameEngine}.
 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/ss1.png}
+	\caption{Captura de tela 1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/ss2.png}
+	\caption{Captura de tela 2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/ss3.png}
+	\caption{Captura de tela 3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/ss4.png}
+	\caption{Captura de tela 4}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=24em]{imagens/ss5.png}
+	\caption{Captura de tela 5}
+\end{figure}
+
+
+\iffalse
 \section{Otimizações e testes de desempenho}
 
 Perlin noise  vs GPU? ou noiseSize text mult
+
+IMPLEMENTAR O BATCH RENDERING ANTES DE REALIZAR E DEMONSTRAR OS TESTES
 
 Batch Rendering vs One draw call per object
 
@@ -2145,17 +2566,26 @@ Real time PCG x Loading chunk
 
 Leitura assincrona vs sincroca
 
-
+\fi
 
 % ------------------------------------------
 % CONCLUSÃO
 
 \chapter{Conclusão}
 \label{sec:conclus}
-Com a primeira versão da game engine finalizada é necessário agora realizar considerações finais. Um sistema dessa magnitude deve ser constantemente atualizado com novas tecnologias para manter-se relevante em um cenário competitivo como a indústria de jogos. A pesquisa permitiu produzir um extenso material em língua portuguesa acerca do tema, documentando e exemplificando cada etapa, desde a demonstração de possibilidades até a implementação de uma delas.
+Com a primeira versão da game engine finalizada é necessário realizar algumas considerações finais. Um sistema dessa magnitude deve ser constantemente atualizado com novas tecnologias para manter-se relevante em um cenário competitivo como a indústria de jogos. A pesquisa permitiu produzir um extenso material em língua portuguesa acerca do tema, documentando e exemplificando cada etapa, desde a demonstração das amplas possibilidades para cada situação até sua implementação.
 
-...
+Embora distante de uma versão final, o projeto estando nessa etapa possui uma fundação sólida que lhe permite ser ampliado e melhorado para versões futuras. A engine não somente está com uma base bem construída, mas também está apta a ser utilizada na construção de jogos menos complexos.
 
+Por ser um sistema de grande porte ele não somente embarca muitas funcionalidades, mas também muitas áreas do conhecimento. Por consequência direta disso muitas delas ainda devem sofrer ajustes ao longo do tempo para atingirem um patamar de alta qualidade. Isso só será obtido através de tempo e, muito possivelmente, pela atuação direta de profissionais qualificados da área.
+
+Em suma, a construção de uma game engine é a junção do esforço de diversas áreas para criar um software capaz de trazer novos mundos e entretenimento ao grande público através da arte digital.
+
+\section{Perspectivas de Trabalhos Futuros}
+
+Para versões futuras da engine Narval espera-se uma portabilidade para novas APIs gráficas como DirectX e Vulkan. Também espera-se o desenvolvimento de um editor de níveis que permita uma interface mais abrangente e acessível ao usuário comum. Pretende-se elaborar e criar um suporte para renderização 3D, bem como a expansão e utilização de técnicas mais avançadas de renderização para efeitos sofisticados.
+
+Muito embora essa versão esteja finalizada, espera-se um dia lançá-la no mercado sob a forma de um produto muito bem polido. Para isso tem-se ainda muitas etapas que devem ser superadas para atingir este objetivo final. Algumas delas envolvem não somente aspectos da renderização, mas também aspectos mais gerais como uma manipulação mais eficiente de arquivos, criação de ferramentas para scripting, resolução de pathfinding usando multithreading e muitos outros.
 
 
 
@@ -2180,14 +2610,179 @@ Com a primeira versão da game engine finalizada é necessário agora realizar c
 % ---
 % Inicia os apêndices
 % ---
-%\begin{apendicesenv}
+\begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
 %\partapendices
 
 % ----------------------------------------------------------
-%\chapter{Quisque libero justo}
+\chapter{Implementação do Algoritmo A* Adaptado}
+\label{apend:alg:a*}
 % ----------------------------------------------------------
+\begin{lstlisting}[caption=A* adaptado]
+public class AStar {
+	private ArrayList<Anode> openSet = new ArrayList<>();
+	private ArrayList<Anode> closedSet = new ArrayList<>();
+	private float M_SQRT2 = (float) Math.sqrt(2.0);
+	public static final int MAXSTEPS = 900;
+	private int widthSize = (128/8) +1, heightSize = (20/8)+1;
+	private boolean obstacleMap[][];
+	
+	public ArrayList<Anode> calculatePath(Vec2i start, Vec2i end, boolean obstacleMap[][]){
+		Anode startNode = new Anode();
+		Anode endNode	= new Anode();
+		Anode current;
+		this.obstacleMap = obstacleMap;
+		
+		startNode.pos 	= start;
+		endNode.pos 	= end;
+		
+		startNode.setgScore(0);
+		startNode.setfScore( heuristic(startNode, endNode)  );
+		
+		openSet.add(startNode);
+		
+		int k=0;
+		int index = 0;
+		while(!openSet.isEmpty()) {
+			if (k++ > MAXSTEPS) 
+				return null;
+			
+			Collections.sort(openSet);
+			
+			current = openSet.get(0);
+			
+			if(current.pos.compareTo(endNode.pos) == 0) 
+				return constructPath(current);
+			
+			openSet.remove(current);
+			closedSet.add(current);
+			
+			for(Anode neighbor: getNeighbors(current)) {
+				if(isSizeOccupied(neighbor))
+					closedSet.add(neighbor);
+				
+				if(closedSet.contains(neighbor))
+					continue; //ignore the neighbor which is already evaluated
+				
+				if(!openSet.contains(neighbor)) //discover new node
+					openSet.add(neighbor);
+						
+				float gScore = current.getgScore() + distance(current,neighbor);
+				if(gScore >= neighbor.getgScore())
+					continue; // not a better path
+				
+				neighbor.cameFrom = current;
+				neighbor.setgScore( gScore );
+				neighbor.setfScore( neighbor.getgScore() + heuristic(neighbor, endNode) );
+			}
+		}
+		
+		return null;
+	}
+	
+	public boolean isOutOfBounds(Anode node, boolean obstacleMap[][]) {
+		if(node.pos.x>obstacleMap.length-1 || node.pos.y>obstacleMap[0].length-1 || node.pos.x<0 || node.pos.y<0)
+			return true;
+		return false;
+	}
+	
+	private boolean isOccupied(Anode a) {
+		return (!isOutOfBounds(a, obstacleMap) && obstacleMap[a.pos.x][a.pos.y]);
+	}
+	
+	private boolean isSizeOccupied(Anode u) {
+		Anode tempState = new Anode(u.pos.x , u.pos.y);
+		
+		for(int y=0; y<heightSize; y++) {
+			for(int x=0; x<widthSize; x++) {
+				tempState.pos.x = u.pos.x + x;
+				tempState.pos.y = u.pos.y + y;
+				
+				if(isOccupied(tempState))
+					return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private ArrayList<Anode> getNeighbors(Anode current){
+		ArrayList<Anode> neighbors = new ArrayList<>();
+		Anode temp;
+		
+		temp = new Anode(current.pos.x + 1, current.pos.y);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x + 1, current.pos.y + 1);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x , current.pos.y + 1);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x - 1, current.pos.y + 1);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x - 1, current.pos.y);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x - 1, current.pos.y - 1);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x , current.pos.y - 1);
+		neighbors.add(temp);
+		
+		temp = new Anode(current.pos.x + 1, current.pos.y - 1);
+		neighbors.add(temp);
+				
+		return neighbors;
+	}
+	
+	private ArrayList<Anode> constructPath(Anode current){
+		Anode temp = current;
+		ArrayList<Anode> path = new ArrayList<>();
+		
+		while(temp.cameFrom!=null) {
+			path.add(temp.cameFrom);
+			temp = temp.cameFrom;
+		}
+		
+		return path;
+	}
+	
+	private float heuristic(Anode start, Anode end) {
+		float temp;
+		float min = Math.abs(start.pos.x - end.pos.x);
+		float max = Math.abs(start.pos.y - end.pos.y);
+		
+		if (min > max){
+			temp = min;
+			min = max;
+			max = temp;
+		}
+		
+		return ((M_SQRT2-1.0f)*min + max);
+	}
+	
+	private float distance(Anode a, Anode b){
+		float x = a.pos.x-b.pos.x;
+		float y = a.pos.y-b.pos.y;
+		return (float) Math.sqrt(x*x + y*y);
+	}
+	
+	private Anode lowestFScore(ArrayList<Anode> list) {
+		Anode current = list.get(0);
+		
+		for(Anode a: list) {
+			if(current.getfScore()>a.getfScore())
+				current = a;
+		}
+		
+		return current;
+	}
+}
+
+\end{lstlisting}
 
 %\lipsum[50]
 
@@ -2196,7 +2791,7 @@ Com a primeira versão da game engine finalizada é necessário agora realizar c
 % ----------------------------------------------------------
 %\lipsum[55-57]
 
-%\end{apendicesenv}
+\end{apendicesenv}
 % ---
 
 

@@ -5,6 +5,11 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Auburns 2018]{FastNoise}
+\abntrefinfo{Auburns}{AUBURNS}{2018}
+{AUBURNS. \emph{Fast Noise}. 2018.
+Dispon{\'\i}vel em: \url{https://github.com/Auburns/FastNoise\_Java}.}
+
 \bibitem[Buckland 2005]{ProgrammingGameAIByExample}
 \abntrefinfo{Buckland}{BUCKLAND}{2005}
 {BUCKLAND, M. \emph{Programming Game AI by Example}. [S.l.]: Wordware
@@ -21,6 +26,11 @@ Dispon{\'\i}vel em:
 {ECK, D.~J. \emph{Introduction to Computer Graphics}. 2018.
 Dispon{\'\i}vel em:
   \url{http://math.hws.edu/eck/cs424/downloads/graphicsbook-linked.pdf}.}
+
+\bibitem[Fataho 2018]{Fataho}
+\abntrefinfo{Fataho}{FATAHO}{2018}
+{FATAHO. \emph{Perlin Noise Explained}. 2018.
+Dispon{\'\i}vel em: \url{https://www.youtube.com/watch?v=MJ3bvCkHJtE}.}
 
 \bibitem[Gregory 2009]{GameEngineArchitecture}
 \abntrefinfo{Gregory}{GREGORY}{2009}
@@ -69,10 +79,40 @@ Dispon{\'\i}vel em:
 {NYSTROM, R. \emph{Game Programming Patterns}. [S.l.]: Genever Benning, 2014.
 ISBN 0990582906.}
 
+\bibitem[OpenCV 2018]{AffineTransformation}
+\abntrefinfo{OpenCV}{OPENCV}{2018}
+{OPENCV. 2018.
+Dispon{\'\i}vel em:
+  \url{https://docs.opencv.org/3.1.0/d4/d61/tutorial\_warp\_affine.html}.}
+
 \bibitem[OpenGL 2017]{OpenGLAbout}
 \abntrefinfo{OpenGL}{OPENGL}{2017}
 {OPENGL. \emph{About OpenGL}. 2017.
 Dispon{\'\i}vel em: \url{https://www.opengl.org/about/}.}
+
+\bibitem[Patel 2018]{NoiseRedBlob}
+\abntrefinfo{Patel}{PATEL}{2018}
+{PATEL, A. \emph{Making maps with noise functions}. 2018.
+Dispon{\'\i}vel em:
+  \url{https://www.redblobgames.com/maps/terrain-from-noise/}.}
+
+\bibitem[Perlin 1985]{perlin1985image}
+\abntrefinfo{Perlin}{PERLIN}{1985}
+{PERLIN, K. An image synthesizer.
+1985.}
+
+\bibitem[Perlin 2002]{Perlin:2002:IN:566654.566636}
+\abntrefinfo{Perlin}{PERLIN}{2002}
+{PERLIN, K. Improving noise.
+\emph{ACM Trans. Graph.}, ACM, New York, NY, USA, v.~21, n.~3, p. 681--682,
+  jul. 2002.
+ISSN 0730-0301.
+Dispon{\'\i}vel em: \url{http://doi.acm.org/10.1145/566654.566636}.}
+
+\bibitem[Phong 1975]{phong1975}
+\abntrefinfo{Phong}{PHONG}{1975}
+{PHONG, B.~T. Illumination for computer generated pictures.
+\emph{Communications of the ACM}, ACM, v.~18, n.~6, p. 311--317, 1975.}
 
 \bibitem[ScratchAPixel 2018]{PhongShading}
 \abntrefinfo{ScratchAPixel}{SCRATCHAPIXEL}{2018}
@@ -92,6 +132,12 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.gamedev.net/articles/programming/artificial-intelligence/the-total-beginners-guide-to-game-ai-r4942/}.}
 
+\bibitem[Unity 2018]{Frustum}
+\abntrefinfo{Unity}{UNITY}{2018}
+{UNITY. 2018.
+Dispon{\'\i}vel em:
+  \url{https://docs.unity3d.com/Manual/UnderstandingFrustum.html}.}
+
 \bibitem[Vries 2015]{LearnOpenGL}
 \abntrefinfo{Vries}{VRIES}{2015}
 {VRIES, J. de. \emph{Learn OpenGL}. 2. ed. [s.n.], 2015. Dispon{\'\i}vel em:
@@ -104,9 +150,15 @@ Dispon{\'\i}vel em:
 Dispon{\'\i}vel em:
   \url{https://www.raywenderlich.com/2806-introduction-to-component-based-architecture-in-games}.}
 
-\bibitem[Wiki 2018]{PCGWiki}
-\abntrefinfo{Wiki}{WIKI}{2018}
-{WIKI, P. 2018.
+\bibitem[WikiDot 2018]{PCGWiki}
+\abntrefinfo{WikiDot}{WIKIDOT}{2018}
+{WIKIDOT, P. 2018.
 Dispon{\'\i}vel em: \url{http://pcg.wikidot.com/}.}
+
+\bibitem[Wikipedia 2018]{AffineTransformationImg}
+\abntrefinfo{Wikipedia}{WIKIPEDIA}{2018}
+{WIKIPEDIA. 2018.
+Dispon{\'\i}vel em:
+  \url{https://en.wikipedia.org/wiki/Affine\_transformation\#Affine\_transformation\_in\_plane\_geometry}.}
 
 \end{thebibliography}
