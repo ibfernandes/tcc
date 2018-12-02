@@ -38,6 +38,11 @@ Dispon{\'\i}vel em: \url{https://www.youtube.com/watch?v=MJ3bvCkHJtE}.}
   2009.
 ISBN 9781439865262.}
 
+\bibitem[jBox2D 2018]{jBox2D}
+\abntrefinfo{jBox2D}{JBOX2D}{2018}
+{JBOX2D. \emph{jBox2D}. 2018.
+Dispon{\'\i}vel em: \url{http://www.jbox2d.org/}.}
+
 \bibitem[Khronos 2017]{KhronosOpenGLSpecification}
 \abntrefinfo{Khronos}{KHRONOS}{2017}
 {KHRONOS. \emph{OpenGL Specifications}. 2017.
@@ -60,6 +65,11 @@ Dispon{\'\i}vel em: \url{https://www.khronos.org/opengl/wiki/OpenGL\_Object}.}
 Dispon{\'\i}vel em:
   \url{https://www.khronos.org/opengl/wiki/Shader\_Compilation}.}
 
+\bibitem[LWJGL 2018]{LWJGL}
+\abntrefinfo{LWJGL}{LWJGL}{2018}
+{LWJGL. \emph{LWJGL}. 2018.
+Dispon{\'\i}vel em: \url{https://www.lwjgl.org/}.}
+
 \bibitem[Mark e Dill 2018]{UtilityAI}
 \abntrefinfo{Mark e Dill}{MARK; DILL}{2018}
 {MARK, D.; DILL, K. \emph{Improving AI Decision Modeling Through Utility
@@ -78,6 +88,11 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Nystrom}{NYSTROM}{2014}
 {NYSTROM, R. \emph{Game Programming Patterns}. [S.l.]: Genever Benning, 2014.
 ISBN 0990582906.}
+
+\bibitem[openAL 2018]{OpenAL}
+\abntrefinfo{openAL}{OPENAL}{2018}
+{OPENAL. \emph{openAL}. 2018.
+Dispon{\'\i}vel em: \url{https://www.openal.org/}.}
 
 \bibitem[OpenCV 2018]{AffineTransformation}
 \abntrefinfo{OpenCV}{OPENCV}{2018}

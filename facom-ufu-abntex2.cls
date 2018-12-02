@@ -162,8 +162,8 @@
   identifierstyle=\color{almostBlack},
   tabsize=2
 }
-\renewcommand{\lstlistingname}{Algoritmo}
-\renewcommand{\lstlistlistingname}{Lista de \lstlistingname s}
+\renewcommand{\lstlistingname}{Listagem}
+\renewcommand{\lstlistlistingname}{Lista de Listagens}
 
 
 % --- 

@@ -1,61 +1,63 @@
 \select@language {brazil}
-\contentsline {figure}{\numberline {1}{\ignorespaces Pacotes da engine Narval divididos em camadas }}{20}{figure.4.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop b\IeC {\'a}sico ao longo do tempo}}{21}{figure.4.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep fixo ao longo do tempo}}{23}{figure.4.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep vari\IeC {\'a}vel ao longo do tempo}}{23}{figure.4.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Objeto ignorando colis\IeC {\~a}o devido um timestep muito grande}}{24}{figure.4.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep semi-fixo ao longo do tempo}}{25}{figure.4.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces M\IeC {\'e}todo \texttt {update} com tempo de processamento maior que o $\Delta t$}}{26}{figure.4.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{27}{figure.4.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{27}{figure.4.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Etapas do pipeline }}{31}{figure.4.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Dois tri\IeC {\^a}ngulos em coordenadas locais normalizadas que juntos formam um quadrado}}{33}{figure.4.11}
-\contentsline {figure}{\numberline {12}{\ignorespaces Resultado obtido com dois shaders simples}}{35}{figure.4.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Sistema ARGB e RGBA, ambos com canais de 8 bits (1 byte)}}{41}{figure.4.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Extra\IeC {\c c}\IeC {\~a}o do canal verde em um inteiro de 3 bytes}}{41}{figure.4.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Wrap modes}}{42}{figure.4.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Amplia\IeC {\c c}\IeC {\~a}o de 32x usando cada tipo de filtro. }}{42}{figure.4.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Spritesheet com frames de 32x32 pixels}}{43}{figure.4.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y}}{45}{figure.4.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y considerando a caixa base}}{46}{figure.4.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Componentes do modelo de Phong}}{46}{figure.4.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o da luz ambiente com tonalidade alaranjada}}{47}{figure.4.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces \IeC {\^A}ngulo $\theta $ entre raio luminoso e vetor normal da superf\IeC {\'\i }cie iluminada}}{48}{figure.4.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Resultado da luz difusa usando a textura normal do objeto}}{49}{figure.4.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Luz especular do ponto de vista do observador}}{50}{figure.4.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Especializa\IeC {\c c}\IeC {\~a}o das classes numa arquitetura baseada em objetos}}{54}{figure.4.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces GameObject composto de v\IeC {\'a}rios componentes}}{55}{figure.4.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de classes do sistema entity based}}{55}{figure.4.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Colis\IeC {\~a}o AABB vs AABB}}{57}{figure.4.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Processo de transforma\IeC {\c c}\IeC {\~o}es de coordenadas at\IeC {\'e} o espa\IeC {\c c}o final da tela. Fonte:~\cite {LearnOpenGL}}}{58}{figure.4.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Exemplos de transforma\IeC {\c c}\IeC {\~a}o afim. Fonte:~\cite {AffineTransformationImg}}}{59}{figure.4.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Frustum da proje\IeC {\c c}\IeC {\~a}o ortogr\IeC {\'a}fica. Fonte:~\cite {LearnOpenGL}}}{60}{figure.4.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Frustum da proje\IeC {\c c}\IeC {\~a}o de perspectiva. Fonte:~\cite {LearnOpenGL}}}{61}{figure.4.32}
-\contentsline {figure}{\numberline {33}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o do sistema de chunks carregando a \IeC {\'u}ltima coluna da matriz}}{66}{figure.4.33}
-\contentsline {figure}{\numberline {34}{\ignorespaces Gr\IeC {\'a}fico das fun\IeC {\c c}\IeC {\~o}es utility}}{73}{figure.5.34}
-\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama da \IeC {\'A}rvore de considera\IeC {\c c}\IeC {\~o}es para as fun\IeC {\c c}\IeC {\~o}es de pontua\IeC {\c c}\IeC {\~a}o}}{74}{figure.5.35}
-\contentsline {figure}{\numberline {36}{\ignorespaces Desperd\IeC {\'\i }cio gerado ao mapear uma base box de 32x32 pixels numa matriz de ret\IeC {\^a}ngulos 10x10 pixels.}}{76}{figure.5.36}
-\contentsline {figure}{\numberline {37}{\ignorespaces Matriz booleana representada visualmente com os ret\IeC {\^a}ngulos verdes sendo os transpon\IeC {\'\i }veis e os rosas intranspon\IeC {\'\i }veis. }}{76}{figure.5.37}
-\contentsline {figure}{\numberline {38}{\ignorespaces Resultado final obtido com o A* }}{77}{figure.5.38}
-\contentsline {figure}{\numberline {39}{\ignorespaces Ponto $(0.75, 0.25)$ no plano. Adaptado de: \cite {Fataho}}}{78}{figure.6.39}
-\contentsline {figure}{\numberline {40}{\ignorespaces Vetores gradiente definidos em amarelo no plano. Adaptado de: \cite {Fataho}}}{79}{figure.6.40}
-\contentsline {figure}{\numberline {41}{\ignorespaces Vetor dist\IeC {\^a}ncia do ponto $(0,0)$na borda at\IeC {\'e} o ponto $(0.75,0.25)$ em vermelho. Adaptado de: \cite {Fataho}}}{79}{figure.6.41}
-\contentsline {figure}{\numberline {42}{\ignorespaces Vetores dist\IeC {\^a}ncia do ponto $(0,0)$ em verde e vetores gradiente em amarelo. Adaptado de: \cite {Fataho}}}{80}{figure.6.42}
-\contentsline {figure}{\numberline {43}{\ignorespaces Resultado da altera\IeC {\c c}\IeC {\~a}o na frequ\IeC {\^e}ncia. Adaptado de: \cite {NoiseRedBlob}}}{81}{figure.6.43}
-\contentsline {figure}{\numberline {44}{\ignorespaces Resultado final dos terrenos ap\IeC {\'o}s modelagem do ru\IeC {\'\i }do e atribui\IeC {\c c}\IeC {\~a}o de significado. Adaptado de: \cite {NoiseRedBlob}}}{83}{figure.6.44}
-\contentsline {figure}{\numberline {45}{\ignorespaces Classes do pacote engine.ai}}{84}{figure.7.45}
-\contentsline {figure}{\numberline {46}{\ignorespaces Classes do pacote engine.audio}}{85}{figure.7.46}
-\contentsline {figure}{\numberline {47}{\ignorespaces Classes do pacote engine.engine}}{86}{figure.7.47}
-\contentsline {figure}{\numberline {48}{\ignorespaces Classes do pacote engine.entity.component}}{87}{figure.7.48}
-\contentsline {figure}{\numberline {49}{\ignorespaces Classes do pacote engine.entity}}{88}{figure.7.49}
-\contentsline {figure}{\numberline {50}{\ignorespaces Classes do pacote engine.graphic}}{88}{figure.7.50}
-\contentsline {figure}{\numberline {51}{\ignorespaces Classes do pacote engine.input}}{89}{figure.7.51}
-\contentsline {figure}{\numberline {52}{\ignorespaces Classes do pacote engine.logic}}{90}{figure.7.52}
-\contentsline {figure}{\numberline {53}{\ignorespaces Classes do pacote engine.noise}}{91}{figure.7.53}
-\contentsline {figure}{\numberline {54}{\ignorespaces Classes do pacote engine.renderer}}{92}{figure.7.54}
-\contentsline {figure}{\numberline {55}{\ignorespaces Classes do pacote engine.utilities}}{92}{figure.7.55}
-\contentsline {figure}{\numberline {56}{\ignorespaces Captura de tela 1}}{95}{figure.8.56}
-\contentsline {figure}{\numberline {57}{\ignorespaces Captura de tela 2}}{95}{figure.8.57}
-\contentsline {figure}{\numberline {58}{\ignorespaces Captura de tela 3}}{96}{figure.8.58}
-\contentsline {figure}{\numberline {59}{\ignorespaces Captura de tela 4}}{96}{figure.8.59}
-\contentsline {figure}{\numberline {60}{\ignorespaces Captura de tela 5}}{96}{figure.8.60}
+\contentsline {figure}{\numberline {1}{\ignorespaces Pacotes da engine Narval divididos em camadas }}{19}{figure.3.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop b\IeC {\'a}sico ao longo do tempo}}{20}{figure.3.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep fixo ao longo do tempo}}{22}{figure.3.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep vari\IeC {\'a}vel ao longo do tempo}}{22}{figure.3.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Objeto ignorando colis\IeC {\~a}o devido um timestep muito grande}}{23}{figure.3.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Execu\IeC {\c c}\IeC {\~a}o do game loop com timestep semi-fixo ao longo do tempo}}{24}{figure.3.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces M\IeC {\'e}todo \texttt {update} com tempo de processamento maior que o $\Delta t$}}{24}{figure.3.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{25}{figure.3.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Renderiza\IeC {\c c}\IeC {\~a}o sem interpola\IeC {\c c}\IeC {\~a}o }}{26}{figure.3.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Etapas do pipeline }}{29}{figure.3.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Dois tri\IeC {\^a}ngulos em coordenadas locais normalizadas que juntos formam um quadrado}}{31}{figure.3.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Resultado obtido com dois shaders simples}}{33}{figure.3.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Sistema ARGB e RGBA, ambos com canais de 8 bits (1 byte)}}{37}{figure.3.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Extra\IeC {\c c}\IeC {\~a}o do canal verde em um inteiro de 3 bytes}}{38}{figure.3.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Wrap modes}}{38}{figure.3.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Amplia\IeC {\c c}\IeC {\~a}o de 32x usando cada tipo de filtro. }}{39}{figure.3.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Spritesheet com frames de 32x32 pixels}}{39}{figure.3.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y}}{42}{figure.3.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Ordem correta de renderiza\IeC {\c c}\IeC {\~a}o: do menor y para o maior y considerando a caixa base}}{42}{figure.3.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Componentes do modelo de Phong}}{43}{figure.3.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o da luz ambiente com tonalidade alaranjada}}{44}{figure.3.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces \IeC {\^A}ngulo $\theta $ entre raio luminoso e vetor normal da superf\IeC {\'\i }cie iluminada}}{44}{figure.3.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces Resultado da luz difusa usando a textura normal do objeto}}{46}{figure.3.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces Luz especular do ponto de vista do observador}}{47}{figure.3.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Especializa\IeC {\c c}\IeC {\~a}o das classes numa arquitetura baseada em objetos}}{51}{figure.3.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces GameObject composto de v\IeC {\'a}rios componentes}}{52}{figure.3.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Diagrama de classes do sistema entity based}}{52}{figure.3.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Colis\IeC {\~a}o AABB vs AABB}}{54}{figure.3.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Processo de transforma\IeC {\c c}\IeC {\~o}es de coordenadas at\IeC {\'e} o espa\IeC {\c c}o final da tela. Fonte:~\cite {LearnOpenGL}}}{55}{figure.3.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Exemplos de transforma\IeC {\c c}\IeC {\~a}o afim. Fonte:~\cite {AffineTransformationImg}}}{56}{figure.3.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Frustum da proje\IeC {\c c}\IeC {\~a}o ortogr\IeC {\'a}fica. Fonte:~\cite {LearnOpenGL}}}{57}{figure.3.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Frustum da proje\IeC {\c c}\IeC {\~a}o de perspectiva. Fonte:~\cite {LearnOpenGL}}}{58}{figure.3.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Demonstra\IeC {\c c}\IeC {\~a}o do sistema de chunks carregando a \IeC {\'u}ltima coluna da matriz}}{63}{figure.3.33}
+\contentsline {figure}{\numberline {34}{\ignorespaces Gr\IeC {\'a}fico das fun\IeC {\c c}\IeC {\~o}es utility}}{67}{figure.4.34}
+\contentsline {figure}{\numberline {35}{\ignorespaces Diagrama da \IeC {\'A}rvore de considera\IeC {\c c}\IeC {\~o}es para as fun\IeC {\c c}\IeC {\~o}es de pontua\IeC {\c c}\IeC {\~a}o}}{68}{figure.4.35}
+\contentsline {figure}{\numberline {36}{\ignorespaces Desperd\IeC {\'\i }cio gerado ao mapear uma base box de 32x32 pixels numa matriz de ret\IeC {\^a}ngulos 10x10 pixels.}}{70}{figure.4.36}
+\contentsline {figure}{\numberline {37}{\ignorespaces Matriz booleana representada visualmente com os ret\IeC {\^a}ngulos verdes sendo os transpon\IeC {\'\i }veis e os rosas intranspon\IeC {\'\i }veis. }}{70}{figure.4.37}
+\contentsline {figure}{\numberline {38}{\ignorespaces Resultado final obtido com o A* }}{71}{figure.4.38}
+\contentsline {figure}{\numberline {39}{\ignorespaces Ponto $(0.75, 0.25)$ no plano. Adaptado de: \cite {Fataho}}}{72}{figure.5.39}
+\contentsline {figure}{\numberline {40}{\ignorespaces Vetores gradiente definidos em amarelo no plano. Adaptado de: \cite {Fataho}}}{73}{figure.5.40}
+\contentsline {figure}{\numberline {41}{\ignorespaces Vetor dist\IeC {\^a}ncia do ponto $(0,0)$na borda at\IeC {\'e} o ponto $(0.75,0.25)$ em vermelho. Adaptado de: \cite {Fataho}}}{73}{figure.5.41}
+\contentsline {figure}{\numberline {42}{\ignorespaces Vetores dist\IeC {\^a}ncia do ponto $(0,0)$ em verde e vetores gradiente em amarelo. Adaptado de: \cite {Fataho}}}{74}{figure.5.42}
+\contentsline {figure}{\numberline {43}{\ignorespaces Resultado da altera\IeC {\c c}\IeC {\~a}o na frequ\IeC {\^e}ncia. Adaptado de: \cite {NoiseRedBlob}}}{75}{figure.5.43}
+\contentsline {figure}{\numberline {44}{\ignorespaces Resultado final dos terrenos ap\IeC {\'o}s modelagem do ru\IeC {\'\i }do e atribui\IeC {\c c}\IeC {\~a}o de significado. Adaptado de: \cite {NoiseRedBlob} }}{77}{figure.5.44}
+\contentsline {figure}{\numberline {45}{\ignorespaces Classes do pacote engine.ai}}{78}{figure.6.45}
+\contentsline {figure}{\numberline {46}{\ignorespaces Classes do pacote engine.audio}}{79}{figure.6.46}
+\contentsline {figure}{\numberline {47}{\ignorespaces Classes do pacote engine.engine}}{80}{figure.6.47}
+\contentsline {figure}{\numberline {48}{\ignorespaces Classes do pacote engine.entity.component}}{81}{figure.6.48}
+\contentsline {figure}{\numberline {49}{\ignorespaces Classes do pacote engine.entity}}{82}{figure.6.49}
+\contentsline {figure}{\numberline {50}{\ignorespaces Classes do pacote engine.graphic}}{82}{figure.6.50}
+\contentsline {figure}{\numberline {51}{\ignorespaces Classes do pacote engine.input}}{83}{figure.6.51}
+\contentsline {figure}{\numberline {52}{\ignorespaces Classes do pacote engine.logic}}{84}{figure.6.52}
+\contentsline {figure}{\numberline {53}{\ignorespaces Classes do pacote engine.noise}}{85}{figure.6.53}
+\contentsline {figure}{\numberline {54}{\ignorespaces Classes do pacote engine.renderer}}{86}{figure.6.54}
+\contentsline {figure}{\numberline {55}{\ignorespaces Classes do pacote engine.utilities}}{86}{figure.6.55}
+\contentsline {figure}{\numberline {56}{\ignorespaces \IeC {\'A}rvore de arquivos do projeto}}{87}{figure.6.56}
+\contentsline {figure}{\numberline {57}{\ignorespaces Fluxo de chamadas do m\IeC {\'e}todo \texttt {update} a partir da Engine. Esse mesmo fluxo tamb\IeC {\'e}m vale para os m\IeC {\'e}todos \texttt {render} e \texttt {variableUpdate}.}}{89}{figure.7.57}
+\contentsline {figure}{\numberline {58}{\ignorespaces Captura de tela 1}}{92}{figure.7.58}
+\contentsline {figure}{\numberline {59}{\ignorespaces Captura de tela 2}}{92}{figure.7.59}
+\contentsline {figure}{\numberline {60}{\ignorespaces Captura de tela 3}}{92}{figure.7.60}
+\contentsline {figure}{\numberline {61}{\ignorespaces Captura de tela 4}}{93}{figure.7.61}
+\contentsline {figure}{\numberline {62}{\ignorespaces Captura de tela 5}}{93}{figure.7.62}

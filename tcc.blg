@@ -44,9 +44,15 @@ Warning--entry type for "FastNoise" isn't style-file defined
 --line 241 of file referencias.bib
 Warning--entry type for "NoiseRedBlob" isn't style-file defined
 --line 249 of file referencias.bib
+Warning--entry type for "LWJGL" isn't style-file defined
+--line 257 of file referencias.bib
+Warning--entry type for "jBox2D" isn't style-file defined
+--line 265 of file referencias.bib
+Warning--entry type for "openAL" isn't style-file defined
+--line 273 of file referencias.bib
 +---------------------------------------------------------+
 | Estilo bibliográfico abntex2-alf.bst versão v-1.9.6           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-(There were 21 warnings)
+(There were 24 warnings)

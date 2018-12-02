@@ -12,107 +12,120 @@
 \contentsline {section}{\numberline {1.3}Justificativa e Motiva\IeC {\c c}\IeC {\~a}o}{14}{section.1.3}
 \contentsline {section}{\numberline {1.4}Organiza\IeC {\c c}\IeC {\~a}o do Trabalho}{15}{section.1.4}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Revis\IeC {\~a}o Bibliogr\IeC {\'a}fica}}{16}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}\MakeTextUppercase {Conceitos B\IeC {\'a}sicos}}{16}{chapter.2}
 \contentsline {section}{\numberline {2.1}Computa\IeC {\c c}\IeC {\~a}o gr\IeC {\'a}fica}{16}{section.2.1}
 \contentsline {section}{\numberline {2.2}OpenGL}{16}{section.2.2}
 \contentsline {section}{\numberline {2.3}Game Engine}{16}{section.2.3}
 \contentsline {section}{\numberline {2.4}Intelig\IeC {\^e}ncia artificial}{17}{section.2.4}
 \contentsline {section}{\numberline {2.5}Procedural Content Generation}{17}{section.2.5}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Trabalhos Correlatos}}{18}{chapter.3}
+\contentsline {chapter}{\chapternumberline {3}\MakeTextUppercase {Arquitetura da game engine Narval}}{18}{chapter.3}
+\contentsline {section}{\numberline {3.1}\textit {Game Loop}}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Sistema de atualiza\IeC {\c c}\IeC {\~a}o}{20}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Timestep fixo}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Timestep vari\IeC {\'a}vel}{22}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Timestep semi-fixo}{23}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Sistema de renderiza\IeC {\c c}\IeC {\~a}o}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Interpola\IeC {\c c}\IeC {\~a}o Linear}{25}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}API gr\IeC {\'a}fica OpenGL}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Core-profile e Immediate mode}{27}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}State Machine}{27}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Hello window}{27}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}OpenGL Pipeline}{29}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Vertex Array Object e Vertex Buffer Object}{30}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Vertex e Fragment shader}{32}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Compilando o shader em um programa}{33}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Uniforms}{35}{subsection.3.4.8}
+\contentsline {section}{\numberline {3.5}Renderizador}{35}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Textura}{35}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Anima\IeC {\c c}\IeC {\~o}es}{39}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Z-Ordering}{41}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Ilumina\IeC {\c c}\IeC {\~a}o}{42}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Ambiente}{43}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Luz Difusa}{44}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Vetor Normal}{46}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Luz Especular}{46}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}Atenua\IeC {\c c}\IeC {\~a}o}{47}{subsection.3.6.5}
+\contentsline {section}{\numberline {3.7}Classe Renderer}{49}{section.3.7}
+\contentsline {section}{\numberline {3.8}Arquitetura do Game Object}{50}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Object Based}{50}{subsection.3.8.1}
+\contentsline {subsection}{\numberline {3.8.2}Component Based}{51}{subsection.3.8.2}
+\contentsline {subsection}{\numberline {3.8.3}Entity Based}{52}{subsection.3.8.3}
+\contentsline {section}{\numberline {3.9}Sistema de colis\IeC {\~o}es}{53}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1}Colis\IeC {\~o}es do tipo AABB vs AABB}{53}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2}jBox2D}{54}{subsection.3.9.2}
+\contentsline {section}{\numberline {3.10}Sistema de coordenadas}{54}{section.3.10}
+\contentsline {subsection}{\numberline {3.10.1}Espa\IeC {\c c}o local}{55}{subsection.3.10.1}
+\contentsline {subsection}{\numberline {3.10.2}Espa\IeC {\c c}o de mundo}{55}{subsection.3.10.2}
+\contentsline {subsection}{\numberline {3.10.3}Espa\IeC {\c c}o de vis\IeC {\~a}o}{56}{subsection.3.10.3}
+\contentsline {subsection}{\numberline {3.10.4}Espa\IeC {\c c}o de recorte}{56}{subsection.3.10.4}
+\contentsline {subsection}{\numberline {3.10.5}Proje\IeC {\c c}\IeC {\~a}o}{57}{subsection.3.10.5}
+\contentsline {subsubsection}{\numberline {3.10.5.1}Proje\IeC {\c c}\IeC {\~a}o ortogr\IeC {\'a}fica}{57}{subsubsection.3.10.5.1}
+\contentsline {subsubsection}{\numberline {3.10.5.2}Proje\IeC {\c c}\IeC {\~a}o de perspectiva}{58}{subsubsection.3.10.5.2}
+\contentsline {subsection}{\numberline {3.10.6}jBox2D para espa\IeC {\c c}o de mundo}{59}{subsection.3.10.6}
+\contentsline {section}{\numberline {3.11}C\IeC {\^a}mera}{59}{section.3.11}
+\contentsline {section}{\numberline {3.12}Sistema de input}{60}{section.3.12}
+\contentsline {subsection}{\numberline {3.12.1}GLFW Keyboard}{61}{subsection.3.12.1}
+\contentsline {subsection}{\numberline {3.12.2}GLFW Mouse}{61}{subsection.3.12.2}
+\contentsline {section}{\numberline {3.13}Ger\IeC {\^e}ncia de recursos}{62}{section.3.13}
+\contentsline {subsection}{\numberline {3.13.1}Chunk}{63}{subsection.3.13.1}
+\contentsline {subsection}{\numberline {3.13.2}Sistema de Chunks}{63}{subsection.3.13.2}
+\contentsline {subsection}{\numberline {3.13.3}Gerenciador de Chunks}{64}{subsection.3.13.3}
+\contentsline {section}{\numberline {3.14}A\IeC {\'u}dio}{64}{section.3.14}
+\contentsline {subsection}{\numberline {3.14.1}Integrando o OpenAL}{64}{subsection.3.14.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Arquitetura de uma \textit {Game Engine}}}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}\textit {Game Loop}}{20}{section.4.1}
-\contentsline {section}{\numberline {4.2}Sistema de atualiza\IeC {\c c}\IeC {\~a}o}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Timestep fixo}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Timestep vari\IeC {\'a}vel}{23}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Timestep semi-fixo}{24}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Sistema de renderiza\IeC {\c c}\IeC {\~a}o}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Interpola\IeC {\c c}\IeC {\~a}o Linear}{26}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}API gr\IeC {\'a}fica OpenGL}{28}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Core-profile e Immediate mode}{28}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}State Machine}{28}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Hello window}{29}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}OpenGL Pipeline}{30}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Vertex Array Object e Vertex Buffer Object}{32}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}OpenGL Shading Language (GLSL)}{33}{subsection.4.4.6}
-\contentsline {subsection}{\numberline {4.4.7}Vertex e Fragment shader}{33}{subsection.4.4.7}
-\contentsline {subsection}{\numberline {4.4.8}Compilando o shader em um programa}{35}{subsection.4.4.8}
-\contentsline {subsection}{\numberline {4.4.9}Uniforms}{36}{subsection.4.4.9}
-\contentsline {section}{\numberline {4.5}Renderer}{38}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Textura}{38}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Anima\IeC {\c c}\IeC {\~o}es}{43}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Z-Ordering}{45}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Ilumina\IeC {\c c}\IeC {\~a}o}{46}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Ambiente}{46}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Luz Difusa}{47}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Vetor Normal}{49}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}Luz Especular}{49}{subsection.4.6.4}
-\contentsline {subsection}{\numberline {4.6.5}Atenua\IeC {\c c}\IeC {\~a}o}{50}{subsection.4.6.5}
-\contentsline {section}{\numberline {4.7}Classe Renderer}{52}{section.4.7}
-\contentsline {section}{\numberline {4.8}Arquitetura do Game Object}{53}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Object Based}{53}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Component Based}{54}{subsection.4.8.2}
-\contentsline {subsection}{\numberline {4.8.3}Entity Based}{55}{subsection.4.8.3}
-\contentsline {section}{\numberline {4.9}Sistema de colis\IeC {\~o}es}{56}{section.4.9}
-\contentsline {subsection}{\numberline {4.9.1}Colis\IeC {\~o}es do tipo AABB vs AABB}{56}{subsection.4.9.1}
-\contentsline {subsection}{\numberline {4.9.2}jBox2D}{57}{subsection.4.9.2}
-\contentsline {section}{\numberline {4.10}Sistema de coordenadas}{57}{section.4.10}
-\contentsline {subsection}{\numberline {4.10.1}Espa\IeC {\c c}o local}{58}{subsection.4.10.1}
-\contentsline {subsection}{\numberline {4.10.2}Espa\IeC {\c c}o de mundo}{58}{subsection.4.10.2}
-\contentsline {subsection}{\numberline {4.10.3}Espa\IeC {\c c}o de vis\IeC {\~a}o}{59}{subsection.4.10.3}
-\contentsline {subsection}{\numberline {4.10.4}Espa\IeC {\c c}o de recorte}{59}{subsection.4.10.4}
-\contentsline {subsection}{\numberline {4.10.5}Proje\IeC {\c c}\IeC {\~a}o}{60}{subsection.4.10.5}
-\contentsline {subsubsection}{\numberline {4.10.5.1}Proje\IeC {\c c}\IeC {\~a}o ortogr\IeC {\'a}fica}{60}{subsubsection.4.10.5.1}
-\contentsline {subsubsection}{\numberline {4.10.5.2}Proje\IeC {\c c}\IeC {\~a}o de perspectiva}{61}{subsubsection.4.10.5.2}
-\contentsline {subsection}{\numberline {4.10.6}jBox2D para espa\IeC {\c c}o de mundo}{62}{subsection.4.10.6}
-\contentsline {section}{\numberline {4.11}C\IeC {\^a}mera}{62}{section.4.11}
-\contentsline {section}{\numberline {4.12}Sistema de input}{63}{section.4.12}
-\contentsline {subsection}{\numberline {4.12.1}GLFW Keyboard}{64}{subsection.4.12.1}
-\contentsline {subsection}{\numberline {4.12.2}GLFW Mouse}{64}{subsection.4.12.2}
-\contentsline {section}{\numberline {4.13}Ger\IeC {\^e}ncia de recursos}{65}{section.4.13}
-\contentsline {subsection}{\numberline {4.13.1}Chunk}{65}{subsection.4.13.1}
-\contentsline {subsection}{\numberline {4.13.2}Chunk system}{66}{subsection.4.13.2}
-\contentsline {subsection}{\numberline {4.13.3}Chunk Manager}{67}{subsection.4.13.3}
-\contentsline {subsection}{\numberline {4.13.4}A classe Resource Manager}{67}{subsection.4.13.4}
-\contentsline {section}{\numberline {4.14}A\IeC {\'u}dio}{70}{section.4.14}
-\contentsline {subsection}{\numberline {4.14.1}Integrando o OpenAL}{70}{subsection.4.14.1}
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase {Intelig\IeC {\^e}ncia artifical}}{66}{chapter.4}
+\contentsline {section}{\numberline {4.1}Utility em IA}{66}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Processo de funcionamento}{66}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Pathfinding}{69}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Algoritmo A*}{70}{subsection.4.2.1}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Intelig\IeC {\^e}ncia artifical}}{72}{chapter.5}
-\contentsline {section}{\numberline {5.1}Utility em IA}{72}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Processo de funcionamento}{72}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Pathfinding}{75}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}A*}{76}{subsection.5.2.1}
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase {Procedural Content Generation}}{72}{chapter.5}
+\contentsline {section}{\numberline {5.1}Ru\IeC {\'\i }dos aleat\IeC {\'o}rios}{72}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Ru\IeC {\'\i }do de Perlin}{72}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Gera\IeC {\c c}\IeC {\~a}o de terrenos}{74}{section.5.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Procedural Content Generation}}{78}{chapter.6}
-\contentsline {section}{\numberline {6.1}Random noise}{78}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Perlin noise}{78}{subsection.6.1.1}
-\contentsline {section}{\numberline {6.2}Gera\IeC {\c c}\IeC {\~a}o de terrenos}{80}{section.6.2}
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase {Diagramas e panorama geral da engine Narval}}{78}{chapter.6}
+\contentsline {section}{\numberline {6.1}Pacote de IA}{78}{section.6.1}
+\contentsline {section}{\numberline {6.2}Pacote de A\IeC {\'u}dio}{79}{section.6.2}
+\contentsline {section}{\numberline {6.3}Pacote da Engine}{79}{section.6.3}
+\contentsline {section}{\numberline {6.4}Pacote de componentes de entidades}{80}{section.6.4}
+\contentsline {section}{\numberline {6.5}Pacote de entidades}{82}{section.6.5}
+\contentsline {section}{\numberline {6.6}Pacote gr\IeC {\'a}fico}{82}{section.6.6}
+\contentsline {section}{\numberline {6.7}Pacote de input}{83}{section.6.7}
+\contentsline {section}{\numberline {6.8}Pacote l\IeC {\'o}gico}{83}{section.6.8}
+\contentsline {section}{\numberline {6.9}Pacote de ru\IeC {\'\i }do}{84}{section.6.9}
+\contentsline {section}{\numberline {6.10}Pacote de renderizadores}{85}{section.6.10}
+\contentsline {section}{\numberline {6.11}Pacote de utilidades}{86}{section.6.11}
+\contentsline {section}{\numberline {6.12}Estrutura dos arquivos}{87}{section.6.12}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Diagramas e panorama geral}}{84}{chapter.7}
-\contentsline {section}{\numberline {7.1}Pacote de IA}{84}{section.7.1}
-\contentsline {section}{\numberline {7.2}Pacote de A\IeC {\'u}dio}{84}{section.7.2}
-\contentsline {section}{\numberline {7.3}Pacote da Engine}{85}{section.7.3}
-\contentsline {section}{\numberline {7.4}Pacote de componentes de entidades}{86}{section.7.4}
-\contentsline {section}{\numberline {7.5}Pacote de entidades}{88}{section.7.5}
-\contentsline {section}{\numberline {7.6}Pacote gr\IeC {\'a}fico}{88}{section.7.6}
-\contentsline {section}{\numberline {7.7}Pacote de input}{89}{section.7.7}
-\contentsline {section}{\numberline {7.8}Pacote l\IeC {\'o}gico}{89}{section.7.8}
-\contentsline {section}{\numberline {7.9}Pacote de ru\IeC {\'\i }do}{90}{section.7.9}
-\contentsline {section}{\numberline {7.10}Pacote de renderizadores}{91}{section.7.10}
-\contentsline {section}{\numberline {7.11}Pacote de utilidades}{92}{section.7.11}
-\contentsline {section}{\numberline {7.12}Estrutura dos arquivos}{92}{section.7.12}
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase {Experimentos e resultados}}{88}{chapter.7}
+\contentsline {section}{\numberline {7.1}Inicializa\IeC {\c c}\IeC {\~a}o e exemplo de utiliza\IeC {\c c}\IeC {\~a}o da engine}{88}{section.7.1}
+\contentsline {section}{\numberline {7.2}Demonstra\IeC {\c c}\IeC {\~a}o}{91}{section.7.2}
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {Experimentos e resultados}}{95}{chapter.8}
-\contentsline {section}{\numberline {8.1}Demonstra\IeC {\c c}\IeC {\~a}o}{95}{section.8.1}
-\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {9}\MakeTextUppercase {Conclus\IeC {\~a}o}}{97}{chapter.9}
-\contentsline {section}{\numberline {9.1}Perspectivas de Trabalhos Futuros}{97}{section.9.1}
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase {Conclus\IeC {\~a}o}}{94}{chapter.8}
+\contentsline {section}{\numberline {8.1}Perspectivas de Trabalhos Futuros}{94}{section.8.1}
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{98}{section*.8}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{96}{section*.8}
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Implementa\IeC {\c c}\IeC {\~a}o do Algoritmo A* Adaptado}}{100}{appendix.A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase {Classe respons\IeC {\'a}vel pelo shader}}{98}{appendix.A}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase {Implementa\IeC {\c c}\IeC {\~a}o do Algoritmo A* Adaptado}}{101}{appendix.B}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase {Implementa\IeC {\c c}\IeC {\~a}o do sistema Entity Based}}{105}{appendix.C}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase {Classe respons\IeC {\'a}vel pela ger\IeC {\^e}ncia de recursos }}{111}{appendix.D}
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase {Classe n\IeC {\'u}cleo do sistema: Engine }}{114}{appendix.E}
