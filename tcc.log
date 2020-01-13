@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  2 DEC 2018 19:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.29)  12 JAN 2020 21:18
 entering extended mode
 **./tcc.tex
 (tcc.tex
@@ -2290,7 +2290,7 @@ Package pdftex.def Info: Requested size: 82.24883pt x 136.55103pt on input line
 l.2458 		projection 
                     = projection.ortho(0, Engine.getSelf().getWindow().getWi...
  <./imagens/updateFlow.png>] [90]
-<imagens/ss1.png, id=2060, 967.36406pt x 539.76656pt>
+<imagens/ss1.png, id=2065, 967.36406pt x 539.76656pt>
 File: imagens/ss1.png Graphic file (type png)
 <use imagens/ss1.png>
 Package pdftex.def Info: imagens/ss1.png  used on input line 2546. on input lin
@@ -2298,65 +2298,65 @@ e 2546.
 Package pdftex.def Info: Requested size: 281.99597pt x 157.34367pt on input lin
 e 2546.
  [91]
-<imagens/ss2.png, id=2090, 956.07187pt x 542.025pt>
+<imagens/ss2.png, id=2095, 956.07187pt x 542.025pt>
 File: imagens/ss2.png Graphic file (type png)
 <use imagens/ss2.png>
-Package pdftex.def Info: imagens/ss2.png  used on input line 2552. on input lin
-e 2552.
+Package pdftex.def Info: imagens/ss2.png  used on input line 2553. on input lin
+e 2553.
 Package pdftex.def Info: Requested size: 281.99597pt x 159.87117pt on input lin
-e 2552.
-<imagens/ss3.png, id=2091, 956.82469pt x 532.99126pt>
+e 2553.
+<imagens/ss3.png, id=2096, 956.82469pt x 532.99126pt>
 File: imagens/ss3.png Graphic file (type png)
 <use imagens/ss3.png>
-Package pdftex.def Info: imagens/ss3.png  used on input line 2557. on input lin
-e 2557.
+Package pdftex.def Info: imagens/ss3.png  used on input line 2559. on input lin
+e 2559.
 Package pdftex.def Info: Requested size: 281.99597pt x 157.08467pt on input lin
-e 2557.
-<imagens/ss4.png, id=2092, 961.34157pt x 539.01375pt>
+e 2559.
+<imagens/ss4.png, id=2097, 961.34157pt x 539.01375pt>
 File: imagens/ss4.png Graphic file (type png)
 <use imagens/ss4.png>
-Package pdftex.def Info: imagens/ss4.png  used on input line 2562. on input lin
-e 2562.
+Package pdftex.def Info: imagens/ss4.png  used on input line 2565. on input lin
+e 2565.
 Package pdftex.def Info: Requested size: 281.99597pt x 158.11118pt on input lin
-e 2562.
-<imagens/ss5.png, id=2093, 957.5775pt x 535.2497pt>
+e 2565.
+<imagens/ss5.png, id=2098, 957.5775pt x 535.2497pt>
 File: imagens/ss5.png Graphic file (type png)
 <use imagens/ss5.png>
-Package pdftex.def Info: imagens/ss5.png  used on input line 2567. on input lin
-e 2567.
+Package pdftex.def Info: imagens/ss5.png  used on input line 2571. on input lin
+e 2571.
 Package pdftex.def Info: Requested size: 281.99597pt x 157.6196pt on input line
- 2567.
+ 2571.
  [92pdfTeX warning (ext4): destination with the same identifier (name{figure.7.
 58}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2569 \end{figure}
+l.2574 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.7.59}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2569 \end{figure}
+l.2574 \end{figure}
                    pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.7.60}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2569 \end{figure}
+l.2574 \end{figure}
                     <./imagens/ss1.png> <./imagens/ss2.png> <./imagens/ss3.png>
 ] [93pdfTeX warning (ext4): destination with the same identifier (name{figure.7
 .61}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2590 \chapter
+l.2595 \chapter
                {Conclusão}pdfTeX warning (ext4): destination with the same ide
 ntifier (name{figure.7.62}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.2590 \chapter
+l.2595 \chapter
                {Conclusão} <./imagens/ss4.png> <./imagens/ss5.png>] [94
 
 ]
@@ -2399,11 +2399,11 @@ AED: lastpage setting LastPage
 \tf@toc=\write9
 \openout9 = `tcc.toc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3672.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3672.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3677.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3677.
  (tcc.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3672.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3672.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3677.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3677.
 
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
 (rerunfilecheck)             Checksum: 5D0E2758A931C9A2100E8E88B34FAEC6;2886.
@@ -2411,13 +2411,13 @@ Package rerunfilecheck Info: File `tcc.brf' has not changed.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3672.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3677.
  ) 
 Here is how much of TeX's memory you used:
- 19086 strings out of 493312
- 277844 string characters out of 3138901
- 618502 words of memory out of 3000000
- 20126 multiletter control sequences out of 15000+200000
+ 19091 strings out of 493312
+ 278107 string characters out of 3138901
+ 618829 words of memory out of 3000000
+ 20131 multiletter control sequences out of 15000+200000
  74054 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,12n,45p,1734b,1991s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2442,9 +2442,9 @@ m/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmtt9.pfb>
-Output written on tcc.pdf (119 pages, 4373679 bytes).
+Output written on tcc.pdf (119 pages, 4374667 bytes).
 PDF statistics:
- 4070 PDF objects out of 4296 (max. 8388607)
+ 4075 PDF objects out of 4296 (max. 8388607)
  2185 named destinations out of 2487 (max. 500000)
  1171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

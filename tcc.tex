@@ -910,7 +910,7 @@ Esses modos podem ser aplicados distintamente para operações de aumentar ou di
 Por fim, com todos esses parâmetros configurados envia-se o bytebuffer contendo os dados da imagem propriamente dita para o OpenGL. Isso é feito na função \linebreak \texttt{glTexImage2D(type, mipmap_level, internal_format, width, height, border,\linebreak color_format, type, bytebuffer)}.
 
 \subsection{Animações}
-Uma vez que todo o sistema de shader program e texturas estão montados é possível usá-los para construir componentes mais avançados, como o de animação. Um objeto em animação não é nada mais que uma sequência de frames desenhados em um intervalo de milissegundos, criando ilusão de movimento. É comum a utilização de \textit{spritesheets} para armazenar todas as imagens em um único arquivo e então recortá-las em pedaços (frames) em tempo de execução. O exemplo de uma \textit{spritesheet} é dada na Figura~\ref{fig:spritesheetExample}.
+Uma vez que todo o sistema de shader program e texturas estão montados é possível usá-los para construir componentes mais avançados, como o de animação. Um objeto em animação não é nada mais que uma sequência de frames desenhados em um intervalo de milissegundos, criando ilusão de movimento. É comum a utilização de \textit{spritesheets} para armazenar todas as imagens em um único arquivo e então recortá-las em pedaços (frames) em tempo de execução. O exemplo de uma \textit{spritesheet} é dado na Figura~\ref{fig:spritesheetExample}.
 
 \begin{figure}[H]
 	\centering
@@ -947,7 +947,7 @@ void main(){
 
 Na variável \texttt{spriteFrame} tem-se as coordenadas xy de qual pedaço da textura deverá ser extraído e nas coordenadas zw a largura e altura desse pedaço. Essa informação é então repassada  para o fragment shader onde por fim a função \texttt{texture()} irá colher esses pixels para manipulação.
 
-Dessa forma o código da classe responsável pela manipulação lógica da animação é definida na \lstlistingname~\ref{alg:AnimationClass}. A classe pode ser ainda estendida para comportar frames com tempo de duração específico. Para isso basta substituir o parâmetro \texttt{long frameDuration} por um vetor com o tempo de duração correspondete a cada frame e alterar a lógica do método \texttt{update}.
+Dessa forma o código da classe responsável pela manipulação lógica da animação é definido na \lstlistingname~\ref{alg:AnimationClass}. A classe pode ser ainda estendida para comportar frames com tempo de duração específico. Para isso basta substituir o parâmetro \texttt{long frameDuration} por um vetor com o tempo de duração correspondete a cada frame e alterar a lógica do método \texttt{update}.
 
 \begin{lstlisting}[caption=Classe Animation, label={alg:AnimationClass}]
 public class Animation implements Serializable{
@@ -1002,7 +1002,7 @@ public class Animation implements Serializable{
 \end{lstlisting}
 \subsection{Z-Ordering}
 A técnica de z-ordering consiste na ordenação de objetos em sobreposição. É utilizada para organizar a ordem na qual os elementos devem ser renderizados tal que não haja elementos distantes sendo desenhados em cima de objetos mais próximos da câmera.
-Para ambientes 2D, basta ordenar os elementos pela posição y do menor para o maior como ilustrado pela Figura~\ref{fig:zOrder}.
+Para ambientes 2D, basta ordenar os elementos pela posição y do menor para o maior, como ilustrado pela Figura~\ref{fig:zOrder}.
 
 \begin{figure}[H]
 	\centering
@@ -2538,34 +2538,39 @@ public class Game extends GameState{
 
 A demonstração final construída utilizando a game engine evidência suas principais funcionalidades em um mini jogo de exploração com ambiente procedural 2D.
 
-Nele pode-se caminhar através do cenário explorando o território gerado em tempo real e vislumbrar praias e florestas. Durante essa jornada pode-se notar o efeito de iluminação local, global e sua atenuação juntamente com o passar do dia.  Nota-se ainda o efeito de vento aplicado aos objetos que compõem a vegetação e entidades de AI simples que vagam pelo ambiente. A seguir são dadas algumas capturas de tela da demonstração final construída com a engine.
+Nele pode-se caminhar através do cenário explorando o território gerado em tempo real e vislumbrar praias e florestas. Durante essa jornada pode-se notar o efeito de iluminação local, global e sua atenuação juntamente com o passar do dia.  Nota-se ainda o efeito de vento aplicado aos objetos que compõem a vegetação e entidades de AI simples que vagam pelo ambiente. Nas Figuras \ref{fig:ss1}, \ref{fig:ss2}, \ref{fig:ss3}, \ref{fig:ss4} e \ref{fig:ss5} são dadas algumas capturas de tela da demonstração final construída com a engine.
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=24em]{imagens/ss1.png}
 	\caption{Captura de tela 1}
+	\label{fig:ss1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=24em]{imagens/ss2.png}
 	\caption{Captura de tela 2}
+	\label{fig:ss2}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=24em]{imagens/ss3.png}
 	\caption{Captura de tela 3}
+	\label{fig:ss3}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=24em]{imagens/ss4.png}
 	\caption{Captura de tela 4}
+	\label{fig:ss4}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=24em]{imagens/ss5.png}
 	\caption{Captura de tela 5}
+	\label{fig:ss5}
 \end{figure}
 
 

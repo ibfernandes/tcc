@@ -1,0 +1,697 @@
+PWD D:/NextCloud/HD/Projetos - Sources- Doc/TCC
+INPUT C:/Users/User/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT tcc.tex
+OUTPUT tcc.log
+INPUT facom-ufu-abntex2.cls
+INPUT facom-ufu-abntex2.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ifthen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/memoir.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/memoir.cls
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ifetex/ifetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ifetex/ifetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ifetex/ifetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/plain/ifetex/ifetex.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/mem12.clo
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/mem12.clo
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/mempatch.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/mempatch.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/mempatch.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/textcase/textcase.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/textcase/textcase.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/hobsub-generic.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/auxhook.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/pd1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/00miktex/hyperref.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/url/url.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/memhfixc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/memoir/memhfixc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/hpdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bookmark.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bookmark.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bkm-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/bkm-pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/switch.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/babel-portuges/portuges.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/babel-portuges/portuges.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/switch.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/enumitem/enumitem.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/calc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/calc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/cmap.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/cmap.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/lmodern.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/lmodern.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/t1.cmap
+OUTPUT tcc.pdf
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/t1.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/inputenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/inputenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/utf8.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/utf8.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ot1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ot1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/omsenc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/omsenc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lastpage/lastpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lastpage/lastpage.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/indentfirst.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/indentfirst.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/color.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/color.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grffile.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grffile.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/commath/commath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/commath/commath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/alltt.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/alltt.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mathtools/mathtools.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mathtools/mathtools.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mathtools/mhsetup.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mathtools/mhsetup.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/breqn/mathstyle.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/breqn/mathstyle.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fancyhdr/fancyhdr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/fancyhdr/fancyhdr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/float/float.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lipsum/lipsum.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lipsum/lipsum.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/blindtext/blindtext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/blindtext/blindtext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/xspace.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/xspace.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/backref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/backref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2cite.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2cite.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2abrev.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/abntex2/abntex2abrev.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ltxmisc/relsize.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ltxmisc/relsize.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/ltxmisc/relsize.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/listings.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/listings.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstmisc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/listings.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/listings.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/listings/lstlang1.sty
+OUTPUT tcc.idx
+INPUT tcc.aux
+INPUT tcc.aux
+OUTPUT tcc.aux
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/hyperref/nameref.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/gettitlestring.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmss.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmss.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmss12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmss17.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmss12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/ot1lmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/ot1lmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/ot1.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/cmap/ot1.cmap
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/rm-lmr8.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/rm-lmr6.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omllmm.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omllmm.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmmi12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/oml.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/oml.cmap
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmmi8.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmmi6.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omslmsy.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omslmsy.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmsy10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/oms.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/oms.cmap
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmsy8.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmsy6.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omxlmex.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omxlmex.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/lmex10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/omx.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/mmap/omx.cmap
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmss17.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT ./imagens/logoText.png
+INPUT ./imagens/logoText.png
+INPUT ./imagens/logoText.png
+INPUT ./imagens/logoText.png
+INPUT ./imagens/logoText.png
+INPUT ./imagens/logoText.png
+INPUT tcc.lof
+INPUT tcc.lof
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmtt.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmtt.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmtt12.tfm
+INPUT tcc.lot
+INPUT tcc.lot
+INPUT tcc.lol
+INPUT tcc.lol
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT tcc.toc
+INPUT tcc.toc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmssbo10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmss10.tfm
+INPUT ./imagens/engineLayers.png
+INPUT ./imagens/engineLayers.png
+INPUT ./imagens/engineLayers.png
+INPUT ./imagens/engineLayers.png
+INPUT ./imagens/engineLayers.png
+INPUT ./imagens/engineLayers.png
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmsso17.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmtt9.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmr9.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/lm/ec-lmtk10.tfm
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu1_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu2_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu3_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu4_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu6_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu8_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu7_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT ./imagens/ilu5_small.png
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omslmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/lm/omslmr.fd
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/openglpipeline.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/tringulosCompondoQuad.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/helloShader.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/sistema_rgba_argb.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/extracting_rgb_channel.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/wrap_modes.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/gl_filters.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/spritesheet.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/z-order.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/zOrderWithBaseBox.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/lightning.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/sunset.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normal_reflection.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/normalTextureExample.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/specular.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/gameobject_specialization.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/componentBased.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/entityDiagram.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/aabbaabb.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/coordSpace.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/affineTransformation.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/orthographicProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/perspectiveProjection.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/chunkSystem.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/utilityFunctions.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/considerationTree.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pixelWaste.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanningWithGrid.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/pathPlanning.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinPoint.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradients.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndOneDistance.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinGradientsAndDistances.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/perlinFrequencies.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/generatedTerrains.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.ai.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.audio.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.engine.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.component.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.entity.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.graphic.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.input.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.logic.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.noise.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.renderer.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/engine.utilities.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/updateFlow.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss1.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss2.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss3.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss4.png
+INPUT ./imagens/ss5.png
+INPUT ./imagens/ss5.png
+INPUT ./imagens/ss5.png
+INPUT ./imagens/ss5.png
+INPUT ./imagens/ss5.png
+INPUT ./imagens/ss5.png
+INPUT tcc.bbl
+INPUT tcc.bbl
+INPUT tcc.brf
+INPUT tcc.brf
+INPUT ./tcc.brf
+INPUT ./tcc.brf
+OUTPUT tcc.brf
+INPUT tcc.ind
+INPUT tcc.ind
+OUTPUT tcc.lof
+OUTPUT tcc.lot
+OUTPUT tcc.lol
+OUTPUT tcc.toc
+INPUT tcc.aux
+INPUT ./tcc.brf
+INPUT ./tcc.brf
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss17.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbo10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbo10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso17.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtk10.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt9.pfb
